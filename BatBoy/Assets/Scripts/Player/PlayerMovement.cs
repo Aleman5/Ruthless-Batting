@@ -16,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movHor = Vector3.right * Input.GetAxis("Horizontal") * movSpeed;
         Vector3 movVer = Vector3.up * Input.GetAxis("Vertical") * movSpeed;
 
-        transform.position += movHor + movVer;
+        transform.position += (movHor + movVer) * Time.deltaTime;
     }
 }

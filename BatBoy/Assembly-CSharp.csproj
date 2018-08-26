@@ -53,8 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Scripts\General\Damager.cs" />
+     <Compile Include="Assets\Scripts\General\Health.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRotationThroughMouse.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerWeaponsThings.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_Bat.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Weapons_Abstract.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponTest.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Usuario/Desktop/Des-VJ-III---Game/BatBoy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
