@@ -5,15 +5,14 @@ using UnityEngine;
 public class Weapons_Abstract : MonoBehaviour
 {
     protected float attackRate;
-    protected float timeToAttack;
+    protected float cooldown;
 
     protected int weaponLvl;
+    protected int damage;
 
     protected virtual void Awake()
     {
-        timeToAttack = 0;
-        attackRate = 0;
-        weaponLvl = 1;
+
     }
 
     public virtual void Attack()

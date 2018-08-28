@@ -37,12 +37,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Damaged(int dmg)
+    public void Damaged(int dmg)
     {
         health.Amount -= dmg;
-    }
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        Debug.Log("Estoy Colisionando");
     }
 }

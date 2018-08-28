@@ -6,19 +6,12 @@ public class Damager : MonoBehaviour
 {
     [SerializeField] float damage;
 
-    /*void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Me estan pegando");
-        var health = col.GetComponent<Health>();
-        if (health) health.Amount -= damage;
-    }*/
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Enemy")
+        if (collision.CompareTag("Enemy"))
         {
-            var health = coll.gameObject.GetComponent<Health>();
-            if (health) health.Amount -= damage;
+            Health health = collision.GetComponent<Health>();
+            health.Amount -= damage;
         }
     }
 }

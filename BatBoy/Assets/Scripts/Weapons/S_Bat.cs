@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_Bat : Weapons_Abstract
 {
-    BoxCollider2D box;
+    BoxCollider2D batBoxCollider;
 
     float timeToAppearHitBox;
     float timeToDisappearHitBox;
@@ -12,44 +12,50 @@ public class S_Bat : Weapons_Abstract
 
     protected override void Awake()
     {
-        base.Awake();
+        cooldown = 0;
+        weaponLvl = 1;
         attackRate = 1;
+        damage = 1;
         timeToAppearHitBox = 3 / Time.timeScale;
         timeToDisappearHitBox = 0.1f;
 
-        box = GetComponent<BoxCollider2D>();
-        box.size.Set(1.75f, 1f);
-        box.offset.Set(0f, 1f);
-        box.enabled = false;
+        batBoxCollider = GetComponent<BoxCollider2D>();
+        batBoxCollider.enabled = false;
+    }
 
+    public void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Attack();
+        }
     }
 
     public override void Attack()
     {
-        if(Time.time > timeToAttack)
+        if (Time.time > cooldown)
         {
-            timeToAttack = Time.time + attackRate;
+            cooldown = Time.time + attackRate;
 
-            //Invoke("ActivateHitBox", timeToAppearHitBox);
-            ActivateHitBox();
+            batBoxCollider.enabled = true;
 
-            Debug.Log("Me estoy yendo perro");
+            Invoke("DesactivateBox", 0.5f); // In the future this will be the duration of the Bat Attack
         }
     }
 
-    void ActivateHitBox()
+    private void DesactivateBox()
     {
-        box.enabled = true;
-
-        Debug.Log("Me estoy activando perro");
-
-        Invoke("DesactivateHitBox", timeToDisappearHitBox);
-    }
-
-    private void DesactivateHitBox()
-    {
-        box.enabled = false;
+        batBoxCollider.enabled = false;
 
         Debug.Log("Me estoy desactivando perro");
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Health health = collision.GetComponent<Health>();
+            health.Amount -= damage;
+        }
     }
 }

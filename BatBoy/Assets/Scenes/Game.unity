@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331232737}
   - component: {fileID: 331232738}
-  - component: {fileID: 331232739}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -151,25 +150,11 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331232736}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeadc99fd8f22b841b8696808940c7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bat: {fileID: 0}
---- !u!114 &331232739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 331232736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81676f702be30984c890cd1654d35907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  box: {fileID: 1450341930}
-  timeToDisappearHitBox: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,9 +580,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1450341931}
   - component: {fileID: 1450341932}
-  - component: {fileID: 1450341933}
+  - component: {fileID: 1450341935}
+  - component: {fileID: 1450341934}
   m_Layer: 10
-  m_Name: BatTrigger
+  m_Name: Bat
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,7 +611,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1}
@@ -641,7 +627,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1450341933
+--- !u!50 &1450341934
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1450341930}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1450341935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -649,7 +655,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450341930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dba9d674c5022dc42829fb7cdf4e4c05, type: 3}
+  m_Script: {fileID: 11500000, guid: 4460f35c373f20a4a896e36f1b804eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
