@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    GameObject target;
+
     [SerializeField] float speed;
     [SerializeField] float distanceMin;
     [SerializeField] float distanceMax;
@@ -13,12 +14,12 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-        
+        target = GameObject.Find("Player");
     }
 
     void Update()
     {
-        Vector3 diff = target.position - transform.position;
+        Vector3 diff = target.transform.position - transform.position;
         diff.z = 0;
         Vector3 dir = diff.normalized;
         float dist = diff.magnitude;
