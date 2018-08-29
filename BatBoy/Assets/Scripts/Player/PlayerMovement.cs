@@ -5,8 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Vector3 mousePos;
+    Animator anim;
 
     [SerializeField] float movSpeed;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -17,5 +23,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movVer = Vector3.up * Input.GetAxis("Vertical") * movSpeed;
 
         transform.position += (movHor + movVer) * Time.deltaTime;
+
+        anim.SetFloat("VerticalSpeed", Input.GetAxis("Vertical") / movSpeed);
+        anim.SetFloat("HorizontalSpeed", Input.GetAxis("Horizontal") / movSpeed);
     }
 }

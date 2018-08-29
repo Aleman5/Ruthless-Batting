@@ -314,6 +314,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\General\Damager.cs" />
     <Compile Include="Assets\Scripts\General\Health.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
