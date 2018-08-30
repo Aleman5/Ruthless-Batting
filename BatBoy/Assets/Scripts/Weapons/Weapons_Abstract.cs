@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Weapons_Abstract : MonoBehaviour
 {
-    protected float attackRate;
+	
+
+	protected float attackRate;
     protected float cooldown;
 
     protected int weaponLvl;
@@ -12,7 +14,7 @@ public class Weapons_Abstract : MonoBehaviour
 
     protected virtual void Awake()
     {
-
+		
     }
 
     public virtual void Attack()

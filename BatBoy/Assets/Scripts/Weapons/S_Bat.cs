@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class S_Bat : Weapons_Abstract
 {
-    BoxCollider2D batBoxCollider;
+	enum Direction
+	{
+		UP,
+		DOWN,
+		RIGHT,
+		LEFT
+	}
+
+	BoxCollider2D batBoxCollider;
 
     float timeToAppearHitBox;
     float timeToDisappearHitBox;
@@ -12,15 +20,15 @@ public class S_Bat : Weapons_Abstract
 
     protected override void Awake()
     {
-        cooldown = 0;
+		batBoxCollider = GetComponent<BoxCollider2D>();
+		batBoxCollider.enabled = false;
+
+		cooldown = 0;
         weaponLvl = 1;
         attackRate = 1;
         damage = 1;
         timeToAppearHitBox = 3 / Time.timeScale;
         timeToDisappearHitBox = 0.1f;
-
-        batBoxCollider = GetComponent<BoxCollider2D>();
-        batBoxCollider.enabled = false;
     }
 
     public void Update()
@@ -39,15 +47,57 @@ public class S_Bat : Weapons_Abstract
 
             batBoxCollider.enabled = true;
 
-            Invoke("DesactivateBox", 0.5f); // In the future this will be the duration of the Bat Attack
+			SetBoxPreparations();
+
+			Invoke("DesactivateBox", 0.5f); // In the future this will be the duration of the Bat Attack Animation
         }
     }
 
-    private void DesactivateBox()
+	void SetBoxPreparations()
+	{
+		Direction dir;
+
+		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		mousePos.z = 0;
+		mousePos = mousePos - transform.position;
+		float angle = Vector3.SignedAngle(mousePos, transform.up, Vector3.forward);
+
+		Debug.Log(angle);
+
+
+		if		(angle >  45  && angle <   135)
+			dir = Direction.RIGHT;
+		else if (angle >= 135 && angle <= -135)
+			dir = Direction.DOWN;
+		else if (angle > -45  && angle <  -135)
+			dir = Direction.LEFT;
+		else
+			dir = Direction.UP;
+
+			switch(dir)
+			{
+			case Direction.RIGHT:
+				batBoxCollider.offset.Set(1f, 0f);
+				transform.eulerAngles = new Vector3(0f, 0f, 90f);
+				break;
+			case Direction.DOWN:
+				batBoxCollider.offset.Set(0f, -1f);
+				transform.eulerAngles = new Vector3(0f, 0f, 180f);
+				break;
+			case Direction.LEFT:
+				batBoxCollider.offset.Set(-1f, 0f);
+				transform.eulerAngles = new Vector3(0f, 0f, 270f);
+				break;
+			case Direction.UP:
+				batBoxCollider.offset.Set(0f, 1f);
+				transform.eulerAngles = new Vector3(0f, 0f, 0);
+				break;
+			}
+	}
+
+	private void DesactivateBox()
     {
         batBoxCollider.enabled = false;
-
-        Debug.Log("Me estoy desactivando perro");
     }
 
     void OnTriggerEnter2D(Collider2D collision)
