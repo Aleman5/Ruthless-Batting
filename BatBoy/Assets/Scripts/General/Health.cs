@@ -11,7 +11,6 @@ public class Health : MonoBehaviour
         get { return amount; }
         set
         {
-            Debug.Log("Mi vida es " + amount);
             amount = value;
             if (amount <= 0)
             {

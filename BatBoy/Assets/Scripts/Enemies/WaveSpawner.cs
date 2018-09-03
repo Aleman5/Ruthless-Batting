@@ -12,16 +12,22 @@ enum SpawnStates
 public class WaveSpawner : MonoBehaviour
 {
     [System.Serializable]
+    public class Enemy
+    {
+        public Transform enemy;
+        public int count;
+    }
+
+    [System.Serializable]
     public class Wave
     {
         public string name;
-        public Transform enemy;
-        public int count;
         public float rate;
+        public Enemy[] enemies;
     }
 
     [SerializeField] Wave[] waves;
-    private int nextWave = 0;
+    int nextWave = 0;
 
     [SerializeField] Transform[] spawnPoints;
 
@@ -96,10 +102,13 @@ public class WaveSpawner : MonoBehaviour
     {
         state = SpawnStates.SPAWNING;
 
-        for (int i = 0; i < wave.count; i++)
+        for (int i = 0; i < wave.enemies.Length; i++)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f / wave.rate);
+            for (int j = 0; j < wave.enemies[i].count; j++)
+            {
+                SpawnEnemy(wave.enemies[i].enemy);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
         }
 
         state = SpawnStates.WAITING;

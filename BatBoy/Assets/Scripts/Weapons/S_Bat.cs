@@ -62,14 +62,11 @@ public class S_Bat : Weapons_Abstract
 		mousePos = mousePos - transform.position;
 		float angle = Vector3.SignedAngle(mousePos, transform.up, Vector3.forward);
 
-		Debug.Log(angle);
-
-
 		if		(angle >  45  && angle <   135)
 			dir = Direction.RIGHT;
-		else if (angle >= 135 && angle <= -135)
+		else if (angle >= 135 || angle <= -135)
 			dir = Direction.DOWN;
-		else if (angle > -45  && angle <  -135)
+		else if (angle < -45  && angle >  -135)
 			dir = Direction.LEFT;
 		else
 			dir = Direction.UP;
@@ -77,19 +74,15 @@ public class S_Bat : Weapons_Abstract
 			switch(dir)
 			{
 			case Direction.RIGHT:
-				batBoxCollider.offset.Set(1f, 0f);
-				transform.eulerAngles = new Vector3(0f, 0f, 90f);
+				transform.eulerAngles = new Vector3(0f, 0f, -90f);
 				break;
 			case Direction.DOWN:
-				batBoxCollider.offset.Set(0f, -1f);
 				transform.eulerAngles = new Vector3(0f, 0f, 180f);
 				break;
 			case Direction.LEFT:
-				batBoxCollider.offset.Set(-1f, 0f);
-				transform.eulerAngles = new Vector3(0f, 0f, 270f);
+				transform.eulerAngles = new Vector3(0f, 0f, 90f);
 				break;
 			case Direction.UP:
-				batBoxCollider.offset.Set(0f, 1f);
 				transform.eulerAngles = new Vector3(0f, 0f, 0);
 				break;
 			}
@@ -97,6 +90,8 @@ public class S_Bat : Weapons_Abstract
 
 	private void DesactivateBox()
     {
+        transform.eulerAngles = new Vector3(0f, 0f, 0f);
+
         batBoxCollider.enabled = false;
     }
 
