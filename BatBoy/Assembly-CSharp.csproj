@@ -53,11 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera\CameraPosition.cs" />
+     <Compile Include="Assets\Scripts\Camera\FollowObject.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemies\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\General\Damager.cs" />
      <Compile Include="Assets\Scripts\General\Health.cs" />
+     <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAnimations.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerRotationThroughMouse.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerWeaponsThings.cs" />
