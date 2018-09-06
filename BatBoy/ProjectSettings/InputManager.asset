@@ -39,12 +39,12 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire1
-    descriptiveName: 
+    descriptiveName: Left Click
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: mouse 0
     altNegativeButton: 
-    altPositiveButton: mouse 0
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -55,12 +55,12 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire2
-    descriptiveName: 
+    descriptiveName: Q
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: q
     altNegativeButton: 
-    altPositiveButton: mouse 1
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -71,12 +71,12 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire3
-    descriptiveName: 
+    descriptiveName: E
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left shift
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: mouse 2
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -295,10 +295,10 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Interact
-    descriptiveName: E
+    descriptiveName: C
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: e
+    positiveButton: c
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 0

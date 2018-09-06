@@ -7,16 +7,20 @@ public class BuyElement : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float distanceToInteract;
-    [SerializeField] GameObject elementToBuy;
     [SerializeField] int levelOfTheElement;
-    [SerializeField] int indexOfTheElement;
 
     [SerializeField] UnityEvent onInteract;
     [SerializeField] UnityEvent onRange;
     [SerializeField] UnityEvent onQuit;
 
+    IBuyable buyable;
+
     bool isOnRange = false;
     bool isBought = false;
+
+    void Start() {
+        buyable = GetComponent<IBuyable>();
+    }
 
     void Update()
     {
@@ -33,7 +37,7 @@ public class BuyElement : MonoBehaviour
             if (Input.GetButtonDown("Interact") && !isBought)
             {
                 isBought = true;
-                OnBought(); // Consultar al profe
+                buyable.Buy(player, levelOfTheElement);
                 onInteract.Invoke();
             }
         }
@@ -42,11 +46,6 @@ public class BuyElement : MonoBehaviour
             isOnRange = false;
             onQuit.Invoke();
         }
-    }
-
-    void OnBought() // Consultar al profe si hay una forma de invocar una funcion con delegate o event
-    {               // que me permita enviar parámetros
-        
     }
 
     public UnityEvent OnInteract

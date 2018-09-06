@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4893457922252606}
   - component: {fileID: 114546003849428298}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Seller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,9 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   distanceToInteract: 3
-  elementToBuy: {fileID: 0}
   levelOfTheElement: 1
-  indexOfTheElement: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -152,7 +150,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Buy this rare FIRE item for 50$
+  m_text: Hi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -228,11 +226,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 23319584822648744}

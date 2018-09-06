@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4350378102404354}
+  - component: {fileID: 114857309744712058}
   m_Layer: 10
   m_Name: Fire
   m_TagString: Weapon
@@ -35,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4943309254033388}
   - component: {fileID: 61102048834147952}
+  - component: {fileID: 68354647342303566}
   - component: {fileID: 50931908486865294}
   - component: {fileID: 114868424911263290}
   m_Layer: 8
@@ -218,7 +220,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640716396141690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -262,6 +264,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 1}
   m_EdgeRadius: 0
+--- !u!68 &68354647342303566
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640716396141690}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.22, y: 0}
+  - {x: -0.22, y: 0}
 --- !u!95 &95633327949536240
 Animator:
   serializedVersion: 3
@@ -300,6 +319,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4460f35c373f20a4a896e36f1b804eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114857309744712058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119842500845110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e157c0c0bc073494cb390433dec3155d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114868424911263290
