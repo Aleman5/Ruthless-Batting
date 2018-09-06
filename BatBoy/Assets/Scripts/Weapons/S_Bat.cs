@@ -15,7 +15,6 @@ public class S_Bat : Weapons_Abstract
 	BoxCollider2D batBoxCollider;
 
     float timeToAppearHitBox;
-    float timeToDisappearHitBox;
     float distanceOfBox;
 
     protected override void Awake()
@@ -28,7 +27,6 @@ public class S_Bat : Weapons_Abstract
         attackRate = 1;
         damage = 1;
         timeToAppearHitBox = 3 / Time.timeScale;
-        timeToDisappearHitBox = 0.1f;
     }
 
     public void Update()

@@ -9,11 +9,14 @@ public class BuyElement : MonoBehaviour
     [SerializeField] float distanceToInteract;
     [SerializeField] GameObject elementToBuy;
     [SerializeField] int levelOfTheElement;
+    [SerializeField] int indexOfTheElement;
 
     [SerializeField] UnityEvent onInteract;
     [SerializeField] UnityEvent onRange;
+    [SerializeField] UnityEvent onQuit;
 
     bool isOnRange = false;
+    bool isBought = false;
 
     void Update()
     {
@@ -27,16 +30,23 @@ public class BuyElement : MonoBehaviour
                 onRange.Invoke();
             }
 
-            if (Input.GetButtonDown("Interact")) // Hacerle consulta al profe sobre cuál sería la mejor opción para
-            {                                    // hacer algo con este código una vez que el personaje ya interactuó.
+            if (Input.GetButtonDown("Interact") && !isBought)
+            {
+                isBought = true;
+                OnBought(); // Consultar al profe
                 onInteract.Invoke();
             }
         }
         else if (isOnRange)
         {
             isOnRange = false;
-            onRange.Invoke();
+            onQuit.Invoke();
         }
+    }
+
+    void OnBought() // Consultar al profe si hay una forma de invocar una funcion con delegate o event
+    {               // que me permita enviar parámetros
+        
     }
 
     public UnityEvent OnInteract
@@ -46,5 +56,13 @@ public class BuyElement : MonoBehaviour
     public UnityEvent OnRange
     {
         get { return onRange; }
+    }
+    public UnityEvent OnQuit
+    {
+        get { return onQuit; }
+    }
+    public bool IsOnRange()
+    {
+        return isOnRange;
     }
 }
