@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Weapon
   - Enemy
+  - LimitCollider
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Wall
   - WallBottom
   - Floor
-  - 
+  - LimitCollider
   - 
   - 
   - 
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 687432105
+    locked: 0
+  - name: Wall Change
+    uniqueID: 3903050213
     locked: 0
   - name: Text
     uniqueID: 2080920143
