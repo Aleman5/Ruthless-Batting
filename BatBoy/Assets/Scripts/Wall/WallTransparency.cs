@@ -5,28 +5,37 @@ using UnityEngine;
 public class WallTransparency : MonoBehaviour
 {
     [SerializeField] Transform player;
+    //[SerializeField] MeshRenderer[] tilesTouched; // Temporary Serializabed
 
-    Vector3 cameraOffset;
+    Transform tileTouched;
+    float distCameraPlayer;
 
     void Start()
     {
-        cameraOffset = transform.position - player.transform.position;
+        distCameraPlayer = (transform.position - player.transform.position).magnitude;
     }
 
     void LateUpdate ()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, Vector3.forward, out hit))
+        if(Physics.Raycast(transform.position, Vector3.forward, out hit, distCameraPlayer))
         {
-            
-            MeshRenderer meshRenderer = hit.transform.GetComponent<MeshRenderer>();
-            if(meshRenderer.material.color.a != 0.3f)
+            if (hit.transform != tileTouched)
             {
-                meshRenderer.material.color = new Color(1.0f, 1.0f, 1.0f, 0.3f);
+                MeshRenderer meshRenderer = hit.transform.GetComponent<MeshRenderer>();
+
+                Color color = meshRenderer.material.color;
+                color.a = 0.3f;
+                meshRenderer.material.color = color;
+                tileTouched = hit.transform;
             }
         }
+        else if(tileTouched)
+        {
+            Color color = tileTouched.GetComponent<MeshRenderer>().material.color;
+            color.a = 1f;
+            tileTouched.GetComponent<MeshRenderer>().material.color = color;
+            tileTouched = null;
+        }
 	}
-
-    // Los objetos transparentados guardarlos en una lista o algo así y cuando el jugador deje de estar
-    // por debajo que lo vuelva a la normalidad.
 }
