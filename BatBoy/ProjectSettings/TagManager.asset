@@ -21,7 +21,7 @@ TagManager:
   - Seller
   - Wall
   - WallBottom
-  - 
+  - Floor
   - 
   - 
   - 
@@ -42,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3293122153
+    locked: 0
+  - name: Wall
+    uniqueID: 1275164195
+    locked: 0
+  - name: Character
+    uniqueID: 687432105
+    locked: 0
+  - name: Text
+    uniqueID: 2080920143
     locked: 0
