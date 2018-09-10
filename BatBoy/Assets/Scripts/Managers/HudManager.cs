@@ -6,24 +6,17 @@ using TMPro;
 
 public class HudManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI buyZone1Text;
-    [SerializeField] BuyElement buyFire1Element;
+    [SerializeField] TextMeshProUGUI moneyChange;
+    //[SerializeField] /* Script donde buscar el dinero actual*/ buyFire1Element;
 
     void Start()
     {
-        buyZone1Text.enabled = false;
-        buyFire1Element.OnRange.AddListener(Zone1OnRange);
-        buyFire1Element.OnInteract.AddListener(Zone1OnInteract);
+        //buyFire1Element.OnInteract.AddListener(Zone1OnInteract);
         
     }
 
-    void Zone1OnRange()
+    void OnMoneyPickUp()
     {
-        buyZone1Text.enabled = !buyZone1Text.enabled;
-    }
-
-    void Zone1OnInteract()
-    {
-        buyZone1Text.text = "Have a nice day!";
+        moneyChange.text = "$" /*+ unNumero.c_str()*/;
     }
 }
