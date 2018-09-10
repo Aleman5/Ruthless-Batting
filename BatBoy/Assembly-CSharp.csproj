@@ -62,8 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\FollowObject.cs" />
-    <Compile Include="Assets\Scripts\Elements\BuyableFire.cs" />
-    <Compile Include="Assets\Scripts\Elements\BuyableIce.cs" />
+    <Compile Include="Assets\Scripts\Elements\Buyables\BuyableFire.cs" />
+    <Compile Include="Assets\Scripts\Elements\Buyables\BuyableIce.cs" />
     <Compile Include="Assets\Scripts\Elements\BuyElement.cs" />
     <Compile Include="Assets\Scripts\Elements\Fire.cs" />
     <Compile Include="Assets\Scripts\Elements\Ice.cs" />
@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Elements\Weapons_Abstract.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\WaveSpawner.cs" />
+    <Compile Include="Assets\Scripts\General\ChangeSortingLayer.cs" />
     <Compile Include="Assets\Scripts\General\Damager.cs" />
     <Compile Include="Assets\Scripts\General\Health.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IBuyable.cs" />
@@ -82,7 +83,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotationThroughMouse.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponsThings.cs" />
-    <Compile Include="Assets\Scripts\Wall\WallTransparency.cs" />
+    <Compile Include="Assets\Scripts\Wall\WallTransparencyFromCamera.cs" />
+    <Compile Include="Assets\Scripts\Wall\WallTransparencyFromObject.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
