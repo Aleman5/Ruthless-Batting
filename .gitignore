@@ -8,3 +8,5 @@ BatBoy/obj/
 BatBoy/BatBoy\.sln
 
 BatBoy/Assembly-CSharp\.csproj
+
+*.csproj
