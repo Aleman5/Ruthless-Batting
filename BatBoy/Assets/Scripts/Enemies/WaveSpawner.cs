@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 enum SpawnStates
 {
@@ -35,10 +36,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] float timeBetweenWaves;
     [SerializeField] float waveCountdown;
 
-    [SerializeField] Text waveText;
+    [SerializeField] UnityEvent onWaveChange;
 
     float searchCountdown = 1f;
-    int cont = 1;
 
     SpawnStates state;
 
@@ -108,10 +108,8 @@ public class WaveSpawner : MonoBehaviour
 
         if (state == SpawnStates.SPAWNING)
         {
-            waveText.text = wave.name;
+            onWaveChange.Invoke();
         }
-        else
-            waveText.text = " ";
 
         for (int i = 0; i < wave.enemies.Length; i++)
         {
@@ -124,8 +122,6 @@ public class WaveSpawner : MonoBehaviour
 
         state = SpawnStates.WAITING;
 
-        cont++;
-
         yield break;
     }
 
@@ -134,5 +130,15 @@ public class WaveSpawner : MonoBehaviour
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    public string GetActualWaveName()
+    {
+        return waves[nextWave].name;
+    }
+
+    public UnityEvent OnWaveChange
+    {
+        get { return onWaveChange; }
     }
 }

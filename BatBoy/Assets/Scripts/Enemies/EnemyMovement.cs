@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 if (dist > rangeToStop)
                 {
-                    isMoving = true;
+                    moveThroughPlayer();
                 }
                 else
                 {
@@ -53,21 +53,25 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    void moveThroughPlayer()
+    {
+        isMoving = true;
+
+        float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
+
+        float angle = Vector2.Angle(target.transform.up, diff) * sign;
+
+        Debug.Log(angle);
+
+        vecForce.x = Mathf.Sin(angle)/* * diff.magnitude*/ * speed;
+        vecForce.y = Mathf.Cos(angle)/* * diff.magnitude*/ * speed;
+    }
+
     void FixedUpdate()
     {
         if(isMoving)
         {
-            float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
-
-            float angle = Vector2.Angle(target.transform.up, diff) * sign;
-
-            Debug.Log(angle);
-
-            vecForce.x = Mathf.Sin(angle) * diff.magnitude * speed;
-            vecForce.y = Mathf.Cos(angle) * diff.magnitude * speed;
-
             rb.AddForce(vecForce);
-
             isMoving = false;
         }
     }

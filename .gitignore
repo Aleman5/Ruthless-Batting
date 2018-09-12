@@ -10,3 +10,5 @@ BatBoy/BatBoy\.sln
 BatBoy/Assembly-CSharp\.csproj
 
 *.csproj
+
+*.sln
