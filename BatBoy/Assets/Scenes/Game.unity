@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 80721659}
   m_Layer: 12
   m_Name: Limit12
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 477699851}
   m_Layer: 12
   m_Name: Limit1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 634064025}
   m_Layer: 12
   m_Name: Limit8
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1934,7 +1934,7 @@ MonoBehaviour:
     rate: 1
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 358b87906fec9084eaef2058903f6580, type: 2}
-      count: 3
+      count: 1
   - name: Wave 2!
     rate: 1
     enemies:
@@ -1969,7 +1969,7 @@ GameObject:
   - component: {fileID: 892848980}
   m_Layer: 12
   m_Name: Limit4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2447,7 +2447,7 @@ GameObject:
   - component: {fileID: 1085857652}
   m_Layer: 12
   m_Name: Limit6
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2555,7 +2555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1130693666
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2692,7 +2692,7 @@ GameObject:
   - component: {fileID: 1223016810}
   m_Layer: 12
   m_Name: Limit5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3061,6 +3061,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 61565155232857336, guid: 0108433d40580da4aa34fd37c89b6920,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0108433d40580da4aa34fd37c89b6920, type: 2}
   m_IsPrefabAsset: 0
@@ -3232,7 +3237,7 @@ GameObject:
   - component: {fileID: 1544727303}
   m_Layer: 12
   m_Name: Limit7
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3385,7 +3390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571610296}
   - component: {fileID: 1571610295}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3602,7 +3607,7 @@ GameObject:
   - component: {fileID: 1644144945}
   m_Layer: 12
   m_Name: Limit10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3963,7 +3968,7 @@ GameObject:
   - component: {fileID: 1984938837}
   m_Layer: 12
   m_Name: Limit9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4069,7 +4074,7 @@ GameObject:
   - component: {fileID: 2045140030}
   m_Layer: 12
   m_Name: Limit13
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4174,7 +4179,7 @@ GameObject:
   - component: {fileID: 2054232027}
   m_Layer: 12
   m_Name: Limit2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4287,7 +4292,7 @@ GameObject:
   - component: {fileID: 2083789947}
   m_Layer: 12
   m_Name: Limit3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4393,7 +4398,7 @@ GameObject:
   - component: {fileID: 2093605821}
   m_Layer: 12
   m_Name: Limit11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

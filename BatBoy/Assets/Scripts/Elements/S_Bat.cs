@@ -26,7 +26,7 @@ public class S_Bat : Weapons_Abstract
         weaponLvl = 1;
         attackRate = 1;
         damage = 1;
-        timeToAppearHitBox = 3 / Time.timeScale;
+        timeToAppearHitBox = 5 / Time.timeScale;
     }
 
     public void Update()
