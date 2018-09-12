@@ -1,29 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Health))]
 public class EnemyMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
-    GameObject target;
-
     [SerializeField] float speed;
-    [SerializeField] float distanceMin;
-    [SerializeField] float distanceMax;
+    [SerializeField] float rangeToHunt;
 
+    NavMeshAgent navMesh;
+    GameObject target;
     Health health;
-
-    void Awake()
-    {
-        target = GameObject.Find("Player");
-    }
-
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.Find("Player");
+        navMesh = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -34,14 +28,12 @@ public class EnemyMovement : MonoBehaviour
         float dist = diff.magnitude;
 
 
-        if (dist < distanceMax)
+        if (dist < rangeToHunt)
         {
-            if (dist > distanceMin)
+            if (dist > navMesh.stoppingDistance)
             {
-                Vector2 vecForce;
-                vecForce.x = Input.GetAxis("Horizontal") * speed;
-                vecForce.y = Input.GetAxis("Vertical") * speed;
-                rb.AddForce(vecForce);
+                navMesh.destination = target.transform.position;
+                
             }
             else
             {

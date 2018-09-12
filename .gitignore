@@ -2,3 +2,9 @@
 BatBoy/Library/
 
 BatBoy/\.vs/
+
+BatBoy/obj/
+
+BatBoy/BatBoy\.sln
+
+BatBoy/Assembly-CSharp\.csproj

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float movSpeed;
 
     Rigidbody2D rb;
+    Vector2 movForce;
 
     void Start()
     {
@@ -18,11 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Moving with rigidbody
-        Vector2 vecForce;
-        vecForce.x = Input.GetAxis("Horizontal") * movSpeed;
-        vecForce.y = Input.GetAxis("Vertical") * movSpeed;
-        rb.AddForce(vecForce);
+        movForce = Vector2.zero;
+        movForce.x = Input.GetAxis("Horizontal") * movSpeed;
+        movForce.y = Input.GetAxis("Vertical") * movSpeed;
+        
 
         // Rotation by the mouse position
         //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -32,5 +32,10 @@ public class PlayerMovement : MonoBehaviour
         /*Vector3 movHor = Vector3.right * Input.GetAxis("Horizontal") * movSpeed;
         Vector3 movVer = Vector3.up * Input.GetAxis("Vertical") * movSpeed;
         transform.position += (movHor + movVer) * Time.deltaTime;*/
+    }
+
+    void FixedUpdate()
+    {
+        rb.AddForce(movForce);
     }
 }
