@@ -188,10 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9558c04c38f3d4da7805e8ebaf759e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 24
+  speed: 25
   rangeToHunt: 10
   rangeToStop: 1.2
-  wallLayerName: 12
+  wallLayerNumber: 12
 --- !u!212 &212134795369062564
 SpriteRenderer:
   m_ObjectHideFlags: 1

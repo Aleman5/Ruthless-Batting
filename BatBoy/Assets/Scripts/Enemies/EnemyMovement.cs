@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float rangeToHunt;
     [SerializeField] float rangeToStop;
-    [SerializeField] int wallLayerName;
+    [SerializeField] int wallLayerNumber;
 
     bool isMoving;
     Vector2 vecForce;
@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
         if (dist < rangeToHunt)
         {
             RaycastHit hit;
-            if (!Physics.Raycast(transform.position, Vector3.forward, out hit, dist, wallLayerName))
+            if (!Physics.Raycast(transform.position, dir, out hit, dist, wallLayerNumber))
             {
                 if (dist > rangeToStop)
                 {
@@ -63,8 +63,8 @@ public class EnemyMovement : MonoBehaviour
 
             Debug.Log(angle);
 
-            vecForce.x = Mathf.Sin(angle)/* * diff.magnitude*/ * speed;
-            vecForce.y = Mathf.Cos(angle)/* * diff.magnitude*/ * speed;
+            vecForce.x = Mathf.Sin(angle) * diff.magnitude * speed;
+            vecForce.y = Mathf.Cos(angle) * diff.magnitude * speed;
 
             rb.AddForce(vecForce);
 

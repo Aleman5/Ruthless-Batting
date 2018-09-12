@@ -108,9 +108,10 @@ public class WaveSpawner : MonoBehaviour
 
         if (state == SpawnStates.SPAWNING)
         {
-            waveText.text = "OLEADA: " + cont;
+            waveText.text = wave.name;
         }
-        //else waveText.text = " ";
+        else
+            waveText.text = " ";
 
         for (int i = 0; i < wave.enemies.Length; i++)
         {
