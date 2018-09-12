@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 enum SpawnStates
 {
@@ -34,7 +35,10 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] float timeBetweenWaves;
     [SerializeField] float waveCountdown;
 
+    [SerializeField] Text waveText;
+
     float searchCountdown = 1f;
+    int cont = 1;
 
     SpawnStates state;
 
@@ -102,6 +106,12 @@ public class WaveSpawner : MonoBehaviour
     {
         state = SpawnStates.SPAWNING;
 
+        if (state == SpawnStates.SPAWNING)
+        {
+            waveText.text = "OLEADA: " + cont;
+        }
+        //else waveText.text = " ";
+
         for (int i = 0; i < wave.enemies.Length; i++)
         {
             for (int j = 0; j < wave.enemies[i].count; j++)
@@ -112,6 +122,8 @@ public class WaveSpawner : MonoBehaviour
         }
 
         state = SpawnStates.WAITING;
+
+        cont++;
 
         yield break;
     }
