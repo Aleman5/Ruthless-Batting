@@ -469,7 +469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &429253922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 0$
+  m_text: $0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -578,7 +578,7 @@ MonoBehaviour:
     characterCount: 2
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -801,6 +801,11 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: priceOfTheElement
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
@@ -1484,6 +1489,11 @@ Prefab:
     - target: {fileID: 1373720540548192, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: priceOfTheElement
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
@@ -2447,6 +2457,11 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: priceOfTheElement
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
   m_IsPrefabAsset: 0
@@ -2585,6 +2600,7 @@ MonoBehaviour:
   moneyChange: {fileID: 429253923}
   waveText: {fileID: 1169081250}
   spawner: {fileID: 890979878}
+  moneyHolder: {fileID: 2126759612}
 --- !u!114 &1898558396 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
@@ -3068,3 +3084,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2126759611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1640716396141690, guid: 0108433d40580da4aa34fd37c89b6920,
+    type: 2}
+  m_PrefabInternal: {fileID: 1428653449}
+--- !u!114 &2126759612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126759611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b6cff1496646b41b604fe0c78f4c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMoneyChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

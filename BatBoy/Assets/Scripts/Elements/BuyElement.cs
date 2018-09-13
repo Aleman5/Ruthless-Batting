@@ -8,18 +8,22 @@ public class BuyElement : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float distanceToInteract;
     [SerializeField] int levelOfTheElement;
+    [Range(0,500)]
+    [SerializeField] int priceOfTheElement;
 
     [SerializeField] UnityEvent onInteract;
     [SerializeField] UnityEvent onRange;
     [SerializeField] UnityEvent onQuit;
 
     IBuyable buyable;
+    MoneyHolder moneyHolder;
 
     bool isOnRange = false;
     bool isBought = false;
 
     void Start() {
         buyable = GetComponent<IBuyable>();
+        moneyHolder = GameObject.Find("Player").GetComponent<MoneyHolder>();
     }
 
     void Update()
@@ -34,10 +38,11 @@ public class BuyElement : MonoBehaviour
                 onRange.Invoke();
             }
 
-            if (Input.GetButtonDown("Interact") && !isBought)
+            if (Input.GetButtonDown("Interact") && !isBought && moneyHolder.ActualMoney >= priceOfTheElement)
             {
                 isBought = true;
                 buyable.Buy(player, levelOfTheElement);
+                moneyHolder.ActualMoney = -priceOfTheElement;
                 onInteract.Invoke();
             }
         }

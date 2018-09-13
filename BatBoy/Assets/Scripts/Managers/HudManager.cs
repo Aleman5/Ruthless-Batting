@@ -10,17 +10,17 @@ public class HudManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI waveText;
 
     [SerializeField] WaveSpawner spawner;
-    //[SerializeField] /* Script donde buscar el dinero actual*/ buyFire1Element;
+    [SerializeField] MoneyHolder moneyHolder;
 
     void Start()
     {
-        //buyFire1Element.OnInteract.AddListener(Zone1OnInteract);
         spawner.OnWaveChange.AddListener(ShowWaveText);
+        moneyHolder.OnMoneyChange.AddListener(OnMoneyChanged);
     }
 
-    void OnMoneyPickUp()
+    void OnMoneyChanged()
     {
-        moneyChange.text = "$" /*+ unNumero.c_str()*/;
+        moneyChange.text = "$" + moneyHolder.ActualMoney;
     }
 
     void ShowWaveText()
