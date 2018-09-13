@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     bool isMoving;
     Vector2 vecForce;
-    Vector3 diff;
+    Vector3 dir;
 
     Rigidbody2D rb;
     GameObject target;
@@ -30,16 +30,16 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        diff = target.transform.position - transform.position;
+        Vector3 diff = target.transform.position - transform.position;
         diff.z = 0;
-        Vector3 dir = diff.normalized;
+        dir = diff.normalized;
         float dist = diff.magnitude;
 
 
         if (dist < rangeToHunt)
         {
-            RaycastHit hit;
-            if (!Physics.Raycast(transform.position, dir, out hit, dist, wallLayerNumber))
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, dist, LayerMask.NameToLayer("Wall"));
+            if (hit.collider == null)
             {
                 if (dist > rangeToStop)
                 {
@@ -50,6 +50,8 @@ public class EnemyMovement : MonoBehaviour
                     // Acá atacaría
                 }
             }
+            else
+                Debug.Log(hit.collider.name);
         }
     }
 
@@ -57,14 +59,16 @@ public class EnemyMovement : MonoBehaviour
     {
         isMoving = true;
 
-        float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
+        //float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
 
-        float angle = Vector2.Angle(target.transform.up, diff) * sign;
+        //float angle = Vector2.Angle(target.transform.up, diff) * sign;
 
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
-        vecForce.x = Mathf.Sin(angle)/* * diff.magnitude*/ * speed;
-        vecForce.y = Mathf.Cos(angle)/* * diff.magnitude*/ * speed;
+        //vecForce.x = Mathf.Sin(angle)/* * diff.magnitude*/ * speed;
+        //vecForce.y = Mathf.Cos(angle)/* * diff.magnitude*/ * speed;
+
+        vecForce = dir * speed;
     }
 
     void FixedUpdate()

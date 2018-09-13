@@ -6,13 +6,15 @@ using UnityEngine;
 public class GiveMoney : MonoBehaviour
 {
 
-    int moneyToGive = 5; // This variable is temporary
+    int moneyToGive; // This variable is temporary
 
     Health health;
     MoneyHolder moneyHolder;
 
     void Start()
     {
+        moneyToGive = Random.Range(4, 8);
+
         health = GetComponent<Health>();
         health.OnDeath.AddListener(GiveMoneyToPlayer);
 
