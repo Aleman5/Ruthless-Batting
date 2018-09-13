@@ -23,7 +23,7 @@ public class BuyElement : MonoBehaviour
 
     void Start() {
         buyable = GetComponent<IBuyable>();
-        moneyHolder = GameObject.Find("Player").GetComponent<MoneyHolder>();
+        moneyHolder = GameObject.Find("Player3D").GetComponent<MoneyHolder>();
     }
 
     void Update()
