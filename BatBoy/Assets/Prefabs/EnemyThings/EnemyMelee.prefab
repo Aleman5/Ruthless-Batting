@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4567884773569260}
-  - component: {fileID: 68360603195611036}
+  - component: {fileID: 65481556185712286}
   m_Layer: 15
   m_Name: Enemy_Limit
   m_TagString: LimitCollider
@@ -35,13 +35,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4687128411996388}
-  - component: {fileID: 61941887617669062}
-  - component: {fileID: 50491361278987862}
-  - component: {fileID: 114957432099225470}
+  - component: {fileID: 65167739392840904}
+  - component: {fileID: 54793557188355554}
+  - component: {fileID: 114178080981143062}
   - component: {fileID: 114331512968824984}
   - component: {fileID: 114445677894267044}
   m_Layer: 9
-  m_Name: Enemy1
+  m_Name: EnemyMelee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,13 +69,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816313016841132}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4687128411996388}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4567884773569260
 Transform:
   m_ObjectHideFlags: 1
@@ -104,68 +104,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50491361278987862
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!54 &54793557188355554
+Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786262072408662}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 20
+  m_Drag: 20
   m_AngularDrag: 2
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 116
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61941887617669062
-BoxCollider2D:
+--- !u!65 &65167739392840904
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786262072408662}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!68 &68360603195611036
-EdgeCollider2D:
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65481556185712286
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169804400223088}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.5, y: 0}
-  - {x: -0.5, y: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.35}
+--- !u!114 &114178080981143062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786262072408662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3bacacf5615dd4783ba764fed057b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70
+  rangeToHunt: 10
+  rangeToStop: 1.2
+  possibleObstacules:
+    serializedVersion: 2
+    m_Bits: 32768
 --- !u!114 &114331512968824984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,21 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d399c27700f6ab4c8ef4b1fb6b0c201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114957432099225470
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786262072408662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9558c04c38f3d4da7805e8ebaf759e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 65
-  rangeToHunt: 10
-  rangeToStop: 1.2
-  wallLayerNumber: 12
 --- !u!212 &212134795369062564
 SpriteRenderer:
   m_ObjectHideFlags: 1

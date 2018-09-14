@@ -9,67 +9,65 @@ public class EnemyMovement3D : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float rangeToHunt;
     [SerializeField] float rangeToStop;
-    [SerializeField] int wallLayerNumber;
+    [SerializeField] LayerMask possibleObstacules;
 
     bool isMoving;
-    Vector2 vecForce;
-    Vector3 dir;
+    Vector3 vecForce;
 
-    Rigidbody2D rb;
+    Rigidbody rb;
     GameObject target;
     Health health;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        target = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody>();
+        target = GameObject.Find("Player3D");
         isMoving = false;
-        vecForce.x = 0;
-        vecForce.y = speed;
+        vecForce = Vector2.zero;
     }
 
     void Update()
     {
         Vector3 diff = target.transform.position - transform.position;
-        diff.z = 0;
-        dir = diff.normalized;
+        Vector3 dir = diff.normalized;
         float dist = diff.magnitude;
 
 
         if (dist < rangeToHunt)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, dist, LayerMask.NameToLayer("Wall"));
-            if (hit.collider == null)
+            RaycastHit hit;
+            if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
             {
                 if (dist > rangeToStop)
                 {
-                    moveThroughPlayer();
+                    isMoving = true;
+                    vecForce = dir * speed;
+
+                    //moveThroughPlayer();
                 }
                 else
                 {
                     // Acá atacaría
                 }
             }
-            else
-                Debug.Log(hit.collider.name);
         }
     }
 
-    void moveThroughPlayer()
+    /*void moveThroughPlayer()
     {
         isMoving = true;
 
-        //float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
+        float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
 
-        //float angle = Vector2.Angle(target.transform.up, diff) * sign;
+        float angle = Vector2.Angle(target.transform.up, diff) * sign;
 
-        //Debug.Log(angle);
+        Debug.Log(angle);
 
-        //vecForce.x = Mathf.Sin(angle)/* * diff.magnitude*/ * speed;
-        //vecForce.y = Mathf.Cos(angle)/* * diff.magnitude*/ * speed;
+        vecForce.x = Mathf.Sin(angle) * speed;
+        vecForce.y = Mathf.Cos(angle) * speed;
 
         vecForce = dir * speed;
-    }
+    }*/
 
     void FixedUpdate()
     {

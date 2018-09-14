@@ -23,13 +23,13 @@ public class WallTransparencyFromObject : MonoBehaviour
         sortingOrder = spriteRenderer.sortingOrder;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter(Collider col)
     {
         if(col.CompareTag("LimitCollider"))
             MakeTransparent();
     }
 
-    void OnTriggerExit2D(Collider2D col)
+    void OnTriggerExit(Collider col)
     {
         if (col.CompareTag("LimitCollider"))
             TurnOffTransparent();
