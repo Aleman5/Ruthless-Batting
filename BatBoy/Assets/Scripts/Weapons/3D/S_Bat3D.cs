@@ -13,6 +13,7 @@ public class S_Bat3D : Weapons_Abstract
 		LEFT
 	}
 
+    PlayerMovement3D playerMovement;
 	BoxCollider batBoxCollider;
     [SerializeField] UnityEvent onAttack;
 
@@ -21,7 +22,9 @@ public class S_Bat3D : Weapons_Abstract
 
     protected override void Awake()
     {
-		batBoxCollider = GetComponent<BoxCollider>();
+        playerMovement = GetComponentInParent<PlayerMovement3D>();
+
+        batBoxCollider = GetComponent<BoxCollider>();
 		batBoxCollider.enabled = false;
 
 		cooldown = 1.5f;
@@ -45,54 +48,38 @@ public class S_Bat3D : Weapons_Abstract
         {
             cooldown = Time.time + attackRate;
 
+            playerMovement.enabled = false;
+
             batBoxCollider.enabled = true;
 
             onAttack.Invoke();
 
-			SetBoxPreparations();
+			SetBoxPreparations(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
 			Invoke("DesactivateBox", 0.48f); // In the future this will be the duration of the Bat Attack Animation
         }
     }
 
-	void SetBoxPreparations()
+	void SetBoxPreparations(Vector3 distance)
 	{
-		Direction dir;
-
-		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		mousePos.y = 0;
-		mousePos = mousePos - transform.position;
-		float angle = Vector3.SignedAngle(mousePos, transform.forward, Vector3.up);
+        distance.y = 0;
+		float angle = Vector3.SignedAngle(distance, transform.forward, Vector3.up);
 
 		if		(angle >  45  && angle <   135)
-			dir = Direction.RIGHT;
-		else if (angle >= 135 || angle <= -135)
-			dir = Direction.DOWN;
-		else if (angle < -45  && angle >  -135)
-			dir = Direction.LEFT;
-		else
-			dir = Direction.UP;
-
-			switch(dir)
-			{
-			case Direction.RIGHT:
-				transform.eulerAngles = new Vector3(0f, -90f, 0f);
-				break;
-			case Direction.DOWN:
-				transform.eulerAngles = new Vector3(0f, 180f, 0f);
-				break;
-			case Direction.LEFT:
-				transform.eulerAngles = new Vector3(0f, 90f, 0f);
-				break;
-			case Direction.UP:
-				transform.eulerAngles = new Vector3(0f, 0f, 0);
-				break;
-			}
+            transform.eulerAngles = new Vector3(0f, -90f, 0f);
+        else if (angle >= 135 || angle <= -135)
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        else if (angle < -45  && angle >  -135)
+            transform.eulerAngles = new Vector3(0f, 90f, 0f);
+        else
+            transform.eulerAngles = new Vector3(0f, 0f, 0);
 	}
 
 	private void DesactivateBox()
     {
-        transform.eulerAngles = new Vector3(0f, 0f, 0);
+        transform.eulerAngles = new Vector3(0f, 0f, 0f);
+
+        playerMovement.enabled = true;
 
         batBoxCollider.enabled = false;
     }

@@ -23,7 +23,7 @@ public class EnemyMovement3D : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         target = GameObject.Find("Player3D");
         isMoving = false;
-        vecForce = Vector2.zero;
+        vecForce = Vector3.zero;
     }
 
     void Update()
@@ -31,7 +31,6 @@ public class EnemyMovement3D : MonoBehaviour
         Vector3 diff = target.transform.position - transform.position;
         Vector3 dir = diff.normalized;
         float dist = diff.magnitude;
-
 
         if (dist < rangeToHunt)
         {
@@ -42,12 +41,10 @@ public class EnemyMovement3D : MonoBehaviour
                 {
                     isMoving = true;
                     vecForce = dir * speed;
-
-                    //moveThroughPlayer();
                 }
                 else
                 {
-                    // Acá atacaría
+                    IsAttacking = true;
                 }
             }
         }
@@ -82,4 +79,11 @@ public class EnemyMovement3D : MonoBehaviour
     {
         health.Amount -= dmg;
     }
+
+    public Vector3 GetDistance()
+    {
+        return target.transform.position - transform.position;
+    }
+
+    public bool IsAttacking { get; set; }
 }
