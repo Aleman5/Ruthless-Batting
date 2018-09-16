@@ -8,6 +8,7 @@ public class PlayerMovement3D : MonoBehaviour
     //Vector3 mousePos;
 
     [SerializeField] float movSpeed;
+    float originalMovSpeed;
 
     Rigidbody rb;
     Vector3 movForce;
@@ -15,6 +16,8 @@ public class PlayerMovement3D : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        originalMovSpeed = movSpeed;
     }
 
     void Update()
@@ -38,5 +41,10 @@ public class PlayerMovement3D : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(movForce);
+    }
+
+    public void SetStats(int level)
+    {
+        movSpeed = originalMovSpeed + originalMovSpeed * (0.1f * level); // Level 1 -> +10%, Level 2 -> +20%, Level 3 -> +30%
     }
 }

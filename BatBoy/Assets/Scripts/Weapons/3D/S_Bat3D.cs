@@ -17,7 +17,7 @@ public class S_Bat3D : Weapons_Abstract
 	BoxCollider batBoxCollider;
     [SerializeField] UnityEvent onAttack;
 
-    float timeToAppearHitBox;
+    float timeToDisappearHitBox;
     float distanceOfBox;
 
     protected override void Awake()
@@ -31,7 +31,7 @@ public class S_Bat3D : Weapons_Abstract
         weaponLvl = 1;
         attackRate = 1;
         damage = 1;
-        timeToAppearHitBox = 5 / Time.timeScale;
+        timeToDisappearHitBox = GetComponentInChildren<Animation>()["Attacking"].length;
     }
 
     public void Update()
@@ -56,7 +56,7 @@ public class S_Bat3D : Weapons_Abstract
 
 			SetBoxPreparations(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
-			Invoke("DesactivateBox", 0.48f); // In the future this will be the duration of the Bat Attack Animation
+			Invoke("DesactivateBox", timeToDisappearHitBox); // In the future this will be the duration of the Bat Attack Animation
         }
     }
 
@@ -91,6 +91,12 @@ public class S_Bat3D : Weapons_Abstract
             Health health = collision.GetComponent<Health>();
             health.Amount -= damage;
         }
+    }
+
+    public void SetStats(int level)
+    {
+        cooldown -= cooldown * 0.1f * level;
+        timeToDisappearHitBox -= timeToDisappearHitBox * 0.1f * level;
     }
 
     public UnityEvent OnAttack
