@@ -6,11 +6,11 @@ public class BuyableIce : MonoBehaviour, IBuyable
 {
     [SerializeField] GameObject ice;
 
-    Ice iceScript;
+    Ice3D iceScript;
 
     void Start()
     {
-        iceScript = ice.GetComponent<Ice>();
+        iceScript = ice.GetComponent<Ice3D>();
     }
 
     public void Buy(Transform player, int level)

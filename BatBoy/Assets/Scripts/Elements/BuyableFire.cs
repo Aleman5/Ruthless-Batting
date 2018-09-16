@@ -7,11 +7,11 @@ public class BuyableFire : MonoBehaviour, IBuyable
 
     [SerializeField] GameObject fire;
 
-    Fire fireScript;
+    Fire3D fireScript;
 
     void Start ()
     {
-        fireScript = fire.GetComponent<Fire>();
+        fireScript = fire.GetComponent<Fire3D>();
 	}
 
     public void Buy(Transform player, int level)
