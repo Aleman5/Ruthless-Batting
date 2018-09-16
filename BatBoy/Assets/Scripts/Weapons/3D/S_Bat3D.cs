@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class S_Bat3D : Weapons_Abstract
 {
@@ -13,6 +14,7 @@ public class S_Bat3D : Weapons_Abstract
 	}
 
 	BoxCollider batBoxCollider;
+    [SerializeField] UnityEvent onAttack;
 
     float timeToAppearHitBox;
     float distanceOfBox;
@@ -22,7 +24,7 @@ public class S_Bat3D : Weapons_Abstract
 		batBoxCollider = GetComponent<BoxCollider>();
 		batBoxCollider.enabled = false;
 
-		cooldown = 0;
+		cooldown = 1.5f;
         weaponLvl = 1;
         attackRate = 1;
         damage = 1;
@@ -45,9 +47,11 @@ public class S_Bat3D : Weapons_Abstract
 
             batBoxCollider.enabled = true;
 
+            onAttack.Invoke();
+
 			SetBoxPreparations();
 
-			Invoke("DesactivateBox", 0.5f); // In the future this will be the duration of the Bat Attack Animation
+			Invoke("DesactivateBox", 0.48f); // In the future this will be the duration of the Bat Attack Animation
         }
     }
 
@@ -88,7 +92,7 @@ public class S_Bat3D : Weapons_Abstract
 
 	private void DesactivateBox()
     {
-        transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        transform.eulerAngles = new Vector3(0f, 0f, 0);
 
         batBoxCollider.enabled = false;
     }
@@ -100,5 +104,10 @@ public class S_Bat3D : Weapons_Abstract
             Health health = collision.GetComponent<Health>();
             health.Amount -= damage;
         }
+    }
+
+    public UnityEvent OnAttack
+    {
+        get { return onAttack; }
     }
 }

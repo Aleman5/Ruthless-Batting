@@ -354,6 +354,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 811572694}
   m_Script: {fileID: 11500000, guid: b4b6cff1496646b41b604fe0c78f4c3e, type: 3}
+--- !u!114 &56053423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 56053421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e71a570ed9cb1448afc69249c967bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &56053426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040,
