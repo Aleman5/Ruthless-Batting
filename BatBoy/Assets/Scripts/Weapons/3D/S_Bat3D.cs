@@ -31,7 +31,8 @@ public class S_Bat3D : Weapons_Abstract
         weaponLvl = 1;
         attackRate = 1;
         damage = 1;
-        timeToDisappearHitBox = GetComponentInChildren<Animation>()["Attacking"].length;
+
+        timeToDisappearHitBox = 0.5f;
     }
 
     public void Update()
@@ -54,26 +55,13 @@ public class S_Bat3D : Weapons_Abstract
 
             onAttack.Invoke();
 
-			SetBoxPreparations(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            //SetBoxPreparations(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
-			Invoke("DesactivateBox", timeToDisappearHitBox); // In the future this will be the duration of the Bat Attack Animation
+            Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+
+            Invoke("DesactivateBox", timeToDisappearHitBox); // In the future this will be the duration of the Bat Attack Animation
         }
     }
-
-	void SetBoxPreparations(Vector3 distance)
-	{
-        distance.y = 0;
-		float angle = Vector3.SignedAngle(distance, transform.forward, Vector3.up);
-
-		if		(angle >  45  && angle <   135)
-            transform.eulerAngles = new Vector3(0f, -90f, 0f);
-        else if (angle >= 135 || angle <= -135)
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        else if (angle < -45  && angle >  -135)
-            transform.eulerAngles = new Vector3(0f, 90f, 0f);
-        else
-            transform.eulerAngles = new Vector3(0f, 0f, 0);
-	}
 
 	private void DesactivateBox()
     {

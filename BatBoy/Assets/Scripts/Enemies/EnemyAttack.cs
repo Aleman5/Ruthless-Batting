@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
 
         ChangeBoxState();
 
-        SetDirection(distance);
+        Utilities.SetBoxPreparations(transform, distance);
 
         yield return new WaitForSeconds(0.5f);
 
@@ -49,21 +49,6 @@ public class EnemyAttack : MonoBehaviour
         isRunning = false;
 
         yield break;
-    }
-
-    void SetDirection(Vector3 distance)
-    {
-        distance.y = 0;
-        float angle = Vector3.SignedAngle(distance, transform.forward, Vector3.up);
-
-        if (angle > 45 && angle < 135)
-            transform.eulerAngles = new Vector3(0f, -90f, 0f);
-        else if (angle >= 135 || angle <= -135)
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        else if (angle < -45 && angle > -135)
-            transform.eulerAngles = new Vector3(0f, 90f, 0f);
-        else
-            transform.eulerAngles = new Vector3(0f, 0f, 0);
     }
 
     private void ChangeBoxState()
