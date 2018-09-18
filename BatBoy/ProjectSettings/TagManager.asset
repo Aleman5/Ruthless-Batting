@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - LimitCollider
   - Wall
+  - WaveSpawner
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - LimitCollider
   - Camera
   - EnemyWeapon
-  - WallLimit
+  - 
   - 
   - 
   - 

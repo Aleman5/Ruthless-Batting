@@ -37,6 +37,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] float waveCountdown;
 
     [SerializeField] UnityEvent onWaveChange;
+    [SerializeField] UnityEvent onLevelComplete;
 
     float searchCountdown = 1f;
 
@@ -83,7 +84,9 @@ public class WaveSpawner : MonoBehaviour
         nextWave++;
         if(nextWave > waves.Length - 1)
         {
-            nextWave = 0;
+            OnLevelComplete.Invoke();
+
+            gameObject.SetActive(false);
         }
     }
 
@@ -140,5 +143,9 @@ public class WaveSpawner : MonoBehaviour
     public UnityEvent OnWaveChange
     {
         get { return onWaveChange; }
+    }
+    public UnityEvent OnLevelComplete
+    {
+        get { return onLevelComplete; }
     }
 }

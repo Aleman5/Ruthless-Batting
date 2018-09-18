@@ -13,6 +13,7 @@ public class EnemyMovement3D : MonoBehaviour
 
     bool isMoving;
     Vector3 vecForce;
+    Vector3 vecFromOrigToBottom;
 
     Rigidbody rb;
     GameObject target;
@@ -24,6 +25,10 @@ public class EnemyMovement3D : MonoBehaviour
         target = GameObject.Find("Player3D");
         isMoving = false;
         vecForce = Vector3.zero;
+
+        vecFromOrigToBottom.x = 0f;
+        vecFromOrigToBottom.y = -0.5f;
+        vecFromOrigToBottom.z = 0f;
     }
 
     void Update()
@@ -35,7 +40,8 @@ public class EnemyMovement3D : MonoBehaviour
         if (dist < rangeToHunt)
         {
             RaycastHit hit;
-            if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
+
+            if (!Physics.Raycast(transform.position - vecFromOrigToBottom, dir, out hit, dist, possibleObstacules))
             {
                 if (dist > rangeToStop)
                 {
@@ -49,22 +55,6 @@ public class EnemyMovement3D : MonoBehaviour
             }
         }
     }
-
-    /*void moveThroughPlayer()
-    {
-        isMoving = true;
-
-        float sign = (target.transform.position.x < transform.position.x) ? -1.0f : 1.0f;
-
-        float angle = Vector2.Angle(target.transform.up, diff) * sign;
-
-        Debug.Log(angle);
-
-        vecForce.x = Mathf.Sin(angle) * speed;
-        vecForce.y = Mathf.Cos(angle) * speed;
-
-        vecForce = dir * speed;
-    }*/
 
     void FixedUpdate()
     {
