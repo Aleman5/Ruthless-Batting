@@ -18,7 +18,8 @@ public class Health : MonoBehaviour
             {
                 amount = 0;
                 OnDeath.Invoke();
-                Destroy(gameObject);
+                if(!CompareTag("Player"))
+                    Destroy(gameObject);
                 //Acá se le diria al personaje que se ejecute la animacion de muerte
                 // Y que tmb deje de ser Trigger para que el personaje no lo pueda lastimar mas
             }
