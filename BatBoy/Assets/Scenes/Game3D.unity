@@ -354,6 +354,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 811572694}
   m_Script: {fileID: 11500000, guid: b4b6cff1496646b41b604fe0c78f4c3e, type: 3}
+--- !u!114 &56053423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
+    type: 2}
+  m_PrefabInternal: {fileID: 811572694}
+  m_Script: {fileID: 11500000, guid: 6e71a570ed9cb1448afc69249c967bb3, type: 3}
 --- !u!4 &56053426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040,
