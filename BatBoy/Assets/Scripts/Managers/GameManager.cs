@@ -8,12 +8,12 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] WaveSpawner waveSpawnerScript;
     [SerializeField] RectTransform winScreen;
-    [SerializeField] Health healthScrip;
+    [SerializeField] Health PlayerHealthScript;
 
     void Start()
     {
         waveSpawnerScript.OnLevelComplete.AddListener(IsWin);
-        healthScrip.OnDeath.AddListener(Restart);
+        PlayerHealthScript.OnDeath.AddListener(Restart);
     }
 
     void IsWin()

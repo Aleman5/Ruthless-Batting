@@ -2790,6 +2790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveSpawnerScript: {fileID: 2010963725}
   winScreen: {fileID: 2083235098}
+  PlayerHealthScript: {fileID: 56053423}
 --- !u!4 &1826606858
 Transform:
   m_ObjectHideFlags: 0
