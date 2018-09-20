@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class S_Bat3D : Weapons_Abstract
+public class S_Bat3D : Weapons_Abstract3D
 {
 	enum Direction
 	{

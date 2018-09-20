@@ -3042,7 +3042,7 @@ MonoBehaviour:
   - {fileID: 1655863614}
   - {fileID: 1126905183}
   - {fileID: 1067284007}
-  timeBetweenWaves: 15
+  timeBetweenWaves: 5
   waveCountdown: 0
   onWaveChange:
     m_PersistentCalls:
