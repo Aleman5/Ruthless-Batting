@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-enum SpawnStates
+enum SpawnState
 {
     COUNTING,
     SPAWNING,
     WAITING
 }
 
-public class WaveSpawnerWithoutTime : MonoBehaviour
+public class WaveSpawner : MonoBehaviour
 {
     [System.Serializable]
     public class Enemy
@@ -40,44 +40,33 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
     [SerializeField] UnityEvent onLevelComplete;
 
     float searchCountdown = 1f;
-    float timeToCompleteTheLevel = 65f;
+
     SpawnStates state;
 
     void Awake()
     {
         state = SpawnStates.COUNTING;
         waveCountdown = timeBetweenWaves;
-
-        TimeLeft = timeToCompleteTheLevel;
     }
 
     void Update()
     {
-        if(state == SpawnStates.WAITING)
+        if (state == SpawnStates.WAITING)
         {
-            if(TimeLeft <= 0)
+            if (!EnemyIsAlive())
             {
                 WaveCompleted();
             }
             else
             {
-                if (!EnemyIsAlive())
-                {
-                    // Acá se activaría el texto para que mantenga presionado y avance a la siguiente ronda.
-                }
-
                 return;
             }
         }
 
-        if(waveCountdown <= 0)
+        if (waveCountdown <= 0)
         {
-            TimeLeft -= Time.deltaTime;
-
             if (state != SpawnStates.SPAWNING)
             {
-                TimeLeft = timeToCompleteTheLevel;
-
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
@@ -93,7 +82,7 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
         waveCountdown = timeBetweenWaves;
 
         nextWave++;
-        if(nextWave > waves.Length - 1)
+        if (nextWave > waves.Length - 1)
         {
             OnLevelComplete.Invoke();
 
@@ -104,10 +93,10 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
-        if(searchCountdown <= 0f)
+        if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if(GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 return false;
             }
@@ -133,7 +122,7 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
                 yield return new WaitForSeconds(1f / wave.rate);
             }
         }
-        
+
         state = SpawnStates.WAITING;
 
         yield break;
@@ -150,8 +139,6 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
     {
         return waves[nextWave].name;
     }
-
-    public float TimeLeft { get; set; }
 
     public UnityEvent OnWaveChange
     {
