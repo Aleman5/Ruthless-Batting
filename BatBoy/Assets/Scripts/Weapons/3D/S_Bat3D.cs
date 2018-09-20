@@ -13,17 +13,17 @@ public class S_Bat3D : Weapons_Abstract
 		LEFT
 	}
 
-    PlayerMovement3D playerMovement;
-	BoxCollider batBoxCollider;
+    [SerializeField] PlayerMovement3D playerMovement;
+	
     [SerializeField] UnityEvent onAttack;
+
+    BoxCollider batBoxCollider;
 
     float timeToDisappearHitBox;
     float distanceOfBox;
 
     protected override void Awake()
     {
-        playerMovement = GetComponentInParent<PlayerMovement3D>();
-
         batBoxCollider = GetComponent<BoxCollider>();
 		batBoxCollider.enabled = false;
 

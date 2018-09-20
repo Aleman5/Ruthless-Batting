@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement3D : MonoBehaviour
 {
-    //Vector3 mousePos;
-
+    [SerializeField] Rigidbody rigidbodyToUse;
     [SerializeField] float movSpeed;
-    float originalMovSpeed;
 
-    Rigidbody rb;
+    float originalMovSpeed;
     Vector3 movForce;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
         originalMovSpeed = movSpeed;
     }
 
@@ -40,7 +35,7 @@ public class PlayerMovement3D : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(movForce);
+        rigidbodyToUse.AddForce(movForce);
     }
 
     public void SetStats(int level)

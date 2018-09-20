@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BuyableMovSpeed : MonoBehaviour, IBuyable {
 
+    [SerializeField] PlayerMovement3D movementToImprove;
+
     public void Buy(Transform player, int level)
     {
-        player.GetComponent<PlayerMovement3D>().SetStats(level);
+        movementToImprove.SetStats(level);
     }
 }

@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Health))]
 public class EnemyMovement3D : MonoBehaviour
 {
+    [SerializeField] Rigidbody rigidbodyToUse;
     [SerializeField] float speed;
     [SerializeField] float rangeToHunt;
     [SerializeField] float rangeToStop;
@@ -13,22 +12,14 @@ public class EnemyMovement3D : MonoBehaviour
 
     bool isMoving;
     Vector3 vecForce;
-    Vector3 vecFromOrigToBottom;
-
-    Rigidbody rb;
+    
     GameObject target;
-    Health health;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        target = GameObject.Find("Player3D");
+        target = GameObject.Find("Player_Limit");
         isMoving = false;
         vecForce = Vector3.zero;
-
-        vecFromOrigToBottom.x = 0f;
-        vecFromOrigToBottom.y = -0.5f;
-        vecFromOrigToBottom.z = 0f;
     }
 
     void Update()
@@ -41,7 +32,7 @@ public class EnemyMovement3D : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (!Physics.Raycast(transform.position - vecFromOrigToBottom, dir, out hit, dist, possibleObstacules))
+            if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
             {
                 if (dist > rangeToStop)
                 {
@@ -60,14 +51,9 @@ public class EnemyMovement3D : MonoBehaviour
     {
         if(isMoving)
         {
-            rb.AddForce(vecForce);
+            rigidbodyToUse.AddForce(vecForce);
             isMoving = false;
         }
-    }
-
-    public void Damaged(int dmg)
-    {
-        health.Amount -= dmg;
     }
 
     public Vector3 GetDistance()

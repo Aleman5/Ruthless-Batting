@@ -1783,6 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4958de38993f774408f78ab1daae9fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementToImprove: {fileID: 1525864539}
 --- !u!1 &1197594891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,6 +2226,12 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -5.978081, y: 0, z: -2.753345}
   m_TimeToStationary: 0.5
+--- !u!114 &1525864539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114066864553504702, guid: 8c01a6385e064d3428459454e2390040,
+    type: 2}
+  m_PrefabInternal: {fileID: 811572694}
+  m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
 --- !u!1 &1538308268
 GameObject:
   m_ObjectHideFlags: 0

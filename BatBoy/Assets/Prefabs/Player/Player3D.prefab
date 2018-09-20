@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4206184862782068}
   - component: {fileID: 65929348495263124}
   - component: {fileID: 54021608170205194}
-  - component: {fileID: 114825671883356818}
   - component: {fileID: 114576870129227746}
   - component: {fileID: 114711837485505980}
   m_Layer: 8
@@ -140,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4355824302211080}
   - component: {fileID: 65678257501229702}
+  - component: {fileID: 114066864553504702}
   m_Layer: 15
   m_Name: Player_Limit
   m_TagString: LimitCollider
@@ -345,6 +345,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114066864553504702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1956566791293112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyToUse: {fileID: 54021608170205194}
+  movSpeed: 120
 --- !u!114 &114115550603122454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e79afe82abdf948bd70d42d741e435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 114066864553504702}
   onAttack:
     m_PersistentCalls:
       m_Calls: []
@@ -438,18 +452,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114825671883356818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064627292940418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movSpeed: 100
 --- !u!212 &212455151954614020
 SpriteRenderer:
   m_ObjectHideFlags: 1

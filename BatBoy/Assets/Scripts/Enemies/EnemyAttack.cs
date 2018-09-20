@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    EnemyMovement3D enemyMovement;
+    [SerializeField] EnemyMovement3D enemyMovement;
     bool isRunning;
 
     BoxCollider box;
 
     void Awake()
     {
-        enemyMovement = GetComponentInParent<EnemyMovement3D>();
-
         box = GetComponent<BoxCollider>();
         box.enabled = false;
 
