@@ -11,7 +11,7 @@ enum SpawnStates
     WAITING
 }
 
-public class WaveSpawnerWithoutTime : MonoBehaviour
+public class WaveSpawner : MonoBehaviour
 {
     [System.Serializable]
     public class Enemy
@@ -53,6 +53,11 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
 
     void Update()
     {
+        if(state != SpawnStates.COUNTING)
+        {
+            TimeLeft -= Time.deltaTime;
+        }
+
         if(state == SpawnStates.WAITING)
         {
             if(TimeLeft <= 0)
@@ -72,8 +77,6 @@ public class WaveSpawnerWithoutTime : MonoBehaviour
 
         if(waveCountdown <= 0)
         {
-            TimeLeft -= Time.deltaTime;
-
             if (state != SpawnStates.SPAWNING)
             {
                 TimeLeft = timeToCompleteTheLevel;

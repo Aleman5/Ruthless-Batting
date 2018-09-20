@@ -32,10 +32,18 @@ public class HudManager : MonoBehaviour
 
     void Update()
     {
-        float leftTime = 70f;
+        if(spawner.TimeLeft > 0)
+        {
+            float leftTime = spawner.TimeLeft;
 
-        minutes = Mathf.FloorToInt(leftTime / 60f);
-        seconds = Mathf.FloorToInt(leftTime % 60f);
+            minutes = Mathf.FloorToInt(leftTime / 60f);
+            seconds = Mathf.FloorToInt(leftTime % 60f);
+        }
+        else
+        {
+            minutes = 0;
+            seconds = 0;
+        }
 
         TimeLeft();
     }

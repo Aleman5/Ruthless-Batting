@@ -11,7 +11,7 @@ enum SpawnState
     WAITING
 }
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSpawnerWithoutTime : MonoBehaviour
 {
     [System.Serializable]
     public class Enemy
