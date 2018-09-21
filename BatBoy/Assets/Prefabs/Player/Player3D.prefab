@@ -30,6 +30,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1069432631293334
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4444922404652732}
+  - component: {fileID: 65946476828881318}
+  - component: {fileID: 114528797308696362}
+  m_Layer: 10
+  m_Name: Bat_Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1397336102549674
 GameObject:
   m_ObjectHideFlags: 1
@@ -38,7 +55,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4924668435930754}
-  - component: {fileID: 65643919533197674}
   - component: {fileID: 114602273621247378}
   m_Layer: 10
   m_Name: Bat
@@ -107,6 +123,7 @@ GameObject:
   - component: {fileID: 212455151954614020}
   - component: {fileID: 95217206102448802}
   - component: {fileID: 114329781562717090}
+  - component: {fileID: 111106516256199774}
   m_Layer: 10
   m_Name: Bat_Sprite
   m_TagString: Untagged
@@ -218,6 +235,19 @@ Transform:
   m_Father: {fileID: 4206184862782068}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4444922404652732
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069432631293334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4924668435930754}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4680432764170928
 Transform:
   m_ObjectHideFlags: 1
@@ -242,6 +272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4970162524460830}
+  - {fileID: 4444922404652732}
   m_Father: {fileID: 4357924824557688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -273,18 +304,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &65643919533197674
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397336102549674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 0, z: 1}
 --- !u!65 &65678257501229702
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -309,6 +328,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.42, y: 0.5, z: 0.76}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65946476828881318
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069432631293334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.125, y: 0.5, z: 0.6}
+  m_Center: {x: 0.47, y: 0, z: 0.8}
 --- !u!95 &95217206102448802
 Animator:
   serializedVersion: 3
@@ -345,6 +376,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111106516256199774
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583681894813426}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 521e6c6f156bbe84f9a40880c0f1d3fe, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 521e6c6f156bbe84f9a40880c0f1d3fe, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114066864553504702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,6 +448,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450d88db0d19a7645b921fe8da1a2a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114528797308696362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069432631293334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd7d2a3c07e8f444b44bb017caedb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114576870129227746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -430,6 +487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 114066864553504702}
+  batBoxCollider: {fileID: 65946476828881318}
+  horizontalAttackRange: 1
   onAttack:
     m_PersistentCalls:
       m_Calls: []
