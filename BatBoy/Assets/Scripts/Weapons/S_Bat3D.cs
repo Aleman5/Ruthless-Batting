@@ -30,7 +30,7 @@ public class S_Bat3D : Weapons_Abstract3D
     {
         //batBoxCollider = GetComponent<BoxCollider>();
 
-        oriPosBox = batBoxCollider.transform.position;
+        //oriPosBox = batBoxCollider.transform.position;
 
         cooldown = 1.5f;
         weaponLvl = 1;
@@ -137,8 +137,6 @@ public class S_Bat3D : Weapons_Abstract3D
                 break;
         }
 
-        batBoxCollider.transform.position = oriPosBox;
-
         DesactivateBox();
 
         yield break;
@@ -149,6 +147,8 @@ public class S_Bat3D : Weapons_Abstract3D
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
         playerMovement.enabled = true;
+
+        batBoxCollider.transform.position = oriPosBox + playerMovement.transform.position;
 
         batBoxCollider.enabled = false;
     }
