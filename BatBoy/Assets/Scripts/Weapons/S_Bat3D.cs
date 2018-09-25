@@ -57,7 +57,7 @@ public class S_Bat3D : Weapons_Abstract3D
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > cooldown)
+        if (InputManager.Instance.GetFireButton() && Time.time > cooldown)
         {
             Attack();
         }

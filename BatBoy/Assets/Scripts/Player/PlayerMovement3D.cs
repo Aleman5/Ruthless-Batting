@@ -18,8 +18,8 @@ public class PlayerMovement3D : MonoBehaviour
     void Update()
     {
         movForce = Vector3.zero;
-        movForce.x = Input.GetAxis("Horizontal") * movSpeed;
-        movForce.z = Input.GetAxis("Vertical") * movSpeed;
+        movForce.x = InputManager.Instance.GetHorizontalAxis() * movSpeed;
+        movForce.z = InputManager.Instance.GetVerticalAxis() * movSpeed;
         movForce.y = 0;
         
 

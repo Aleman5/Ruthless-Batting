@@ -38,7 +38,7 @@ public class BuyElement : MonoBehaviour
                 onRange.Invoke();
             }
 
-            if (Input.GetButtonDown("Interact") && !isBought && moneyHolder.ActualMoney >= priceOfTheElement)
+            if (InputManager.Instance.GetInteractButton() && !isBought && moneyHolder.ActualMoney >= priceOfTheElement)
             {
                 isBought = true;
                 buyable.Buy(player, levelOfTheElement);
