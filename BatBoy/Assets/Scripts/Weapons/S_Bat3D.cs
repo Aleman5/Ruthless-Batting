@@ -46,8 +46,8 @@ public class S_Bat3D : Weapons_Abstract3D
                                 0.5f, 
                                 0.6f);
         batBoxCollider.center.Set(horizontalAttackRange / 2,
-                                  0, 
-                                  0.8f);
+                                  0,
+                                  1.106f);
         distanceToMovePerFrame = batBoxCollider.size.x;
 
         batBoxCollider.enabled = false;
