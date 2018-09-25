@@ -24,6 +24,8 @@ public class S_Bat3D : Weapons_Abstract3D
     float distanceToMovePerFrame;
     int amountOfFrames;
 
+    int directionOfTheAttack;
+
     Vector3 oriPosBox;
 
     protected override void Awake()
@@ -91,9 +93,11 @@ public class S_Bat3D : Weapons_Abstract3D
 
         onAttack.Invoke();
 
-        int direction = Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        DirectionOfTheAttack = Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
-        switch (direction)
+
+
+        switch (DirectionOfTheAttack)
         {
             case 0:
                 for (int i = 0; i < amountOfFrames + 1; i++)
@@ -172,5 +176,11 @@ public class S_Bat3D : Weapons_Abstract3D
     public UnityEvent OnAttack
     {
         get { return onAttack; }
+    }
+
+    public int DirectionOfTheAttack
+    {
+        get { return directionOfTheAttack; }
+        set { directionOfTheAttack = value; }
     }
 }
