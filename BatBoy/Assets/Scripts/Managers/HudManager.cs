@@ -10,6 +10,7 @@ public class HudManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyChange;
     [SerializeField] TextMeshProUGUI waveText;
     [SerializeField] TextMeshProUGUI timeLeft;
+    [SerializeField] TextMeshProUGUI nextWaveText;
 
     [Header("Scripts")]
     [SerializeField] WaveSpawner spawner;
@@ -21,6 +22,7 @@ public class HudManager : MonoBehaviour
     void Start()
     {
         spawner.OnWaveChange.AddListener(ShowWaveText);
+        spawner.OnNewWaveWaiting.AddListener(ShowNextWave);
         moneyHolder.OnMoneyChange.AddListener(OnMoneyChanged);
 
         moneyChange.text = "$" + moneyHolder.ActualMoney;
@@ -58,12 +60,16 @@ public class HudManager : MonoBehaviour
         waveText.text = spawner.GetActualWaveName();
     }
 
+    void ShowNextWave()
+    {
+        nextWaveText.enabled = !nextWaveText.enabled;
+    }
+
     void TimeLeft()
     {
         if(seconds < 10)
             timeLeft.text = minutes + ":0" + seconds;
         else
             timeLeft.text = minutes + ":" + seconds;
-
     }
 }

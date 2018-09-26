@@ -37,8 +37,11 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] float waveCountdown;
 
     [SerializeField] UnityEvent onWaveChange;
+    [SerializeField] UnityEvent onNewWaveWaiting;
     [SerializeField] UnityEvent onLevelComplete;
 
+    bool waveCompleted = false;
+    bool levelCompleted = false;
     float searchCountdown = 1f;
     float timeToCompleteTheLevel = 65f;
     SpawnStates state;
@@ -60,19 +63,22 @@ public class WaveSpawner : MonoBehaviour
 
         if(state == SpawnStates.WAITING)
         {
-            if(TimeLeft <= 0)
+            if(TimeLeft <= 0 || (waveCompleted && InputManager.Instance.GetNextWaveButton()) || levelCompleted)
             {
-                WaveCompleted();
+                StartCountdown();
             }
-            else
+            else if (!waveCompleted)
             {
                 if (!EnemyIsAlive())
                 {
-                    // Acá se activaría el texto para que mantenga presionado y avance a la siguiente ronda.
+                    waveCompleted = true;
+                    if (nextWave < waves.Length - 1)
+                        onNewWaveWaiting.Invoke();
+                    else
+                        levelCompleted = true;
                 }
-
-                return;
             }
+            return;
         }
 
         if(waveCountdown <= 0)
@@ -90,18 +96,23 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    void WaveCompleted()
+    void StartCountdown()
     {
         state = SpawnStates.COUNTING;
         waveCountdown = timeBetweenWaves;
 
         nextWave++;
-        if(nextWave > waves.Length - 1)
+        if (nextWave > waves.Length - 1)
         {
             OnLevelComplete.Invoke();
 
             gameObject.SetActive(false);
         }
+        else
+        {
+            onNewWaveWaiting.Invoke();
+        }
+        waveCompleted = false;
     }
 
     bool EnemyIsAlive()
@@ -159,6 +170,10 @@ public class WaveSpawner : MonoBehaviour
     public UnityEvent OnWaveChange
     {
         get { return onWaveChange; }
+    }
+    public UnityEvent OnNewWaveWaiting
+    {
+        get { return onNewWaveWaiting; }
     }
     public UnityEvent OnLevelComplete
     {

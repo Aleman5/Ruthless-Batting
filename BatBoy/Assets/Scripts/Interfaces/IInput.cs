@@ -7,5 +7,6 @@ interface IInput{
     float GetHorizontalAxis();
     bool GetFireButton();
     bool GetInteractButton();
+    bool GetNextWaveButton();
     bool GetPauseButton();
 }
