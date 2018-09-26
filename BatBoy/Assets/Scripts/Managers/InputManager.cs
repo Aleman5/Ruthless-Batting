@@ -22,7 +22,7 @@ public class InputManager : MonoBehaviour
     public bool GetFireButton()      { return input.GetFireButton();     }
     public bool GetInteractButton()  { return input.GetInteractButton(); }
     public bool GetPauseButton()     { return input.GetPauseButton();    }
-    public bool GetNextWaveButton()  { return input.GetNextWaveButton(); }
+    public bool GetActionButton()  { return input.GetActionButton(); }
 
     static public InputManager Instance
     {

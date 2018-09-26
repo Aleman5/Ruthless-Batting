@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
 
         if(state == SpawnStates.WAITING)
         {
-            if(TimeLeft <= 0 || (waveCompleted && InputManager.Instance.GetNextWaveButton()) || levelCompleted)
+            if(TimeLeft <= 0 || (waveCompleted && InputManager.Instance.GetActionButton()) || levelCompleted)
             {
                 StartCountdown();
             }

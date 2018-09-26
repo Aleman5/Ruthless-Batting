@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] RectTransform winScreen;
     [SerializeField] Health PlayerHealthScript;
 
+    bool gameWon = false;
+
     void Start()
     {
         waveSpawnerScript.OnLevelComplete.AddListener(IsWin);
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     void IsWin()
     {
         winScreen.gameObject.SetActive(true);
+        gameWon = true;
 
         PauseGame();
     }
@@ -43,5 +46,11 @@ public class GameManager : MonoBehaviour
         //Input manager
         //PauseGame();
             SceneManager.LoadScene(1);
+    }
+
+    void Update()
+    {
+        if(gameWon && InputManager.Instance.GetActionButton())
+            SceneManager.LoadScene(0);
     }
 }

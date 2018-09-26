@@ -20,9 +20,9 @@ public class InputPC : IInput
     {
         return Input.GetButtonDown("Interact");
     }
-    public bool GetNextWaveButton()
+    public bool GetActionButton()
     {
-        return Input.GetButtonDown("NextWave");
+        return Input.GetButtonDown("Action");
     }
     public bool GetPauseButton()
     {
