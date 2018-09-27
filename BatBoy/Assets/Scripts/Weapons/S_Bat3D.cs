@@ -91,11 +91,9 @@ public class S_Bat3D : Weapons_Abstract3D
 
         batBoxCollider.enabled = true;
 
-        onAttack.Invoke();
-
         DirectionOfTheAttack = Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
-
+        onAttack.Invoke();
 
         switch (DirectionOfTheAttack)
         {
