@@ -16,6 +16,7 @@ public class S_Bat3D : Weapons_Abstract3D
     [SerializeField] PlayerMovement3D playerMovement;
     [SerializeField] BoxCollider batBoxCollider;
     [SerializeField] float horizontalAttackRange;
+    [SerializeField] float dashForce;
     [SerializeField] UnityEvent onAttack;
 
     float timeToDisappearHitBox;
@@ -103,6 +104,7 @@ public class S_Bat3D : Weapons_Abstract3D
                     Vector3 vecMove = Vector3.zero;
                     vecMove.x = distanceToMovePerFrame;
                     batBoxCollider.transform.position += -vecMove;
+                    playerMovement.MakeForceMovement(Vector3.forward * dashForce);
 
                     yield return new WaitForSeconds(timeBtwChange);
                 }
@@ -113,6 +115,7 @@ public class S_Bat3D : Weapons_Abstract3D
                     Vector3 vecMove = Vector3.zero;
                     vecMove.z = distanceToMovePerFrame;
                     batBoxCollider.transform.position += vecMove;
+                    playerMovement.MakeForceMovement(Vector3.right * dashForce);
 
                     yield return new WaitForSeconds(timeBtwChange);
                 }
@@ -123,6 +126,7 @@ public class S_Bat3D : Weapons_Abstract3D
                     Vector3 vecMove = Vector3.zero;
                     vecMove.x = distanceToMovePerFrame;
                     batBoxCollider.transform.position += vecMove;
+                    playerMovement.MakeForceMovement(-Vector3.forward * dashForce);
 
                     yield return new WaitForSeconds(timeBtwChange);
                 }
@@ -133,6 +137,7 @@ public class S_Bat3D : Weapons_Abstract3D
                     Vector3 vecMove = Vector3.zero;
                     vecMove.z = distanceToMovePerFrame;
                     batBoxCollider.transform.position += -vecMove;
+                    playerMovement.MakeForceMovement(-Vector3.right * dashForce);
 
                     yield return new WaitForSeconds(timeBtwChange);
                 }

@@ -144,7 +144,6 @@ public class WaveSpawner : MonoBehaviour
         {
             for (int j = 0; j < wave.enemies[i].count; j++)
             {
-                Debug.Log(wave.enemies.Length + " + " + wave.enemies[i].count);
                 SpawnEnemy(wave.enemies[i].enemy);
                 yield return new WaitForSeconds(1f / wave.rate);
             }
@@ -157,15 +156,13 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy)
     {
-        Debug.Log("1");
         int spawnPoint = Random.Range(0, spawnPoints.Length);
-        Debug.Log("2");
+        
         Transform pointTransform = spawnPoints[spawnPoint];
-        Debug.Log("3");
+        
         Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation);
-        Debug.Log("4");
+        
         go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnPoint].GetComponentsInChildren<Transform>());
-        Debug.Log("5");
     }
 
     public string GetActualWaveName()

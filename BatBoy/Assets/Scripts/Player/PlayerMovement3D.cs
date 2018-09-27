@@ -38,6 +38,11 @@ public class PlayerMovement3D : MonoBehaviour
         rigidbodyToUse.AddForce(movForce);
     }
 
+    public void MakeForceMovement(Vector3 newForce)
+    {
+        rigidbodyToUse.AddForce(newForce);
+    }
+
     public void SetStats(int level)
     {
         movSpeed = originalMovSpeed + originalMovSpeed * (0.1f * level); // Level 1 -> +10%, Level 2 -> +20%, Level 3 -> +30%
