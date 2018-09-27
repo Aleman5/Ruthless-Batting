@@ -4,10 +4,10 @@ using System.Collections;
 
 public class Patrol : MonoBehaviour
 {
-    public Transform[] points;
-    private int destPoint = 0;
-    private NavMeshAgent agent;
-    private int actualPoint;
+    NavMeshAgent agent;
+    Transform[] points;
+    int destPoint = 0;
+    int actualPoint;
 
     void Start()
     {
@@ -18,8 +18,6 @@ public class Patrol : MonoBehaviour
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
         agent.autoBraking = false;
-
-        FindNextPoint();
     }
 
     void FindNextPoint()
@@ -51,5 +49,10 @@ public class Patrol : MonoBehaviour
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             FindNextPoint();
+    }
+
+    public void SetPoints(Transform[] pointsToFollow)
+    {
+        points = pointsToFollow;
     }
 }
