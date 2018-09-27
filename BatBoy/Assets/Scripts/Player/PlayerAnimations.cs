@@ -7,17 +7,23 @@ public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] S_Bat3D batScript;
 
+    float idleFloat;
+
 	Animator anim;
 
-	private void Awake() {
+    /* TENER UNA VARIABLE QUE SE GUARDE EL ULTIMO VALOR DEL FLOAT QUE USA EL B.T (VERIFICANDO QUE NO SEA 0) */
+    /* PARA PODER DECIDIR QUE IDLE UTILIZAR.                                                                */
+
+    private void Awake() {
 		anim = GetComponent<Animator>();
         batScript.OnAttack.AddListener(SetAttackTrigger);
 	}
 
 	void Update() 
 	{
-		anim.SetFloat("VerticalSpeed", Input.GetAxis("Vertical"));
-		anim.SetFloat("HorizontalSpeed", Input.GetAxis("Horizontal"));
+		anim.SetFloat("VerticalSpeed", InputManager.Instance.GetVerticalAxis());
+		anim.SetFloat("HorizontalSpeed", InputManager.Instance.GetHorizontalAxis());
+        //idleFloat = anim.GetFloat("")
 	}
 
     void SetAttackTrigger()
