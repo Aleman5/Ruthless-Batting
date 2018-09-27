@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbodyToUse: {fileID: 54021608170205194}
-  movSpeed: 120
+  movSpeed: 180
 --- !u!114 &114115550603122454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e71a570ed9cb1448afc69249c967bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 4
+  amount: 1
   onDeath:
     m_PersistentCalls:
       m_Calls: []

@@ -35,36 +35,27 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] Transform[] patrolHolders;
 
     [SerializeField] float timeBetweenWaves;
-    [SerializeField] float waveCountdown;
 
     [SerializeField] UnityEvent onWaveChange;
-    [SerializeField] UnityEvent onNewWaveWaiting;
     [SerializeField] UnityEvent onLevelComplete;
+    [SerializeField] UnityEvent onCountdown;
 
     bool waveCompleted = false;
     bool levelCompleted = false;
     float searchCountdown = 1f;
-    float timeToCompleteTheLevel = 65f;
     SpawnStates state;
 
     void Awake()
     {
         state = SpawnStates.COUNTING;
-        waveCountdown = timeBetweenWaves;
-
-        TimeLeft = timeToCompleteTheLevel;
+        TimeLeft = timeBetweenWaves;
     }
 
     void Update()
     {
-        if(state != SpawnStates.COUNTING)
-        {
-            TimeLeft -= Time.deltaTime;
-        }
-
         if(state == SpawnStates.WAITING)
         {
-            if(TimeLeft <= 0 || (waveCompleted && InputManager.Instance.GetActionButton()) || levelCompleted)
+            if(waveCompleted || levelCompleted)
             {
                 StartCountdown();
             }
@@ -74,7 +65,9 @@ public class WaveSpawner : MonoBehaviour
                 {
                     waveCompleted = true;
                     if (nextWave < waves.Length - 1)
-                        onNewWaveWaiting.Invoke();
+                    {
+                        
+                    }
                     else
                         levelCompleted = true;
                 }
@@ -82,25 +75,24 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if(waveCountdown <= 0)
+        if(TimeLeft <= 0)
         {
             if (state != SpawnStates.SPAWNING)
             {
-                TimeLeft = timeToCompleteTheLevel;
-
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
         else
         {
-            waveCountdown -= Time.deltaTime;
+            TimeLeft -= Time.deltaTime;
         }
     }
 
     void StartCountdown()
     {
         state = SpawnStates.COUNTING;
-        waveCountdown = timeBetweenWaves;
+        TimeLeft = timeBetweenWaves;
+        onCountdown.Invoke();
 
         nextWave++;
         if (nextWave > waves.Length - 1)
@@ -108,10 +100,6 @@ public class WaveSpawner : MonoBehaviour
             OnLevelComplete.Invoke();
 
             gameObject.SetActive(false);
-        }
-        else
-        {
-            onNewWaveWaiting.Invoke();
         }
         waveCompleted = false;
     }
@@ -176,12 +164,12 @@ public class WaveSpawner : MonoBehaviour
     {
         get { return onWaveChange; }
     }
-    public UnityEvent OnNewWaveWaiting
-    {
-        get { return onNewWaveWaiting; }
-    }
     public UnityEvent OnLevelComplete
     {
         get { return onLevelComplete; }
+    }
+    public UnityEvent OnCountdown
+    {
+        get { return onCountdown; }
     }
 }
