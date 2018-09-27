@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567884773569260}
   - component: {fileID: 65481556185712286}
-  - component: {fileID: 114625323320608216}
+  - component: {fileID: 114037686251366450}
   m_Layer: 15
   m_Name: Enemy_Limit
   m_TagString: LimitCollider
@@ -54,11 +54,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4687128411996388}
   - component: {fileID: 65167739392840904}
+  - component: {fileID: 195406705368406694}
   - component: {fileID: 114331512968824984}
   - component: {fileID: 114445677894267044}
-  - component: {fileID: 195406705368406694}
   - component: {fileID: 114979610603164574}
-  - component: {fileID: 114397564564312906}
   m_Layer: 9
   m_Name: EnemyMelee
   m_TagString: Enemy
@@ -192,6 +191,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114037686251366450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169804400223088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade892cc854065941b14b7cde48a7684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distToChase: 20
+  distToStop: 2
+  speed: 2
+  possibleObstacules:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!114 &114331512968824984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,18 +225,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114397564564312906
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1786262072408662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade892cc854065941b14b7cde48a7684, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distToChase: 5
 --- !u!114 &114445677894267044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,30 +242,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1715449084907264}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80a001994db4f1a46ac31d854c2e0627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovement: {fileID: 114625323320608216}
---- !u!114 &114625323320608216
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1169804400223088}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3bacacf5615dd4783ba764fed057b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbodyToUse: {fileID: 0}
-  speed: 80
-  rangeToHunt: 10
-  rangeToStop: 1.2
-  possibleObstacules:
-    serializedVersion: 2
-    m_Bits: 8192
+  enemyMovement: {fileID: 114037686251366450}
 --- !u!114 &114979610603164574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,7 +268,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

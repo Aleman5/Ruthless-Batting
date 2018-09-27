@@ -367,7 +367,7 @@ Animator:
   m_GameObject: {fileID: 1398123301319880}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: af41a3de1d4a3014c913191b49c4ae2a, type: 2}
+  m_Controller: {fileID: 9100000, guid: cce1b11c0941ad84a87b29d8e86c2947, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197660caba0afec4fb86602880362a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batScript: {fileID: 114602273621247378}
 --- !u!114 &114196762205882882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,6 +490,7 @@ MonoBehaviour:
   playerMovement: {fileID: 114066864553504702}
   batBoxCollider: {fileID: 65946476828881318}
   horizontalAttackRange: 1
+  dashForce: 300
   onAttack:
     m_PersistentCalls:
       m_Calls: []
@@ -505,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e71a570ed9cb1448afc69249c967bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 1
+  amount: 4
   onDeath:
     m_PersistentCalls:
       m_Calls: []

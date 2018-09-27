@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] EnemyMovement3D enemyMovement;
+    [SerializeField] EnemyMovNav enemyMovement;
     bool isRunning;
 
     BoxCollider box;

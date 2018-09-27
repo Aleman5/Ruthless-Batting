@@ -393,12 +393,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040,
     type: 2}
   m_PrefabInternal: {fileID: 811572694}
---- !u!114 &110974347 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114602273621247378, guid: 8c01a6385e064d3428459454e2390040,
-    type: 2}
-  m_PrefabInternal: {fileID: 811572694}
-  m_Script: {fileID: 11500000, guid: 26e79afe82abdf948bd70d42d741e435, type: 3}
 --- !u!1 &140768745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,25 +2133,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114154881355873904, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: batScript
-      value: 
-      objectReference: {fileID: 110974347}
     - target: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
         type: 2}
       propertyPath: amount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 95278775475645272, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: cce1b11c0941ad84a87b29d8e86c2947, type: 2}
-    - target: {fileID: 114602273621247378, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: dashForce
-      value: 300
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
