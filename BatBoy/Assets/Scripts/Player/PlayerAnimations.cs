@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class PlayerAnimations : MonoBehaviour
 {
-    [SerializeField] S_Bat3D batScript;
+    [SerializeField] Bat batScript;
 
     float idleFloat;
 

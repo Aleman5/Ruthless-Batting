@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        Debug.Log("Perdiste");
         //Animacion de muerte de jugador
         //Input manager
         //PauseGame();

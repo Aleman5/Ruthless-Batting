@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class S_Bat3D : Weapons_Abstract3D
+public class Bat : MonoBehaviour, IWeapon
 {
 	enum Direction
 	{
@@ -19,6 +19,11 @@ public class S_Bat3D : Weapons_Abstract3D
     [SerializeField] float dashForce;
     [SerializeField] UnityEvent onAttack;
 
+    float cooldown;
+    float attackRate;
+    int weaponLvl;
+    int damage;
+
     float timeToDisappearHitBox;
     float timeBtwChange;
     float distanceOfBox;
@@ -29,15 +34,15 @@ public class S_Bat3D : Weapons_Abstract3D
 
     Vector3 oriPosBox;
 
-    protected override void Awake()
+    void Awake()
     {
         //batBoxCollider = GetComponent<BoxCollider>();
 
         //oriPosBox = batBoxCollider.transform.position;
 
         cooldown = 1.5f;
-        weaponLvl = 1;
         attackRate = 1;
+        weaponLvl = 1;
         damage = 1;
 
         amountOfFrames = 6;
@@ -56,18 +61,16 @@ public class S_Bat3D : Weapons_Abstract3D
         batBoxCollider.enabled = false;
     }
 
-    public void Update()
+    void Update()
     {
         if (InputManager.Instance.GetFireButton() && Time.time > cooldown)
         {
-            Attack();
+            StartCoroutine(Attacking());
         }
     }
 
-    public override void Attack()
+    void Attack()
     {
-        StartCoroutine(Attacking());
-
         /*if (Time.time > cooldown)
         {
             cooldown = Time.time + attackRate;
@@ -149,7 +152,7 @@ public class S_Bat3D : Weapons_Abstract3D
         yield break;
     }
 
-	private void DesactivateBox()
+	void DesactivateBox()
     {
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
 

@@ -44,7 +44,6 @@ public class HudManager : MonoBehaviour
     void CountdownTextSituation()
     {
         timeLeft.enabled = !timeLeft.enabled;
-        Debug.Log(timeLeft.enabled);
     }
 
     void TimeText()

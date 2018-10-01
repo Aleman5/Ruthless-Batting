@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BatAnimation : MonoBehaviour
 {
-    S_Bat3D script;
+    Bat script;
     Animator anim;
     float speed;
 
     void Start()
     {
-        script = GetComponentInParent<S_Bat3D>();
+        script = GetComponentInParent<Bat>();
         script.OnAttack.AddListener(Attacking);
         anim = GetComponent<Animator>();
 
