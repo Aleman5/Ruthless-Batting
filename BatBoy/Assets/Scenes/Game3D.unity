@@ -388,42 +388,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 811572694}
   m_Script: {fileID: 11500000, guid: 6e71a570ed9cb1448afc69249c967bb3, type: 3}
---- !u!95 &56053424
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 56053421}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!320 &56053425
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 56053421}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e9e9de59c29580f4b944d61be3254fb0, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 114214661925544922, guid: e9e9de59c29580f4b944d61be3254fb0, type: 2}
-    value: {fileID: 56053424}
-  m_ExposedReferences:
-    m_References: []
 --- !u!4 &56053426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040,
@@ -2226,16 +2190,6 @@ Prefab:
     - target: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: amount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114066864553504702, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: movSpeed
-      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}

@@ -16,7 +16,6 @@ public class Bat : MonoBehaviour, IWeapon
     [SerializeField] PlayerMovement3D playerMovement;
     [SerializeField] BoxCollider batBoxCollider;
     [SerializeField] float horizontalAttackRange;
-    [SerializeField] float dashForce;
     [SerializeField] UnityEvent onAttack;
 
     float cooldown;
@@ -41,14 +40,14 @@ public class Bat : MonoBehaviour, IWeapon
         //oriPosBox = batBoxCollider.transform.position;
 
         cooldown = 1.5f;
-        attackRate = 1;
+        attackRate = 0.55f;
         weaponLvl = 1;
         damage = 1;
 
         amountOfFrames = 6;
 
-        timeToDisappearHitBox = 0.42f;
-        timeBtwChange = timeToDisappearHitBox / amountOfFrames;
+        timeToDisappearHitBox = 0.4f;
+        /*timeBtwChange = timeToDisappearHitBox / amountOfFrames;
 
         batBoxCollider.size.Set(horizontalAttackRange / amountOfFrames,
                                 0.5f, 
@@ -56,7 +55,7 @@ public class Bat : MonoBehaviour, IWeapon
         batBoxCollider.center.Set(horizontalAttackRange / 2,
                                   0,
                                   1.106f);
-        distanceToMovePerFrame = batBoxCollider.size.x;
+        distanceToMovePerFrame = batBoxCollider.size.x;*/
 
         batBoxCollider.enabled = false;
     }
@@ -65,29 +64,26 @@ public class Bat : MonoBehaviour, IWeapon
     {
         if (InputManager.Instance.GetFireButton() && Time.time > cooldown)
         {
-            StartCoroutine(Attacking());
+            Attack();
         }
     }
 
     void Attack()
     {
-        /*if (Time.time > cooldown)
-        {
-            cooldown = Time.time + attackRate;
+        cooldown = Time.time + attackRate;
 
-            playerMovement.enabled = false;
+        playerMovement.enabled = false;
 
-            batBoxCollider.enabled = true;
+        batBoxCollider.enabled = true;
 
-            onAttack.Invoke();
+        DirectionOfTheAttack = Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 
-            Utilities.SetBoxPreparations(transform, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        onAttack.Invoke();
 
-            Invoke("DesactivateBox", timeToDisappearHitBox); // In the future this will be the duration of the Bat Attack Animation
-        }*/
+        Invoke("DesactivateBox", timeToDisappearHitBox);
     }
 
-    IEnumerator Attacking()
+    /*IEnumerator Attacking()
     {
         cooldown = Time.time + attackRate;
 
@@ -150,7 +146,7 @@ public class Bat : MonoBehaviour, IWeapon
         DesactivateBox();
 
         yield break;
-    }
+    }*/
 
 	void DesactivateBox()
     {
@@ -158,7 +154,7 @@ public class Bat : MonoBehaviour, IWeapon
 
         playerMovement.enabled = true;
 
-        batBoxCollider.transform.position = oriPosBox + playerMovement.transform.position;
+        //batBoxCollider.transform.position = oriPosBox + playerMovement.transform.position;
 
         batBoxCollider.enabled = false;
     }

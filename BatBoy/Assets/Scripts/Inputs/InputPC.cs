@@ -14,7 +14,11 @@ public class InputPC : IInput
     }
     public bool GetFireButton()
     {
-        return Input.GetButton("Fire1");
+        return Input.GetButtonDown("Fire1");
+    }
+    public bool GetDashButton()
+    {
+        return Input.GetButtonDown("Dash");
     }
     public bool GetInteractButton()
     {

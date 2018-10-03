@@ -6,6 +6,7 @@ public class PlayerMovement3D : MonoBehaviour
 {
     [SerializeField] Rigidbody rigidbodyToUse;
     [SerializeField] float movSpeed;
+    [SerializeField] float dashForce;
 
     float originalMovSpeed;
     Vector3 movForce;
@@ -21,7 +22,12 @@ public class PlayerMovement3D : MonoBehaviour
         movForce.x = InputManager.Instance.GetHorizontalAxis() * movSpeed;
         movForce.z = InputManager.Instance.GetVerticalAxis() * movSpeed;
         movForce.y = 0;
-        
+
+        if (InputManager.Instance.GetDashButton())
+        {
+            MakeForceMovement();
+        }
+            
 
         // Rotation by the mouse position
         //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -38,8 +44,23 @@ public class PlayerMovement3D : MonoBehaviour
         rigidbodyToUse.AddForce(movForce);
     }
 
-    public void MakeForceMovement(Vector3 newForce)
+    public void MakeForceMovement()
     {
+        Vector3 newForce = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        newForce.y = 0;
+        newForce = newForce.normalized * dashForce;
+
+
+        // Dash depending on the player LookAt
+        /*if (movForce.z > 0)
+            newForce = Vector3.forward * dashForce;
+        else if (movForce.z < 0)
+            newForce = -Vector3.forward * dashForce;
+        else if (movForce.x > 0)
+            newForce = Vector3.right * dashForce;
+        else
+            newForce = -Vector3.right * dashForce;*/
+
         rigidbodyToUse.AddForce(newForce);
     }
 
