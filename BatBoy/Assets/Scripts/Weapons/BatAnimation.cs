@@ -24,6 +24,6 @@ public class BatAnimation : MonoBehaviour
 
     public void SetStats(int level)
     {
-        GetComponent<Animation>()["Attacking"].speed = speed * 0.15f * level;
+        anim.speed -= speed * 0.1f * level;
     }
 }

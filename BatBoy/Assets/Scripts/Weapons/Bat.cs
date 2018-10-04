@@ -24,14 +24,15 @@ public class Bat : MonoBehaviour, IWeapon
     int damage;
 
     float timeToDisappearHitBox;
-    float timeBtwChange;
-    float distanceOfBox;
-    float distanceToMovePerFrame;
-    int amountOfFrames;
+    float origTimeToDisappearHitBox;
+    //float timeBtwChange;
+    //float distanceOfBox;
+    //float distanceToMovePerFrame;
+    //int amountOfFrames;
 
     int directionOfTheAttack;
 
-    Vector3 oriPosBox;
+    //Vector3 oriPosBox;
 
     void Awake()
     {
@@ -44,9 +45,10 @@ public class Bat : MonoBehaviour, IWeapon
         weaponLvl = 1;
         damage = 1;
 
-        amountOfFrames = 6;
+        //amountOfFrames = 6;
 
         timeToDisappearHitBox = 0.4f;
+        origTimeToDisappearHitBox = timeToDisappearHitBox;
         /*timeBtwChange = timeToDisappearHitBox / amountOfFrames;
 
         batBoxCollider.size.Set(horizontalAttackRange / amountOfFrames,
@@ -159,20 +161,11 @@ public class Bat : MonoBehaviour, IWeapon
         batBoxCollider.enabled = false;
     }
 
-    /*void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            Health health = collision.GetComponent<Health>();
-            health.Amount -= damage;
-        }
-    }*/
-
     public void SetStats(int level)
     {
         cooldown -= cooldown * 0.1f * level;
-        timeToDisappearHitBox -= timeToDisappearHitBox * 0.1f * level;
-        timeBtwChange = timeToDisappearHitBox / amountOfFrames;
+        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.1f * level;
+        //timeBtwChange = timeToDisappearHitBox / amountOfFrames;
     }
 
     public UnityEvent OnAttack
