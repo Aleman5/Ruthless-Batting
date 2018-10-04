@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 212455151954614020}
   - component: {fileID: 95217206102448802}
   - component: {fileID: 114329781562717090}
-  - component: {fileID: 111106516256199774}
   m_Layer: 10
   m_Name: Bat_Sprite
   m_TagString: Untagged
@@ -215,7 +214,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956566791293112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4206184862782068}
@@ -317,7 +316,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.42, y: 0.5, z: 0.1}
-  m_Center: {x: 0, y: 0, z: -0.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65929348495263124
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -396,21 +395,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &111106516256199774
-Animation:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1583681894813426}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 521e6c6f156bbe84f9a40880c0f1d3fe, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 521e6c6f156bbe84f9a40880c0f1d3fe, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &114066864553504702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbodyToUse: {fileID: 54021608170205194}
   movSpeed: 180
-  dashForce: 1150
+  dashForce: 1500
 --- !u!114 &114115550603122454
 MonoBehaviour:
   m_ObjectHideFlags: 1

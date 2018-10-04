@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class BuyElement : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform objective;
     [SerializeField] float distanceToInteract;
     [SerializeField] int levelOfTheElement;
     [Range(0,500)]
@@ -23,12 +23,12 @@ public class BuyElement : MonoBehaviour
 
     void Start() {
         buyable = GetComponent<IBuyable>();
-        moneyHolder = player.GetComponent<MoneyHolder>();
+        moneyHolder = objective.GetComponent<MoneyHolder>();
     }
 
     void Update()
     {
-        Vector3 dist = player.position - transform.position;
+        Vector3 dist = objective.position - transform.position;
 
         if (dist.magnitude < distanceToInteract)
         {
@@ -41,7 +41,7 @@ public class BuyElement : MonoBehaviour
             if (InputManager.Instance.GetInteractButton() && !isBought && moneyHolder.ActualMoney >= priceOfTheElement)
             {
                 isBought = true;
-                buyable.Buy(player, levelOfTheElement);
+                buyable.Buy(objective, levelOfTheElement);
                 moneyHolder.ActualMoney = -priceOfTheElement;
                 onInteract.Invoke();
             }
