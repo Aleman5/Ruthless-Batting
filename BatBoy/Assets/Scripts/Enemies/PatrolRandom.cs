@@ -49,7 +49,8 @@ public class PatrolRandom : MonoBehaviour
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            FindNextPoint();
+            StartCoroutine(Wait());
+                //FindNextPoint();
     }
 
     public void SetPoints(Transform[] pointsToFollow)
@@ -57,4 +58,10 @@ public class PatrolRandom : MonoBehaviour
         points = pointsToFollow;
     }
 
+    IEnumerator Wait()
+    {
+        timer = Random.Range(3, 5);
+        yield return new WaitForSeconds(timer);
+        FindNextPoint();
+    }
 }
