@@ -2,12 +2,13 @@
 using UnityEngine.AI;
 using System.Collections;
 
-public class Patrol : MonoBehaviour
+public class PatrolRandom : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform[] points;
     int destPoint = 0;
     int actualPoint;
+    int timer;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class Patrol : MonoBehaviour
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
         do{
-            destPoint = (destPoint + 1) % points.Length;
+            destPoint = Random.Range(0, points.Length -1);
         } while (actualPoint == destPoint);
 
         // Set the agent to go to the currently selected destination.
@@ -55,4 +56,5 @@ public class Patrol : MonoBehaviour
     {
         points = pointsToFollow;
     }
+
 }
