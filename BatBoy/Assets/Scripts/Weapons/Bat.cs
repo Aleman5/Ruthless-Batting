@@ -21,7 +21,6 @@ public class Bat : MonoBehaviour, IWeapon
     float cooldown;
     float attackRate;
     int weaponLvl;
-    int damage;
 
     float timeToDisappearHitBox;
     float origTimeToDisappearHitBox;
@@ -43,7 +42,6 @@ public class Bat : MonoBehaviour, IWeapon
         cooldown = 1.5f;
         attackRate = 0.55f;
         weaponLvl = 1;
-        damage = 1;
 
         //amountOfFrames = 6;
 

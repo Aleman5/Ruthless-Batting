@@ -6,11 +6,24 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] WaveSpawner waveSpawnerScript;
-    [SerializeField] RectTransform winScreen;
+    static GameManager instance;
+
+    [Header("Scripts")]
     [SerializeField] Health PlayerHealthScript;
+    [SerializeField] WaveSpawner waveSpawnerScript;
+
+    [Header("Canvas")]
+    [SerializeField] RectTransform winScreen;
 
     bool gameWon = false;
+
+    void Awake()
+    {
+        if (Instance == this)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -51,5 +64,22 @@ public class GameManager : MonoBehaviour
     {
         if(gameWon && InputManager.Instance.GetActionButton())
             SceneManager.LoadScene(0);
+    }
+
+    static public GameManager Instance
+    {
+        get
+        {
+            if (!instance)
+            {
+                instance = FindObjectOfType<GameManager>();
+                if (!instance)
+                {
+                    GameObject go = new GameObject("GameManager");
+                    instance = go.AddComponent<GameManager>();
+                }
+            }
+            return instance;
+        }
     }
 }
