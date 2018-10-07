@@ -144,13 +144,18 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy)
     {
-        int spawnPoint = Random.Range(0, spawnPoints.Length);
+        int spawnHolder = Random.Range(0, spawnPoints.Length -1);
         
-        Transform pointTransform = spawnPoints[spawnPoint];
+        Transform pointTransform = spawnPoints[spawnHolder];
         
         Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation);
+
+        if (enemy.name == "EnemySuperior") {
+            go.GetComponent<PatrolRandom>().SetPoints(patrolHolders[patrolHolders.Length -1].GetComponentsInChildren<Transform>());
+            return;
+        }
         
-        go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnPoint].GetComponentsInChildren<Transform>());
+        go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
     }
 
     public string GetActualWaveName()
