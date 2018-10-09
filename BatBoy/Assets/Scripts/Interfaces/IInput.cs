@@ -10,4 +10,5 @@ interface IInput{
     bool GetInteractButton();
     bool GetActionButton();
     bool GetPauseButton();
+    bool GetRestartButton();
 }

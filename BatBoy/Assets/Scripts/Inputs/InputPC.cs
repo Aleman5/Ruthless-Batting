@@ -32,4 +32,8 @@ public class InputPC : IInput
     {
         return Input.GetButtonDown("Cancel");
     }
+    public bool GetRestartButton()
+    {
+        return Input.GetButtonDown("Restart");
+    }
 }

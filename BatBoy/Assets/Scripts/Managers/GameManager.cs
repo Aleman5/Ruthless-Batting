@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -16,8 +17,10 @@ public class GameManager : MonoBehaviour
     [Header("Canvas")]
     [SerializeField] RectTransform winScreen;
     [SerializeField] GameObject pauseCanvas;
+    [SerializeField] GameObject restartText;
 
     bool gameWon = false;
+    bool lose = false;
 
     void Awake()
     {
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
     void PauseGame()
     {
         pauseCanvas.SetActive(true);
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
             winScreen.gameObject.SetActive(false);
 
         pauseCanvas.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -72,16 +75,22 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        //Animacion de muerte de jugador
-        //Input manager
-        //PauseGame();
-            SceneManager.LoadScene(1);
+        restartText.SetActive(true);
+        Time.timeScale = 0f;
+        lose = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()
     {
         if(gameWon && InputManager.Instance.GetActionButton())
             SceneManager.LoadScene(0);
+        if (lose && InputManager.Instance.GetRestartButton())
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
+        }
     }
 
     static public GameManager Instance

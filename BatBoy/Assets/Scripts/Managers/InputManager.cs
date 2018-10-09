@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
     public bool GetInteractButton()  { return input.GetInteractButton(); }
     public bool GetPauseButton()     { return input.GetPauseButton();    }
     public bool GetActionButton()    { return input.GetActionButton();   }
+    public bool GetRestartButton()   { return input.GetRestartButton();  }
 
     static public InputManager Instance
     {
