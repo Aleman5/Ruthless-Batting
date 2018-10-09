@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] Health PlayerHealthScript;
     [SerializeField] WaveSpawner waveSpawnerScript;
+    [SerializeField] PauseController pauseScript;
 
     [Header("Canvas")]
     [SerializeField] RectTransform winScreen;
+    [SerializeField] GameObject pauseCanvas;
 
     bool gameWon = false;
 
@@ -29,6 +31,9 @@ public class GameManager : MonoBehaviour
     {
         waveSpawnerScript.OnLevelComplete.AddListener(IsWin);
         PlayerHealthScript.OnDeath.AddListener(Restart);
+        pauseScript.OnPause.AddListener(PauseGame);
+        pauseScript.OnResume.AddListener(ContinueGame);
+        pauseScript.OnReturn.AddListener(ReturnMenu);
     }
 
     void IsWin()
@@ -36,12 +41,16 @@ public class GameManager : MonoBehaviour
         winScreen.gameObject.SetActive(true);
         gameWon = true;
 
-        PauseGame();
+        Time.timeScale = 0;
+        //PauseGame();
     }
 
     void PauseGame()
     {
+        pauseCanvas.SetActive(true);
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void ContinueGame()
@@ -49,7 +58,16 @@ public class GameManager : MonoBehaviour
         if(winScreen.gameObject.activeInHierarchy)
             winScreen.gameObject.SetActive(false);
 
+        pauseCanvas.SetActive(false);
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void ReturnMenu()
+    {
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void Restart()
