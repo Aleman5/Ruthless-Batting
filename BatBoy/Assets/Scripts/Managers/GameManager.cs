@@ -71,6 +71,10 @@ public class GameManager : MonoBehaviour
     {
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        StartCoroutine(ChangeLevel());
     }
 
     void Restart()
@@ -91,6 +95,18 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
             SceneManager.LoadScene(1);
         }
+        if (InputManager.Instance.GetPauseButton())
+        {
+            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+        }
+    }
+
+    IEnumerator ChangeLevel()
+    {
+        //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(2);//fadeTime);
+
+        SceneManager.LoadScene("Menu");
     }
 
     static public GameManager Instance

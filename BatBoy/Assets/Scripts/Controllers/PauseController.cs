@@ -11,16 +11,13 @@ public class PauseController : MonoBehaviour {
     [SerializeField] UnityEvent onResume;
     [SerializeField] UnityEvent onReturn;
     
-    void Update()
+    /*void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPause)
-                Resume();
-            else
-                Pause();
-        }
-    }
+        if (GameIsPause)
+            Resume();
+        else
+            Pause();
+    }*/
 
     public void Resume()
     {
@@ -38,7 +35,17 @@ public class PauseController : MonoBehaviour {
     {
         GameIsPause = false;
         OnReturn.Invoke();
-        StartCoroutine(ChangeLevel());
+        //StartCoroutine(ChangeLevel());
+    }
+
+    void OnEnable()
+    {
+        Pause();
+    }
+
+    void OnDisable()
+    {
+        Resume();
     }
 
     public UnityEvent OnPause
@@ -56,10 +63,11 @@ public class PauseController : MonoBehaviour {
         get { return onReturn; }
     }
 
-    IEnumerator ChangeLevel()
+    /*IEnumerator ChangeLevel()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(3);//fadeTime);
+        yield return new WaitForSeconds(2);//fadeTime);
+
         SceneManager.LoadScene("Menu");
-    }
+    }*/
 }
