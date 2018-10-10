@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade892cc854065941b14b7cde48a7684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distToChase: 20
+  distToChase: 18
   distToStop: 2
   speed: 3
   possibleObstacules:

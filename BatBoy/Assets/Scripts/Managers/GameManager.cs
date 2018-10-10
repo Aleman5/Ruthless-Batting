@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ChangeLevel()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(2);//fadeTime);
+        yield return new WaitForSeconds(1);//fadeTime);
 
         SceneManager.LoadScene("Menu");
     }

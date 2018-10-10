@@ -863,11 +863,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1636,7 +1636,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b816dd78d3a5d354bb5cc025d024d127, type: 3}
-    m_FontSize: 23
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1695,7 +1695,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.58725923}
   m_AnchorMax: {x: 0.5, y: 0.58725923}
   m_AnchoredPosition: {x: 0.000061035156, y: -191}
-  m_SizeDelta: {x: 247.1, y: 46.3}
+  m_SizeDelta: {x: 300, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508713541
 MonoBehaviour:
@@ -2115,7 +2115,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b816dd78d3a5d354bb5cc025d024d127, type: 3}
-    m_FontSize: 23
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2659,7 +2659,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.58725923}
   m_AnchorMax: {x: 0.5, y: 0.58725923}
   m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 247.1, y: 46.3}
+  m_SizeDelta: {x: 300, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917304844
 MonoBehaviour:
@@ -2803,7 +2803,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b816dd78d3a5d354bb5cc025d024d127, type: 3}
-    m_FontSize: 23
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3397,7 +3397,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.58725923}
   m_AnchorMax: {x: 0.5, y: 0.58725923}
   m_AnchoredPosition: {x: 0.000061035156, y: -94.23999}
-  m_SizeDelta: {x: 247.1, y: 46.3}
+  m_SizeDelta: {x: 300, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1342400244
 MonoBehaviour:
@@ -3800,10 +3800,10 @@ RectTransform:
   m_Father: {fileID: 2083235098}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -242}
-  m_SizeDelta: {x: -1720, y: -1030}
+  m_AnchorMin: {x: 0.3074375, y: 0.22422223}
+  m_AnchorMax: {x: 0.6995625, y: 0.29618523}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554204616
 MonoBehaviour:
@@ -4599,11 +4599,15 @@ MonoBehaviour:
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 39725a311a8adec448f54647201d0895, type: 2}
       count: 8
+    - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
+      count: 3
   - name: Last Wave!
     rate: 1
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 39725a311a8adec448f54647201d0895, type: 2}
       count: 10
+    - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
+      count: 5
   spawnPoints:
   - {fileID: 227456110}
   - {fileID: 1224711615}

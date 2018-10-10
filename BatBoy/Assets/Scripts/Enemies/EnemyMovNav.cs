@@ -48,7 +48,7 @@ public class EnemyMovNav : MonoBehaviour {
                 if (dist > distToStop)
                 {
                     nav.SetDestination(player.position);
-                    nav.speed = speed + speed / 2;
+                    nav.speed = speed * 2;
                 }
                 else
                 {
