@@ -8,6 +8,11 @@ public class Health : MonoBehaviour
     [SerializeField] float amount;
     [HideInInspector][SerializeField] UnityEvent onDeath;
 
+    private void Awake()
+    {
+        ShakerController.Instance.AddToShake(this);
+    }
+
     public float Amount
     {
         get { return amount; }
