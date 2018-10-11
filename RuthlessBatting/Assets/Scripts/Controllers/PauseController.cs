@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour {
 
     public static bool GameIsPause = false;
-    [SerializeField] UnityEvent onPause;
-    [SerializeField] UnityEvent onResume;
-    [SerializeField] UnityEvent onReturn;
+    [HideInInspector][SerializeField] UnityEvent onPause;
+    [HideInInspector][SerializeField] UnityEvent onResume;
+    [HideInInspector][SerializeField] UnityEvent onReturn;
     
     /*void Update()
     {
