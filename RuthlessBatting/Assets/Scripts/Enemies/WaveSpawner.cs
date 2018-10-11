@@ -144,7 +144,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy)
     {
-        int spawnHolder = Random.Range(0, spawnPoints.Length -1);
+        int spawnHolder = Random.Range(0, spawnPoints.Length);
         
         Transform pointTransform = spawnPoints[spawnHolder];
         
