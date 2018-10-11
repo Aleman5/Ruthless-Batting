@@ -36,9 +36,9 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] float timeBetweenWaves;
 
-    [SerializeField] UnityEvent onWaveChange;
-    [SerializeField] UnityEvent onLevelComplete;
-    [SerializeField] UnityEvent onCountdown;
+    [HideInInspector][SerializeField] UnityEvent onWaveChange;
+    [HideInInspector][SerializeField] UnityEvent onLevelComplete;
+    [HideInInspector][SerializeField] UnityEvent onCountdown;
 
     bool waveCompleted = false;
     bool levelCompleted = false;
@@ -144,7 +144,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy)
     {
-        int spawnHolder = Random.Range(0, spawnPoints.Length -1);
+        int spawnHolder = Random.Range(0, spawnPoints.Length);
         
         Transform pointTransform = spawnPoints[spawnHolder];
         

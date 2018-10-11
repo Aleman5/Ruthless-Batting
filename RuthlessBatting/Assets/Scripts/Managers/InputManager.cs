@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     {
         if (Instance == this)
         {
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             input = new InputPC();
         }

@@ -16,7 +16,7 @@ public class Bat : MonoBehaviour, IWeapon
     [SerializeField] PlayerMovement3D playerMovement;
     [SerializeField] BoxCollider batBoxCollider;
     [SerializeField] float horizontalAttackRange;
-    [SerializeField] UnityEvent onAttack;
+    [HideInInspector][SerializeField] UnityEvent onAttack;
 
     float cooldown;
     float attackRate;

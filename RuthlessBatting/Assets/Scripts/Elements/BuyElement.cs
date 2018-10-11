@@ -11,9 +11,9 @@ public class BuyElement : MonoBehaviour
     [Range(0,500)]
     [SerializeField] int priceOfTheElement;
 
-    [SerializeField] UnityEvent onInteract;
-    [SerializeField] UnityEvent onRange;
-    [SerializeField] UnityEvent onQuit;
+    [HideInInspector][SerializeField] UnityEvent onInteract;
+    [HideInInspector][SerializeField] UnityEvent onRange;
+    [HideInInspector][SerializeField] UnityEvent onQuit;
 
     IBuyable buyable;
     MoneyHolder moneyHolder;

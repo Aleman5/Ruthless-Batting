@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [SerializeField] float amount;
-    [SerializeField] UnityEvent onDeath;
+    [HideInInspector][SerializeField] UnityEvent onDeath;
 
     private void Awake()
     {

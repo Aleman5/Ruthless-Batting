@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MoneyHolder : MonoBehaviour
 {
-    [SerializeField] UnityEvent onMoneyChange;
+    [HideInInspector][SerializeField] UnityEvent onMoneyChange;
 
     int actualMoney = 0;
 
