@@ -74,4 +74,5 @@ public class EnemyMovNav : MonoBehaviour {
     }
 
     public bool IsAttacking { get; set; }
+    public float SetSpeed { set { nav.speed = value; } }
 }

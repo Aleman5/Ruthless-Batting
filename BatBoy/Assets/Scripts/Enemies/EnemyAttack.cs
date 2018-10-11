@@ -27,6 +27,7 @@ public class EnemyAttack : MonoBehaviour
     {
         isRunning = true;
 
+        enemyMovement.SetSpeed = 0.0f;
         enemyMovement.enabled = false;
 
         yield return new WaitForSeconds(0.2f);
@@ -35,7 +36,7 @@ public class EnemyAttack : MonoBehaviour
 
         Utilities.SetBoxPreparations(transform, distance);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
 
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
