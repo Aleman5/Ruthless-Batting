@@ -4739,6 +4739,8 @@ MonoBehaviour:
       count: 6
     - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
       count: 2
+    - enemy: {fileID: 4687128411996388, guid: 91f6e907fc4f4574a91a48c8745d2b73, type: 2}
+      count: 5
   - name: Wave 2!
     rate: 1
     enemies:

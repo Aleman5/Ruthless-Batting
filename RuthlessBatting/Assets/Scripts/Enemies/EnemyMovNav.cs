@@ -74,5 +74,10 @@ public class EnemyMovNav : MonoBehaviour {
     }
 
     public bool IsAttacking { get; set; }
-    public float SetSpeed { set { nav.speed = value; } }
+    //public float SetSpeed { set { nav.speed = value; } }
+    public void IsStop()
+    {
+        nav.isStopped = !nav.isStopped;
+        nav.velocity = Vector3.zero;
+    }
 }

@@ -27,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
     {
         isRunning = true;
 
-        enemyMovement.SetSpeed = 0.0f;
+        enemyMovement.IsStop();
         enemyMovement.enabled = false;
 
         yield return new WaitForSeconds(0.2f);
@@ -44,6 +44,7 @@ public class EnemyAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        enemyMovement.IsStop();
         enemyMovement.enabled = true;
         enemyMovement.IsAttacking = false;
 
