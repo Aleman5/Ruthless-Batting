@@ -22,7 +22,7 @@ public class EnemyRangeAttack : MonoBehaviour
     {
         isRunning = true;
 
-        enemyMovement.SetSpeed = 0.0f;
+        //enemyMovement.SetSpeed = 0.0f;
         enemyMovement.enabled = false;
 
         yield return new WaitForSeconds(0.2f);
