@@ -50,10 +50,8 @@ public class EnemyExplode : MonoBehaviour {
 
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("ONTRIGGER");
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("ONTRIGGERPLAYER");
             Health health = collision.GetComponent<Health>();
             health.Amount -= 1;
         }
