@@ -7,7 +7,7 @@ public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] Bat batScript;
 
-    float idleFloat;
+    float actualVel;
 
 	Animator anim;
 
@@ -21,14 +21,17 @@ public class PlayerAnimations : MonoBehaviour
 
 	void Update() 
 	{
-		anim.SetFloat("VerticalSpeed", InputManager.Instance.GetVerticalAxis());
-		anim.SetFloat("HorizontalSpeed", InputManager.Instance.GetHorizontalAxis());
-        //idleFloat = anim.GetFloat("")
+        anim.SetFloat("VerticalSpeed", InputManager.Instance.GetVerticalAxis());
+        anim.SetFloat("HorizontalSpeed", InputManager.Instance.GetHorizontalAxis());
+
+        //actualVel = (InputManager.Instance.GetHorizontalAxis() + InputManager.Instance.GetVerticalAxis());
+        //anim.SetFloat("Velocity", actualVel);
+        //anim.SetInteger("Direction", batScript.ActualDirection);
 	}
 
     void SetAttackTrigger()
     {
         anim.SetTrigger("Attacking");
-        anim.SetInteger("Direction", batScript.DirectionOfTheAttack);
+        anim.SetInteger("Direction", batScript.ActualDirection);
     }
 }
