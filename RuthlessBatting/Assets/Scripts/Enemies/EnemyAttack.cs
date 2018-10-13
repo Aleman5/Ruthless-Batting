@@ -44,7 +44,7 @@ public class EnemyAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        enemyMovement.IsStop();
+        //enemyMovement.IsStop();
         enemyMovement.enabled = true;
         enemyMovement.IsAttacking = false;
 
