@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] EnemyMovNav enemyMovement;
+    [HideInInspector][SerializeField] UnityEvent onAttack;
+
     bool isRunning;
 
     BoxCollider box;
@@ -36,6 +39,8 @@ public class EnemyAttack : MonoBehaviour
 
         Utilities.GetDirection(transform, distance);
 
+        onAttack.Invoke();
+
         yield return new WaitForSeconds(0.4f);
 
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -65,5 +70,10 @@ public class EnemyAttack : MonoBehaviour
             Health health = collision.GetComponent<Health>();
             health.Amount -= 1;
         }
+    }
+
+    public UnityEvent OnAttack
+    {
+        get { return onAttack; }
     }
 }

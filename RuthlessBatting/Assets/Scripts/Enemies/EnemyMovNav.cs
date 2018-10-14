@@ -17,6 +17,8 @@ public class EnemyMovNav : MonoBehaviour {
     NavMeshAgent nav;
     Animator anim;
 
+    bool isChasing;
+
     void Awake()
     {
         player = GameObject.Find("Player_Limit").transform;
@@ -25,6 +27,8 @@ public class EnemyMovNav : MonoBehaviour {
         nav = GetComponentInParent<NavMeshAgent>();
         nav.angularSpeed = 0;
         nav.speed = speed;
+
+        isChasing = false;
     }
 
 
@@ -47,20 +51,22 @@ public class EnemyMovNav : MonoBehaviour {
             {
                 if (dist > distToStop)
                 {
+                    if(!isChasing) isChasing = true;
                     nav.SetDestination(player.position);
                     nav.speed = speed * 2;
                 }
                 else
                 {
+                    if(isChasing) isChasing = false;
                     IsAttacking = true;
                 }
             }
             else
             {
+                if (isChasing) isChasing = false;
                 nav.speed = speed;
             }
         }
-
         /*if (nav.enabled && (dist <= distToChase))
         {
             nav.SetDestination(player.position);
@@ -68,10 +74,17 @@ public class EnemyMovNav : MonoBehaviour {
         }*/
     }
 
+    public int GetDirection()
+    {
+        return Utilities.GetDirection(transform, nav.destination - nav.transform.position);
+    }
+
     public Vector3 GetDistance()
     {
         return player.position - transform.position;
     }
+
+    public bool IsChasing { get { return isChasing; } }
 
     public bool IsAttacking { get; set; }
     //public float SetSpeed { set { nav.speed = value; } }

@@ -30,6 +30,9 @@ public class PlayerAnimations : MonoBehaviour
             anim.SetFloat("VerticalSpeed", xVel);
         }
         else if(xVel > 0.1f || xVel < -0.1f)
+        {
+
+        }
 
         anim.SetFloat("VerticalSpeed", InputManager.Instance.GetVerticalAxis());
         anim.SetFloat("HorizontalSpeed", InputManager.Instance.GetHorizontalAxis());

@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 4503009343898290}
   - component: {fileID: 212134795369062564}
   - component: {fileID: 95995150346661854}
+  - component: {fileID: 114787121069145014}
   m_Layer: 0
   m_Name: Enemy_Mesh
   m_TagString: Untagged
@@ -182,7 +183,7 @@ Animator:
   m_GameObject: {fileID: 1816313016841132}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbdef2928bd17a74da4ac50b97a497b9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -259,6 +260,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMovement: {fileID: 114037686251366450}
+  onAttack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114787121069145014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816313016841132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b454a56b274904ebb397954642bf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &195406705368406694
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -315,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 687432105
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8acb3c964abe8d642bd395dfa984fa33, type: 3}
+  m_Sprite: {fileID: 21300014, guid: 89c5317818c82b845ad700943a48cd7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

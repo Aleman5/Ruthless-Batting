@@ -2594,7 +2594,12 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cce1b11c0941ad84a87b29d8e86c2947, type: 2}
+      objectReference: {fileID: 9100000, guid: 7d987479620219e40a56e025e94505a9, type: 2}
+    - target: {fileID: 95217206102448802, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: af76e67a2e3f3e0429c7e5995d0a2f32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   m_IsPrefabAsset: 0
@@ -4685,7 +4690,7 @@ MonoBehaviour:
     - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
       count: 2
     - enemy: {fileID: 4687128411996388, guid: 91f6e907fc4f4574a91a48c8745d2b73, type: 2}
-      count: 5
+      count: 3
   - name: Wave 2!
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
