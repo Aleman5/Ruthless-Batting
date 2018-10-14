@@ -2586,40 +2586,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114528797308696362, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: obstacules.m_Bits
-      value: 8192
+    - target: {fileID: 1440181098334370, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+      propertyPath: m_Name
+      value: Player_Attack
       objectReference: {fileID: 0}
-    - target: {fileID: 114528797308696362, guid: 8c01a6385e064d3428459454e2390040,
+    - target: {fileID: 95278775475645272, guid: 8c01a6385e064d3428459454e2390040,
         type: 2}
-      propertyPath: originOfTheRay
+      propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 1616657952}
-    - target: {fileID: 320344302382805580, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: m_SceneBindings.Array.data[0].value
-      value: 
-      objectReference: {fileID: 811572695}
-    - target: {fileID: 320344302382805580, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: m_InitialState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
-        type: 2}
-      propertyPath: amount
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 95965608452274910, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+      objectReference: {fileID: 9100000, guid: cce1b11c0941ad84a87b29d8e86c2947, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   m_IsPrefabAsset: 0
---- !u!95 &811572695 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95278775475645272, guid: 8c01a6385e064d3428459454e2390040,
-    type: 2}
-  m_PrefabInternal: {fileID: 811572694}
 --- !u!1 &855312757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,11 +4216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1616657952 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4355824302211080, guid: 8c01a6385e064d3428459454e2390040,
-    type: 2}
-  m_PrefabInternal: {fileID: 811572694}
 --- !u!4 &1684127483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4775508325871846, guid: 3e34ea15b1d099c4594c872068fd0182,

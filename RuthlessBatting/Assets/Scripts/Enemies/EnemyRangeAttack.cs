@@ -27,7 +27,7 @@ public class EnemyRangeAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        Utilities.SetBoxPreparations(transform, distance);
+        Utilities.GetDirection(transform, distance);
 
         yield return new WaitForSeconds(0.4f);
 

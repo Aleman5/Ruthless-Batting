@@ -23,8 +23,6 @@ GameObject:
   - component: {fileID: 54021608170205194}
   - component: {fileID: 114576870129227746}
   - component: {fileID: 114711837485505980}
-  - component: {fileID: 320344302382805580}
-  - component: {fileID: 95965608452274910}
   m_Layer: 8
   m_Name: Player3D
   m_TagString: Player
@@ -368,28 +366,10 @@ Animator:
   m_GameObject: {fileID: 1398123301319880}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cce1b11c0941ad84a87b29d8e86c2947, type: 2}
+  m_Controller: {fileID: 9100000, guid: efb818d0f80cfc749bda6f8bded76280, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95965608452274910
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064627292940418}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -465,6 +445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd7d2a3c07e8f444b44bb017caedb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originOfTheRay: {fileID: 4355824302211080}
+  obstacules:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!114 &114576870129227746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -609,21 +593,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!320 &320344302382805580
-PlayableDirector:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1064627292940418}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e9e9de59c29580f4b944d61be3254fb0, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 114214661925544922, guid: e9e9de59c29580f4b944d61be3254fb0, type: 2}
-    value: {fileID: 95965608452274910}
-  m_ExposedReferences:
-    m_References: []
