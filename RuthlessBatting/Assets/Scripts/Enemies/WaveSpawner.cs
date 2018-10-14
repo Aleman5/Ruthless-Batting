@@ -13,6 +13,9 @@ enum SpawnStates
 
 public class WaveSpawner : MonoBehaviour
 {
+    [SerializeField] float timeBetweenWaves;
+    [SerializeField] float rate;
+
     [System.Serializable]
     public class Enemy
     {
@@ -24,7 +27,6 @@ public class WaveSpawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public float rate;
         public Enemy[] enemies;
     }
 
@@ -34,14 +36,11 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] Transform[] patrolHolders;
 
-    [SerializeField] float timeBetweenWaves;
-
     [HideInInspector][SerializeField] UnityEvent onWaveChange;
     [HideInInspector][SerializeField] UnityEvent onLevelComplete;
     [HideInInspector][SerializeField] UnityEvent onCountdown;
 
     bool waveCompleted = false;
-    bool levelCompleted = false;
     float searchCountdown = 1f;
     SpawnStates state;
 
@@ -55,7 +54,7 @@ public class WaveSpawner : MonoBehaviour
     {
         if(state == SpawnStates.WAITING)
         {
-            if(waveCompleted || levelCompleted)
+            if(waveCompleted)
             {
                 StartCountdown();
             }
@@ -64,12 +63,6 @@ public class WaveSpawner : MonoBehaviour
                 if (!EnemyIsAlive())
                 {
                     waveCompleted = true;
-                    if (nextWave < waves.Length - 1)
-                    {
-                        
-                    }
-                    else
-                        levelCompleted = true;
                 }
             }
             return;
@@ -133,7 +126,7 @@ public class WaveSpawner : MonoBehaviour
             for (int j = 0; j < wave.enemies[i].count; j++)
             {
                 SpawnEnemy(wave.enemies[i].enemy);
-                yield return new WaitForSeconds(1f / wave.rate);
+                yield return new WaitForSeconds(1f / rate);
             }
         }
         
@@ -147,7 +140,6 @@ public class WaveSpawner : MonoBehaviour
         int spawnHolder = Random.Range(0, spawnPoints.Length);
         
         Transform pointTransform = spawnPoints[spawnHolder];
-        
         Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation);
 
         if (enemy.name == "EnemySuperior") {
