@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject restartText;
 
     bool gameWon = false;
-    bool lose = false;
+    bool alive = true;
 
     void Awake()
     {
@@ -81,21 +81,21 @@ public class GameManager : MonoBehaviour
     {
         restartText.SetActive(true);
         Time.timeScale = 0f;
-        lose = true;
+        alive = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
     void Update()
     {
-        if(gameWon && InputManager.Instance.GetActionButton())
+        if (gameWon && InputManager.Instance.GetActionButton())
             SceneManager.LoadScene(0);
-        if (lose && InputManager.Instance.GetRestartButton())
+        if (!alive && InputManager.Instance.GetRestartButton())
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(1);
         }
-        if (InputManager.Instance.GetPauseButton())
+        if (alive && InputManager.Instance.GetPauseButton())
         {
             pauseCanvas.SetActive(!pauseCanvas.activeSelf);
         }
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ChangeLevel()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(1);//fadeTime);
+        yield return new WaitForSeconds(0.5f);//fadeTime);
 
         SceneManager.LoadScene("Menu");
     }
