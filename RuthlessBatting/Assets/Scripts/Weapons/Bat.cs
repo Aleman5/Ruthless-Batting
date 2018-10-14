@@ -72,7 +72,7 @@ public class Bat : MonoBehaviour, IWeapon
     {
         cooldown = Time.time + attackRate;
 
-        playerMovement.enabled = false;
+        //playerMovement.enabled = false;
 
         batBoxCollider.enabled = true;
 
