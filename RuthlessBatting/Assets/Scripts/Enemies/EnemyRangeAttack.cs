@@ -5,50 +5,28 @@ using UnityEngine;
 public class EnemyRangeAttack : MonoBehaviour
 {
     [SerializeField] EnemyMovNav enemyMovement;
-    bool isRunning;
+    private float rate;
+    [SerializeField] float startRate;
+    [SerializeField] GameObject bullet;
 
     void Awake()
     {
-        isRunning = false;
+        rate = startRate;
     }
 
     void Update()
     {
-        if (enemyMovement.IsAttacking && !isRunning)
-            StartCoroutine(Attack(enemyMovement.GetDistance()));
-    }
-
-    IEnumerator Attack(Vector3 distance)
-    {
-        isRunning = true;
-
-        //enemyMovement.SetSpeed = 0.0f;
-        enemyMovement.enabled = false;
-
-        yield return new WaitForSeconds(0.2f);
-
-        Utilities.GetDirection(transform, distance);
-
-        yield return new WaitForSeconds(0.4f);
-
-        transform.eulerAngles = new Vector3(0f, 0f, 0f);
-
-        yield return new WaitForSeconds(0.5f);
-
-        enemyMovement.enabled = true;
-        enemyMovement.IsAttacking = false;
-
-        isRunning = false;
-
-        yield break;
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (enemyMovement.IsAttacking)
         {
-            Health health = collision.GetComponent<Health>();
-            health.Amount -= 1;
+            if (rate <= 0)
+            {
+                Instantiate(bullet, transform.position, Quaternion.identity);
+                rate = startRate;
+            }
+            else
+            {
+                rate -= Time.deltaTime;
+            }
         }
     }
 }

@@ -37,7 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4342774108486458}
   - component: {fileID: 65911216100194980}
-  m_Layer: 17
+  - component: {fileID: 114654313471602066}
+  m_Layer: 0
   m_Name: Enemy_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965497126018656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7003598, y: -0.3, z: 4.660399}
+  m_LocalPosition: {x: 13.85, y: -0.3, z: 0.12116617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4643582722876938}
@@ -168,7 +169,7 @@ BoxCollider:
   m_GameObject: {fileID: 1546014468752290}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.1, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.75}
@@ -201,9 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade892cc854065941b14b7cde48a7684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distToChase: 20
-  distToStop: 2
-  speed: 3
+  distToChase: 18
+  distToStop: 5
+  speed: 2
   possibleObstacules:
     serializedVersion: 2
     m_Bits: 8192
@@ -235,13 +236,27 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114654313471602066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546014468752290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051726677ae41940b22d28774719d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMovement: {fileID: 114095980270788970}
+  startRate: 1.5
+  bullet: {fileID: 1326141454163290, guid: e0a1e5cae8dd8b54dbaeec9fd6ff5ad7, type: 2}
 --- !u!114 &114930069672365200
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965497126018656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd79aebddb2c3741adae8ec427f8477, type: 3}
   m_Name: 
@@ -255,13 +270,13 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 1
-  m_Acceleration: 8
+  m_Speed: 4
+  m_Acceleration: 19
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
