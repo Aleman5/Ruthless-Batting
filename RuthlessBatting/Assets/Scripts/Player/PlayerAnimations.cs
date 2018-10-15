@@ -7,9 +7,6 @@ public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] Bat batScript;
 
-    float yVel;
-    float xVel;
-
     Animator anim;
 
     /* TENER UNA VARIABLE QUE SE GUARDE EL ULTIMO VALOR DEL FLOAT QUE USA EL B.T (VERIFICANDO QUE NO SEA 0) */
@@ -22,18 +19,6 @@ public class PlayerAnimations : MonoBehaviour
 
 	void Update() 
 	{
-        xVel = InputManager.Instance.GetVerticalAxis();
-        yVel = InputManager.Instance.GetHorizontalAxis();
-
-        if(yVel > 0.1f || yVel < -0.1f)
-        {
-            anim.SetFloat("VerticalSpeed", xVel);
-        }
-        else if(xVel > 0.1f || xVel < -0.1f)
-        {
-
-        }
-
         anim.SetFloat("VerticalSpeed", InputManager.Instance.GetVerticalAxis());
         anim.SetFloat("HorizontalSpeed", InputManager.Instance.GetHorizontalAxis());
 
