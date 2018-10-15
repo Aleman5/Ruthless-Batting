@@ -6,6 +6,7 @@ public class EnemyExplode : MonoBehaviour {
 
     [SerializeField] EnemyMovNav enemyMovement;
     [SerializeField] Health enemyHealth;
+    [SerializeField] float timeToExplode;
     bool isRunning;
 
     SphereCollider sphere;
@@ -31,7 +32,7 @@ public class EnemyExplode : MonoBehaviour {
         enemyMovement.IsStop();
         enemyMovement.enabled = false;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeToExplode);
 
         ChangeBoxState();
 

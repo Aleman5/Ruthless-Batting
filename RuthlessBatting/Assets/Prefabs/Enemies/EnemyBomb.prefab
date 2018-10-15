@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMovement: {fileID: 114037686251366450}
   enemyHealth: {fileID: 114331512968824984}
+  timeToExplode: 0.6
 --- !u!135 &135678041895044384
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -275,7 +276,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
