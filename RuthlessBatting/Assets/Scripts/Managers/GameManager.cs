@@ -89,15 +89,22 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameWon && InputManager.Instance.GetActionButton())
-            SceneManager.LoadScene(0);
-        if (!alive && InputManager.Instance.GetRestartButton())
+            StartCoroutine("ChangeLevel");
+
+        if (!alive) // Player is dead.
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(1);
+            if(InputManager.Instance.GetRestartButton())
+            {
+                Time.timeScale = 1f;
+                SceneManager.LoadScene(1);
+            }
+            if (InputManager.Instance.GetPauseButton())
+                StartCoroutine("ChangeLevel");
         }
-        if (alive && InputManager.Instance.GetPauseButton())
+        else // Player is alive.
         {
-            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+            if(InputManager.Instance.GetPauseButton())
+                pauseCanvas.SetActive(!pauseCanvas.activeSelf);
         }
     }
 
