@@ -6,9 +6,9 @@ public class ZoomWhenKilling : MonoBehaviour
 {
     public static ZoomWhenKilling instance;
 
-    [SerializeField] float distanceToGetCloser;
-    [SerializeField] float velocityGoingBack;
-    [SerializeField] float timeToStartGoingBack;
+    [SerializeField] float distanceToZoom;
+    [SerializeField] float velocityTurningBack;
+    [SerializeField] float timeToTurnBack;
 
     float maxSizeOfView;
     float actualTime;
@@ -24,7 +24,7 @@ public class ZoomWhenKilling : MonoBehaviour
         {
             if(actualTime < 0)
             {
-                Camera.main.orthographicSize += velocityGoingBack;
+                Camera.main.orthographicSize += velocityTurningBack;
                 return;
             }
             actualTime -= Time.deltaTime;
@@ -33,8 +33,8 @@ public class ZoomWhenKilling : MonoBehaviour
 
     public void ReduceSize()
     {
-        Camera.main.orthographicSize -= distanceToGetCloser;
-        actualTime = timeToStartGoingBack;
+        Camera.main.orthographicSize -= distanceToZoom;
+        actualTime = timeToTurnBack;
     }
 
     static public ZoomWhenKilling Instance

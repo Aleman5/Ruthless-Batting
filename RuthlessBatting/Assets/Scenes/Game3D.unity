@@ -3574,6 +3574,21 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 56053426}
+    - target: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: distanceToZoom
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: velocityTurningBack
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: timeToTurnBack
+      value: 1.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
   m_IsPrefabAsset: 0
