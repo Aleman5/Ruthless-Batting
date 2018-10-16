@@ -14,6 +14,7 @@ public class ShakerController : MonoBehaviour {
     public void AddToShake(Health health)
     {
         health.OnDeath.AddListener(Shake);
+        health.OnDeath.AddListener(ZoomWhenKilling.Instance.ReduceSize);
     }
 
     void Shake()
