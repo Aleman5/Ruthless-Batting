@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
             if (InputManager.Instance.GetPauseButton())
-                StartCoroutine("ChangeLevel");
+                ReturnMenu();
         }
         else // Player is alive.
         {

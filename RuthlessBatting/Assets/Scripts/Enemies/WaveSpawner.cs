@@ -85,15 +85,20 @@ public class WaveSpawner : MonoBehaviour
     {
         state = SpawnStates.COUNTING;
         TimeLeft = timeBetweenWaves;
-        onCountdown.Invoke();
 
         nextWave++;
+
         if (nextWave > waves.Length - 1)
         {
             OnLevelComplete.Invoke();
 
             gameObject.SetActive(false);
         }
+        else
+        {
+            onCountdown.Invoke();
+        }
+
         waveCompleted = false;
     }
 

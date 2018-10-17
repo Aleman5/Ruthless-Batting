@@ -12,6 +12,7 @@ public class BuyElement : MonoBehaviour
     [SerializeField] int priceOfTheElement;
 
     [HideInInspector][SerializeField] UnityEvent onInteract;
+    [HideInInspector][SerializeField] UnityEvent onNotEnoughMoney;
     [HideInInspector][SerializeField] UnityEvent onRange;
     [HideInInspector][SerializeField] UnityEvent onQuit;
 
@@ -19,7 +20,6 @@ public class BuyElement : MonoBehaviour
     MoneyHolder moneyHolder;
 
     bool isOnRange = false;
-    bool isBought = false;
 
     void Start() {
         buyable = GetComponent<IBuyable>();
@@ -38,12 +38,17 @@ public class BuyElement : MonoBehaviour
                 onRange.Invoke();
             }
 
-            if (InputManager.Instance.GetInteractButton() && !isBought && moneyHolder.ActualMoney >= priceOfTheElement)
+            if (InputManager.Instance.GetInteractButton())
             {
-                isBought = true;
-                buyable.Buy(objective, levelOfTheElement);
-                moneyHolder.ActualMoney = -priceOfTheElement;
-                onInteract.Invoke();
+                if(moneyHolder.ActualMoney >= priceOfTheElement)
+                {
+                    buyable.Buy(objective, levelOfTheElement);
+                    moneyHolder.ActualMoney = -priceOfTheElement;
+                    onInteract.Invoke();
+                    enabled = false;
+                }
+                else
+                    OnNotEnoughMoney.Invoke();
             }
         }
         else if (isOnRange)
@@ -53,9 +58,18 @@ public class BuyElement : MonoBehaviour
         }
     }
 
+    public bool IsOnRange()
+    {
+        return isOnRange;
+    }
+
     public UnityEvent OnInteract
     {
         get { return onInteract; }
+    }
+    public UnityEvent OnNotEnoughMoney
+    {
+        get { return onNotEnoughMoney; }
     }
     public UnityEvent OnRange
     {
@@ -64,9 +78,5 @@ public class BuyElement : MonoBehaviour
     public UnityEvent OnQuit
     {
         get { return onQuit; }
-    }
-    public bool IsOnRange()
-    {
-        return isOnRange;
     }
 }

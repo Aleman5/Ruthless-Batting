@@ -163,14 +163,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
-      propertyPath: player
+      propertyPath: objective
       value: 
       objectReference: {fileID: 56053426}
-    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+    - target: {fileID: 114719360579342382, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
-      propertyPath: elementToBuy
+      propertyPath: movementToImprove
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1525864539}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -181,81 +181,10 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+    - target: {fileID: 114277183398613906, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
-      propertyPath: indexOfTheElement
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_text
-      value: Improve your SPEED by 10% for 50$
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_textInfo.characterCount
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_textInfo.wordCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224810256083768812, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1399294804043654, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23319584822648744, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 2080920143
-      objectReference: {fileID: 0}
-    - target: {fileID: 23319584822648744, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: priceOfTheElement
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-        type: 2}
-      propertyPath: objective
-      value: 
-      objectReference: {fileID: 56053426}
-    - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
+      propertyPath: duration
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
@@ -271,29 +200,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 18958922}
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
---- !u!1 &18958925 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1373720540548192, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
-    type: 2}
-  m_PrefabInternal: {fileID: 18958922}
 --- !u!114 &18958926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
     type: 2}
   m_PrefabInternal: {fileID: 18958922}
   m_Script: {fileID: 11500000, guid: 072ca5dc6f8d3b64ca6928c5e5091b5e, type: 3}
---- !u!114 &18958927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 18958925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4958de38993f774408f78ab1daae9fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementToImprove: {fileID: 1525864539}
 --- !u!1 &45477902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,12 +6165,18 @@ MonoBehaviour:
       count: 8
     - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
       count: 3
+    - enemy: {fileID: 4509008947959764, guid: 1033fb784116fa44fb7cc72a2ae830f7, type: 2}
+      count: 3
   - name: Last Wave!
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
-      count: 10
+      count: 8
     - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
       count: 5
+    - enemy: {fileID: 4509008947959764, guid: 1033fb784116fa44fb7cc72a2ae830f7, type: 2}
+      count: 4
+    - enemy: {fileID: 4687128411996388, guid: 91f6e907fc4f4574a91a48c8745d2b73, type: 2}
+      count: 4
   spawnPoints:
   - {fileID: 227456110}
   - {fileID: 1224711615}
@@ -6505,7 +6423,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114719360579342382, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &2046076102 stripped

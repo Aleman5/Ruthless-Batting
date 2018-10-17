@@ -33,7 +33,8 @@ public class ZoomWhenKilling : MonoBehaviour
 
     public void ReduceSize()
     {
-        Camera.main.orthographicSize -= distanceToZoom;
+        if(Camera.main.orthographicSize > 3)
+            Camera.main.orthographicSize -= distanceToZoom;
         actualTime = timeToTurnBack;
     }
 
