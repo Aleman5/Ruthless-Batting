@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distToChase: 18
-  distToStop: 5
+  distToStop: 7
   speed: 2
   possibleObstacules:
     serializedVersion: 2
