@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 1023528156}
   - component: {fileID: 1023528158}
   - component: {fileID: 1023528157}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2281,7 +2281,7 @@ GameObject:
   - component: {fileID: 1264884036}
   - component: {fileID: 1264884035}
   - component: {fileID: 1264884034}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2304,8 +2304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000095367, y: -147.1}
-  m_SizeDelta: {x: 117.6, y: 31.5}
+  m_AnchoredPosition: {x: 0.000013351, y: -154.5}
+  m_SizeDelta: {x: 169.4, y: 64.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264884034
 MonoBehaviour:
@@ -3597,7 +3597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0fc188572228a459b21eeb04522f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRate: -0.4
+  fadeRate: 0.1
 --- !u!1 &1922852004
 GameObject:
   m_ObjectHideFlags: 0
