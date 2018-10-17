@@ -5390,6 +5390,7 @@ MonoBehaviour:
   - Have a nice Day!
   - Come here the next time...
   - Thanks for buying here!
+  notEnoughMoneyText: Now enough money dude
 --- !u!1 &1604790842
 GameObject:
   m_ObjectHideFlags: 0

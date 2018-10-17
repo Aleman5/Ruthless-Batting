@@ -15,6 +15,7 @@ public class BuyTextManager : MonoBehaviour
 
     [SerializeField] Elements[] elements;
     [SerializeField] string[] differentAnswers;
+    [SerializeField] string notEnoughMoneyText;
 
     int indexOfText;
     string savedText = "";
@@ -73,7 +74,7 @@ public class BuyTextManager : MonoBehaviour
             {
                 indexOfText = i;
                 savedText = elements[i].sellerText.text;
-                elements[i].sellerText.text = "Not enough money dude";
+                elements[i].sellerText.text = notEnoughMoneyText;
                 Invoke("NameBackToNormal", 0.5f);
             }
         }
