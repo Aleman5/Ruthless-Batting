@@ -31,7 +31,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     [SerializeField] Wave[] waves;
-    int nextWave = 0;
+    int nextWave = -1;
 
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] Transform[] patrolHolders;
@@ -44,10 +44,9 @@ public class WaveSpawner : MonoBehaviour
     float searchCountdown = 1f;
     SpawnStates state;
 
-    void Awake()
+    void Start()
     {
-        state = SpawnStates.COUNTING;
-        TimeLeft = timeBetweenWaves;
+        StartCountdown();
     }
 
     void Update()
@@ -68,7 +67,7 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if(TimeLeft <= 0)
+        if(TimeLeft <= -2)
         {
             if (state != SpawnStates.SPAWNING)
             {

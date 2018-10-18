@@ -467,7 +467,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 5
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 183d1749538a0944d9f1e8b91f13e11c, type: 2}
   m_sharedMaterial: {fileID: 21177758031758660, guid: 183d1749538a0944d9f1e8b91f13e11c,
@@ -2750,7 +2750,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Wave
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 183d1749538a0944d9f1e8b91f13e11c, type: 2}
   m_sharedMaterial: {fileID: 21177758031758660, guid: 183d1749538a0944d9f1e8b91f13e11c,
@@ -2819,13 +2819,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -1.2213377}
   m_textInfo:
     textComponent: {fileID: 683142867}
-    characterCount: 4
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
@@ -4284,7 +4284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyChange: {fileID: 397586311}
-  waveText: {fileID: 683142867}
   timeLeft: {fileID: 180649665}
   spawner: {fileID: 2010963725}
   moneyHolder: {fileID: 56053422}
@@ -5411,7 +5410,6 @@ MonoBehaviour:
   - Have a nice Day!
   - Come here the next time...
   - Thanks for buying here!
-  notEnoughMoneyText: Now enough money dude
 --- !u!1 &1604790842
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,7 +6241,7 @@ MonoBehaviour:
   timeBetweenWaves: 5
   rate: 1
   waves:
-  - name: Wave 1!
+  - name: wave 1
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
       count: 6
@@ -6251,7 +6249,7 @@ MonoBehaviour:
       count: 2
     - enemy: {fileID: 4687128411996388, guid: 91f6e907fc4f4574a91a48c8745d2b73, type: 2}
       count: 3
-  - name: Wave 2!
+  - name: wave 2
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
       count: 8
@@ -6259,7 +6257,7 @@ MonoBehaviour:
       count: 3
     - enemy: {fileID: 4509008947959764, guid: 1033fb784116fa44fb7cc72a2ae830f7, type: 2}
       count: 3
-  - name: Last Wave!
+  - name: the last wave
     enemies:
     - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
       count: 8
