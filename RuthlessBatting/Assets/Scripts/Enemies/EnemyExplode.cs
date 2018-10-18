@@ -6,16 +6,12 @@ public class EnemyExplode : MonoBehaviour {
 
     [SerializeField] EnemyMovNav enemyMovement;
     [SerializeField] Health enemyHealth;
+    [SerializeField] GameObject explosion;
     [SerializeField] float timeToExplode;
     bool isRunning;
 
-    SphereCollider sphere;
-
     void Awake()
     {
-        sphere = GetComponent<SphereCollider>();
-        sphere.enabled = false;
-
         isRunning = false;
     }
 
@@ -34,27 +30,12 @@ public class EnemyExplode : MonoBehaviour {
 
         yield return new WaitForSeconds(timeToExplode);
 
-        ChangeBoxState();
-
-        yield return new WaitForSeconds(0.1f);
-        ChangeBoxState();
-
         enemyMovement.IsStop();
 
+        Vector3 explosionPos = transform.position;
+        explosionPos.y = 0.1f;
+        Instantiate(explosion, explosionPos, transform.rotation);
+
         enemyHealth.Amount = 0;
-    }
-
-    private void ChangeBoxState()
-    {
-        sphere.enabled = !sphere.enabled;
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Health health = collision.GetComponent<Health>();
-            health.Amount -= 1;
-        }
     }
 }
