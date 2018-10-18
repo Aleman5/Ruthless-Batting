@@ -8,7 +8,6 @@ public class PatrolRandom : MonoBehaviour
     Transform[] points;
     int destPoint = 0;
     int actualPoint;
-    int timer;
 
     void Start()
     {
@@ -60,8 +59,7 @@ public class PatrolRandom : MonoBehaviour
 
     IEnumerator Wait()
     {
-        timer = Random.Range(3, 5);
-        yield return new WaitForSeconds(timer);
+        yield return new WaitForSeconds(Random.Range(2, 4));
         FindNextPoint();
     }
 }

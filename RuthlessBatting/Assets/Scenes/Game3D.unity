@@ -3789,23 +3789,6 @@ Transform:
   m_Father: {fileID: 2091680678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1091325658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1966777115832620, guid: 2189f19a43e55f549b4cc497a33a391c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1721237402}
---- !u!65 &1091325660
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1091325658}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1097490507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,7 +3974,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8, y: 6}
+  m_Size: {x: 26.386667, y: 27.053333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5558,7 +5541,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4973495146596594, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.02
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 4973495146596594, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5588,20 +5571,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 1655261108755014, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
+    - target: {fileID: 1966777115832620, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
       propertyPath: m_TagString
-      value: Wall
+      value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 4305096565758572, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.427
-      objectReference: {fileID: 0}
-    - target: {fileID: 1655261108755014, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61192891873924438, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2189f19a43e55f549b4cc497a33a391c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1733153363
@@ -6490,7 +6464,7 @@ Prefab:
     - target: {fileID: 23319584822648744, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}

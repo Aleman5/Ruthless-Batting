@@ -49,10 +49,13 @@ TagManager:
   - name: Floor
     uniqueID: 3293122153
     locked: 0
+  - name: BehindWall
+    uniqueID: 1157082113
+    locked: 0
   - name: Wall
     uniqueID: 1275164195
     locked: 0
-  - name: Character
+  - name: OverWall
     uniqueID: 687432105
     locked: 0
   - name: Wall Change
