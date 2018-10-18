@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4503009343898290}
   - component: {fileID: 212134795369062564}
   - component: {fileID: 95995150346661854}
-  - component: {fileID: 114591940752825902}
+  - component: {fileID: 114885705377152442}
   m_Layer: 0
   m_Name: Enemy_Mesh
   m_TagString: Untagged
@@ -183,7 +183,7 @@ Animator:
   m_GameObject: {fileID: 1816313016841132}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 8ad22cef7955e814baea2bc53bbdf4f9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114591940752825902
+--- !u!114 &114885705377152442
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816313016841132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e875df2b6b3cac94f9464de5fa595277, type: 3}
+  m_Script: {fileID: 11500000, guid: d1b454a56b274904ebb397954642bf8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114979610603164574
@@ -312,7 +312,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 56578fa69da32384b8ae4a64008f19f9, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SortingLayerID: 687432105
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8acb3c964abe8d642bd395dfa984fa33, type: 3}
+  m_Sprite: {fileID: 21300012, guid: 85f297ab60ae58f4282e6c2906d6ef2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
