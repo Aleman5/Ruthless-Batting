@@ -6238,6 +6238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de3e3f00eec02c46b518bf643725ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartFirstWave: 3
   timeBetweenWaves: 5
   rate: 1
   waves:

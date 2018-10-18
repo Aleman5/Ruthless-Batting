@@ -13,6 +13,7 @@ enum SpawnStates
 
 public class WaveSpawner : MonoBehaviour
 {
+    [SerializeField] float timeToStartFirstWave;
     [SerializeField] float timeBetweenWaves;
     [SerializeField] float rate;
 
@@ -46,7 +47,8 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCountdown();
+        state = SpawnStates.COUNTING;
+        Invoke("StartCountdown", timeToStartFirstWave);
     }
 
     void Update()
