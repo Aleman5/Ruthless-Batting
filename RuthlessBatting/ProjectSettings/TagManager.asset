@@ -49,6 +49,9 @@ TagManager:
   - name: Floor
     uniqueID: 3293122153
     locked: 0
+  - name: Furniture
+    uniqueID: 3365181749
+    locked: 0
   - name: BehindWall
     uniqueID: 1157082113
     locked: 0

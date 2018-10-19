@@ -7,6 +7,13 @@ public class TriggerAttackDetection : MonoBehaviour
     [SerializeField] Transform originOfTheRay;
     [SerializeField] LayerMask obstacules;
 
+    AudioSource audio;
+
+    void Awake()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Enemy"))
@@ -16,6 +23,8 @@ public class TriggerAttackDetection : MonoBehaviour
             {
                 Health health = collision.GetComponent<Health>();
                 health.Amount -= 1;
+
+                audio.Play();
             }
         }
     }

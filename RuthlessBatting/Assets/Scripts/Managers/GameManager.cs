@@ -75,7 +75,8 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        StartCoroutine(ChangeLevel());
+        ChangeLevel2();
+        //StartCoroutine(ChangeLevel());
     }
 
     void Restart()
@@ -90,7 +91,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameWon && InputManager.Instance.GetActionButton())
-            StartCoroutine("ChangeLevel");
+        {
+            Time.timeScale = 1f;
+            ChangeLevel2();
+            //StartCoroutine("ChangeLevel");
+        }
+            
 
         if (!alive) // Player is dead.
         {
@@ -100,7 +106,11 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
             if (InputManager.Instance.GetPauseButton())
+            {
+                Time.timeScale = 1f;
                 ReturnMenu();
+            }
+                
         }
         else // Player is alive.
         {
@@ -109,10 +119,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void ChangeLevel2()
+    {
+        MusicManager.Instance.Stop();
+        SceneManager.LoadScene("Menu");
+    }
+
     IEnumerator ChangeLevel()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(0.5f);//fadeTime);
+        yield return new WaitForSeconds(0.05f);//fadeTime);
         MusicManager.Instance.Stop();
 
         SceneManager.LoadScene("Menu");
