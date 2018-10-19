@@ -8,6 +8,7 @@ public class TriggerAttackDetection : MonoBehaviour
     [SerializeField] LayerMask obstacules;
 
     AudioSource audio;
+    [SerializeField] AudioClip audioClip;
 
     void Awake()
     {
@@ -24,7 +25,7 @@ public class TriggerAttackDetection : MonoBehaviour
                 Health health = collision.GetComponent<Health>();
                 health.Amount -= 1;
 
-                audio.Play();
+                audio.PlayOneShot(audioClip);
             }
         }
     }
