@@ -6,8 +6,10 @@ public class TransparentableWall : MonoBehaviour
 {
     [Range(0, 0.99f)]
     [SerializeField] float levelOfTransparency = 0.3f;
-    [SerializeField] string overWallLayer = "Over Wall";
-    [SerializeField] string behindWallLayer = "Behind Wall";
+    [SerializeField] const string overWallLayer = "OverWall";
+    [SerializeField] int overWallSortingOrder = 0;
+    [SerializeField] const string behindWallLayer = "BehindWall";
+    [SerializeField] int behindWallSortingOrder = 0;
 
     SpriteRenderer spriteRenderer;
     bool isTransparent;
@@ -24,17 +26,45 @@ public class TransparentableWall : MonoBehaviour
         if (countOfObjects == 1 && !isTransparent)
             MakeTransparent();
 
-        col.transform.parent.GetComponentInChildren<SpriteRenderer>().sortingLayerName = behindWallLayer;
+        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+        sprRenderer.sortingLayerName = behindWallLayer;
+        sprRenderer.sortingOrder = behindWallSortingOrder;
     }
 
+    /*void OnColliderEnter(Collision col)
+    {
+        countOfObjects++;
+        if (countOfObjects == 1 && !isTransparent)
+            MakeTransparent();
+
+        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+        sprRenderer.sortingLayerName = behindWallLayer;
+        sprRenderer.sortingOrder = behindWallSortingOrder;
+    }*/
+
     void OnTriggerExit(Collider col)
+    {
+        Debug.Log("Te detecté gil");
+
+        countOfObjects--;
+        if (countOfObjects == 0 && isTransparent)
+            TurnOffTransparent();
+
+        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+        sprRenderer.sortingLayerName = overWallLayer;
+        sprRenderer.sortingOrder = overWallSortingOrder;
+    }
+
+    /*void OnCollisionExit(Collision col)
     {
         countOfObjects--;
         if (countOfObjects == 0 && isTransparent)
             TurnOffTransparent();
 
-        col.transform.parent.GetComponentInChildren<SpriteRenderer>().sortingLayerName = overWallLayer;
-    }
+        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+        sprRenderer.sortingLayerName = overWallLayer;
+        sprRenderer.sortingOrder = overWallSortingOrder;
+    }*/
 
     void MakeTransparent()
     {

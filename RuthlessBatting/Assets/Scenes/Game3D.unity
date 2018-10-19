@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 51750309}
   m_Layer: 12
   m_Name: Level1 Walls 1_13
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &56053421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1064627292940418, guid: 8c01a6385e064d3428459454e2390040,
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 120269516}
   m_Layer: 12
   m_Name: Level1 Walls 1_20
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,8 +692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &140447138
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 158029359}
   m_Layer: 12
   m_Name: Level1 Walls 1_32
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,8 +934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &160643133
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 160643137}
   m_Layer: 12
   m_Name: Level1 Walls 1_27
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1037,8 +1037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &168678323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 168678327}
   m_Layer: 12
   m_Name: Level1 Walls 1_15
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1140,8 +1140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &180649663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 284054947}
   m_Layer: 12
   m_Name: Level1 Walls 1_30
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1905,8 +1905,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &292140337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 324483276}
   m_Layer: 12
   m_Name: Level1 Walls 1_24
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2731,7 +2731,7 @@ GameObject:
   - component: {fileID: 450202086}
   m_Layer: 12
   m_Name: Level1 Walls 1_16
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2819,8 +2819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &467411269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,7 +3198,7 @@ GameObject:
   - component: {fileID: 521328412}
   m_Layer: 12
   m_Name: Level1 Walls 1_4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3286,7 +3286,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 526363720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.54, y: 0, z: -8.467}
+  m_LocalPosition: {x: 1.54, y: 0, z: -8.869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 507238552}
@@ -3301,7 +3301,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.2, y: 0.6, z: 2.5}
+  m_Extents: {x: 0.2, y: 0.6, z: 2.25}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -3317,7 +3317,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 1.2, z: 5}
+  m_Size: {x: 0.4, y: 1.2, z: 4.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &542133486
 GameObject:
@@ -4467,7 +4467,7 @@ GameObject:
   - component: {fileID: 754398333}
   m_Layer: 12
   m_Name: Level1 Walls 1_8
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4750,7 +4750,7 @@ GameObject:
   - component: {fileID: 890368119}
   m_Layer: 12
   m_Name: Level1 Walls 1_5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4838,8 +4838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &897161961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 901363386}
   m_Layer: 12
   m_Name: Level1 Walls 1_12
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5106,7 +5106,7 @@ GameObject:
   - component: {fileID: 925854573}
   m_Layer: 12
   m_Name: Level1 Walls 1_26
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5452,7 +5452,7 @@ GameObject:
   - component: {fileID: 1020239307}
   m_Layer: 12
   m_Name: Level1 Walls 1_6
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5529,7 +5529,7 @@ GameObject:
   - component: {fileID: 1023922899}
   m_Layer: 12
   m_Name: Level1 Walls 1_18
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5617,8 +5617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1030662972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,7 +5932,7 @@ GameObject:
   - component: {fileID: 1113618780}
   m_Layer: 12
   m_Name: Level1 Walls 1_29
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6020,8 +6020,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1130367277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,7 +6252,7 @@ GameObject:
   - component: {fileID: 1204733315}
   m_Layer: 12
   m_Name: Level1 Walls 1_1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6340,8 +6340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1001 &1224711614
 Prefab:
   m_ObjectHideFlags: 0
@@ -6447,7 +6447,7 @@ GameObject:
   - component: {fileID: 1298292370}
   m_Layer: 12
   m_Name: Level1 Walls 1_25
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6535,8 +6535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1319631813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,7 +6661,7 @@ GameObject:
   - component: {fileID: 1324179613}
   m_Layer: 12
   m_Name: Level1 Walls 1_0
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6907,7 +6907,7 @@ GameObject:
   - component: {fileID: 1364032507}
   m_Layer: 12
   m_Name: Level1 Walls 1_11
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6995,8 +6995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1387204803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7010,7 +7010,7 @@ GameObject:
   - component: {fileID: 1387204807}
   m_Layer: 12
   m_Name: Level1 Walls 1_7
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7098,8 +7098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1387649256
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,7 +7475,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1439967455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.55, y: 0, z: 6.08}
+  m_LocalPosition: {x: 4.55, y: 0, z: 5.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 507238552}
@@ -7490,7 +7490,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.2, y: 0.6, z: 1.65}
+  m_Extents: {x: 0.2, y: 0.6, z: 1.4}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -7506,7 +7506,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 1.2, z: 3.3}
+  m_Size: {x: 0.4, y: 1.2, z: 2.8}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1442570700
 GameObject:
@@ -7724,7 +7724,7 @@ GameObject:
   - component: {fileID: 1540530220}
   m_Layer: 12
   m_Name: Level1 Walls 1_23
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7812,8 +7812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1543502649
 GameObject:
   m_ObjectHideFlags: 0
@@ -8459,7 +8459,7 @@ GameObject:
   - component: {fileID: 1702343537}
   m_Layer: 12
   m_Name: Level1 Walls 1_22
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8547,8 +8547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1001 &1721237402
 Prefab:
   m_ObjectHideFlags: 0
@@ -9745,7 +9745,7 @@ GameObject:
   - component: {fileID: 2081197519}
   m_Layer: 12
   m_Name: Level1 Walls 1_31
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9821,8 +9821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!65 &2081197520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10059,7 +10059,7 @@ GameObject:
   - component: {fileID: 2095844847}
   m_Layer: 12
   m_Name: Level1 Walls 1_9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10147,8 +10147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &2112233688
 GameObject:
   m_ObjectHideFlags: 0
@@ -10162,7 +10162,7 @@ GameObject:
   - component: {fileID: 2112233692}
   m_Layer: 12
   m_Name: Level1 Walls 1_3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10250,8 +10250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOfTransparency: 0.3
-  overWallLayer: Over Wall
-  behindWallLayer: Behind Wall
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &2112599856
 GameObject:
   m_ObjectHideFlags: 0
