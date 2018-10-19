@@ -1,7 +1,42 @@
 fileFormatVersion: 2
 guid: 6b943dff572fec341a5aba6e87e99cda
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Level1 Walls 1_0
+    21300002: Level1 Walls 1_1
+    21300004: Level1 Walls 1_3
+    21300006: Level1 Walls 1_2
+    21300008: Level1 Walls 1_4
+    21300010: Level1 Walls 1_7
+    21300012: Level1 Walls 1_5
+    21300014: Level1 Walls 1_6
+    21300016: Level1 Walls 1_8
+    21300018: Level1 Walls 1_9
+    21300020: Level1 Walls 1_10
+    21300022: Level1 Walls 1_11
+    21300024: Level1 Walls 1_12
+    21300026: Level1 Walls 1_13
+    21300028: Level1 Walls 1_14
+    21300030: Level1 Walls 1_15
+    21300032: Level1 Walls 1_16
+    21300034: Level1 Walls 1_17
+    21300036: Level1 Walls 1_18
+    21300038: Level1 Walls 1_19
+    21300040: Level1 Walls 1_20
+    21300042: Level1 Walls 1_21
+    21300044: Level1 Walls 1_22
+    21300046: Level1 Walls 1_23
+    21300048: Level1 Walls 1_24
+    21300050: Level1 Walls 1_25
+    21300052: Level1 Walls 1_26
+    21300054: Level1 Walls 1_27
+    21300056: Level1 Walls 1_28
+    21300058: Level1 Walls 1_29
+    21300060: Level1 Walls 1_30
+    21300062: Level1 Walls 1_32
+    21300064: Level1 Walls 1_31
+    21300066: Level1 Walls 1_33
+    21300068: Level1 Walls 1_34
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -126,7 +161,707 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Level1 Walls 1_0
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 212
+        width: 22
+        height: 1561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884f64a613c91f643a7ca297e3739a52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 212
+        width: 252
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcd4c90b737fe448863a3aab7d69544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 212
+        width: 225
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24055c8917d30b34b998a64cf84f79a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_2
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 212
+        width: 134
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bea36629d41444d92f534662e7f113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_4
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 212
+        width: 13
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68e42a97c903c444a99d338e7c00b09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_7
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 212
+        width: 980
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c277b3a25aee04aaf0dc44c5a33714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_5
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 535
+        width: 13
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d47b2ecb18b8442a10bd081baa3107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_6
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 673
+        width: 13
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1773942155b32734d97006f60df82b3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_8
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 212
+        width: 22
+        height: 1561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1472ad357a906924a8022e66ea1a69e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 712
+        width: 283
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea7f25fe866b9440b4a19f40c314fab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_10
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 712
+        width: 75
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f446f0257e3db4bb17aa77fd7a16a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_11
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 712
+        width: 412
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbce70ae38054d94490fbd015dc5e5c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 712
+        width: 202
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c90340a10cb52478cc897370619da1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_13
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 712
+        width: 258
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d6f4a1eb5ecec4aa332ffca3e8f9d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_14
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 712
+        width: 75
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e87921e6c6b09448a33ccbd3957b799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_15
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 712
+        width: 299
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779779106d09d54468ec5811f4731371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_16
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1132
+        width: 334
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd86ad70c4abdc14eb68ae39156ddb69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1132
+        width: 75
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7153b6f1f1563449bbeac797738309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_18
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1132
+        width: 603
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6680b4c6f90cbaa44bdef4b90badb959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_19
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 1132
+        width: 75
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62962e082219751428beaeba46e5b0d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_20
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1132
+        width: 355
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd6e9aa7b285a44c9c20808c3f09c0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_21
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1132
+        width: 75
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cded384d24e14f3498a2cfba5ab18bef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_22
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1132
+        width: 87
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e1fdda36f61fa408df358d1d32982f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_23
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1370
+        width: 257
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadaab29986fb7d4baaa8fb4ea373248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_24
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1370
+        width: 13
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bdd3e1fb5567e4abc807cf55005a40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_25
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1581
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ce6d358b49a0d408777add53c58dcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_26
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1701
+        width: 13
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d1f32289fc86746b4d3ff1769f4653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_27
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1370
+        width: 593
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3c3dc72cbeec043a294033595b18e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_28
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1370
+        width: 75
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1810b230f8bc3f440876604941cb46b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_29
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1370
+        width: 87
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8848ea397dc48284b9e2253c32edff01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_30
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1773
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfad875982b6a240af6954a8f18c279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_32
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1773
+        width: 1451
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed40a7049212794093d0674fc7f78b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_31
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1773
+        width: 131
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9241c5f5fef419c4aa49da577a2bcfc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_33
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 598
+        width: 13
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457fada7286d94f47a06581897d9dc5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level1 Walls 1_34
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 147
+        width: 1648
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fd634a391db6f49bfd390f135e7e28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
