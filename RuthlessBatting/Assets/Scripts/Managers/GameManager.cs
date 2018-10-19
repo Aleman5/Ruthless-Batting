@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             //DontDestroyOnLoad(gameObject);
         }
+        MusicManager.Instance.Play();
     }
 
     void Start()
@@ -112,6 +113,7 @@ public class GameManager : MonoBehaviour
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(0.5f);//fadeTime);
+        MusicManager.Instance.Stop();
 
         SceneManager.LoadScene("Menu");
     }

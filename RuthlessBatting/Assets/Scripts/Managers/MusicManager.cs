@@ -15,4 +15,31 @@ public class MusicManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void Play()
+    {
+        this.gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    public void Stop()
+    {
+        this.gameObject.GetComponent<AudioSource>().Stop();
+    }
+
+    static public MusicManager Instance
+    {
+        get
+        {
+            if (!instance)
+            {
+                instance = FindObjectOfType<MusicManager>();
+                if (!instance)
+                {
+                    GameObject go = new GameObject("MusicManager");
+                    instance = go.AddComponent<MusicManager>();
+                }
+            }
+            return instance;
+        }
+    }
 }
