@@ -71,7 +71,7 @@ public class WaveSpawner : MonoBehaviour
 
         if(TimeLeft <= -2)
         {
-            if (state != SpawnStates.SPAWNING)
+            if (state != SpawnStates.SPAWNING && nextWave != -1)
             {
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
