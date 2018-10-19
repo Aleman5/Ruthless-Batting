@@ -189,6 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fce6f9f639d249429320f2c361dde24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToGetCloser: 0.3
-  velocityGoingBack: 0.01
-  timeToStartGoingBack: 1.25
+  distanceToZoom: 0.3
+  velocityTurningBack: 0.01
+  timeToTurnBack: 1.25
