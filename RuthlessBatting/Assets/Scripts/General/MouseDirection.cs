@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseDirection : MonoBehaviour {
-
-    [SerializeField] Transform obj;
-
+public class MouseDirection : MonoBehaviour
+{
     void Update()
     {
-        Vector3 mouse = Input.mousePosition;
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(new Vector3(mouse.x, mouse.y, obj.transform.position.y));
-        Vector3 forward = mouseWorld - obj.transform.position;
-        obj.transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        mousePosition.y = 0;
+        transform.rotation = Quaternion.LookRotation(mousePosition, Vector3.up);
     }
 }
