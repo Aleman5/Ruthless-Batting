@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4687128411996388}
   - component: {fileID: 65167739392840904}
+  - component: {fileID: 54442565003553118}
   - component: {fileID: 195406705368406694}
   - component: {fileID: 114331512968824984}
   - component: {fileID: 114445677894267044}
@@ -138,6 +139,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54442565003553118
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786262072408662}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 2
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!65 &65167739392840904
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -157,7 +173,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169804400223088}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5, z: 0.1}
@@ -330,7 +346,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 687432105
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: 85f297ab60ae58f4282e6c2906d6ef2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

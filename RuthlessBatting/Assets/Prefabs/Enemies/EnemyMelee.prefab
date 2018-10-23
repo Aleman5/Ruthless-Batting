@@ -259,6 +259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMovement: {fileID: 114037686251366450}
+  onAttack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!195 &195406705368406694
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -313,7 +318,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 687432105
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8acb3c964abe8d642bd395dfa984fa33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

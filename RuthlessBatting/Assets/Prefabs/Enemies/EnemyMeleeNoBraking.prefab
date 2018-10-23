@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4687128411996388}
   - component: {fileID: 65167739392840904}
+  - component: {fileID: 54112008554439450}
   - component: {fileID: 195406705368406694}
   - component: {fileID: 114331512968824984}
   - component: {fileID: 114445677894267044}
@@ -129,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786262072408662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3186786, y: -0.3, z: 7.4362874}
+  m_LocalPosition: {x: 7.8270674, y: -0.3, z: -6.580687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4567884773569260}
@@ -138,6 +139,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54112008554439450
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786262072408662}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 20
+  m_AngularDrag: 2
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!65 &65167739392840904
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -157,7 +173,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169804400223088}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5, z: 0.1}
@@ -330,7 +346,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 687432105
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300014, guid: 89c5317818c82b845ad700943a48cd7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

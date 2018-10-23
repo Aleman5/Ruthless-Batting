@@ -22,6 +22,8 @@ public class TransparentableWall : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log("Te detecté gil");
+
         countOfObjects++;
         if (countOfObjects == 1 && !isTransparent)
             MakeTransparent();
@@ -30,22 +32,9 @@ public class TransparentableWall : MonoBehaviour
         sprRenderer.sortingLayerName = behindWallLayer;
         sprRenderer.sortingOrder = behindWallSortingOrder;
     }
-
-    /*void OnColliderEnter(Collision col)
-    {
-        countOfObjects++;
-        if (countOfObjects == 1 && !isTransparent)
-            MakeTransparent();
-
-        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
-        sprRenderer.sortingLayerName = behindWallLayer;
-        sprRenderer.sortingOrder = behindWallSortingOrder;
-    }*/
 
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("Te detecté gil");
-
         countOfObjects--;
         if (countOfObjects == 0 && isTransparent)
             TurnOffTransparent();
@@ -54,17 +43,6 @@ public class TransparentableWall : MonoBehaviour
         sprRenderer.sortingLayerName = overWallLayer;
         sprRenderer.sortingOrder = overWallSortingOrder;
     }
-
-    /*void OnCollisionExit(Collision col)
-    {
-        countOfObjects--;
-        if (countOfObjects == 0 && isTransparent)
-            TurnOffTransparent();
-
-        SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
-        sprRenderer.sortingLayerName = overWallLayer;
-        sprRenderer.sortingOrder = overWallSortingOrder;
-    }*/
 
     void MakeTransparent()
     {
