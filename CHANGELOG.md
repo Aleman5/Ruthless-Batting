@@ -1,7 +1,28 @@
 # Changelog
 All notable changes will be documented here.
 
-##[Unreleased]
+##[unrealeased]
+### Added
+- 
+
+### Updated
+- 
+
+
+##[v0.8.1]
+### Added
+- Changelog.
+- Orbital around Player.
+- Crosshair.
+
+### Updated
+- Money system (Multiplier).
+
+### Fixed
+- Enemies invisibility through Wall.
+
+
+##[v0.8]
 ### Added
 - T-SHIRTS made for all the group.
 - Games is in Progress screen added.
