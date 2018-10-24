@@ -22,8 +22,6 @@ public class TransparentableWall : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Te detecté gil");
-
         countOfObjects++;
         if (countOfObjects == 1 && !isTransparent)
             MakeTransparent();

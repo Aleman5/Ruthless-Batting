@@ -35,7 +35,7 @@ public class InputManager : MonoBehaviour
                 instance = FindObjectOfType<InputManager>();
                 if (!instance)
                 {
-                    GameObject go = new GameObject("InputManager");
+                    GameObject go = new GameObject("Manager");
                     instance = go.AddComponent<InputManager>();
                 }
             }

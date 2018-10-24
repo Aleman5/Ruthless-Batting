@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class ZoomWhenKilling : MonoBehaviour
 {
-    public static ZoomWhenKilling instance;
-
     [SerializeField] float distanceToZoom;
     [SerializeField] float velocityTurningBack;
-    [SerializeField] float timeToTurnBack;
+    [SerializeField] float minCameraSize;
 
     float maxSizeOfView;
-    float actualTime;
+    bool isGoingBack;
 
     void Awake()
     {
@@ -20,38 +18,22 @@ public class ZoomWhenKilling : MonoBehaviour
 
     void Update()
     {
-        if (Camera.main.orthographicSize < maxSizeOfView)
+        if (isGoingBack && Camera.main.orthographicSize < maxSizeOfView)
         {
-            if(actualTime < 0)
-            {
-                Camera.main.orthographicSize += velocityTurningBack;
-                return;
-            }
-            actualTime -= Time.deltaTime;
+            Camera.main.orthographicSize += velocityTurningBack;
         }
     }
 
     public void ReduceSize()
     {
-        if(Camera.main.orthographicSize > 3)
+        if(Camera.main.orthographicSize > minCameraSize)
             Camera.main.orthographicSize -= distanceToZoom;
-        actualTime = timeToTurnBack;
+        isGoingBack = false;
     }
 
-    static public ZoomWhenKilling Instance
+    public bool IsGoingBack
     {
-        get
-        {
-            if (!instance)
-            {
-                instance = FindObjectOfType<ZoomWhenKilling>();
-                if (!instance)
-                {
-                    GameObject go = new GameObject("ZoomWhenKilling");
-                    instance = go.AddComponent<ZoomWhenKilling>();
-                }
-            }
-            return instance;
-        }
+        get { return isGoingBack;  }
+        set { isGoingBack = value; }
     }
 }

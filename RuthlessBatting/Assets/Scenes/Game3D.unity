@@ -204,6 +204,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21177758031758660, guid: 183d1749538a0944d9f1e8b91f13e11c,
         type: 2}
+    - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: priceOfTheElement
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: m_text
+      value: Improve your SPEED by 10% for 200$
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
   m_IsPrefabAsset: 0
@@ -7488,9 +7508,20 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 56053421}
+    - target: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: minCameraSize
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1400589923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1400589922}
+  m_Script: {fileID: 11500000, guid: 9fce6f9f639d249429320f2c361dde24, type: 3}
 --- !u!1 &1403231705
 GameObject:
   m_ObjectHideFlags: 0
@@ -9261,8 +9292,9 @@ GameObject:
   - component: {fileID: 1826606858}
   - component: {fileID: 1826606857}
   - component: {fileID: 1826606859}
+  - component: {fileID: 1826606860}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9309,6 +9341,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a8c74de34feb240b3d18e20258e3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1826606860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826606856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c622e6ed942e0cb41965fa36e0a1e1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomKillScript: {fileID: 1400589923}
+  moneyHolderScript: {fileID: 56053422}
+  minMoneyToGive: 8
+  maxMoneyToGive: 12
+  timeToTurnBack: 1.5
 --- !u!1 &1828384358
 GameObject:
   m_ObjectHideFlags: 0
@@ -9782,12 +9830,12 @@ Prefab:
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_text
-      value: Improve your ATTACK SPEED by 10% for 50$
+      value: Improve your ATTACK SPEED by 10% for 200$
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 40
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -9802,7 +9850,7 @@ Prefab:
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -9822,7 +9870,7 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: priceOfTheElement
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9859,6 +9907,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21177758031758660, guid: 183d1749538a0944d9f1e8b91f13e11c,
         type: 2}
+    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114719360579342382, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}

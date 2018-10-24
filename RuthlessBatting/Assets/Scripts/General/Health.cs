@@ -10,7 +10,8 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        ShakerController.Instance.AddToShake(this);
+        if (!CompareTag("Player"))
+            MoneyManager.Instance.AddToListeners(this);
     }
 
     public float Amount
