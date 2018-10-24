@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4567884773569260}
   - component: {fileID: 65481556185712286}
   - component: {fileID: 114037686251366450}
+  - component: {fileID: 114650930208602052}
   m_Layer: 15
   m_Name: Enemy_Limit
   m_TagString: LimitCollider
@@ -252,6 +253,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114650930208602052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169804400223088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce06cf12a7614da48846863e819d1b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &195406705368406694
 NavMeshAgent:
   m_ObjectHideFlags: 1

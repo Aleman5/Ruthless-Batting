@@ -22,24 +22,34 @@ public class TransparentableWall : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        countOfObjects++;
-        if (countOfObjects == 1 && !isTransparent)
-            MakeTransparent();
+        IncreaseCounter();
 
         SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
         sprRenderer.sortingLayerName = behindWallLayer;
         sprRenderer.sortingOrder = behindWallSortingOrder;
     }
 
+    public void IncreaseCounter()
+    {
+        countOfObjects++;
+        if (countOfObjects == 1 && !isTransparent)
+            MakeTransparent();
+    }
+
     void OnTriggerExit(Collider col)
     {
-        countOfObjects--;
-        if (countOfObjects == 0 && isTransparent)
-            TurnOffTransparent();
+        DecreaseCounter();
 
         SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
         sprRenderer.sortingLayerName = overWallLayer;
         sprRenderer.sortingOrder = overWallSortingOrder;
+    }
+
+    public void DecreaseCounter()
+    {
+        countOfObjects--;
+        if (countOfObjects == 0 && isTransparent)
+            TurnOffTransparent();
     }
 
     void MakeTransparent()

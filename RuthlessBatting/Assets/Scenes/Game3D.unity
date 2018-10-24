@@ -207,12 +207,12 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: priceOfTheElement
-      value: 200
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_text
-      value: Improve your SPEED by 10% for 200$
+      value: Improve your SPEED by 10% for 175$
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -223,6 +223,11 @@ Prefab:
         type: 2}
       propertyPath: m_enableWordWrapping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
@@ -9830,7 +9835,7 @@ Prefab:
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_text
-      value: Improve your ATTACK SPEED by 10% for 200$
+      value: Improve your ATTACK SPEED by 10% for 175$
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -9850,7 +9855,7 @@ Prefab:
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -9870,7 +9875,7 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: priceOfTheElement
-      value: 200
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
