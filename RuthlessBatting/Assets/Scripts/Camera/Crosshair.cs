@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crosshair : MonoBehaviour {
-
+public class Crosshair : MonoBehaviour
+{
     [SerializeField] Canvas myCanvas;
 
-	void Start () {
+	void Start ()
+    {
         Cursor.visible = false;
 	}
 
-	void Update () {
+	void Update ()
+    {
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
         transform.position = myCanvas.transform.TransformPoint(pos);

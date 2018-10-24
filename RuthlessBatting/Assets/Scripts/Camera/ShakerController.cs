@@ -10,7 +10,7 @@ public class ShakerController : MonoBehaviour {
     [SerializeField] float fadeInTime;
     [SerializeField] float fadeOutTime;
 
-    void Shake()
+    public void Shake()
     {
         CameraShaker.Instance.ShakeOnce(magnitude, roughness, fadeInTime, fadeOutTime);
     }

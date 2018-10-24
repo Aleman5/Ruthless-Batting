@@ -6,8 +6,12 @@ public class MoneyManager : MonoBehaviour
 {
     static MoneyManager instance;
 
+    [Header("Scripts")]
+    [SerializeField] ShakerController shakerScript;
     [SerializeField] ZoomWhenKilling zoomKillScript;
     [SerializeField] MoneyHolder moneyHolderScript;
+
+    [Header("Variables")]
     [SerializeField] int minMoneyToGive;
     [SerializeField] int maxMoneyToGive;
     [SerializeField] float timeToTurnBack; // Camera zoom in starts 0.3 seconds before time reaches 0
@@ -32,15 +36,14 @@ public class MoneyManager : MonoBehaviour
 
     public void AddToListeners(Health health)
     {
+        if (shakerScript)
+            health.OnDeath.AddListener(shakerScript.Shake);
+
         if (zoomKillScript)
-        {
             health.OnDeath.AddListener(zoomKillScript.ReduceSize);
-        }
 
         if (moneyHolderScript)
-        {
             health.OnDeath.AddListener(AddMoney);
-        }
     }
 
     void AddMoney()

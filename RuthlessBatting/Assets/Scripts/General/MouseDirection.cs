@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseDirection : MonoBehaviour
 {
-    void Update()
+    void LateUpdate()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         mousePosition.y = 0;
