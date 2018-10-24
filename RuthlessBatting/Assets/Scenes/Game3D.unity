@@ -8810,6 +8810,16 @@ Prefab:
       propertyPath: maxMoneyEarned
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 212853847583560580, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f2db4bae07f2214b99163d4de89d257,
+        type: 3}
+    - target: {fileID: 4729422522327088, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   m_IsPrefabAsset: 0
