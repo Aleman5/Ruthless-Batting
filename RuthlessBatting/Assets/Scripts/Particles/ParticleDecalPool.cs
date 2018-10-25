@@ -5,8 +5,8 @@ using UnityEngine;
 public class ParticleDecalPool : MonoBehaviour
 {
     [SerializeField] int maxDecals = 100;
-    [SerializeField] float decalSizeMin = 0.5f;
-    [SerializeField] float decalSizeMax = 1.5f;
+    public float decalSizeMin = .5f;
+    public float decalSizeMax = 1.5f;
 
     ParticleSystem decalParticleSystem;
     int particleDecalDataIndex;
@@ -18,6 +18,7 @@ public class ParticleDecalPool : MonoBehaviour
         decalParticleSystem = GetComponent<ParticleSystem>();
         particles = new ParticleSystem.Particle[maxDecals];
         particleData = new ParticleDecalData[maxDecals];
+
         for (int i = 0; i < maxDecals; i++)
         {
             particleData[i] = new ParticleDecalData();
@@ -32,17 +33,19 @@ public class ParticleDecalPool : MonoBehaviour
 
     void SetParticleData(ParticleCollisionEvent particleCollisionEvent, Gradient colorGradient)
     {
-        if (particleDecalDataIndex >= maxDecals)
+        if(particleDecalDataIndex >= maxDecals)
         {
             particleDecalDataIndex = 0;
         }
 
+        // Record collision position, rotation, size and color.
         particleData[particleDecalDataIndex].position = particleCollisionEvent.intersection;
+
         Vector3 particleRotationEuler = Quaternion.LookRotation(particleCollisionEvent.normal).eulerAngles;
         particleRotationEuler.z = Random.Range(0, 360);
         particleData[particleDecalDataIndex].rotation = particleRotationEuler;
         particleData[particleDecalDataIndex].size = Random.Range(decalSizeMin, decalSizeMax);
-        particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0f, 1f));
+        particleData[particleDecalDataIndex].color = colorGradient.Evaluate(Random.Range(0.0f, 1.0f));
 
         particleDecalDataIndex++;
     }

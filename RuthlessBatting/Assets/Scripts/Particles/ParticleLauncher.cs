@@ -16,6 +16,13 @@ public class ParticleLauncher : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
+    void OnDestroy()
+    {
+        ParticleSystem.MainModule psMain = particleLauncher.main;
+        psMain.startColor = particleColorGradient.Evaluate(Random.Range(0.0f, 1.0f));
+        particleLauncher.Emit(1);
+    }
+
     void OnParticleCollision(GameObject other)
     {
         ParticlePhysicsExtensions.GetCollisionEvents(particleLauncher, other, collisionEvents);
@@ -25,27 +32,17 @@ public class ParticleLauncher : MonoBehaviour
             splatDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
             EmitAtLocation(collisionEvents[i]);
         }
-
     }
 
     void EmitAtLocation(ParticleCollisionEvent particleCollisionEvent)
     {
         splatterParticles.transform.position = particleCollisionEvent.intersection;
         splatterParticles.transform.rotation = Quaternion.LookRotation(particleCollisionEvent.normal);
+
+
         ParticleSystem.MainModule psMain = splatterParticles.main;
-        psMain.startColor = particleColorGradient.Evaluate(Random.Range(0f, 1f));
+        psMain.startColor = particleColorGradient.Evaluate(Random.Range(0.0f, 1.0f));
 
         splatterParticles.Emit(1);
-    }
-
-    void Update()
-    {
-        if (Input.GetButton("Fire1"))
-        {
-            ParticleSystem.MainModule psMain = particleLauncher.main;
-            psMain.startColor = particleColorGradient.Evaluate(Random.Range(0f, 1f));
-            particleLauncher.Emit(1);
-        }
-
     }
 }
