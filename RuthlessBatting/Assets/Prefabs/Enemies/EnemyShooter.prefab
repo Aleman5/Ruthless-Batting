@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4773850018865680}
   - component: {fileID: 212875143461799936}
   - component: {fileID: 95462924432421646}
+  - component: {fileID: 114131368583885420}
   m_Layer: 0
   m_Name: Enemy_Mesh
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256302301869286}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4509008947959764}
@@ -224,6 +225,17 @@ MonoBehaviour:
   possibleObstacules:
     serializedVersion: 2
     m_Bits: 8192
+--- !u!114 &114131368583885420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256302301869286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35f5281110472244a084f82517419a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114497248224477842
 MonoBehaviour:
   m_ObjectHideFlags: 1

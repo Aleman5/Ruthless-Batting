@@ -16,7 +16,7 @@ public class ParticleLauncher : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
-    void OnDestroy()
+    public void Killed()
     {
         ParticleSystem.MainModule psMain = particleLauncher.main;
         psMain.startColor = particleColorGradient.Evaluate(Random.Range(0.0f, 1.0f));
