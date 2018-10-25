@@ -10,14 +10,6 @@ public class PauseController : MonoBehaviour {
     [HideInInspector][SerializeField] UnityEvent onPause;
     [HideInInspector][SerializeField] UnityEvent onResume;
     [HideInInspector][SerializeField] UnityEvent onReturn;
-    
-    /*void Update()
-    {
-        if (GameIsPause)
-            Resume();
-        else
-            Pause();
-    }*/
 
     public void Resume()
     {
@@ -35,7 +27,6 @@ public class PauseController : MonoBehaviour {
     {
         GameIsPause = false;
         OnReturn.Invoke();
-        //StartCoroutine(ChangeLevel());
     }
 
     void OnEnable()

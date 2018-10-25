@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     void ReturnMenu()
@@ -85,7 +85,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
         alive = false;
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     void Update()
