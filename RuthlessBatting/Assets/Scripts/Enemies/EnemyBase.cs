@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public abstract class EnemyBase : MonoBehaviour
 {
+    [Header("Variables")]
     [Range(2, 20)]
     public float distToChase;
     [Range(1, 15)]
@@ -19,6 +20,8 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public Transform player;
     [HideInInspector] public NavMeshAgent nav;
     [HideInInspector] public PatrolFSM patrol;
+    [HideInInspector] public float actualTime = 0.0f;
+
     Animator anim;
 
     void Awake()

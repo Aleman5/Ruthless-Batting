@@ -18,7 +18,7 @@ public class EnemyAttackFSM : MonoBehaviour
 
     void Update()
     {
-        if (fsmScript.GetActualState() == 2)
+        if (fsmScript.actualTime <= 0)
             StartCoroutine(Attack(fsmScript.GetDistance()));
     }
 

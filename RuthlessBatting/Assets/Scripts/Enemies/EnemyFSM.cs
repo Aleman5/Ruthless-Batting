@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyFSM : MonoBehaviour
+﻿public class EnemyFSM
 {
     private int[,] fsm;
     private int currentState;

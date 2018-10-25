@@ -32,7 +32,17 @@ public class EnemyMelee : Enemy
     protected override void Attack()
     {
         //base.Attack();
-        if(!PlayerOnRange())
+        if(PlayerOnRange())
+        {
+            if (actualTime <= 0)
+            {
+                actualTime = fireRate;
+                // Attack
+                return;
+            }
+            actualTime -= Time.deltaTime;
+        }
+        else
         {
             OnEnemyOutOfAttackRange();
             return;
