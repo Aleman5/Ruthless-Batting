@@ -67,11 +67,6 @@ public class EnemyMovNav : MonoBehaviour {
                 nav.speed = speed;
             }
         }
-        /*if (nav.enabled && (dist <= distToChase))
-        {
-            nav.SetDestination(player.position);
-            Invoke("SetDestiny", 5f);
-        }*/
     }
 
     public int GetDirection()

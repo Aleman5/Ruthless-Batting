@@ -6,6 +6,11 @@ public class Autodestroy : MonoBehaviour
 {
     [SerializeField] float timeToDestroy;
 
+    public Autodestroy(float timeToDestroy)
+    {
+        this.timeToDestroy = timeToDestroy;
+    }
+
     void Awake()
     {
         Invoke("DestroyMySelf", timeToDestroy);
