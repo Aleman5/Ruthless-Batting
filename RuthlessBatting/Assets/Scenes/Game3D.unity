@@ -4558,6 +4558,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 1.2, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &733089003
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868034234680808, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &753011523
 GameObject:
   m_ObjectHideFlags: 0
@@ -9631,7 +9677,7 @@ MonoBehaviour:
   waves:
   - name: wave 1
     enemies:
-    - enemy: {fileID: 4687128411996388, guid: 33505fccf29a72f4cb9ceb95120e9e1b, type: 2}
+    - enemy: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
       count: 6
     - enemy: {fileID: 4687128411996388, guid: 4d016daadd56b184a9b7ed778acf6e7a, type: 2}
       count: 2
