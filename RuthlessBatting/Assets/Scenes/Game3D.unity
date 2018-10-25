@@ -2682,7 +2682,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -8907,6 +8907,26 @@ Prefab:
     - target: {fileID: 4729422522327088, guid: 8c01a6385e064d3428459454e2390040, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853847583560580, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 687432105
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853847583560580, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212853847583560580, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212996858374942722, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
