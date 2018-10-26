@@ -16,13 +16,13 @@ public class EnemyAttackFSM : MonoBehaviour
         box.enabled = false;
     }
 
-    void Update()
+    /*void Update()
     {
         if (fsmScript.actualTime <= 0)
             StartCoroutine(Attack(fsmScript.GetDistance()));
-    }
+    }*/
 
-    IEnumerator Attack(Vector3 distance)
+    public IEnumerator Attack(Vector3 distance)
     {
         fsmScript.enabled = false;
 
@@ -35,7 +35,7 @@ public class EnemyAttackFSM : MonoBehaviour
         onAttack.Invoke();
 
         yield return new WaitForSeconds(0.4f);
-
+                                                                        // NUNCA DESHABILITAMOS EL DESTINATION, POR ESO ES QUE SIGUE CAMINANDO AL MISMO PUNTO.
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
         ChangeBoxState();

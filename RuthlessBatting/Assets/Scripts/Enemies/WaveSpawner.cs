@@ -155,7 +155,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if(enemy.name == "EnemyMeleeFSM")
         {
-            go.GetComponent<PatrolFSM>().SetPoints(patrolHolders[patrolHolders.Length - 1].GetComponentsInChildren<Transform>());
+            go.GetComponent<PatrolFSM>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
             return;
         }
         go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());

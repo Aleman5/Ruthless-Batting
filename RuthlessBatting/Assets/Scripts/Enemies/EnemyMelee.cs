@@ -22,7 +22,7 @@ public class EnemyMelee : Enemy
         nav.destination = player.position;
         nav.speed = speed * 2;
 
-        if (PlayerOnRange())
+        if (PlayerOnAttackRange())
         {
             OnEnemyInAttackRange();
             return;
@@ -32,20 +32,19 @@ public class EnemyMelee : Enemy
     protected override void Attack()
     {
         //base.Attack();
-        if(PlayerOnRange())
-        {
-            if (actualTime <= 0)
-            {
-                actualTime = fireRate;
-                // Attack
-                return;
-            }
-            actualTime -= Time.deltaTime;
-        }
-        else
+
+        if (!PlayerOnAttackRange())
         {
             OnEnemyOutOfAttackRange();
             return;
         }
+
+        if (actualTime <= 0)
+        {
+            actualTime = fireRate;
+            StartCoroutine(attackFSM.Attack(GetDistance()));
+        }
+        actualTime -= Time.deltaTime;
+        
     }
 }

@@ -19,6 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     [HideInInspector] public Transform player;
     [HideInInspector] public NavMeshAgent nav;
+    [HideInInspector] public EnemyAttackFSM attackFSM;
     [HideInInspector] public PatrolFSM patrol;
     [HideInInspector] public float actualTime = 0.0f;
 
@@ -34,6 +35,7 @@ public abstract class EnemyBase : MonoBehaviour
         nav.speed = speed;
 
         patrol = GetComponent<PatrolFSM>();
+        attackFSM = GetComponentInChildren<EnemyAttackFSM>();
     }
 
     protected void Update()
@@ -116,7 +118,7 @@ public abstract class EnemyBase : MonoBehaviour
         return false;
     }
 
-    public bool PlayerOnRange()
+    public bool PlayerOnAttackRange()
     {
         Vector3 diff = player.position - transform.position;
         Vector3 dir = diff.normalized;
