@@ -12,6 +12,7 @@ public abstract class EnemyBase : MonoBehaviour
     public float distToStop;
     [Range(1, 7)]
     public float speed;
+    [Range(0.5f, 4.0f)]
     public float fireRate;
     public LayerMask possibleObstacules;
 

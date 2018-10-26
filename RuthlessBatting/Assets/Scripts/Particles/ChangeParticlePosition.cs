@@ -22,7 +22,8 @@ public class ChangeParticlePosition : MonoBehaviour
 
     void Splash()
     {
-        pl.transform.position = transform.position;
+        Vector3 vec = new Vector3(0.0f, 0.0f, 0.3f);
+        pl.transform.position = transform.position + vec;
         pl.GetComponent<ParticleLauncher>().Killed();
     }
 }
