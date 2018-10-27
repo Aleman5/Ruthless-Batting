@@ -153,12 +153,8 @@ public class WaveSpawner : MonoBehaviour
             go.GetComponent<IPatrol>().SetPoints(patrolHolders[patrolHolders.Length -1].GetComponentsInChildren<Transform>());
             return;
         }
-        if(enemy.name == "EnemyMeleeFSM" || enemy.name == "EnemyShooterFSM")
-        {
-            go.GetComponent<IPatrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
-            return;
-        }
-        go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
+
+        go.GetComponent<IPatrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
     }
 
     public string GetActualWaveName()

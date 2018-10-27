@@ -6,8 +6,6 @@ public class EnemyRangeAttackFSM : MonoBehaviour, IAttack
 {
     [SerializeField] GameObject bullet;
 
-    EnemyShooter scriptFSM;
-
     public void Attack()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
