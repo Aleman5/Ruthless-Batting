@@ -45,11 +45,10 @@ public class EnemyMelee : Enemy
 
         if (actualTime <= 0)
         {
-            Debug.Log("Attacked");
             OnAttack.Invoke();
             actualTime = fireRate;
             nav.speed = 0;
-            StartCoroutine(attackFSM.Attack(GetDistance()));
+            attackFSM.Attack();
         }
         actualTime -= Time.deltaTime;
         

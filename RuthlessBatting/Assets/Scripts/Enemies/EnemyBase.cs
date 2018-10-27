@@ -20,23 +20,23 @@ public abstract class EnemyBase : MonoBehaviour
     protected bool drawGizmos = true;
 
     [HideInInspector] public IPatrol patrol;
+    [HideInInspector] public IAttack attackFSM;
     [HideInInspector] public Transform player;
     [HideInInspector] public NavMeshAgent nav;
-    [HideInInspector] public EnemyAttackFSM attackFSM;
     [HideInInspector] public float actualTime = 0.0f;
 
     [HideInInspector][SerializeField] UnityEvent onAttack;
 
     void Awake()
     {
-         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
 
         nav = GetComponent<NavMeshAgent>();
         nav.angularSpeed = 0;
         nav.speed = speed;
 
-        attackFSM = GetComponentInChildren<EnemyAttackFSM>();
-        patrol = GetComponent<IPatrol>();
+        attackFSM = GetComponentInChildren<IAttack>();
+        patrol    = GetComponent<IPatrol>();
     }
 
     protected void Update()

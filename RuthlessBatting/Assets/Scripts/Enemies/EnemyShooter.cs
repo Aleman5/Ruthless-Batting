@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class EnemySuperior : Enemy
+public class EnemyShooter : Enemy
 {
     protected override void Patrolling()
     {
@@ -12,7 +13,10 @@ public class EnemySuperior : Enemy
             OnEnemyInSight();
 
         if (!nav.pathPending && nav.remainingDistance < 0.5f)
+        {
             patrol.FindNextPoint();
+        }
+            
     }
 
     protected override void Chasing()

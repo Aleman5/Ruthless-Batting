@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttackFSM : MonoBehaviour
+public class EnemyAttackFSM : MonoBehaviour, IAttack
 {
     [SerializeField] Enemy fsmScript;
 
@@ -14,8 +14,15 @@ public class EnemyAttackFSM : MonoBehaviour
         box.enabled = false;
     }
 
-    public IEnumerator Attack(Vector3 distance)
+    public void Attack()
     {
+        StartCoroutine("AttackCourutine");
+    }
+
+    IEnumerator AttackCourutine()
+    {
+        Vector3 distance = fsmScript.GetDistance();
+
         fsmScript.enabled = false;
 
         yield return new WaitForSeconds(0.1f);

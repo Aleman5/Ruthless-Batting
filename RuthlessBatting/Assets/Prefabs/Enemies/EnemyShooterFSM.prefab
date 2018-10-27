@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4488459408810382}
   - component: {fileID: 212856416976011018}
   - component: {fileID: 95723173138718078}
-  - component: {fileID: 114929242127607010}
   - component: {fileID: 114382943086607120}
   m_Layer: 0
   m_Name: Enemy_Mesh
@@ -56,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4155581666576962}
   - component: {fileID: 65528963793632450}
-  - component: {fileID: 114909795680759752}
+  - component: {fileID: 114928262320876986}
   m_Layer: 17
   m_Name: Enemy_Attack
   m_TagString: Untagged
@@ -77,9 +76,9 @@ GameObject:
   - component: {fileID: 195611916603647220}
   - component: {fileID: 114408888503471204}
   - component: {fileID: 114998817706448686}
-  - component: {fileID: 114955829421450606}
+  - component: {fileID: 114064881153134424}
   m_Layer: 9
-  m_Name: EnemyMeleeFSM
+  m_Name: EnemyShooterFSM
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +199,7 @@ Animator:
   m_GameObject: {fileID: 1380224171595738}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dbdef2928bd17a74da4ac50b97a497b9, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -209,6 +208,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114064881153134424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868034234680808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d40508fd1907194c8439685a38d388b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distToChase: 18
+  distToStop: 7
+  speed: 2
+  fireRate: 3
+  possibleObstacules:
+    serializedVersion: 2
+    m_Bits: 8192
+  player: {fileID: 0}
+  nav: {fileID: 0}
+  actualTime: 0
+  onAttack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114382943086607120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce06cf12a7614da48846863e819d1b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114909795680759752
+--- !u!114 &114928262320876986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,48 +281,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837945240944166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d8e0faf5e1c5a49acec937eb220e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: f08f630492ae0b148958c6ff53188a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsmScript: {fileID: 114955829421450606}
---- !u!114 &114929242127607010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1380224171595738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a43187f17a198846b5447877d8722e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114955829421450606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1868034234680808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49ea47229d019c4db80771bbc67d93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distToChase: 9
-  distToStop: 1
-  speed: 3
-  fireRate: 1.5
-  possibleObstacules:
-    serializedVersion: 2
-    m_Bits: 8192
-  player: {fileID: 0}
-  nav: {fileID: 0}
-  attackFSM: {fileID: 0}
-  actualTime: 0
-  onAttack:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  bullet: {fileID: 1326141454163290, guid: e0a1e5cae8dd8b54dbaeec9fd6ff5ad7, type: 2}
 --- !u!114 &114998817706448686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,7 +352,7 @@ SpriteRenderer:
   m_SortingLayerID: 687432105
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: 89c5317818c82b845ad700943a48cd7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 690a8655cb8c18044abbdbc4fa4f9eb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

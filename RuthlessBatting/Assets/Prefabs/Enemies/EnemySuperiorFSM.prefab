@@ -247,7 +247,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  patrol: {fileID: 0}
 --- !u!114 &114382943086607120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -298,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d8e0faf5e1c5a49acec937eb220e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsmScript: {fileID: 0}
+  fsmScript: {fileID: 114111869695886048}
 --- !u!114 &114929242127607010
 MonoBehaviour:
   m_ObjectHideFlags: 1
