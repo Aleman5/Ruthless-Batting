@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MoneyManager : MonoBehaviour
 {
     static MoneyManager instance;
+
+    [Header("Multiplier Text")]
+    
+    [SerializeField] Transform multiplier;
+    [SerializeField] Gradient colorGradient;
 
     [Header("Scripts")]
     [SerializeField] ShakerController shakerScript;
@@ -16,8 +22,15 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] int maxMoneyToGive;
     [SerializeField] float timeToTurnBack; // Camera zoom in starts 0.3 seconds before time reaches 0
 
+    Transform player;
+
     float timeLeft = 0.0f;
     float moneyMultiplier = 1.0f;
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
 
     void Update()
     {
@@ -50,6 +63,12 @@ public class MoneyManager : MonoBehaviour
     {
         int moneyToAdd = (int)(Random.Range(minMoneyToGive, maxMoneyToGive) * moneyMultiplier);
         moneyHolderScript.ActualMoney = moneyToAdd;
+
+        Vector3 extraPos = new Vector3(Random.Range(-0.7f, 0.7f), 0.0f, 1.0f);
+        Transform go = Instantiate(multiplier, player.position + extraPos, player.rotation);
+        TextMeshPro tm = go.GetComponentInChildren<TextMeshPro>();
+        tm.text = "x" + moneyMultiplier;
+        tm.color = colorGradient.Evaluate(moneyMultiplier - 1.0f);
 
         timeLeft = timeToTurnBack;
         moneyMultiplier += 0.2f;
