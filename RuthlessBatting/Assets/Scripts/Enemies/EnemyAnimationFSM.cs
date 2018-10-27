@@ -12,8 +12,8 @@ public class EnemyAnimationFSM : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-        fsmScript = transform.parent.GetComponentInChildren<Enemy>();
-        transform.parent.GetComponentInChildren<EnemyAttackFSM>().OnAttack.AddListener(Attacking);
+        fsmScript = transform.GetComponentInParent<Enemy>();
+        transform.GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
     }
 
     void Update()

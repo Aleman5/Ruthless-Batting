@@ -52,13 +52,13 @@ public class Enemy : EnemyBase
         switch (fsm.GetState())
         {
             case (int)States.Patrol:
-                Patrol();
+                Patrolling();
                 break;
             case (int)States.Chase:
-                Chase();
+                Chasing();
                 break;
             case (int)States.Attack:
-                Attack();
+                Attacking();
                 break;
             case (int)States.Death:
 
@@ -66,12 +66,17 @@ public class Enemy : EnemyBase
         }
     }
 
-    virtual protected void Patrol()
+    virtual protected void Patrolling()
     {
 
     }
 
-    virtual protected void Chase()
+    virtual protected void Chasing()
+    {
+
+    }
+
+    virtual protected void Attacking()
     {
 
     }

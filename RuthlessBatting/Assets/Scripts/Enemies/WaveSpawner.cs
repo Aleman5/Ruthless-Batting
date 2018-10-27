@@ -148,14 +148,14 @@ public class WaveSpawner : MonoBehaviour
         Transform pointTransform = spawnPoints[spawnHolder];
         Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation);
 
-        if (enemy.name == "EnemySuperior")
+        if (enemy.name == "EnemySuperiorFSM")
         {
-            go.GetComponent<PatrolRandom>().SetPoints(patrolHolders[patrolHolders.Length -1].GetComponentsInChildren<Transform>());
+            go.GetComponent<IPatrol>().SetPoints(patrolHolders[patrolHolders.Length -1].GetComponentsInChildren<Transform>());
             return;
         }
         if(enemy.name == "EnemyMeleeFSM")
         {
-            go.GetComponent<PatrolFSM>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
+            go.GetComponent<IPatrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
             return;
         }
         go.GetComponent<Patrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());

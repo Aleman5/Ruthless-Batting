@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-interface IInput{
+﻿interface IInput{
     float GetVerticalAxis();
     float GetHorizontalAxis();
     bool GetFireButton();

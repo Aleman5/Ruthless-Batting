@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class EnemyAttackFSM : MonoBehaviour
 {
     [SerializeField] Enemy fsmScript;
-    [HideInInspector] [SerializeField] UnityEvent onAttack;
 
     BoxCollider box;
 
@@ -16,23 +14,15 @@ public class EnemyAttackFSM : MonoBehaviour
         box.enabled = false;
     }
 
-    /*void Update()
-    {
-        if (fsmScript.actualTime <= 0)
-            StartCoroutine(Attack(fsmScript.GetDistance()));
-    }*/
-
     public IEnumerator Attack(Vector3 distance)
     {
         fsmScript.enabled = false;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         ChangeBoxState();
 
         Utilities.GetDirection(transform, distance);
-
-        onAttack.Invoke();
 
         yield return new WaitForSeconds(0.4f);
                                                                         // NUNCA DESHABILITAMOS EL DESTINATION, POR ESO ES QUE SIGUE CAMINANDO AL MISMO PUNTO.
@@ -59,10 +49,5 @@ public class EnemyAttackFSM : MonoBehaviour
             Health health = collision.GetComponent<Health>();
             health.Amount -= 1;
         }
-    }
-
-    public UnityEvent OnAttack
-    {
-        get { return onAttack; }
     }
 }

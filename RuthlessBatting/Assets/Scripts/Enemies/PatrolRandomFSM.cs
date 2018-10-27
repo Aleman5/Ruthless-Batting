@@ -2,7 +2,7 @@
 using UnityEngine.AI;
 using System.Collections;
 
-public class PatrolFSM : MonoBehaviour, IPatrol
+public class PatrolRandomFSM : MonoBehaviour, IPatrol
 {
     NavMeshAgent agent;
     Transform[] points;
@@ -22,8 +22,8 @@ public class PatrolFSM : MonoBehaviour, IPatrol
         if (points.Length == 0)
             return;
 
-        do{
-            destPoint = (destPoint + 1) % points.Length;
+        do {
+            destPoint = Random.Range(0, points.Length -1);
         } while (actualPoint == destPoint);
 
         agent.destination = points[destPoint].position;
@@ -31,14 +31,14 @@ public class PatrolFSM : MonoBehaviour, IPatrol
         actualPoint = destPoint;
     }
 
-    /*void Update()
-    {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            FindNextPoint();
-    }*/
-
     public void SetPoints(Transform[] pointsToFollow)
     {
         points = pointsToFollow;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(Random.Range(2, 4));
+        FindNextPoint();
     }
 }

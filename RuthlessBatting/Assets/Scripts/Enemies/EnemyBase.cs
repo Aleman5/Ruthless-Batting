@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -18,25 +19,24 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected bool drawGizmos = true;
 
+    [HideInInspector] public IPatrol patrol;
     [HideInInspector] public Transform player;
     [HideInInspector] public NavMeshAgent nav;
     [HideInInspector] public EnemyAttackFSM attackFSM;
-    [HideInInspector] public PatrolFSM patrol;
     [HideInInspector] public float actualTime = 0.0f;
 
-    Animator anim;
+    [HideInInspector][SerializeField] UnityEvent onAttack;
 
     void Awake()
     {
-        player = GameObject.Find("Player_Limit").transform;
-        anim = GetComponent<Animator>();
+         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
 
-        nav = GetComponentInParent<NavMeshAgent>();
+        nav = GetComponent<NavMeshAgent>();
         nav.angularSpeed = 0;
         nav.speed = speed;
 
-        patrol = GetComponent<PatrolFSM>();
         attackFSM = GetComponentInChildren<EnemyAttackFSM>();
+        patrol = GetComponent<IPatrol>();
     }
 
     protected void Update()
@@ -84,7 +84,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     public bool PlayerOnSight()
     {
-        Vector3 diff = player.position - transform.position;
+        Vector3 diff = GetDistance();
         Vector3 dir = diff.normalized;
         float dist = diff.magnitude;
 
@@ -92,28 +92,9 @@ public abstract class EnemyBase : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
-                return true;
-            /*{
-                
-
-                if (dist > distToStop)
-                {
-                    if (!isChasing) isChasing = true;
-                    nav.SetDestination(player.position);
-                    nav.speed = speed * 2;
-                }
-                else
-                {
-                    if (isChasing) isChasing = false;
-                    IsAttacking = true;
-                }
-            }
-            else
-            {
-                if (isChasing) isChasing = false;
-                nav.speed = speed;
-            }*/
+            if (dist < distToChase)
+                if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
+                    return true;
         }
 
         return false;
@@ -121,7 +102,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     public bool PlayerOnAttackRange()
     {
-        Vector3 diff = player.position - transform.position;
+        Vector3 diff = GetDistance();
         Vector3 dir = diff.normalized;
         float dist = diff.magnitude;
 
@@ -129,36 +110,17 @@ public abstract class EnemyBase : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
-            {
-                if (dist < distToStop)
-                {
+            if (dist < distToStop)
+                if (!Physics.Raycast(transform.position, dir, out hit, dist, possibleObstacules))
                     return true;
-                }
-            }
-            /*{
-                
-
-                if (dist > distToStop)
-                {
-                    if (!isChasing) isChasing = true;
-                    nav.SetDestination(player.position);
-                    nav.speed = speed * 2;
-                }
-                else
-                {
-                    if (isChasing) isChasing = false;
-                    IsAttacking = true;
-                }
-            }
-            else
-            {
-                if (isChasing) isChasing = false;
-                nav.speed = speed;
-            }*/
         }
 
         return false;
+    }
+
+    public Vector3 GetDistance()
+    {
+        return player.transform.position - transform.position;
     }
 
     public int GetDirection()
@@ -166,9 +128,9 @@ public abstract class EnemyBase : MonoBehaviour
         return Utilities.GetDirection(transform, nav.destination - nav.transform.position);
     }
 
-    public Vector3 GetDistance()
+    public UnityEvent OnAttack
     {
-        return player.position - transform.position;
+        get { return onAttack; }
     }
 
     private void OnDrawGizmos()
