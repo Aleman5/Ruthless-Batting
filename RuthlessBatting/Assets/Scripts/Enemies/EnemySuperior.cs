@@ -35,6 +35,7 @@ public class EnemySuperior : Enemy
 
         if (!PlayerOnAttackRange())
         {
+            actualTime = 0;
             OnEnemyOutOfAttackRange();
             return;
         }

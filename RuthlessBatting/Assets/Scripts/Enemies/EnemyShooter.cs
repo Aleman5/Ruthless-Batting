@@ -39,6 +39,7 @@ public class EnemyShooter : Enemy
 
         if (!PlayerOnAttackRange())
         {
+            actualTime = 0;
             OnEnemyOutOfAttackRange();
             return;
         }
