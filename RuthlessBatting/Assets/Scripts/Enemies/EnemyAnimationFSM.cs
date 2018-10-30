@@ -21,6 +21,12 @@ public class EnemyAnimationFSM : MonoBehaviour
         anim.SetInteger("Direction", fsmScript.GetDirection());
 
         anim.speed = isChasing == false ? 0.5f : 1.0f;
+
+        if (fsmScript.PlayerOnSight())
+            anim.speed = 1.6f;
+        else if (fsmScript.PlayerOnAttackRange())
+            anim.speed = 1f;
+        
     }
 
     void Attacking()
