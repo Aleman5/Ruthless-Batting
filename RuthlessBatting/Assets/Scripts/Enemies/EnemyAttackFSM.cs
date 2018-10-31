@@ -5,12 +5,10 @@ using UnityEngine;
 public class EnemyAttackFSM : MonoBehaviour, IAttack
 {
     [SerializeField] Enemy fsmScript;
-
-    BoxCollider box;
+    [SerializeField] BoxCollider box;
 
     void Awake()
     {
-        box = GetComponent<BoxCollider>();
         box.enabled = false;
     }
 
@@ -21,7 +19,9 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
     IEnumerator AttackCourutine()
     {
-        Vector3 distance = fsmScript.GetDistance();
+        Vector3 dist = fsmScript.GetDistance();
+        dist.y = 0;
+        transform.rotation = Quaternion.LookRotation(dist, Vector3.up);
 
         fsmScript.enabled = false;
 
@@ -29,7 +29,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
         ChangeBoxState();
 
-        Utilities.GetDirection(transform, distance);
+        Utilities.GetDirection(transform, dist);
 
         yield return new WaitForSeconds(0.4f);
                                                                         // NUNCA DESHABILITAMOS EL DESTINATION, POR ESO ES QUE SIGUE CAMINANDO AL MISMO PUNTO.

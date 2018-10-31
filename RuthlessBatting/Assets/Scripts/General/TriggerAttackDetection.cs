@@ -6,6 +6,7 @@ public class TriggerAttackDetection : MonoBehaviour
 {
     [SerializeField] Transform originOfTheRay;
     [SerializeField] LayerMask obstacules;
+    [SerializeField] string tagObjective;
 
     AudioSource audio;
     [SerializeField] AudioClip audioClip;
@@ -17,7 +18,7 @@ public class TriggerAttackDetection : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag(tagObjective))
         {
             Vector3 diff = collision.transform.position - originOfTheRay.position;
             if (!Physics.Raycast(originOfTheRay.position, diff.normalized, diff.magnitude, obstacules))
