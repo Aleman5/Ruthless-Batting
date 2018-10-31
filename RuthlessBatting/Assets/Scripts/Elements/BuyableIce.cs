@@ -6,6 +6,7 @@ public class BuyableIce : MonoBehaviour, IBuyable
 {
     [SerializeField] GameObject ice;
 
+    Buyable buyable = Buyable.GRANADE;
     Ice3D iceScript;
 
     void Start()
@@ -19,5 +20,10 @@ public class BuyableIce : MonoBehaviour, IBuyable
             ice.SetActive(true);
 
         iceScript.SetStats(level);
+    }
+
+    public Buyable GetBuyable()
+    {
+        return buyable;
     }
 }

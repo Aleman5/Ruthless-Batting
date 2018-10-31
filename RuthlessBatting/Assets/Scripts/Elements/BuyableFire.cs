@@ -7,6 +7,7 @@ public class BuyableFire : MonoBehaviour, IBuyable
 
     [SerializeField] GameObject fire;
 
+    Buyable buyable = Buyable.GRANADE;
     Fire3D fireScript;
 
     void Start ()
@@ -20,5 +21,10 @@ public class BuyableFire : MonoBehaviour, IBuyable
             fire.SetActive(true);
 
         fireScript.SetStats(level);
+    }
+
+    public Buyable GetBuyable()
+    {
+        return buyable;
     }
 }

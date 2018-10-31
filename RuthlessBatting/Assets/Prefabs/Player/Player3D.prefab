@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 212455151954614020}
   - component: {fileID: 95217206102448802}
   - component: {fileID: 114329781562717090}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Bat_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1064627292940418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0, z: -5}
+  m_LocalPosition: {x: 4.04, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355824302211080}
@@ -616,6 +616,7 @@ MonoBehaviour:
   obstacules:
     serializedVersion: 2
     m_Bits: 8192
+  tagObjective: Enemy
   audioClip: {fileID: 8300000, guid: 95b7d93c4a720e34dbdf18770e75b4da, type: 3}
 --- !u!114 &114576870129227746
 MonoBehaviour:

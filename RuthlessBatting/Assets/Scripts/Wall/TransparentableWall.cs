@@ -5,7 +5,7 @@ using UnityEngine;
 public class TransparentableWall : MonoBehaviour
 {
     [Range(0, 0.99f)]
-    [SerializeField] float levelOfTransparency = 0.3f;
+    [SerializeField] float levelOfTransparency = 0.55f;
     [SerializeField] const string overWallLayer = "OverWall";
     [SerializeField] int overWallSortingOrder = 0;
     [SerializeField] const string behindWallLayer = "BehindWall";
