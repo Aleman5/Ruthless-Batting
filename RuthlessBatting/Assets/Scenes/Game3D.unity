@@ -207,12 +207,12 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: priceOfTheElement
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_text
-      value: Improve your SPEED by 10% for 200$
+      value: Improve your SPEED by 10% for 150$
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -7551,16 +7551,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114180423866259744, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 56053421}
     - target: {fileID: 114188825020694182, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 56053426}
+    - target: {fileID: 114180423866259744, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 56053421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
   m_IsPrefabAsset: 0
@@ -8872,7 +8872,7 @@ Prefab:
     - target: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
         type: 2}
       propertyPath: amount
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1583681894813426, guid: 8c01a6385e064d3428459454e2390040, type: 2}
       propertyPath: m_Layer
@@ -9911,7 +9911,7 @@ Prefab:
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: m_text
-      value: Improve your ATTACK SPEED by 10% for 275$
+      value: Improve your ATTACK SPEED by 10% for 225$
       objectReference: {fileID: 0}
     - target: {fileID: 114756333170246730, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
@@ -9951,7 +9951,7 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: priceOfTheElement
-      value: 275
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 4893457922252606, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x

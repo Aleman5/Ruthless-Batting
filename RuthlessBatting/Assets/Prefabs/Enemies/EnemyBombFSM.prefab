@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distToChase: 20
   distToStop: 2
-  speed: 3
+  speed: 4
   fireRate: 1
   possibleObstacules:
     serializedVersion: 2

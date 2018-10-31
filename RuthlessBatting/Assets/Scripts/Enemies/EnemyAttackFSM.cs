@@ -6,6 +6,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 {
     [SerializeField] Enemy fsmScript;
     [SerializeField] BoxCollider box;
+    [SerializeField] float timeToAttack;
 
     void Awake()
     {
@@ -25,7 +26,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
         fsmScript.enabled = false;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(timeToAttack);
 
         ChangeBoxState();
 

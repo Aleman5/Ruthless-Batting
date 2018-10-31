@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distToChase: 14
   distToStop: 1
-  speed: 3
+  speed: 4
   fireRate: 1.5
   possibleObstacules:
     serializedVersion: 2
@@ -446,6 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fsmScript: {fileID: 114111869695886048}
   box: {fileID: 65514916100962146}
+  timeToAttack: 0.05
 --- !u!114 &114382943086607120
 MonoBehaviour:
   m_ObjectHideFlags: 1
