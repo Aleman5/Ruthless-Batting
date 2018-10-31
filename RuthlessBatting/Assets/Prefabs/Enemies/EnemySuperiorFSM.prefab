@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 1380224171595738}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 8ad22cef7955e814baea2bc53bbdf4f9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 312a0343670c0704ca6838fe5a3b1f83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -240,7 +240,6 @@ MonoBehaviour:
     m_Bits: 8192
   player: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   nav: {fileID: 195611916603647220}
-  attackFSM: {fileID: 0}
   actualTime: 0
   onAttack:
     m_PersistentCalls:
@@ -365,7 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: 687432105
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: 85f297ab60ae58f4282e6c2906d6ef2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22195cca31af0f249a12fd53f2f8dc6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
