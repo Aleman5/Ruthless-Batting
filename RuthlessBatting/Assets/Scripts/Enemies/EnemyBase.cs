@@ -133,7 +133,7 @@ public abstract class EnemyBase : MonoBehaviour
         get { return onAttack; }
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         if (drawGizmos)
         {
@@ -143,5 +143,5 @@ public abstract class EnemyBase : MonoBehaviour
             UnityEditor.Handles.color = Color.green;
             UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.up, distToChase);
         }
-    }
+    }*/
 }

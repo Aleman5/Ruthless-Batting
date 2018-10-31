@@ -7551,21 +7551,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114188825020694182, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 56053426}
     - target: {fileID: 114180423866259744, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 56053421}
-    - target: {fileID: 114807119290039100, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+    - target: {fileID: 114188825020694182, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
         type: 2}
-      propertyPath: minCameraSize
-      value: 3.5
-      objectReference: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 56053426}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
   m_IsPrefabAsset: 0
@@ -9663,7 +9658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToStartFirstWave: 1
-  timeBetweenWaves: 1
+  timeBetweenWaves: 5
   rate: 1
   waves:
   - name: wave 1

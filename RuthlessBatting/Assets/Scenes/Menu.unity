@@ -2280,7 +2280,7 @@ RectTransform:
   m_Father: {fileID: 1952449742}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43625003, y: 0.3244445}
+  m_AnchorMin: {x: 0.43625003, y: 0.3177778}
   m_AnchorMax: {x: 0.5637501, y: 0.4}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -4579,7 +4579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb30dd8170e25a24f9946f00728afa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  URL: https://www.google.com
+  URL: https://www.deviantart.com/jetxe
 --- !u!1 &1657403386
 GameObject:
   m_ObjectHideFlags: 0
