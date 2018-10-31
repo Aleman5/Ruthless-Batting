@@ -8,6 +8,21 @@ All notable changes will be documented here.
 ### Updated
 - 
 
+##[v0.9]
+### Added
+- New sprites for Enemy Melee and Superior.
+- Vignettes for the story.
+- FSM for Enemies.
+- Visibility of the multiplier.
+- Credits Menu.
+
+### Updated
+- Player and Enemies can attack in all directions.
+- Particles System.
+
+### Fixed
+- Enemy Range movement.
+
 
 ##[v0.8.1]
 ### Added
