@@ -16,6 +16,10 @@ public class InputPC : IInput
     {
         return Input.GetButtonDown("Fire1");
     }
+    public bool GetGranadeButton()
+    {
+        return Input.GetButtonDown("Fire2");
+    }
     public bool GetDashButton()
     {
         return Input.GetButtonDown("Dash");

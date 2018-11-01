@@ -20,6 +20,7 @@ public class InputManager : MonoBehaviour
     public float GetVerticalAxis()   { return input.GetVerticalAxis();   }
     public float GetHorizontalAxis() { return input.GetHorizontalAxis(); }
     public bool GetFireButton()      { return input.GetFireButton();     }
+    public bool GetGranadeButton()   { return input.GetGranadeButton();  }
     public bool GetDashButton()      { return input.GetDashButton();     }
     public bool GetInteractButton()  { return input.GetInteractButton(); }
     public bool GetPauseButton()     { return input.GetPauseButton();    }

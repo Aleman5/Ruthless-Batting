@@ -40,7 +40,6 @@ public class Bat : MonoBehaviour, IWeapon
 
     void Update()
     {
-
         if (InputManager.Instance.GetFireButton() && Time.time > cooldown)
         {
             Attack();

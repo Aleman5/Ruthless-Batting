@@ -11,7 +11,8 @@ public class TriggerDetection : MonoBehaviour
         if (collision.CompareTag(objective))
         {
             Health health = collision.GetComponent<Health>();
-            health.Amount -= 1;
+            if (health)
+                health.Amount -= 1;
         }
     }
 }
