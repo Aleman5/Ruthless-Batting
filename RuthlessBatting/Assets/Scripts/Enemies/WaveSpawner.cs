@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.IO;
 
 enum SpawnStates
 {
@@ -37,9 +38,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] Transform[] patrolHolders;
 
-    [HideInInspector][SerializeField] UnityEvent onWaveChange;
-    [HideInInspector][SerializeField] UnityEvent onLevelComplete;
-    [HideInInspector][SerializeField] UnityEvent onCountdown;
+    [HideInInspector] UnityEvent onWaveChange = new UnityEvent();
+    [HideInInspector] UnityEvent onLevelComplete = new UnityEvent();
+    [HideInInspector] UnityEvent onCountdown = new UnityEvent();
 
     bool waveCompleted = false;
     float searchCountdown = 1f;
@@ -49,6 +50,15 @@ public class WaveSpawner : MonoBehaviour
     {
         state = SpawnStates.COUNTING;
         Invoke("StartCountdown", timeToStartFirstWave);
+        if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
+        {
+            for (int i = 0; i < waves.Length; i++)
+            {
+                if (waves[i].name == SaveLoad.saveGame.data.waveName)
+                    nextWave = i - 1;
+            }
+        }
+
     }
 
     void Update()
@@ -160,11 +170,6 @@ public class WaveSpawner : MonoBehaviour
     public string GetActualWaveName()
     {
         return waves[nextWave].name;
-    }
-
-    public int GetWavesCount()
-    {
-        return waves.Length;
     }
 
     public float TimeLeft { get; set; }

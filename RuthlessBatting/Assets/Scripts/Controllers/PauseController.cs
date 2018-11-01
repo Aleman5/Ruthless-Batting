@@ -29,6 +29,11 @@ public class PauseController : MonoBehaviour {
         OnReturn.Invoke();
     }
 
+    public void Save()
+    {
+        SaveLoad.Save();
+    }
+
     void OnEnable()
     {
         Pause();

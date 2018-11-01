@@ -22,6 +22,14 @@ public class MenuController : MonoBehaviour {
         Application.Quit();
 #endif
     }
+    public void Load()
+    {
+        SaveLoad.Load();
+    }
+    public void NewGame()
+    {
+        SaveLoad.NewGame();
+    }
     IEnumerator ChangeScene()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
