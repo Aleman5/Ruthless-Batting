@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] float amount;
     [HideInInspector][SerializeField] UnityEvent onDeath;
+    [HideInInspector][SerializeField] UnityEvent onHit;
 
     private void Awake()
     {
@@ -24,16 +25,22 @@ public class Health : MonoBehaviour
             {
                 amount = 0;
                 OnDeath.Invoke();
-                if(!CompareTag("Player"))
+                if (!CompareTag("Player"))
                     Destroy(gameObject);
                 //Acá se le diria al personaje que se ejecute la animacion de muerte
                 // Y que tmb deje de ser Trigger para que el personaje no lo pueda lastimar mas
             }
+            else if (value < 0)
+                OnHit.Invoke();
         }
     }
 
     public UnityEvent OnDeath
     {
         get { return onDeath; }
+    }
+    public UnityEvent OnHit
+    {
+        get { return onHit; }
     }
 }

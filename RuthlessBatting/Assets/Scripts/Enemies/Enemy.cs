@@ -9,6 +9,7 @@ public class Enemy : EnemyBase
         Patrol = 0,
         Chase,
         Attack,
+        Recovery,
         Death,
         Count
     }
@@ -19,6 +20,7 @@ public class Enemy : EnemyBase
         OutOfSight,
         InAttackRange,
         OutOfAttackRange,
+        OnHit,
         NoHealth,
         Count
     }
@@ -32,14 +34,19 @@ public class Enemy : EnemyBase
     {
         fsm = new EnemyFSM((int)States.Count, (int)Events.Count, (int)States.Patrol);
 
-                                  // Origin             // Event                       // Destiny
-        fsm.SetRelation( (int)States.Patrol,   (int)Events.InSight,            (int)States.Chase  );
-        fsm.SetRelation( (int)States.Chase,    (int)Events.InAttackRange,      (int)States.Attack );
-        fsm.SetRelation( (int)States.Chase,    (int)Events.OutOfSight,         (int)States.Patrol );
-        fsm.SetRelation( (int)States.Attack,   (int)Events.OutOfAttackRange,   (int)States.Chase  );
-        fsm.SetRelation( (int)States.Patrol,   (int)Events.NoHealth,           (int)States.Death  );
-        fsm.SetRelation( (int)States.Chase,    (int)Events.NoHealth,           (int)States.Death  );
-        fsm.SetRelation( (int)States.Attack,   (int)Events.NoHealth,           (int)States.Death  );
+                                  // Origin             // Event                      // Destiny
+        fsm.SetRelation( (int)States.Patrol,   (int)Events.InSight,           (int)States.Chase    );
+        fsm.SetRelation( (int)States.Recovery, (int)Events.InSight,           (int)States.Chase    );
+        fsm.SetRelation( (int)States.Chase,    (int)Events.InAttackRange,     (int)States.Attack   );
+        fsm.SetRelation( (int)States.Chase,    (int)Events.OutOfSight,        (int)States.Patrol   );
+        fsm.SetRelation( (int)States.Attack,   (int)Events.OutOfAttackRange,  (int)States.Chase    );
+        fsm.SetRelation( (int)States.Patrol,   (int)Events.OnHit,             (int)States.Recovery );
+        fsm.SetRelation( (int)States.Chase,    (int)Events.OnHit,             (int)States.Recovery );
+        fsm.SetRelation( (int)States.Attack,   (int)Events.OnHit,             (int)States.Recovery );
+        fsm.SetRelation( (int)States.Patrol,   (int)Events.NoHealth,          (int)States.Death    );
+        fsm.SetRelation( (int)States.Chase,    (int)Events.NoHealth,          (int)States.Death    );
+        fsm.SetRelation( (int)States.Attack,   (int)Events.NoHealth,          (int)States.Death    );
+        fsm.SetRelation( (int)States.Recovery, (int)Events.NoHealth,          (int)States.Death    );
     }
 
     // ===========================================================
@@ -60,6 +67,9 @@ public class Enemy : EnemyBase
             case (int)States.Attack:
                 Attacking();
                 break;
+            case (int)States.Recovery:
+                Recovering();
+                break;
             case (int)States.Death:
 
                 break;
@@ -77,6 +87,11 @@ public class Enemy : EnemyBase
     }
 
     virtual protected void Attacking()
+    {
+
+    }
+
+    virtual protected void Recovering()
     {
 
     }
@@ -108,6 +123,11 @@ public class Enemy : EnemyBase
     override protected void OnEnemyOutOfAttackRange()
     {
         fsm.SendEvent((int)Events.OutOfAttackRange);
+    }
+
+    protected override void OnHit()
+    {
+        fsm.SendEvent((int)Events.OnHit);
     }
 
     protected override void OnNoHealth()

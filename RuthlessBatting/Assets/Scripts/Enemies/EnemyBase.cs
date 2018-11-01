@@ -37,6 +37,9 @@ public abstract class EnemyBase : MonoBehaviour
 
         attackFSM = GetComponentInChildren<IAttack>();
         patrol    = GetComponent<IPatrol>();
+
+        Health health = GetComponent<Health>();
+        if (health) health.OnHit.AddListener(OnHit);
     }
 
     protected void Update()
@@ -74,6 +77,10 @@ public abstract class EnemyBase : MonoBehaviour
 
     }
     virtual protected void OnEnemyOutOfAttackRange()
+    {
+
+    }
+    virtual protected void OnHit()
     {
 
     }
