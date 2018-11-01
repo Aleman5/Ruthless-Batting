@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class BuyElement : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class BuyElement : MonoBehaviour
     [SerializeField] int levelOfTheElement;
     [Range(0,500)]
     [SerializeField] int priceOfTheElement;
+    [Range(0,1)]
+    [SerializeField] float extraPercentagePerLevelUp;
 
     [HideInInspector][SerializeField] UnityEvent onInteract;
     [HideInInspector][SerializeField] UnityEvent onNotEnoughMoney;
@@ -17,12 +20,15 @@ public class BuyElement : MonoBehaviour
     [HideInInspector][SerializeField] UnityEvent onQuit;
 
     IBuyable buyable;
+    TextMeshPro text;
     MoneyHolder moneyHolder;
 
     bool isOnRange = false;
 
     void Start() {
         buyable = GetComponent<IBuyable>();
+        text = GetComponentInChildren<TextMeshPro>();
+        text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
         moneyHolder = objective.GetComponent<MoneyHolder>();
     }
 
@@ -44,8 +50,9 @@ public class BuyElement : MonoBehaviour
                 {
                     buyable.Buy(objective, levelOfTheElement);
                     moneyHolder.ActualMoney = -priceOfTheElement;
+                    LevelUpThePrice();
                     onInteract.Invoke();
-                    enabled = false;
+                    //enabled = false;
                 }
                 else
                     OnNotEnoughMoney.Invoke();
@@ -56,6 +63,19 @@ public class BuyElement : MonoBehaviour
             isOnRange = false;
             onQuit.Invoke();
         }
+    }
+
+    void LevelUpThePrice()
+    {
+        // Talk with Mati if is better incrementing the price based on the original price or based in the actual price.
+        // Example 1: 100 + 100 % 10 = 110 + 100 % 10 = 120 % 10 = 130;
+        // Example 2: 100 + 100 % 10 = 110 + 110 % 10 = 121 % 10 = 133;
+
+        Debug.Log(priceOfTheElement);
+        Debug.Log(priceOfTheElement * extraPercentagePerLevelUp);
+
+        priceOfTheElement += (int)(priceOfTheElement * extraPercentagePerLevelUp);
+        text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
     }
 
     public bool IsOnRange()

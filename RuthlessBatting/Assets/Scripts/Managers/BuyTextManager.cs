@@ -27,7 +27,8 @@ public class BuyTextManager : MonoBehaviour
             elements[i].sellerText.enabled = false;
             elements[i].seller.OnRange.AddListener(OnRange);
             elements[i].seller.OnQuit.AddListener(OnQuit);
-            elements[i].seller.OnInteract.AddListener(OnInteract);
+            //elements[i].seller.OnInteract.AddListener(OnInteract);
+            
             //elements[i].seller.OnNotEnoughMoney.AddListener(OnNotEnoughMoney);
 
         }

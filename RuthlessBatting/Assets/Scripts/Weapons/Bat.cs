@@ -78,8 +78,8 @@ public class Bat : MonoBehaviour, IWeapon
 
     public void SetStats(int level)
     {
-        cooldown -= cooldown * 0.1f * level;
-        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.1f * level;
+        cooldown -= cooldown * 0.05f * level;
+        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.05f * level;
     }
 
     public UnityEvent OnAttack

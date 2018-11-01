@@ -66,6 +66,6 @@ public class PlayerMovement3D : MonoBehaviour
 
     public void SetStats(int level)
     {
-        movSpeed = originalMovSpeed + originalMovSpeed * (0.1f * level); // Level 1 -> +10%, Level 2 -> +20%, Level 3 -> +30%
+        movSpeed = originalMovSpeed + originalMovSpeed * (0.05f * level); // Level 1 -> +5%, Level 2 -> +10%, Level 3 -> +15%
     }
 }
