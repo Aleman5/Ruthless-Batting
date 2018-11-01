@@ -7,8 +7,20 @@ public class EnemyDoubleHit : Enemy
 {
     [Header("Enemy Double Hit Things")]
     [SerializeField] float timeTaunted;
+    [SerializeField] float forceOnHitted;
 
-    float timeLeftTaunted = 3.0f;
+    Health health;
+    float timeLeftTaunted;
+
+    override protected void Awake()
+    {
+        base.Awake();
+
+        health = GetComponent<Health>();
+        health.OnHit.AddListener(OnHit);
+
+        timeLeftTaunted = timeTaunted;
+    }
 
     protected override void Patrolling()
     {
@@ -56,9 +68,28 @@ public class EnemyDoubleHit : Enemy
 
     protected override void Recovering()
     {
+        if(!nav.isStopped)
+        {
+            Vector3 dir = (transform.position - player.transform.position).normalized;
+            dir.y = 0.0f;
+            dir *= forceOnHitted;
+
+            rb.drag = 10;
+
+            rb.AddForce(dir, ForceMode.Impulse);
+
+            nav.speed = 0;
+            nav.isStopped = true;
+        }
+
         if (timeLeftTaunted <= 0)
         {
+            health.Amount += 1;
             timeLeftTaunted = timeTaunted;
+
+            rb.drag = 20;
+
+            nav.isStopped = false;
 
             OnEnemyInSight();
             return;

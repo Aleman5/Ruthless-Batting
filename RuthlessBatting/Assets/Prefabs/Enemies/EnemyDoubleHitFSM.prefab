@@ -421,6 +421,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   player: {fileID: 0}
+  rb: {fileID: 0}
   nav: {fileID: 0}
   actualTime: 0
   onAttack:
@@ -429,6 +430,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timeTaunted: 3
+  forceOnHitted: 15
 --- !u!114 &114224754156101948
 MonoBehaviour:
   m_ObjectHideFlags: 1
