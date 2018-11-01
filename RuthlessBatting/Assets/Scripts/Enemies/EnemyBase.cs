@@ -22,14 +22,17 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public IPatrol patrol;
     [HideInInspector] public IAttack attackFSM;
     [HideInInspector] public Transform player;
+    [HideInInspector] public Rigidbody rb;
     [HideInInspector] public NavMeshAgent nav;
     [HideInInspector] public float actualTime = 0.0f;
 
     [HideInInspector][SerializeField] UnityEvent onAttack;
 
-    void Awake()
+    virtual protected void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
+
+        rb = GetComponent<Rigidbody>();
 
         nav = GetComponent<NavMeshAgent>();
         nav.angularSpeed = 0;
@@ -37,9 +40,6 @@ public abstract class EnemyBase : MonoBehaviour
 
         attackFSM = GetComponentInChildren<IAttack>();
         patrol    = GetComponent<IPatrol>();
-
-        Health health = GetComponent<Health>();
-        if (health) health.OnHit.AddListener(OnHit);
     }
 
     protected void Update()

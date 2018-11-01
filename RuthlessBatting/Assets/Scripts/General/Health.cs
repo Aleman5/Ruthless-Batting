@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
         get { return amount; }
         set
         {
+            float prevHealth = amount;
             amount = value;
             if (amount <= 0)
             {
@@ -30,7 +31,7 @@ public class Health : MonoBehaviour
                 //Acá se le diria al personaje que se ejecute la animacion de muerte
                 // Y que tmb deje de ser Trigger para que el personaje no lo pueda lastimar mas
             }
-            else if (value < 0)
+            else if (prevHealth > amount)
                 OnHit.Invoke();
         }
     }
