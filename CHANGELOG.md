@@ -1,14 +1,14 @@
 # Changelog
 All notable changes will be documented here.
 
-##[unrealeased]
+## [unrealeased]
 ### Added
 - 
 
 ### Updated
 - 
 
-##[v0.9]
+## [v0.9]
 ### Added
 - New sprites for Enemy Melee and Superior.
 - Vignettes for the story.
@@ -24,7 +24,7 @@ All notable changes will be documented here.
 - Enemy Range movement.
 
 
-##[v0.8.1]
+## [v0.8.1]
 ### Added
 - Changelog.
 - Orbital around Player.
@@ -37,7 +37,7 @@ All notable changes will be documented here.
 - Enemies invisibility through Wall.
 
 
-##[v0.8]
+## [v0.8]
 ### Added
 - T-SHIRTS made for all the group.
 - Games is in Progress screen added.
@@ -56,7 +56,7 @@ All notable changes will be documented here.
 - Dash.
 
 
-##[0.7]
+## [0.7]
 ### Added
 - Name of the game ( Ruthless Batting ).
 - Name of the company ( Ruthless Games ).
@@ -83,7 +83,7 @@ All notable changes will be documented here.
 - Enemies attack's accuracy.
 
 
-##[0.6]
+## [0.6]
 ### Added
 - Patrol Random, enemies wait a few seconds before walking to the next objective.
 - Pause Menu during the game.
@@ -104,7 +104,7 @@ All notable changes will be documented here.
 - Time between waves.
 
 
-##[0.5]
+## [0.5]
 ### Added
 - How to Play Menu (before starting the game).
 - Player's attack animations.
@@ -117,7 +117,7 @@ All notable changes will be documented here.
 - Enemy's detection of the Player.
 
 
-##[0.4]
+## [0.4]
 ### Added
 - Level 2 design.
 - Prototype of the Level 1 implemented.
@@ -135,7 +135,7 @@ All notable changes will be documented here.
 - UI works correctly in any window's dimensions.
 
 
-##[0.3]
+## [0.3]
 ### Added
 - New Font.
 - Basic Menu.
@@ -150,7 +150,7 @@ All notable changes will be documented here.
 - Enemy's movement.
 
 
-##[0.2]
+## [0.2]
 ### Added
 - First Level 1 design implemented.
 - New game concepts.
@@ -159,7 +159,7 @@ All notable changes will be documented here.
 - Transparency system through the wall.
 
 
-##[0.1]
+## [0.1]
 ### Added
 - Player and Level 1 concepts.
 - Player's movement.
