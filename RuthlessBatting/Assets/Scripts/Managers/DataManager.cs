@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class DataManager
 {
+    [System.Serializable]
     public struct Data
     {
         public string actualScene;
@@ -19,18 +20,13 @@ public class DataManager
 
 	public DataManager()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
-        {
-            Debug.Log("dacascas");
-
-            moneyScript = GameObject.Find("Player3D").GetComponent<MoneyHolder>();
-            waveScript = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
-
-            data.moneyCount = moneyScript.GetComponent<MoneyHolder>().ActualMoney;
-            data.waveName = waveScript.GetComponent<WaveSpawner>().GetActualWaveName();
-            data.actualScene = SceneManager.GetActiveScene().name;
-	    }     
-
+        
     }
-    	
+    
+    public void SetPreparations()
+    {
+        data.moneyCount = GameObject.FindGameObjectWithTag("Player").GetComponent<MoneyHolder>().ActualMoney;
+        data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
+        data.actualScene = SceneManager.GetActiveScene().name;
+    }
 }

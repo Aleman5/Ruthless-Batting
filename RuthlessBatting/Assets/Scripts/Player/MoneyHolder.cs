@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using System.IO;
 
+[System.Serializable]
 public class MoneyHolder : MonoBehaviour
 {
     [HideInInspector][SerializeField] UnityEvent onMoneyChange;

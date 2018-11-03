@@ -4176,7 +4176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4990710073482848, guid: 2d24845a73d715b4380da1eb72c969cb, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1868034234680808, guid: 2d24845a73d715b4380da1eb72c969cb, type: 2}
       propertyPath: m_IsActive
@@ -8508,6 +8508,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1736978105378836, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102307709769954, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114196762205882882, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
@@ -9482,21 +9490,6 @@ MonoBehaviour:
   - {fileID: 673978902}
   - {fileID: 1099467539}
   - {fileID: 1484826706}
-  onWaveChange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onLevelComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onCountdown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!4 &2010963726
 Transform:
   m_ObjectHideFlags: 0

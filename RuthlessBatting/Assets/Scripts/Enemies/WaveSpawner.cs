@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using System.IO;
 
@@ -12,6 +10,7 @@ enum SpawnStates
     WAITING
 }
 
+[System.Serializable]
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] float timeToStartFirstWave;
@@ -169,6 +168,9 @@ public class WaveSpawner : MonoBehaviour
 
     public string GetActualWaveName()
     {
+        if (nextWave == -1)
+            return waves[nextWave + 1].name;
+
         return waves[nextWave].name;
     }
 
