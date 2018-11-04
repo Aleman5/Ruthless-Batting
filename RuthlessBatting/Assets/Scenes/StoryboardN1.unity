@@ -129,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &46607406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 111262481}
   - component: {fileID: 111262480}
   - component: {fileID: 111262479}
+  - component: {fileID: 111262483}
   m_Layer: 0
   m_Name: StoryboardCanvas
   m_TagString: Untagged
@@ -288,6 +289,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &111262483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 111262478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336ab79bfb7b9244c95ec2f28e573ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 153872314}
+  - {fileID: 1689040975}
+  - {fileID: 323531757}
+  - {fileID: 522544064}
+  - {fileID: 1614093402}
+  - {fileID: 1535480529}
+  - {fileID: 523397755}
+  - {fileID: 663428224}
+  - {fileID: 2126034533}
+  - {fileID: 1227995220}
+  - {fileID: 1843051385}
+  - {fileID: 1884628989}
+  - {fileID: 167237950}
 --- !u!1 &153872314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1653969251
 RectTransform:
   m_ObjectHideFlags: 0
