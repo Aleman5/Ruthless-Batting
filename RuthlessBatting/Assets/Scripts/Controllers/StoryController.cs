@@ -31,7 +31,7 @@ public class StoryController : MonoBehaviour {
             panels[index].SetActive(false);
             index++;
             if (index == panels.Count)
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SaveLoad.NewGame();
             else
                 panels[index].SetActive(true);
         }
