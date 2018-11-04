@@ -32,7 +32,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
         Utilities.GetDirection(transform, dist);
 
         yield return new WaitForSeconds(0.4f);
-                                                                        // NUNCA DESHABILITAMOS EL DESTINATION, POR ESO ES QUE SIGUE CAMINANDO AL MISMO PUNTO.
+        
         transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
         ChangeBoxState();

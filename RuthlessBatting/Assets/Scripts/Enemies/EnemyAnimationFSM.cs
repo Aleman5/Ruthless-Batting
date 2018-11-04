@@ -29,6 +29,6 @@ public class EnemyAnimationFSM : MonoBehaviour
 
     void Attacking()
     {
-        Debug.Log("Muerte a Shinu!");
+        anim.SetTrigger("Attack");
     }
 }

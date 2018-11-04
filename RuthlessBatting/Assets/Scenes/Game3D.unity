@@ -8596,6 +8596,11 @@ Prefab:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 56053427}
+    - target: {fileID: 114711837485505980, guid: 8c01a6385e064d3428459454e2390040,
+        type: 2}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114196762205882882, guid: 8c01a6385e064d3428459454e2390040, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 8c01a6385e064d3428459454e2390040, type: 2}
