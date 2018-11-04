@@ -26,7 +26,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
         fsmScript.enabled = false;
 
-        yield return new WaitForSeconds(timeToAttack);
+        //yield return new WaitForSeconds(timeToAttack);
 
         ChangeBoxState();
 

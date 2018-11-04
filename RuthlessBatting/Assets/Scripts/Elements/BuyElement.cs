@@ -71,9 +71,6 @@ public class BuyElement : MonoBehaviour
         // Example 1: 100 + 100 % 10 = 110 + 100 % 10 = 120 % 10 = 130;
         // Example 2: 100 + 100 % 10 = 110 + 110 % 10 = 121 % 10 = 133;
 
-        Debug.Log(priceOfTheElement);
-        Debug.Log(priceOfTheElement * extraPercentagePerLevelUp);
-
         priceOfTheElement += (int)(priceOfTheElement * extraPercentagePerLevelUp);
         text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
     }

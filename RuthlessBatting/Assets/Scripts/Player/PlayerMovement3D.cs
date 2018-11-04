@@ -46,10 +46,11 @@ public class PlayerMovement3D : MonoBehaviour
 
     public void MakeForceMovement()
     {
+        rigidbodyToUse.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+
         Vector3 newForce = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         newForce.y = 0;
         newForce = newForce.normalized * dashForce;
-
 
         // Dash depending on the player LookAt
         /*if (movForce.z > 0)

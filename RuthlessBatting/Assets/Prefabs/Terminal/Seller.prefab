@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4893457922252606}
   - component: {fileID: 114546003849428298}
-  - component: {fileID: 114719360579342382}
   m_Layer: 11
   m_Name: Seller
   m_TagString: Untagged
@@ -160,9 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: {fileID: 0}
-  distanceToInteract: 2
+  distanceToInteract: 3
   levelOfTheElement: 1
   priceOfTheElement: 50
+  extraPercentagePerLevelUp: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -183,18 +183,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114719360579342382
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1373720540548192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4958de38993f774408f78ab1daae9fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementToImprove: {fileID: 0}
 --- !u!114 &114756333170246730
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -441,6 +441,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114581515887314620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,12 +495,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distToChase: 9
   distToStop: 1
-  speed: 4
+  speed: 3.5
   fireRate: 1.5
   possibleObstacules:
     serializedVersion: 2
     m_Bits: 8192
   player: {fileID: 0}
+  rb: {fileID: 0}
   nav: {fileID: 0}
   actualTime: 0
   onAttack:

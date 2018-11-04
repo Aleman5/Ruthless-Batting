@@ -409,12 +409,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distToChase: 14
   distToStop: 1
-  speed: 4
+  speed: 3.5
   fireRate: 1.5
   possibleObstacules:
     serializedVersion: 2
     m_Bits: 8192
   player: {fileID: 4206184862782068, guid: 8c01a6385e064d3428459454e2390040, type: 2}
+  rb: {fileID: 0}
   nav: {fileID: 195611916603647220}
   actualTime: 0
   onAttack:
@@ -471,6 +472,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 1
   onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onHit:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
