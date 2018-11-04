@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
 
 public class PatrolFSM : MonoBehaviour, IPatrol
 {

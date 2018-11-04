@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
-
-public class EnemyBomb : Enemy
+﻿public class EnemyBomb : Enemy
 {
     protected override void Patrolling()
     {
