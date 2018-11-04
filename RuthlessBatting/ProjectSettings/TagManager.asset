@@ -9,6 +9,7 @@ TagManager:
   - LimitCollider
   - Wall
   - WaveSpawner
+  - StoryPanel
   layers:
   - Default
   - TransparentFX
