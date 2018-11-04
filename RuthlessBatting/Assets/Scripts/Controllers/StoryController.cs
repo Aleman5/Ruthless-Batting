@@ -16,7 +16,7 @@ public class StoryController : MonoBehaviour {
 
 	void Update ()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             if (index > 0)
             {
@@ -26,7 +26,7 @@ public class StoryController : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             panels[index].SetActive(false);
             index++;
