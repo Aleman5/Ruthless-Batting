@@ -55,12 +55,4 @@ public class PauseController : MonoBehaviour {
     {
         get { return onReturn; }
     }
-
-    /*IEnumerator ChangeLevel()
-    {
-        //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(2);//fadeTime);
-
-        SceneManager.LoadScene("Menu");
-    }*/
 }

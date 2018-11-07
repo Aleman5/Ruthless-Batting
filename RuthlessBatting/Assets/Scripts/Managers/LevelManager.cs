@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
     bool gameWon = false;
     bool alive = true;
 
+    Scene actualScene;
+
     void Awake()
     {
         if (Instance == this)
@@ -26,6 +28,8 @@ public class LevelManager : MonoBehaviour
             //DontDestroyOnLoad(gameObject);
         }
         MusicManager.Instance.Play();
+        actualScene = SceneManager.GetActiveScene();
+        Debug.Log(actualScene.name);
     }
 
     void Start()
@@ -43,7 +47,6 @@ public class LevelManager : MonoBehaviour
         gameWon = true;
 
         Time.timeScale = 0;
-        //PauseGame();
     }
 
     void PauseGame()
@@ -72,8 +75,7 @@ public class LevelManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        ChangeLevel2();
-        //StartCoroutine(ChangeLevel());
+        StartCoroutine(GoToMenu());
     }
 
     void Restart()
@@ -91,7 +93,6 @@ public class LevelManager : MonoBehaviour
         {
             Time.timeScale = 1f;
             ChangeLevel2();
-            //StartCoroutine("ChangeLevel");
         }
             
 
@@ -100,7 +101,7 @@ public class LevelManager : MonoBehaviour
             if(InputManager.Instance.GetRestartButton())
             {
                 Time.timeScale = 1f;
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(actualScene.name);
             }
             if (InputManager.Instance.GetPauseButton())
             {
@@ -119,10 +120,10 @@ public class LevelManager : MonoBehaviour
     void ChangeLevel2()
     {
         MusicManager.Instance.Stop();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    IEnumerator ChangeLevel()
+    IEnumerator GoToMenu()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(0.05f);//fadeTime);
