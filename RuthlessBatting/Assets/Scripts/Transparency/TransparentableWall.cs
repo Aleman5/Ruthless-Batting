@@ -20,7 +20,7 @@ public class TransparentableWall : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (CompareTag("LimitCollider"))
+        if (col.CompareTag("LimitCollider"))
         {
             IncreaseCounter();
 
@@ -40,7 +40,7 @@ public class TransparentableWall : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if (CompareTag("LimitCollider"))
+        if (col.CompareTag("LimitCollider"))
         {
             DecreaseCounter();
 

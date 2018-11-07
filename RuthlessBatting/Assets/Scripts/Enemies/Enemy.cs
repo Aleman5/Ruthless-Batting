@@ -99,10 +99,11 @@ public class Enemy : EnemyBase
     {
         alive = false;
 
-        GetComponentInChildren<EnemyAnimationFSM>().enabled = false;
+        Transform t1 = transform.GetChild(1);
+        t1.GetComponent<EnemyAnimationFSM>().enabled = false;
 
         // Mesh is not a slave anymore. Mesh is a free elf.
-        transform.GetChild(1).SetParent(null);
+        t1.SetParent(null);
 
         Destroy(gameObject);
     }

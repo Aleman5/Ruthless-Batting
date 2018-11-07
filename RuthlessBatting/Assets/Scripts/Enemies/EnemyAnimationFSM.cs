@@ -35,7 +35,9 @@ public class EnemyAnimationFSM : MonoBehaviour
 
     void Death()
     {
-        anim.SetInteger("Direction", fsmScript.GetDirection());
+        int dir = fsmScript.GetDistance().x >= 0 ? 1 : 0;
+
+        anim.SetInteger("Direction", dir);
         anim.SetTrigger("Death");
     }
 }
