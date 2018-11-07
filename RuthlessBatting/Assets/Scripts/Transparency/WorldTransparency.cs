@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WorldTransparency : MonoBehaviour
 {
@@ -11,12 +9,23 @@ public class WorldTransparency : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log("OnTriggerEnter");
+
+        SpriteRenderer sprRend = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+
         // Just remove it, it doens't matter if exists on the list or not.
-        UpperFloorObjects.objects.Remove(col.GetComponent<SpriteRenderer>());
+        if(UpperFloorObjects.objects.Remove(sprRend))
+        {
+            Color color = sprRend.material.color;
+            color.a = 1.0f;
+            sprRend.material.color = color;
+        }
     }
 
     void OnTriggerStay(Collider col)
     {
+        Debug.Log("OnTriggerStay");
+
         if (CompareTag("Player"))
         {
             float dist = (col.transform.position - transform.position).magnitude;
@@ -36,9 +45,13 @@ public class WorldTransparency : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        Debug.Log("OnTriggerExit");
+
         float dist = (col.transform.position - transform.position).magnitude;
 
         if(dist > maxDist / 2.0f) // This Collider is on the UpperFloor.
-            UpperFloorObjects.objects.Add(col.GetComponent<SpriteRenderer>());
+        {
+            UpperFloorObjects.objects.Add(col.transform.parent.GetComponentInChildren<SpriteRenderer>());
+        }
     }
 }

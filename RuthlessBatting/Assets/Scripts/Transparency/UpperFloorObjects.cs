@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class UpperFloorObjects : MonoBehaviour
 {
-    static public List<SpriteRenderer> objects;
+    static public List<SpriteRenderer> objects = new List<SpriteRenderer>();
 
     static public void ChangeTransparency(float percentage)
     {
