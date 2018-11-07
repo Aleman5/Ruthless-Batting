@@ -18,9 +18,11 @@ public class WallDetector : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    void OnDisabled()
     {
         if (wall)
+        {
             wall.DecreaseCounter();
+        }
     }
 }

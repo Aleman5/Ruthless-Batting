@@ -118,7 +118,7 @@ public class WaveSpawner : MonoBehaviour
         if(searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if(GameObject.FindGameObjectWithTag("Enemy") == null)
+            if(transform.childCount == 0)
             {
                 return false;
             }
@@ -155,7 +155,7 @@ public class WaveSpawner : MonoBehaviour
         int spawnHolder = Random.Range(0, spawnPoints.Length);
         
         Transform pointTransform = spawnPoints[spawnHolder];
-        Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation);
+        Transform go = Instantiate(enemy, pointTransform.position, pointTransform.rotation, transform);
 
         if (enemy.name == "EnemySuperiorFSM")
         {

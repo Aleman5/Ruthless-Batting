@@ -26,7 +26,7 @@ public class Enemy : EnemyBase
     EnemyFSM fsm;
 
     // ===========================================================
-    // Inicialización
+    // Inicialization
     // ===========================================================
     private void Start()
     {
@@ -48,7 +48,7 @@ public class Enemy : EnemyBase
     }
 
     // ===========================================================
-    // Métodos virtuales
+    // Virtual Methods
     // ===========================================================
     override protected void OnUpdate()
     {
@@ -69,7 +69,8 @@ public class Enemy : EnemyBase
                 Recovering();
                 break;
             case (int)States.Death:
-
+                if (alive)
+                    Die();
                 break;
         }
     }
@@ -94,13 +95,25 @@ public class Enemy : EnemyBase
 
     }
 
+    void Die()
+    {
+        alive = false;
+
+        GetComponentInChildren<EnemyAnimationFSM>().enabled = false;
+
+        // Mesh is not a slave anymore. Mesh is a free elf.
+        transform.GetChild(1).SetParent(null);
+
+        Destroy(gameObject);
+    }
+
     virtual protected void Attack()
     {
 
     }
 
     // ===========================================================
-    // Eventos
+    // Events
     // ===========================================================
 
     override protected void OnEnemyInSight()

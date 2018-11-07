@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54021608170205194}
   - component: {fileID: 114576870129227746}
   - component: {fileID: 114711837485505980}
+  - component: {fileID: 114485388478377118}
   m_Layer: 8
   m_Name: Player3D
   m_TagString: Player
@@ -57,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4639674730715598}
   - component: {fileID: 212853847583560580}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DirectionSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,9 +74,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4924668435930754}
   - component: {fileID: 114602273621247378}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Bat
-  m_TagString: Weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,14 +122,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4680432764170928}
-  - component: {fileID: 114196762205882882}
-  m_Layer: 10
-  m_Name: Fire
-  m_TagString: Weapon
+  - component: {fileID: 114644955185397280}
+  m_Layer: 0
+  m_Name: GranadeLauncher
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1583681894813426
 GameObject:
   m_ObjectHideFlags: 1
@@ -156,9 +157,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4260145552534994}
   - component: {fileID: 114115550603122454}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Ice
-  m_TagString: Weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4729422522327088}
   - component: {fileID: 114354981508760510}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player_Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +538,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956566791293112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
   m_Name: 
@@ -568,17 +569,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batScript: {fileID: 114602273621247378}
---- !u!114 &114196762205882882
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1479512903778656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8532dd08fe5257e4d99d51cc7428d709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114329781562717090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,6 +591,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5d0c0a09e8b52498aaa1feb5bcbdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114485388478377118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064627292940418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyToUse: {fileID: 54021608170205194}
+  movSpeed: 180
+  dashForce: 4000
 --- !u!114 &114528797308696362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -645,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e79afe82abdf948bd70d42d741e435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 114066864553504702}
+  playerMovement: {fileID: 114485388478377118}
   batBoxCollider: {fileID: 65946476828881318}
   horizontalAttackRange: 1
   onAttack:
@@ -653,6 +657,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114644955185397280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1479512903778656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60be94c2a089d7d4886bd52d69dc42d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  granade: {fileID: 1482602942559422, guid: 214d1da90e389a94bbbb4fb53b3f5c51, type: 2}
+  cooldown: 1
 --- !u!114 &114711837485505980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -666,6 +683,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 1
   onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onHit:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

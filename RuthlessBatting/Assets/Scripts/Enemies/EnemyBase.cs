@@ -16,6 +16,7 @@ public abstract class EnemyBase : MonoBehaviour
     public LayerMask possibleObstacules;
 
     protected bool drawGizmos = true;
+    protected bool alive = true;
 
     [HideInInspector] public IPatrol patrol;
     [HideInInspector] public IAttack attackFSM;
@@ -38,6 +39,8 @@ public abstract class EnemyBase : MonoBehaviour
 
         attackFSM = GetComponentInChildren<IAttack>();
         patrol    = GetComponent<IPatrol>();
+
+        GetComponent<Health>().OnDeath.AddListener(OnNoHealth);
     }
 
     protected void Update()

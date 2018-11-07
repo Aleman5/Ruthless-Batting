@@ -21,10 +21,10 @@ public class PlayerMovement3D : MonoBehaviour
         movForce.z = InputManager.Instance.GetVerticalAxis() * movSpeed;
         movForce.y = 0;
 
-        /*if (InputManager.Instance.GetDashButton())
+        if (InputManager.Instance.GetDashButton())
         {
             MakeForceMovement();
-        }*/
+        }
             
 
         // Rotation by the mouse position

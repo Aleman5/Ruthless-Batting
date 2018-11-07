@@ -12,6 +12,7 @@ public class EnemyAnimationFSM : MonoBehaviour
         anim = GetComponent<Animator>();
         fsmScript = transform.GetComponentInParent<Enemy>();
         transform.GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
+        transform.GetComponentInParent<Health>().OnDeath.AddListener(Death);
     }
 
     void Update()
@@ -30,5 +31,11 @@ public class EnemyAnimationFSM : MonoBehaviour
     void Attacking()
     {
         anim.SetTrigger("Attack");
+    }
+
+    void Death()
+    {
+        anim.SetInteger("Direction", fsmScript.GetDirection());
+        anim.SetTrigger("Death");
     }
 }
