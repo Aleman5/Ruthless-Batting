@@ -13,14 +13,14 @@ public class EnemyMovNav : MonoBehaviour {
 
     Transform player;
     NavMeshAgent nav;
-    Animator anim;
+    //Animator anim;
 
     bool isChasing;
 
     void Awake()
     {
         player = GameObject.Find("Player_Limit").transform;
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
 
         nav = GetComponentInParent<NavMeshAgent>();
         nav.angularSpeed = 0;

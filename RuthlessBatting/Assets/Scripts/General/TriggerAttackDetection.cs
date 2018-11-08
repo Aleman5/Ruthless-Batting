@@ -6,12 +6,12 @@ public class TriggerAttackDetection : MonoBehaviour
     [SerializeField] LayerMask obstacules;
     [SerializeField] string tagObjective;
 
-    AudioSource audio;
+    AudioSource _audio;
     [SerializeField] AudioClip audioClip;
 
     void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        _audio = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider collision)
@@ -24,7 +24,7 @@ public class TriggerAttackDetection : MonoBehaviour
                 Health health = collision.GetComponent<Health>();
                 health.Amount -= 1;
 
-                audio.PlayOneShot(audioClip);
+                _audio.PlayOneShot(audioClip);
             }
         }
     }

@@ -15,7 +15,7 @@ public class EnemyExplodeFSM : MonoBehaviour, IAttack
 
     IEnumerator Explode()
     {
-        Vector3 distance = fsmScript.GetDistance();
+        //Vector3 distance = fsmScript.GetDistance();
 
         fsmScript.enabled = false;
 
