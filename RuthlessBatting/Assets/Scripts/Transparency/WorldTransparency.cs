@@ -9,8 +9,6 @@ public class WorldTransparency : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("OnTriggerEnter");
-
         SpriteRenderer sprRend = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
 
         // Just remove it, it doens't matter if exists on the list or not.
@@ -24,9 +22,7 @@ public class WorldTransparency : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        Debug.Log("OnTriggerStay");
-
-        if (CompareTag("Player"))
+        if (col.transform.parent.CompareTag("Player"))
         {
             float dist = (col.transform.position - transform.position).magnitude;
 
@@ -37,6 +33,7 @@ public class WorldTransparency : MonoBehaviour
                 float percentage = dist / maxDist;
 
                 if (percentage > 1.0f) percentage = 1.0f;
+                else if (percentage < 0.1f) percentage = 0.1f;
 
                 UpperFloorObjects.ChangeTransparency(percentage);
             }
@@ -45,13 +42,13 @@ public class WorldTransparency : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("OnTriggerExit");
-
         float dist = (col.transform.position - transform.position).magnitude;
 
         if(dist > maxDist / 2.0f) // This Collider is on the UpperFloor.
         {
             UpperFloorObjects.objects.Add(col.transform.parent.GetComponentInChildren<SpriteRenderer>());
         }
+        else if (col.transform.parent.CompareTag("Player"))
+            UpperFloorObjects.ChangeTransparency(0.1f);
     }
 }

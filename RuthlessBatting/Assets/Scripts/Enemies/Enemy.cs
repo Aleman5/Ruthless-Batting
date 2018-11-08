@@ -52,7 +52,7 @@ public class Enemy : EnemyBase
     // ===========================================================
     override protected void OnUpdate()
     {
-        Debug.Log((States)fsm.GetState());
+        //Debug.Log((States)fsm.GetState());
 
         switch (fsm.GetState())
         {

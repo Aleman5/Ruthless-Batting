@@ -33,7 +33,6 @@ public class TransparentableWall : MonoBehaviour
     public void IncreaseCounter()
     {
         countOfObjects++;
-        Debug.Log("Increased: " + countOfObjects);
         if (countOfObjects == 1 && !isTransparent)
             MakeTransparent();
     }
@@ -53,7 +52,6 @@ public class TransparentableWall : MonoBehaviour
     public void DecreaseCounter()
     {
         countOfObjects--;
-        Debug.Log("Decreased: " + countOfObjects);
         if (countOfObjects == 0 && isTransparent)
             TurnOffTransparent();
     }
