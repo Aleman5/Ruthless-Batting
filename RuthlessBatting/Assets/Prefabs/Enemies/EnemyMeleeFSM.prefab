@@ -471,6 +471,11 @@ MonoBehaviour:
   fsmScript: {fileID: 114955829421450606}
   box: {fileID: 65823964086265204}
   timeToAttack: 0.05
+  originOfTheRay: {fileID: 4066433100334602}
+  obstacules:
+    serializedVersion: 2
+    m_Bits: 8192
+  tagObjective: Player
 --- !u!114 &114929242127607010
 MonoBehaviour:
   m_ObjectHideFlags: 1

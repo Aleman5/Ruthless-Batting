@@ -7,6 +7,10 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
     [SerializeField] BoxCollider box;
     [SerializeField] float timeToAttack;
 
+    [SerializeField] Transform originOfTheRay;
+    [SerializeField] LayerMask obstacules;
+    [SerializeField] string tagObjective;
+
     void Awake()
     {
         box.enabled = false;
@@ -53,8 +57,12 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
     {
         if (collision.CompareTag("Player"))
         {
-            Health health = collision.GetComponent<Health>();
-            health.Amount -= 1;
+            Vector3 diff = collision.transform.position - originOfTheRay.position;
+            if (!Physics.Raycast(originOfTheRay.position, diff.normalized, diff.magnitude, obstacules))
+            {
+                Health health = collision.GetComponent<Health>();
+                health.Amount -= 1;
+            }
         }
     }
 }
