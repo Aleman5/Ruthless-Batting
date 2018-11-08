@@ -6,7 +6,7 @@ public class CheckIfTargerBehindWall : MonoBehaviour
     [SerializeField] float rangeToStop;
     [SerializeField] LayerMask possibleObstacules;
 
-    GameObject target;
+    GameObject target = new GameObject();
 
     public bool CheckMovement()
     {

@@ -5,7 +5,7 @@ public class EnemyAnimationFSM : MonoBehaviour
     Animator anim;
     Enemy fsmScript;
 
-    bool isChasing;
+    bool isChasing = false;
 
     void Awake()
     {
