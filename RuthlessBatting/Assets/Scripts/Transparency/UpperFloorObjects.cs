@@ -14,4 +14,12 @@ public class UpperFloorObjects : MonoBehaviour
             obj.material.color = color;
         }
     }
+
+    static public void EmptyList()
+    {
+        while(objects.Count > 0)
+        {
+            objects.RemoveAt(0);
+        }
+    }
 }

@@ -3,38 +3,54 @@
 public class PlayerMovement3D : MonoBehaviour
 {
     [SerializeField] Rigidbody rigidbodyToUse;
-    [SerializeField] float movSpeed;
+    [SerializeField] float speed;
+    [SerializeField] float speedOnStairs;
     [SerializeField] float dashForce;
 
+    bool isOnStairs = false;
+    float angleOfTheStairs = 36.0f; // Angle of the Stairs.
     float originalMovSpeed;
     Vector3 movForce;
+    Vector3 stairsDir;
 
     void Start()
     {
-        originalMovSpeed = movSpeed;
+        originalMovSpeed = speed;
+
+        stairsDir.x = 0.0f;
+        //stairsDir.y = Mathf.Sin(angleOfTheStairs);
+        //stairsDir.z = Mathf.Cos(angleOfTheStairs);
+
+        stairsDir.y = 0.587785f;
+        stairsDir.z = 0.809017f;
     }
 
     void Update()
     {
         movForce = Vector3.zero;
-        movForce.x = InputManager.Instance.GetHorizontalAxis() * movSpeed;
-        movForce.z = InputManager.Instance.GetVerticalAxis() * movSpeed;
-        movForce.y = 0;
+
+        movForce.x = InputManager.Instance.GetHorizontalAxis();
+        movForce.z = InputManager.Instance.GetVerticalAxis();
+
+        if (!isOnStairs)
+        {
+            movForce.x *= speed;
+            movForce.z *= speed;
+            movForce.y = 0;
+        }
+        else
+        {
+            movForce.z *= stairsDir.z;
+
+            movForce.y = movForce.z * stairsDir.y;
+
+            movForce = movForce.normalized * speedOnStairs;
+        }
 
         if (InputManager.Instance.GetDashButton())
         {
             MakeForceMovement();
         }
-            
-
-        // Rotation by the mouse position
-        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
-
-        // Moving with transform
-        /*Vector3 movHor = Vector3.right * Input.GetAxis("Horizontal") * movSpeed;
-        Vector3 movVer = Vector3.up * Input.GetAxis("Vertical") * movSpeed;
-        transform.position += (movHor + movVer) * Time.deltaTime;*/
     }
 
     void FixedUpdate()
@@ -65,6 +81,8 @@ public class PlayerMovement3D : MonoBehaviour
 
     public void SetStats(int level)
     {
-        movSpeed = originalMovSpeed + originalMovSpeed * (0.05f * level); // Level 1 -> +5%, Level 2 -> +10%, Level 3 -> +15%
+        speed = originalMovSpeed + originalMovSpeed * (0.05f * level); // Level 1 -> +5%, Level 2 -> +10%, Level 3 -> +15%
     }
+
+    public bool IsOnStairs { set { isOnStairs = value; }  }
 }

@@ -2,10 +2,15 @@
 
 public class WorldTransparency : MonoBehaviour
 {
-    [SerializeField] float maxDist;
+    float maxDist;
 
     // Saving the last dist to make less operations per frame.
     float prevDist = 0.0f;
+
+    private void Awake()
+    {
+        maxDist = GetComponent<BoxCollider>().size.z;
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -18,6 +23,9 @@ public class WorldTransparency : MonoBehaviour
             color.a = 1.0f;
             sprRend.material.color = color;
         }
+
+        if (col.transform.parent.CompareTag("Player"))
+            col.transform.parent.GetComponent<PlayerMovement3D>().IsOnStairs = true;
     }
 
     void OnTriggerStay(Collider col)
@@ -32,7 +40,7 @@ public class WorldTransparency : MonoBehaviour
 
                 float percentage = dist / maxDist;
 
-                if (percentage > 1.0f) percentage = 1.0f;
+                     if (percentage > 1.0f) percentage = 1.0f;
                 else if (percentage < 0.1f) percentage = 0.1f;
 
                 UpperFloorObjects.ChangeTransparency(percentage);
@@ -43,12 +51,13 @@ public class WorldTransparency : MonoBehaviour
     void OnTriggerExit(Collider col)
     {
         float dist = (col.transform.position - transform.position).magnitude;
-
-        if(dist > maxDist / 2.0f) // This Collider is on the UpperFloor.
+        
+        if (dist > maxDist / 2.0f) // This Collider is on the UpperFloor.
         {
             UpperFloorObjects.objects.Add(col.transform.parent.GetComponentInChildren<SpriteRenderer>());
         }
-        else if (col.transform.parent.CompareTag("Player"))
-            UpperFloorObjects.ChangeTransparency(0.1f);
+
+        if (col.transform.parent.CompareTag("Player"))
+            col.transform.parent.GetComponent<PlayerMovement3D>().IsOnStairs = false;
     }
 }

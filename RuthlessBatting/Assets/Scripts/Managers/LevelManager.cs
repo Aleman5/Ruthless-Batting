@@ -29,7 +29,6 @@ public class LevelManager : MonoBehaviour
         }
         MusicManager.Instance.Play();
         actualScene = SceneManager.GetActiveScene();
-        Debug.Log(actualScene.name);
     }
 
     void Start()
@@ -101,6 +100,8 @@ public class LevelManager : MonoBehaviour
             if(InputManager.Instance.GetRestartButton())
             {
                 Time.timeScale = 1f;
+
+                UpperFloorObjects.EmptyList();
                 SceneManager.LoadScene(actualScene.name);
             }
             if (InputManager.Instance.GetPauseButton())
