@@ -131,9 +131,10 @@ public abstract class EnemyBase : MonoBehaviour
         return player.transform.position - transform.position;
     }
 
-    public int GetDirection()
+    public Vector3 GetDestinationDistance()
     {
-        return Utilities.GetDirection(transform, nav.destination - nav.transform.position);
+        return nav.transform.position - nav.destination;
+        //return Utilities.GetDirection(transform, nav.destination - nav.transform.position);
     }
 
     public UnityEvent OnAttack
@@ -141,6 +142,8 @@ public abstract class EnemyBase : MonoBehaviour
         get { return onAttack; }
     }
 
+
+    // Comment /* ~~~ */ OnDrawGizmos in case of trying to build a new version.
     /*private void OnDrawGizmos()
     {
         if (drawGizmos)

@@ -17,7 +17,9 @@ public class EnemyAnimationFSM : MonoBehaviour
 
     void Update()
     {
-        anim.SetInteger("Direction", fsmScript.GetDirection());
+        int dir = fsmScript.GetDestinationDistance().x >= 0 ? 1 : 0;
+
+        anim.SetInteger("Direction", dir);
 
         anim.speed = isChasing == false ? 0.5f : 1.0f;
 
@@ -39,5 +41,7 @@ public class EnemyAnimationFSM : MonoBehaviour
 
         anim.SetInteger("Direction", dir);
         anim.SetTrigger("Death");
+
+        enabled = false;
     }
 }
