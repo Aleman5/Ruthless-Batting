@@ -24,6 +24,7 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public NavMeshAgent nav;
     [HideInInspector] public float actualTime = 0.0f;
+    [HideInInspector] public Health health;
 
     [HideInInspector][SerializeField] UnityEvent onAttack;
 
@@ -40,7 +41,9 @@ public abstract class EnemyBase : MonoBehaviour
         attackFSM = GetComponentInChildren<IAttack>();
         patrol    = GetComponent<IPatrol>();
 
-        GetComponent<Health>().OnDeath.AddListener(OnNoHealth);
+        health = GetComponent<Health>();
+
+        health.OnDeath.AddListener(OnNoHealth);
     }
 
     protected void Update()

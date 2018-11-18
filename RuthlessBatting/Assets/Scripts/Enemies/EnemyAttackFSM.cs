@@ -55,7 +55,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && fsmScript.GetActualHealth() > 0)
         {
             Vector3 diff = collision.transform.position - originOfTheRay.position;
             if (!Physics.Raycast(originOfTheRay.position, diff.normalized, diff.magnitude, obstacules))

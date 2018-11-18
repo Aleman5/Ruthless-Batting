@@ -151,4 +151,9 @@ public class Enemy : EnemyBase
     {
         return fsm.GetState();
     }
+
+    public int GetActualHealth()
+    {
+        return (int)health.Amount;
+    }
 }
