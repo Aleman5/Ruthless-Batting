@@ -14,7 +14,6 @@ public abstract class EnemyBase : MonoBehaviour
     [Range(0.5f, 4.0f)]
     public float fireRate;
     public LayerMask possibleObstacules;
-    
 
     protected bool drawGizmos = true;
     protected bool alive = true;
@@ -22,8 +21,10 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public IPatrol patrol;
     [HideInInspector] public IAttack attackFSM;
     [HideInInspector] public Transform player;
+    [HideInInspector] public Transform deathBodyHolder;
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public NavMeshAgent nav;
+    [HideInInspector] public Health health;
     [HideInInspector] public float actualTime = 0.0f;
 
     [HideInInspector][SerializeField] UnityEvent onAttack;
@@ -159,5 +160,3 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }*/
 }
-    [HideInInspector] public Transform deathBodyHolder;
-    [HideInInspector] public Health health;
