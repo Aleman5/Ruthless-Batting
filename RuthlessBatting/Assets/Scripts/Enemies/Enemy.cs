@@ -103,7 +103,7 @@ public class Enemy : EnemyBase
         t1.GetComponent<EnemyAnimationFSM>().enabled = false;
 
         // Mesh is not a slave anymore. Mesh is a free elf.
-        t1.SetParent(null);
+        t1.SetParent(deathBodyHolder);
 
         Destroy(gameObject);
     }

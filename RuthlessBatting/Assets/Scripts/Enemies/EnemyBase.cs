@@ -14,6 +14,7 @@ public abstract class EnemyBase : MonoBehaviour
     [Range(0.5f, 4.0f)]
     public float fireRate;
     public LayerMask possibleObstacules;
+    
 
     protected bool drawGizmos = true;
     protected bool alive = true;
@@ -24,12 +25,14 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public Rigidbody rb;
     [HideInInspector] public NavMeshAgent nav;
     [HideInInspector] public float actualTime = 0.0f;
+    [HideInInspector] public Transform deathBodyHolder;
 
     [HideInInspector][SerializeField] UnityEvent onAttack;
 
     virtual protected void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
+        deathBodyHolder = BodiesHolder.Instance.transform;
 
         rb = GetComponent<Rigidbody>();
 
@@ -141,7 +144,6 @@ public abstract class EnemyBase : MonoBehaviour
     {
         get { return onAttack; }
     }
-
 
     // Comment /* ~~~ */ OnDrawGizmos in case of trying to build a new version.
     /*private void OnDrawGizmos()

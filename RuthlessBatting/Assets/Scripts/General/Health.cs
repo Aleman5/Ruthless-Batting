@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         if (!CompareTag("Player"))
+        {
             MoneyManager.Instance.AddToListeners(this);
+
+        }
     }
 
     public float Amount

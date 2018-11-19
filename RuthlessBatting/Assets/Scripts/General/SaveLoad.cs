@@ -12,7 +12,9 @@ public static class SaveLoad
         saveGame.data.actualScene = "Game3D";
         saveGame.data.waveName = "wave1";
         saveGame.data.moneyCount = 0;
-        
+        //saveGame.data.enemyBodies = new SpriteRenderer[BodiesHolder.Instance.GetMaxBodies()];
+        saveGame.data.enemyBodies = 0;
+
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/rbSave.bp");
         bf.Serialize(file, saveGame);
