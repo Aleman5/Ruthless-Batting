@@ -51,6 +51,12 @@ public class PlayerMovement3D : MonoBehaviour
         {
             MakeForceMovement();
         }
+
+        // Para Testing nomás
+        if (Input.GetKey(KeyCode.H))
+        {
+            GetComponent<Health>().Amount++;
+        }
     }
 
     void FixedUpdate()

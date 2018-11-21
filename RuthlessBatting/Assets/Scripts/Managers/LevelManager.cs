@@ -116,6 +116,10 @@ public class LevelManager : MonoBehaviour
             if(InputManager.Instance.GetPauseButton())
                 pauseCanvas.SetActive(!pauseCanvas.activeSelf);
         }
+
+        // Para Testing nomás.
+        if (Input.GetKey(KeyCode.J))
+            SceneManager.LoadScene(3);
     }
 
     void ChangeLevel2()
