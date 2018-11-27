@@ -819,9 +819,11 @@ GameObject:
   m_Component:
   - component: {fileID: 91087519}
   - component: {fileID: 91087520}
-  m_Layer: 0
+  - component: {fileID: 91087522}
+  - component: {fileID: 91087521}
+  m_Layer: 12
   m_Name: Mesa-C
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,6 +887,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &91087521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91087518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.96, y: 0.8137993, z: 0.20000005}
+  m_Center: {x: 0, y: 0.113100484, z: -1.6910187e-16}
+--- !u!114 &91087522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91087518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &111579347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,9 +2600,11 @@ GameObject:
   m_Component:
   - component: {fileID: 347446515}
   - component: {fileID: 347446516}
-  m_Layer: 0
+  - component: {fileID: 347446518}
+  - component: {fileID: 347446517}
+  m_Layer: 12
   m_Name: Mueble2.2-G
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2638,6 +2668,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &347446517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347446514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73333335, y: 1.4400004, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &347446518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347446514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &349075631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,9 +4263,11 @@ GameObject:
   m_Component:
   - component: {fileID: 615845816}
   - component: {fileID: 615845817}
-  m_Layer: 0
+  - component: {fileID: 615845819}
+  - component: {fileID: 615845818}
+  m_Layer: 12
   m_Name: Mueble-R1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4273,6 +4331,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &615845818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615845815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52, y: 0.37445268, z: 0.20000005}
+  m_Center: {x: 0, y: 0.6994407, z: 2.8342248e-15}
+--- !u!114 &615845819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 615845815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &634958256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4767,9 +4851,11 @@ GameObject:
   m_Component:
   - component: {fileID: 686013846}
   - component: {fileID: 686013847}
-  m_Layer: 0
+  - component: {fileID: 686013849}
+  - component: {fileID: 686013848}
+  m_Layer: 12
   m_Name: Mueble.2-R2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4833,6 +4919,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &686013848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686013845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &686013849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686013845}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5466667, y: 0.9333336, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &692980919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,9 +5425,11 @@ GameObject:
   m_Component:
   - component: {fileID: 865068630}
   - component: {fileID: 865068631}
-  m_Layer: 0
+  - component: {fileID: 865068633}
+  - component: {fileID: 865068632}
+  m_Layer: 12
   m_Name: Mueble2-E
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5379,6 +5493,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &865068632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865068629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &865068633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865068629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5466667, y: 0.34073862, z: 0.20000005}
+  m_Center: {x: 0, y: 0.71629775, z: 3.0737775e-15}
 --- !u!1 &890368115
 GameObject:
   m_ObjectHideFlags: 0
@@ -10986,7 +11126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2010963725
 MonoBehaviour:
   m_ObjectHideFlags: 0
