@@ -52,17 +52,4 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
     {
         box.enabled = !box.enabled;
     }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Player") && fsmScript.GetActualHealth() > 0)
-        {
-            Vector3 diff = collision.transform.position - originOfTheRay.position;
-            if (!Physics.Raycast(originOfTheRay.position, diff.normalized, diff.magnitude, obstacules))
-            {
-                Health health = collision.GetComponent<Health>();
-                health.Amount -= 1;
-            }
-        }
-    }
 }
