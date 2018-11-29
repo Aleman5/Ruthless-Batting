@@ -22,7 +22,6 @@ public class WallDetector : MonoBehaviour
     {
         if (wall)
         {
-            Debug.Log("OnDisabled");
             wall.DecreaseCounter();
         }
     }

@@ -11346,6 +11346,11 @@ Prefab:
       propertyPath: speedOnStairs
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 65878554992776858, guid: 2a7f225b9b38fb84bb757d7e843431e2,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
   m_IsPrefabAsset: 0
