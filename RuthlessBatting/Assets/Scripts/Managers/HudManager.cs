@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HudManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class HudManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] WaveSpawner spawner;
     [SerializeField] MoneyHolder moneyHolder;
+
+    [Header("Images")]
+    [SerializeField] Image hud;
 
     string waveText = "";
 
@@ -49,16 +53,18 @@ public class HudManager : MonoBehaviour
     void TimeText()
     {
         int time = Mathf.FloorToInt(spawner.TimeLeft);
-
+        hud.enabled = true;
         if (time > 0)
             timeLeft.text = "" + time;
         else
-            timeLeft.text = "Starts " + waveText + "...";
+            timeLeft.text = "0";
+           // timeLeft.text = "Starts " + waveText + "...";
 
         if (time <= -2)
         {
             timeLeft.text = "";
             CountdownTextSituation();
+            hud.enabled = false;
         }
     }
 }
