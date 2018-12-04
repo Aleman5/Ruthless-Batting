@@ -26,7 +26,8 @@ public class BuyElement : MonoBehaviour
     void Start() {
         buyable = GetComponent<IBuyable>();
         text = GetComponentInChildren<TextMeshPro>();
-        text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
+        //text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
+        text.text = "" + priceOfTheElement;
         moneyHolder = objective.GetComponent<MoneyHolder>();
     }
 
@@ -70,7 +71,8 @@ public class BuyElement : MonoBehaviour
         // Example 2: 100 + 100 % 10 = 110 + 110 % 10 = 121 % 10 = 133;
 
         priceOfTheElement += (int)(priceOfTheElement * extraPercentagePerLevelUp);
-        text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
+        //text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
+        text.text = ""+priceOfTheElement;
     }
 
     public bool IsOnRange()

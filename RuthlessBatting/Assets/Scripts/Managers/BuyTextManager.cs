@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class BuyTextManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BuyTextManager : MonoBehaviour
     {
         public BuyElement seller;
         public TextMeshPro sellerText;
+        public Image hud;
     }
 
     [SerializeField] Elements[] elements;
@@ -22,10 +24,12 @@ public class BuyTextManager : MonoBehaviour
         for (int i = 0; i < elements.Length; i++)
         {
             elements[i].sellerText.enabled = false;
+            elements[i].hud.enabled = false;
             elements[i].seller.OnRange.AddListener(OnRange);
             elements[i].seller.OnQuit.AddListener(OnQuit);
+
             //elements[i].seller.OnInteract.AddListener(OnInteract);
-            
+
             //elements[i].seller.OnNotEnoughMoney.AddListener(OnNotEnoughMoney);
 
         }
@@ -36,7 +40,10 @@ public class BuyTextManager : MonoBehaviour
         for (int i = 0; i < elements.Length; i++)
         {
             if (elements[i].seller.IsOnRange())
+            {
+                elements[i].hud.enabled = true;
                 elements[i].sellerText.enabled = true;
+            }
         }
     }
 
@@ -45,7 +52,10 @@ public class BuyTextManager : MonoBehaviour
         for (int i = 0; i < elements.Length; i++)
         {
             if (elements[i].sellerText.enabled)
+            {
                 elements[i].sellerText.enabled = false;
+                elements[i].hud.enabled = false;
+            }
         }
     }
 
@@ -59,7 +69,7 @@ public class BuyTextManager : MonoBehaviour
                     CancelInvoke("NameBackToNormal");
 
                 int newMessageIndex = Random.Range(0, differentAnswers.Length);
-                elements[i].sellerText.text = differentAnswers[newMessageIndex];
+                //elements[i].sellerText.text = differentAnswers[newMessageIndex];
             }
         }
     }
