@@ -12,6 +12,8 @@ public class BuyTextManager : MonoBehaviour
         public TextMeshPro sellerText;
         public List<Sprite> hud;
         public SpriteRenderer sp;
+        public List<Image> image;
+
         public int index;
     }
 
