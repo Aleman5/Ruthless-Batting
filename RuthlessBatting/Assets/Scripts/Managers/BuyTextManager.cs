@@ -8,13 +8,15 @@ public class BuyTextManager : MonoBehaviour
     [System.Serializable]
     public class Elements
     {
+        public List<Sprite> hudSellers;
+        public List<Sprite> hudAbilities;
+        public SpriteRenderer sp;
+        public Image im;
         public BuyElement seller;
         public TextMeshPro sellerText;
-        public List<Sprite> hud;
-        public SpriteRenderer sp;
-        public List<Image> image;
 
         public int index;
+        public int index2;
     }
 
     [SerializeField] Elements[] elements;
@@ -87,7 +89,8 @@ public class BuyTextManager : MonoBehaviour
         {
             if (elements[i].sellerText.enabled)
             {
-                elements[i].sp.sprite = elements[i].hud[++elements[i].index];
+                elements[i].sp.sprite = elements[i].hudSellers[++elements[i].index];
+                elements[i].im.sprite = elements[i].hudAbilities[++elements[i].index2];
             }
         }
     }

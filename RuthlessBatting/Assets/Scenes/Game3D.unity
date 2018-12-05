@@ -10524,24 +10524,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements:
-  - seller: {fileID: 18958926}
-    sellerText: {fileID: 18958924}
-    hud:
+  - hudSellers:
     - {fileID: 21300000, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
     - {fileID: 21300002, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
     - {fileID: 21300004, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
+    - {fileID: 21300004, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
+    hudAbilities:
+    - {fileID: 21300000, guid: fbe64d63e28a52842b09554395e9b71d, type: 3}
+    - {fileID: 21300000, guid: 3760c18eb23e0ed4eadb883fdfe3685d, type: 3}
+    - {fileID: 21300000, guid: 3a556e7d08c7881468f47ed050bfdd54, type: 3}
+    - {fileID: 21300000, guid: 944495bc59e4b9c40a53a5a209a01aa7, type: 3}
     sp: {fileID: 452031616}
-    image: []
+    im: {fileID: 1514617112}
+    seller: {fileID: 18958926}
+    sellerText: {fileID: 18958924}
     index: 0
-  - seller: {fileID: 2046076105}
-    sellerText: {fileID: 2046076103}
-    hud:
+    index2: 0
+  - hudSellers:
     - {fileID: 21300016, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
     - {fileID: 21300014, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
     - {fileID: 21300012, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
+    - {fileID: 21300012, guid: 414e1d763bb02d94eb9b7fd21014d44c, type: 3}
+    hudAbilities:
+    - {fileID: 21300000, guid: fbe64d63e28a52842b09554395e9b71d, type: 3}
+    - {fileID: 21300000, guid: c274df1840ba5e041ad16f24801e5922, type: 3}
+    - {fileID: 21300000, guid: 9c9b816cc5b51224d8e544f2da1c1008, type: 3}
+    - {fileID: 21300000, guid: b517403c1bb3ca84d9e585d63d3a212c, type: 3}
     sp: {fileID: 1425499882}
-    image: []
+    im: {fileID: 1264477886}
+    seller: {fileID: 2046076105}
+    sellerText: {fileID: 2046076103}
     index: 0
+    index2: 0
   differentAnswers:
   - Have a nice Day!
   - Come here the next time...
