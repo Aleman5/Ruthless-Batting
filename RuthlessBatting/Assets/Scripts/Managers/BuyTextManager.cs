@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
@@ -9,7 +10,9 @@ public class BuyTextManager : MonoBehaviour
     {
         public BuyElement seller;
         public TextMeshPro sellerText;
-        public Image hud;
+        public List<Sprite> hud;
+        public SpriteRenderer sp;
+        public int index;
     }
 
     [SerializeField] Elements[] elements;
@@ -18,15 +21,17 @@ public class BuyTextManager : MonoBehaviour
 
     //int indexOfText;
     //string savedText = "";
-
+  
     void Start()
     {
         for (int i = 0; i < elements.Length; i++)
         {
             elements[i].sellerText.enabled = false;
-            elements[i].hud.enabled = false;
+            elements[i].sp.enabled = false;
             elements[i].seller.OnRange.AddListener(OnRange);
             elements[i].seller.OnQuit.AddListener(OnQuit);
+
+            elements[i].seller.OnInteract.AddListener(ChangeSprite);
 
             //elements[i].seller.OnInteract.AddListener(OnInteract);
 
@@ -41,7 +46,7 @@ public class BuyTextManager : MonoBehaviour
         {
             if (elements[i].seller.IsOnRange())
             {
-                elements[i].hud.enabled = true;
+                elements[i].sp.enabled = true;
                 elements[i].sellerText.enabled = true;
             }
         }
@@ -54,7 +59,7 @@ public class BuyTextManager : MonoBehaviour
             if (elements[i].sellerText.enabled)
             {
                 elements[i].sellerText.enabled = false;
-                elements[i].hud.enabled = false;
+                elements[i].sp.enabled = false;
             }
         }
     }
@@ -70,6 +75,17 @@ public class BuyTextManager : MonoBehaviour
 
                 int newMessageIndex = Random.Range(0, differentAnswers.Length);
                 //elements[i].sellerText.text = differentAnswers[newMessageIndex];
+            }
+        }
+    }
+
+    void ChangeSprite()
+    {
+        for (int i = 0; i < elements.Length; i++)
+        {
+            if (elements[i].sellerText.enabled)
+            {
+                elements[i].sp.sprite = elements[i].hud[++elements[i].index];
             }
         }
     }
