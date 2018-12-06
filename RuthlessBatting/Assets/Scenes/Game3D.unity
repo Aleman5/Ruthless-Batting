@@ -10717,6 +10717,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  font: {fileID: 11400000, guid: da19c0e9c4c3eec40ad6ca23f77f9f15, type: 2}
   shakerScript: {fileID: 284243726}
   zoomKillScript: {fileID: 1400589923}
   moneyHolderScript: {fileID: 56053422}

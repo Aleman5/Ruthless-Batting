@@ -10,6 +10,9 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] Transform multiplier;
     [SerializeField] Gradient colorGradient;
 
+    [Header("Font")]
+    [SerializeField] TMP_FontAsset font; 
+
     [Header("Scripts")]
     [SerializeField] ShakerController shakerScript;
     [SerializeField] ZoomWhenKilling zoomKillScript;
@@ -19,6 +22,7 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] int minMoneyToGive;
     [SerializeField] int maxMoneyToGive;
     [SerializeField] float timeToTurnBack; // Camera zoom in starts 0.3 seconds before time reaches 0
+
 
     Transform player;
 
@@ -65,6 +69,8 @@ public class MoneyManager : MonoBehaviour
         Vector3 extraPos = new Vector3(Random.Range(-0.7f, 0.7f), 0.0f, 1.0f);
         Transform go = Instantiate(multiplier, player.position + extraPos, player.rotation);
         TextMeshPro tm = go.GetComponentInChildren<TextMeshPro>();
+        tm.font = font;
+        tm.fontSize = 7;
         tm.text = "x" + moneyMultiplier;
         tm.color = colorGradient.Evaluate(moneyMultiplier - 1.0f);
 
