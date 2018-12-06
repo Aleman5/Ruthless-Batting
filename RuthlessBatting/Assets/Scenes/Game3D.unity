@@ -1236,7 +1236,7 @@ Prefab:
     - target: {fileID: 224940046996612196, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 26.199997
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 223396030712903446, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
@@ -8881,6 +8881,12 @@ Prefab:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114837818202187540, guid: ca9355a040708ca458e8b20ba063dd96,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50179554e6595b147a03429703817c84,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9355a040708ca458e8b20ba063dd96, type: 2}
   m_IsPrefabAsset: 0
