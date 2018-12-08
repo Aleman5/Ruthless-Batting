@@ -8,7 +8,7 @@ public class TriggerAttackDetection : MonoBehaviour
     [SerializeField] string tagObjective;
 
     AudioSource _audio;
-    [SerializeField] AudioClip audioClip;
+    [SerializeField] AudioClip[] audioClip;
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class TriggerAttackDetection : MonoBehaviour
                 Health health = collision.GetComponent<Health>();
                 health.Amount -= 1;
 
-                _audio.PlayOneShot(audioClip);
+                _audio.PlayOneShot(audioClip[Random.Range(0, audioClip.Length)]);
             }
         }
     }

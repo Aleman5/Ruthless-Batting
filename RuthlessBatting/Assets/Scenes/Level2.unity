@@ -17459,7 +17459,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   tagObjective: Enemy
-  audioClip: {fileID: 8300000, guid: 95b7d93c4a720e34dbdf18770e75b4da, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: 77d8a79ec1b285447a720ea2ed68cd06, type: 3}
+  - {fileID: 8300000, guid: ff5a0672bda7deb4590c06252136f3e0, type: 3}
+  - {fileID: 8300000, guid: 442a46adb5fc6744e97dde77fbcc7602, type: 3}
 --- !u!82 &1924349792
 AudioSource:
   m_ObjectHideFlags: 0

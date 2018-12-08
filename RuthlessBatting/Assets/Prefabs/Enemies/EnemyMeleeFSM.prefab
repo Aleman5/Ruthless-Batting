@@ -194,7 +194,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868034234680808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.015476, y: -0.3, z: -6.437128}
+  m_LocalPosition: {x: 1.9100955, y: -0.16930008, z: -7.342907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4066433100334602}
@@ -396,13 +396,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd7d2a3c07e8f444b44bb017caedb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsmScript: {fileID: 114955829421450606}
   originOfTheRay: {fileID: 4066433100334602}
   obstacules:
     serializedVersion: 2
     m_Bits: 8192
   tagObjective: Player
-  audioClip: {fileID: 8300000, guid: 95b7d93c4a720e34dbdf18770e75b4da, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: 9e0a1a10d098c544b8b486b390efeb3c, type: 3}
+  - {fileID: 8300000, guid: 8881fd7345f11314cb88414da4886f34, type: 3}
+  - {fileID: 8300000, guid: 689a02a66625e0748a631a1c99e52729, type: 3}
 --- !u!114 &114224754156101948
 MonoBehaviour:
   m_ObjectHideFlags: 1
