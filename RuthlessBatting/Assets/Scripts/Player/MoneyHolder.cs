@@ -17,6 +17,12 @@ public class MoneyHolder : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+            ActualMoney = 100;
+    }
+
     public int ActualMoney
     {
         get { return actualMoney; }

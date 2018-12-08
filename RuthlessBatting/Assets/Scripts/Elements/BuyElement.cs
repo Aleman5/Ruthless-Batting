@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using System.IO;
 using TMPro;
 
@@ -22,6 +23,7 @@ public class BuyElement : MonoBehaviour
     MoneyHolder moneyHolder;
 
     int levelOfTheElement;
+    int actualLevelScene;
 
     bool isOnRange = false;
 
@@ -39,6 +41,15 @@ public class BuyElement : MonoBehaviour
         text.text = "" + priceOfTheElement;
         moneyHolder = objective.GetComponent<MoneyHolder>();
 
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Game3D":
+                actualLevelScene = 1;
+                break;
+            case "Level2":
+                actualLevelScene = 2;
+                break;
+        }
     }
 
     void Update()
@@ -55,7 +66,7 @@ public class BuyElement : MonoBehaviour
 
             if (InputManager.Instance.GetInteractButton())
             {
-                if(moneyHolder.ActualMoney >= priceOfTheElement)
+                if(levelOfTheElement < 3  * actualLevelScene && moneyHolder.ActualMoney >= priceOfTheElement)
                 {
                     buyable.Buy(objective, ++levelOfTheElement);
                     moneyHolder.ActualMoney = -priceOfTheElement;
