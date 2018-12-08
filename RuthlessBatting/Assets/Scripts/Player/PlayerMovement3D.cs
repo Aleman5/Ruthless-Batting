@@ -15,11 +15,6 @@ public class PlayerMovement3D : MonoBehaviour
     Vector3 movForce;
     Vector3 stairsDir;
 
-    void Awake()
-    {
-        upgMovLevel = 0;
-    }
-
     void Start()
     {
         originalMovSpeed = speed;
@@ -27,11 +22,11 @@ public class PlayerMovement3D : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
         {
             int[] upgValues = SaveLoad.saveGame.data.playerUpgrades;
-
-            if (upgValues[0] > 0) SetStats(upgValues[0]);
-            if (upgValues[1] > 0) GetComponentInChildren<Bat>().SetStats(upgValues[1]);
-            if (upgValues[2] > 0) GetComponentInChildren<GranadeLauncher>().SetStats(upgValues[2]);
-            if (upgValues[3] > 0) GetComponent<Health>().Amount = upgValues[3];
+            
+            if (upgValues[(int)Buyable.MOVSPEED] > 0) SetStats(upgValues[(int)Buyable.MOVSPEED]);
+            if (upgValues[(int)Buyable.ATKSPEED] > 0) GetComponentInChildren<Bat>().SetStats(upgValues[(int)Buyable.ATKSPEED]);
+            if (upgValues[(int)Buyable.GRENADE ] > 0) GetComponentInChildren<GranadeLauncher>().SetStats(upgValues[(int)Buyable.GRENADE]);
+            if (upgValues[(int)Buyable.EXTRAHP ] > 0) GetComponent<Health>().Amount = upgValues[(int)Buyable.EXTRAHP];
         }
 
         stairsDir.x = 0.0f;
@@ -104,6 +99,7 @@ public class PlayerMovement3D : MonoBehaviour
 
     public int GetUpgradeValue(int index)
     {
+        
         switch (index)
         {
             case (int)Buyable.MOVSPEED:

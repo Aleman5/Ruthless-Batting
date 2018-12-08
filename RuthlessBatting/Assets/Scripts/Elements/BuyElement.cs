@@ -25,12 +25,14 @@ public class BuyElement : MonoBehaviour
 
     bool isOnRange = false;
 
-    void Start()
+    void Awake()
     {
         buyable = GetComponent<IBuyable>();
 
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
             levelOfTheElement = SaveLoad.saveGame.data.playerUpgrades[(int)buyable.GetBuyable()];
+        else
+            levelOfTheElement = 0;
 
         text = GetComponentInChildren<TextMeshPro>();
         //text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
@@ -55,7 +57,7 @@ public class BuyElement : MonoBehaviour
             {
                 if(moneyHolder.ActualMoney >= priceOfTheElement)
                 {
-                    buyable.Buy(objective, levelOfTheElement);
+                    buyable.Buy(objective, ++levelOfTheElement);
                     moneyHolder.ActualMoney = -priceOfTheElement;
                     LevelUpThePrice();
                     onInteract.Invoke();

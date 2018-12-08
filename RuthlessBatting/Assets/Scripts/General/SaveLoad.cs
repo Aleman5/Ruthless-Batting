@@ -15,7 +15,12 @@ public static class SaveLoad
         //saveGame.data.enemyBodies = new SpriteRenderer[BodiesHolder.Instance.GetMaxBodies()];
         saveGame.data.enemyBodies = 0;
         for (int i = 0; i < (int)Buyable.COUNT; i++)
-            saveGame.data.playerUpgrades[i] = 0;
+        {
+            if (i == (int)Buyable.EXTRAHP)
+                saveGame.data.playerUpgrades[i] = 0;
+            else
+                saveGame.data.playerUpgrades[i] = 1;
+        }
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/rbSave.bp");

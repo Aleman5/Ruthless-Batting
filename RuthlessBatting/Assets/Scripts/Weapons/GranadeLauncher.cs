@@ -10,11 +10,6 @@ public class GranadeLauncher : MonoBehaviour, IWeapon
     float actualTime;
     int upgGrenadeLevel;
 
-    void Awake()
-    {
-        upgGrenadeLevel = 0;
-    }
-
     void Start()
     {
         actualTime = cooldown;

@@ -28,7 +28,6 @@ public class Bat : MonoBehaviour, IWeapon
     {
         cooldown = 1.5f;
         attackRate = 0.55f;
-        upgBatLevel = 0;
 
         timeToDisappearHitBox = 0.4f;
         origTimeToDisappearHitBox = timeToDisappearHitBox;

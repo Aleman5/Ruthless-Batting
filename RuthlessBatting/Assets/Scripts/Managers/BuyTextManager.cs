@@ -10,8 +10,8 @@ public class BuyTextManager : MonoBehaviour
     {
         public List<Sprite> hudSellers;
         public List<Sprite> hudAbilities;
-        public SpriteRenderer sp;
-        public Image im;
+        public SpriteRenderer sprite;
+        public Image image;
         public BuyElement seller;
         public TextMeshPro sellerText;
 
@@ -30,20 +30,28 @@ public class BuyTextManager : MonoBehaviour
     {
         for (int i = 0; i < elements.Length; i++)
         {
-            elements[i].sp.sprite = elements[i].hudSellers[elements[i].seller.GetLevel()];   // -------- WIP ---------
-            elements[i].im.sprite = elements[i].hudAbilities[elements[i].seller.GetLevel()]; // -------- WIP ---------
+            int level = elements[i].seller.GetLevel();
+
+            if (level > 0)
+            {
+                elements[i].sprite.sprite = elements[i].hudSellers[level];
+                elements[i].image.sprite = elements[i].hudAbilities[level];
+            }
 
             elements[i].sellerText.enabled = false;
-            elements[i].sp.enabled = false;
+            elements[i].sprite.enabled = false;
             elements[i].seller.OnRange.AddListener(OnRange);
             elements[i].seller.OnQuit.AddListener(OnQuit);
 
             elements[i].seller.OnInteract.AddListener(ChangeSprite);
 
-            //elements[i].seller.OnInteract.AddListener(OnInteract);
+            //elements[i].index = -1;
+            //elements[i].index2 = -1;
 
             //elements[i].seller.OnNotEnoughMoney.AddListener(OnNotEnoughMoney);
         }
+
+        //ChangeSprite();
     }
 
     void OnRange()
@@ -52,7 +60,7 @@ public class BuyTextManager : MonoBehaviour
         {
             if (elements[i].seller.IsOnRange())
             {
-                elements[i].sp.enabled = true;
+                elements[i].sprite.enabled = true;
                 elements[i].sellerText.enabled = true;
             }
         }
@@ -65,7 +73,7 @@ public class BuyTextManager : MonoBehaviour
             if (elements[i].sellerText.enabled)
             {
                 elements[i].sellerText.enabled = false;
-                elements[i].sp.enabled = false;
+                elements[i].sprite.enabled = false;
             }
         }
     }
@@ -91,8 +99,8 @@ public class BuyTextManager : MonoBehaviour
         {
             if (elements[i].sellerText.enabled)
             {
-                elements[i].sp.sprite = elements[i].hudSellers[++elements[i].index];
-                elements[i].im.sprite = elements[i].hudAbilities[++elements[i].index2];
+                elements[i].sprite.sprite = elements[i].hudSellers[elements[i].seller.GetLevel()];
+                elements[i].image.sprite = elements[i].hudAbilities[elements[i].seller.GetLevel()];
             }
         }
     }
