@@ -5,7 +5,7 @@ public class BuyableGrenade : MonoBehaviour, IBuyable
 
     [SerializeField] GameObject grenade;
 
-    Buyable buyable = Buyable.GRANADE;
+    Buyable buyable = Buyable.GRENADE;
     GranadeLauncher grScript;
 
     void Start ()

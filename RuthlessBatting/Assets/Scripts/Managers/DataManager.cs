@@ -10,27 +10,32 @@ public class DataManager
         public string actualScene;
         public int moneyCount;
         public string waveName;
+        public int[] playerUpgrades;
         public int enemyBodies;
     }
 
 	public static DataManager current;
-	//public MoneyHolder moneyScript;
-    //public WaveSpawner waveScript; 
 
     public Data data;
 
 	public DataManager()
     {
-        //data.enemyBodies = new SpriteRenderer[BodiesHolder.Instance.GetMaxBodies()];
+        data.playerUpgrades = new int[(int)Buyable.COUNT];
     }
 
     public void SetPreparations()
     {
-        data.moneyCount = GameObject.FindGameObjectWithTag("Player").GetComponent<MoneyHolder>().ActualMoney;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        data.moneyCount = player.GetComponent<MoneyHolder>().ActualMoney;
         data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
         data.actualScene = SceneManager.GetActiveScene().name;
-
         data.enemyBodies = BodiesHolder.Instance.GetBodies();
+
+        PlayerMovement3D pMovScript = player.GetComponent<PlayerMovement3D>();
+
+        for (int i = 0; i < (int)Buyable.COUNT; i++)
+            data.playerUpgrades[i] = pMovScript.GetUpgradeValue(i);
 
         //SpriteRenderer[] srs = BodiesHolder.Instance.GetBodies();
 

@@ -30,6 +30,9 @@ public class BuyTextManager : MonoBehaviour
     {
         for (int i = 0; i < elements.Length; i++)
         {
+            elements[i].sp.sprite = elements[i].hudSellers[elements[i].seller.GetLevel()];   // -------- WIP ---------
+            elements[i].im.sprite = elements[i].hudAbilities[elements[i].seller.GetLevel()]; // -------- WIP ---------
+
             elements[i].sellerText.enabled = false;
             elements[i].sp.enabled = false;
             elements[i].seller.OnRange.AddListener(OnRange);
@@ -40,7 +43,6 @@ public class BuyTextManager : MonoBehaviour
             //elements[i].seller.OnInteract.AddListener(OnInteract);
 
             //elements[i].seller.OnNotEnoughMoney.AddListener(OnNotEnoughMoney);
-
         }
     }
 

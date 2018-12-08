@@ -18,7 +18,7 @@ public class Bat : MonoBehaviour, IWeapon
 
     float cooldown;
     float attackRate;
-    //int weaponLvl;
+    int upgBatLevel;
 
     float timeToDisappearHitBox;
     float origTimeToDisappearHitBox;
@@ -28,7 +28,7 @@ public class Bat : MonoBehaviour, IWeapon
     {
         cooldown = 1.5f;
         attackRate = 0.55f;
-        //weaponLvl = 1;
+        upgBatLevel = 0;
 
         timeToDisappearHitBox = 0.4f;
         origTimeToDisappearHitBox = timeToDisappearHitBox;
@@ -75,9 +75,13 @@ public class Bat : MonoBehaviour, IWeapon
 
     public void SetStats(int level)
     {
-        cooldown -= cooldown * 0.05f * level;
-        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.05f * level;
+        upgBatLevel = level;
+
+        cooldown -= cooldown * 0.05f * upgBatLevel;
+        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.05f * upgBatLevel;
     }
+
+    public int GetUpgradeValue() { return upgBatLevel; }
 
     public UnityEvent OnAttack
     {

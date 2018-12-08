@@ -8,6 +8,12 @@ public class GranadeLauncher : MonoBehaviour, IWeapon
     [SerializeField] float cooldown;
 
     float actualTime;
+    int upgGrenadeLevel;
+
+    void Awake()
+    {
+        upgGrenadeLevel = 0;
+    }
 
     void Start()
     {
@@ -40,6 +46,10 @@ public class GranadeLauncher : MonoBehaviour, IWeapon
 
     public void SetStats(int level)
     {
-        
+        upgGrenadeLevel = level;
+
+        cooldown -= cooldown * 0.05f * upgGrenadeLevel;
     }
+
+    public int GetUpgradeValue() { return upgGrenadeLevel; }
 }

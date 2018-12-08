@@ -2,7 +2,7 @@
 {
     MOVSPEED,
     ATKSPEED,
-    GRANADE,
+    GRENADE,
     EXTRAHP,
     COUNT
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.IO;
 
 public class PlayerMovement3D : MonoBehaviour
 {
@@ -7,15 +8,31 @@ public class PlayerMovement3D : MonoBehaviour
     [SerializeField] float speedOnStairs;
     [SerializeField] float dashForce;
 
-    bool isOnStairs = false;
+    int upgMovLevel; // Upgrade level
     float angleOfTheStairs = 36.0f; // Angle of the Stairs.
     float originalMovSpeed;
+    bool isOnStairs = false;
     Vector3 movForce;
     Vector3 stairsDir;
+
+    void Awake()
+    {
+        upgMovLevel = 0;
+    }
 
     void Start()
     {
         originalMovSpeed = speed;
+
+        if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
+        {
+            int[] upgValues = SaveLoad.saveGame.data.playerUpgrades;
+
+            if (upgValues[0] > 0) SetStats(upgValues[0]);
+            if (upgValues[1] > 0) GetComponentInChildren<Bat>().SetStats(upgValues[1]);
+            if (upgValues[2] > 0) GetComponentInChildren<GranadeLauncher>().SetStats(upgValues[2]);
+            if (upgValues[3] > 0) GetComponent<Health>().Amount = upgValues[3];
+        }
 
         stairsDir.x = 0.0f;
         //stairsDir.y = Mathf.Sin(angleOfTheStairs);
@@ -85,10 +102,31 @@ public class PlayerMovement3D : MonoBehaviour
         rigidbodyToUse.AddForce(newForce);
     }
 
+    public int GetUpgradeValue(int index)
+    {
+        switch (index)
+        {
+            case (int)Buyable.MOVSPEED:
+                return GetUpgradeValue();
+            case (int)Buyable.ATKSPEED:
+                return GetComponentInChildren<Bat>().GetUpgradeValue();
+            case (int)Buyable.GRENADE:
+                return GetComponentInChildren<GranadeLauncher>().GetUpgradeValue();
+            case (int)Buyable.EXTRAHP:
+                return (int)GetComponent<Health>().Amount;
+        }
+
+        return -1;
+    }
+
     public void SetStats(int level)
     {
+        upgMovLevel = level;
+
         speed = originalMovSpeed + originalMovSpeed * (0.05f * level); // Level 1 -> +5%, Level 2 -> +10%, Level 3 -> +15%
     }
+
+    public int GetUpgradeValue() { return upgMovLevel; }
 
     public bool IsOnStairs { set { isOnStairs = value; }  }
 }

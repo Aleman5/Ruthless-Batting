@@ -3,6 +3,7 @@
 public class ParticleDecalPool : MonoBehaviour
 {
     [SerializeField] int maxDecals = 100;
+
     public float decalSizeMin = .5f;
     public float decalSizeMax = 1.5f;
 
