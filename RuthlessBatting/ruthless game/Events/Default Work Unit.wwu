@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="matar_enemigo_bath" ID="{24629EFD-3219-42E1-8B69-64893E898844}">
+					<ChildrenList>
+						<Action Name="" ID="{C49A227B-5C7B-4E3F-9885-C85E6AB56273}" ShortID="410722825">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="matar un enemigo" ID="{DB85515E-945D-4BB4-A061-B150AC2F220C}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bath_al_aire" ID="{BDE14EE8-EA15-460D-914D-8BA5E444F80F}">
+					<ChildrenList>
+						<Action Name="" ID="{39A48B3F-4BD9-4DD8-9C2C-F76E3CAD8E23}" ShortID="457318173">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bate al aire" ID="{2745C9C1-FD6D-4649-86A6-CD93E3DAD9C0}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="habilidad_comprada" ID="{EE4C4702-8357-44BB-92EE-7F694A68EF1D}">
+					<ChildrenList>
+						<Action Name="" ID="{CEBC1D9A-1AD3-4CBB-B24A-3D471C9FD570}" ShortID="757821459">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="habilidad comprada" ID="{119D0FA0-C89E-4807-8616-8BDE473532A4}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="respiracion_media" ID="{0E659EA0-C5A2-41C6-8DF8-835A420E07F6}">
+					<ChildrenList>
+						<Action Name="" ID="{29308DA3-6F4C-4D4D-8B3A-9C24A376792D}" ShortID="70557025">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="40"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="respiracion_agitada" ID="{83C1A6F1-61F2-4E4E-ACCA-0AFB823DE87C}">
+					<ChildrenList>
+						<Action Name="" ID="{DAE6AAE7-47AB-48F8-9105-BFB8D3D62E7E}" ShortID="845957160">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="respiracion_normal" ID="{D2E8A5BE-5B71-4282-9D26-83814AA26572}">
+					<ChildrenList>
+						<Action Name="" ID="{EE3FB51D-0F34-4F9A-8947-68367973C8E7}" ShortID="574540040">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bate_pared" ID="{C30C305A-A1E9-46C7-B774-2F2139DCDD1F}">
+					<ChildrenList>
+						<Action Name="" ID="{3E6ACAA3-293D-47B9-A742-3AE442E837AC}" ShortID="139072692">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="golpes bath" ID="{3E77C23F-01CB-4943-B4E4-58C820809C41}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu" ID="{2D18A62F-29ED-4C1F-8826-F267BE529940}">
+					<ChildrenList>
+						<Action Name="" ID="{23C0DCC4-8872-4F38-94CB-03411660C7B2}" ShortID="494908826">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B3E75BB0-C115-4346-B0EC-2F39EB2432C4}" ShortID="918675741">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FB57546F-F296-49CF-B376-CB45F976B67E}" ShortID="1060139496">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CD618BF8-28BE-4138-B6A0-A4C900FF61A5}" ShortID="645925981">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="nivel1" ID="{A7959030-5FA2-4221-B491-9F50AE8AE468}">
+					<ChildrenList>
+						<Action Name="" ID="{EF3BEBCA-C12C-4F92-B0BD-89E97173A4C0}" ShortID="231105492">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F2790662-5026-4DFD-89C7-643A9294B8C8}" ShortID="299814080">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C8AACE41-05F5-42B0-9364-4F8535A1A6FE}" ShortID="779266078">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{193D42CD-595D-4608-9D87-2862F34D629B}" ShortID="67069881">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="nivel2" ID="{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}">
+					<ChildrenList>
+						<Action Name="" ID="{7E6A6E55-C8C3-4F3F-AB4D-F4A22E178EE2}" ShortID="669058660">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0C4A5DBC-E316-4671-8F18-E9CD7BCFBF25}" ShortID="153289141">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{23E4DC69-AA55-4559-925C-6A6DF6A2C182}" ShortID="45799562">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_slide" ID="{86CEAEB6-953E-4614-8B4C-95B58D64B0D0}">
+					<ChildrenList>
+						<Action Name="" ID="{654FEDE2-27FB-42C8-BE22-A87359E971CD}" ShortID="502217860">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu slide" ID="{E165B535-69E9-436D-BC36-3CCF306E576C}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_clic" ID="{D15C9230-A402-4B2B-A90E-BB91E48E2CDC}">
+					<ChildrenList>
+						<Action Name="" ID="{582C7941-36A1-480B-AFFA-5B3AEDE6677D}" ShortID="521819008">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu clic" ID="{9E313A08-3402-49BF-B0A3-C78EC86BC8A5}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_atras" ID="{F02BF51D-8236-4DD3-8864-BE2480BD3873}">
+					<ChildrenList>
+						<Action Name="" ID="{59EBD05C-4B2E-4B19-8620-00959FD2FE36}" ShortID="496801668">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu atras" ID="{6ECC2B5E-1824-4915-AE5D-35F8E7A73C1C}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\</ProjectRoot>
+		<SourceFilesRoot>D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
+			<ShortName>main</ShortName>
+			<Path>main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="72870192" Name="bate_pared" ObjectPath="\Events\Default Work Unit\bate_pared"/>
+				<Event Id="2360431688" Name="bath_al_aire" ObjectPath="\Events\Default Work Unit\bath_al_aire"/>
+				<Event Id="1079158723" Name="habilidad_comprada" ObjectPath="\Events\Default Work Unit\habilidad_comprada"/>
+				<Event Id="3063919553" Name="matar_enemigo_bath" ObjectPath="\Events\Default Work Unit\matar_enemigo_bath"/>
+				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\menu"/>
+				<Event Id="756780678" Name="menu_atras" ObjectPath="\Events\Default Work Unit\menu_atras"/>
+				<Event Id="1280036882" Name="menu_clic" ObjectPath="\Events\Default Work Unit\menu_clic"/>
+				<Event Id="2795715930" Name="menu_slide" ObjectPath="\Events\Default Work Unit\menu_slide"/>
+				<Event Id="409685056" Name="nivel1" ObjectPath="\Events\Default Work Unit\nivel1"/>
+				<Event Id="409685059" Name="nivel2" ObjectPath="\Events\Default Work Unit\nivel2"/>
+				<Event Id="341686896" Name="respiracion_agitada" ObjectPath="\Events\Default Work Unit\respiracion_agitada"/>
+				<Event Id="668515409" Name="respiracion_media" ObjectPath="\Events\Default Work Unit\respiracion_media"/>
+				<Event Id="4137353766" Name="respiracion_normal" ObjectPath="\Events\Default Work Unit\respiracion_normal"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="22642979" Language="SFX">
+					<ShortName>menu\menu atras.wav</ShortName>
+					<Path>SFX\menu\menu atras_539C0FE5.wem</Path>
+				</File>
+				<File Id="65115155" Language="SFX">
+					<ShortName>grito1.wav</ShortName>
+					<Path>SFX\grito1_A1793BE9.wem</Path>
+				</File>
+				<File Id="86463283" Language="SFX">
+					<ShortName>grito2.wav</ShortName>
+					<Path>SFX\grito2_A1793BE9.wem</Path>
+				</File>
+				<File Id="136492028" Language="SFX">
+					<ShortName>grito5.wav</ShortName>
+					<Path>SFX\grito5_A1793BE9.wem</Path>
+				</File>
+				<File Id="153040202" Language="SFX">
+					<ShortName>menu\menu slide.wav</ShortName>
+					<Path>SFX\menu\menu slide_FA988307.wem</Path>
+				</File>
+				<File Id="175276589" Language="SFX">
+					<ShortName>bate al aire\bate al aire#06.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#06_50C632CB.wem</Path>
+				</File>
+				<File Id="200382282" Language="SFX">
+					<ShortName>sangre3.wav</ShortName>
+					<Path>SFX\sangre3_A1793BE9.wem</Path>
+				</File>
+				<File Id="265189159" Language="SFX">
+					<ShortName>respiracion rtpc\resp media.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp media_8E69F07C.wem</Path>
+				</File>
+				<File Id="275331321" Language="SFX">
+					<ShortName>grito7.wav</ShortName>
+					<Path>SFX\grito7_A1793BE9.wem</Path>
+				</File>
+				<File Id="284596102" Language="SFX">
+					<ShortName>bate al aire\bate al aire#02.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#02_5DB4DE1C.wem</Path>
+				</File>
+				<File Id="305260296" Language="SFX">
+					<ShortName>sangre5.wav</ShortName>
+					<Path>SFX\sangre5_A1793BE9.wem</Path>
+				</File>
+				<File Id="371803262" Language="SFX">
+					<ShortName>menu\menu slide.wav</ShortName>
+					<Path>SFX\menu\menu slide_F461D75A.wem</Path>
+				</File>
+				<File Id="372640633" Language="SFX">
+					<ShortName>respiracion rtpc\resp normal.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp normal_EFC56459.wem</Path>
+				</File>
+				<File Id="378896296" Language="SFX">
+					<ShortName>menu\menu clic.wav</ShortName>
+					<Path>SFX\menu\menu clic_5F21DBF6.wem</Path>
+				</File>
+				<File Id="384831498" Language="SFX">
+					<ShortName>grito6.wav</ShortName>
+					<Path>SFX\grito6_A1793BE9.wem</Path>
+				</File>
+				<File Id="390293228" Language="SFX">
+					<ShortName>sangre1.wav</ShortName>
+					<Path>SFX\sangre1_A1793BE9.wem</Path>
+				</File>
+				<File Id="401075010" Language="SFX">
+					<ShortName>habilidad comprada.wav</ShortName>
+					<Path>SFX\habilidad comprada_A1793BE9.wem</Path>
+				</File>
+				<File Id="407723403" Language="SFX">
+					<ShortName>golpes bath2.wav</ShortName>
+					<Path>SFX\golpes bath2_A1793BE9.wem</Path>
+				</File>
+				<File Id="449438330" Language="SFX">
+					<ShortName>sangre4.wav</ShortName>
+					<Path>SFX\sangre4_A1793BE9.wem</Path>
+				</File>
+				<File Id="451758459" Language="SFX">
+					<ShortName>grito3.wav</ShortName>
+					<Path>SFX\grito3_A1793BE9.wem</Path>
+				</File>
+				<File Id="484510687" Language="SFX">
+					<ShortName>menu\menu atras.wav</ShortName>
+					<Path>SFX\menu\menu atras_DE932BAD.wem</Path>
+				</File>
+				<File Id="486112213" Language="SFX">
+					<ShortName>Ruth_nivel2\Ruth_nivel2.wav</ShortName>
+					<Path>SFX\Ruth_nivel2\Ruth_nivel2_CB1F3167.wem</Path>
+				</File>
+				<File Id="529332982" Language="SFX">
+					<ShortName>bate al aire\bate al aire#03.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#03_9BC1C015.wem</Path>
+				</File>
+				<File Id="542588298" Language="SFX">
+					<ShortName>golpes bath3.wav</ShortName>
+					<Path>SFX\golpes bath3_A1793BE9.wem</Path>
+				</File>
+				<File Id="545788684" Language="SFX">
+					<ShortName>sangre7.wav</ShortName>
+					<Path>SFX\sangre7_A1793BE9.wem</Path>
+				</File>
+				<File Id="552256101" Language="SFX">
+					<ShortName>grito8.wav</ShortName>
+					<Path>SFX\grito8_A1793BE9.wem</Path>
+				</File>
+				<File Id="563179024" Language="SFX">
+					<ShortName>grito4.wav</ShortName>
+					<Path>SFX\grito4_A1793BE9.wem</Path>
+				</File>
+				<File Id="566891829" Language="SFX">
+					<ShortName>Ruth_nivel1\Ruth_nivel1.wav</ShortName>
+					<Path>SFX\Ruth_nivel1\Ruth_nivel1_CB1F3167.wem</Path>
+				</File>
+				<File Id="651555151" Language="SFX">
+					<ShortName>menu\menu clic.wav</ShortName>
+					<Path>SFX\menu\menu clic_B829FD71.wem</Path>
+				</File>
+				<File Id="660180741" Language="SFX">
+					<ShortName>respiracion rtpc\resp normal.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp normal_55F4FAE1.wem</Path>
+				</File>
+				<File Id="704379521" Language="SFX">
+					<ShortName>sangre2.wav</ShortName>
+					<Path>SFX\sangre2_A1793BE9.wem</Path>
+				</File>
+				<File Id="716503316" Language="SFX">
+					<ShortName>golpes bath4.wav</ShortName>
+					<Path>SFX\golpes bath4_A1793BE9.wem</Path>
+				</File>
+				<File Id="732028916" Language="SFX">
+					<ShortName>menu\menu slide.wav</ShortName>
+					<Path>SFX\menu\menu slide_8D78F790.wem</Path>
+				</File>
+				<File Id="752857847" Language="SFX">
+					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp agitad_7536F0A1.wem</Path>
+				</File>
+				<File Id="788638222" Language="SFX">
+					<ShortName>menu\menu slide.wav</ShortName>
+					<Path>SFX\menu\menu slide_55AEAC7C.wem</Path>
+				</File>
+				<File Id="799756066" Language="SFX">
+					<ShortName>respiracion rtpc\resp normal.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp normal_679290F9.wem</Path>
+				</File>
+				<File Id="832217768" Language="SFX">
+					<ShortName>respiracion rtpc\resp media.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp media_B9B905B7.wem</Path>
+				</File>
+				<File Id="833636875" Language="SFX">
+					<ShortName>sangre6.wav</ShortName>
+					<Path>SFX\sangre6_A1793BE9.wem</Path>
+				</File>
+				<File Id="852612019" Language="SFX">
+					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp agitad_DBD7A50D.wem</Path>
+				</File>
+				<File Id="878297216" Language="SFX">
+					<ShortName>bate al aire\bate al aire#04.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#04_99DCC3D4.wem</Path>
+				</File>
+				<File Id="886800314" Language="SFX">
+					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp agitad_6E09BAC3.wem</Path>
+				</File>
+				<File Id="898991215" Language="SFX">
+					<ShortName>golpes bath1.wav</ShortName>
+					<Path>SFX\golpes bath1_A1793BE9.wem</Path>
+				</File>
+				<File Id="942580077" Language="SFX">
+					<ShortName>Musica_Menu\Ruthless Menu final.wav</ShortName>
+					<Path>SFX\Musica_Menu\Ruthless Menu final_CB1F3167.wem</Path>
+				</File>
+				<File Id="950241008" Language="SFX">
+					<ShortName>bate al aire\bate al aire#01.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#01_CAF1CB35.wem</Path>
+				</File>
+				<File Id="968144958" Language="SFX">
+					<ShortName>golpes bath5.wav</ShortName>
+					<Path>SFX\golpes bath5_A1793BE9.wem</Path>
+				</File>
+				<File Id="996366000" Language="SFX">
+					<ShortName>menu\menu atras.wav</ShortName>
+					<Path>SFX\menu\menu atras_453B7232.wem</Path>
+				</File>
+				<File Id="1058815598" Language="SFX">
+					<ShortName>bate al aire\bate al aire#05.wav</ShortName>
+					<Path>SFX\bate al aire\bate al aire#05_2AFF91F3.wem</Path>
+				</File>
+				<File Id="1064015697" Language="SFX">
+					<ShortName>respiracion rtpc\resp media.wav</ShortName>
+					<Path>SFX\respiracion rtpc\resp media_FDC49EF7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
