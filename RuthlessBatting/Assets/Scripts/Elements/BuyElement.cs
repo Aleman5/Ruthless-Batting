@@ -71,6 +71,7 @@ public class BuyElement : MonoBehaviour
                     buyable.Buy(objective, ++levelOfTheElement);
                     moneyHolder.ActualMoney = -priceOfTheElement;
                     LevelUpThePrice();
+                    AudioManager.Instance.RunAudio(Audios.habilidad_comprada);
                     onInteract.Invoke();
                     //enabled = false;
                 }

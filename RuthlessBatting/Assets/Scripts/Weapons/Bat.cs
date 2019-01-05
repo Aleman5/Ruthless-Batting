@@ -58,6 +58,8 @@ public class Bat : MonoBehaviour, IWeapon
         mousePosition.y = 0;
         transform.rotation = Quaternion.LookRotation(mousePosition, Vector3.up);
 
+        AudioManager.Instance.RunAudio(Audios.bath_al_aire);
+
         onAttack.Invoke();
 
         Invoke("DesactivateBox", timeToDisappearHitBox);

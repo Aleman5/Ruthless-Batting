@@ -2,10 +2,11 @@
 
 public class TriggerAttackDetection : MonoBehaviour
 {
-    Health healthScript;
     [SerializeField] Transform originOfTheRay;
     [SerializeField] LayerMask obstacules;
-    [SerializeField] string tagObjective;
+    [SerializeField] string[] tagObjective;
+
+    Health healthScript;
 
     void Awake()
     {
@@ -14,7 +15,7 @@ public class TriggerAttackDetection : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag(tagObjective) && healthScript.Amount > 0)
+        if (collision.CompareTag(tagObjective[0]) && healthScript.Amount > 0)
         {
             Vector3 diff = collision.transform.GetChild(0).position - originOfTheRay.position;
             if (!Physics.Raycast(originOfTheRay.position, diff.normalized, diff.magnitude, obstacules))
@@ -25,5 +26,8 @@ public class TriggerAttackDetection : MonoBehaviour
                 AudioManager.Instance.RunAudio(Audios.matar_enemigo_bath);
             }
         }
+
+        if (collision.CompareTag(tagObjective[1]))
+            AudioManager.Instance.RunAudio(Audios.bate_pared);
     }
 }

@@ -6,6 +6,7 @@ public class EnemyRangeAttackFSM : MonoBehaviour, IAttack
 
     public void Attack()
     {
+        AudioManager.Instance.RunAudio(Audios.bath_al_aire);
         Instantiate(bullet, transform.position, Quaternion.identity);
     }
 }

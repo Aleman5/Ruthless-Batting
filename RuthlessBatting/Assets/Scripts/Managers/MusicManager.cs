@@ -19,11 +19,15 @@ public class MusicManager : MonoBehaviour
 
     public void Play()
     {
-        // Acá preguntar por los nombres o Id de cada escena y mandar el audio correspondiente.
-
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Level1":
+            case "Menu":
+                sceneAudio = Audios.menu;
+                break;
+            case "StoryboardN1":
+                sceneAudio = Audios.menu;
+                break;
+            case "Game3D":
                 sceneAudio = Audios.nivel1;
                 break;
 
@@ -33,13 +37,11 @@ public class MusicManager : MonoBehaviour
         }
 
         AudioManager.Instance.RunAudio(sceneAudio);
-
-        this.gameObject.GetComponent<AudioSource>().Play();
     }
 
     public void Stop()
     {
-        this.gameObject.GetComponent<AudioSource>().Stop();
+
     }
 
     static public MusicManager Instance

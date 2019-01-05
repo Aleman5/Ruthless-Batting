@@ -55,6 +55,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: Player
+  obstacules:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!114 &114377205929872250
 MonoBehaviour:
   m_ObjectHideFlags: 1
