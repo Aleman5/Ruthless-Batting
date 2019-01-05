@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
     private static MusicManager instance;
+
+    Audios sceneAudio;
 
     void Awake()
     {
@@ -16,6 +19,21 @@ public class MusicManager : MonoBehaviour
 
     public void Play()
     {
+        // Acá preguntar por los nombres o Id de cada escena y mandar el audio correspondiente.
+
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                sceneAudio = Audios.nivel1;
+                break;
+
+            case "Level2":
+                sceneAudio = Audios.nivel2;
+                break;
+        }
+
+        AudioManager.Instance.RunAudio(sceneAudio);
+
         this.gameObject.GetComponent<AudioSource>().Play();
     }
 

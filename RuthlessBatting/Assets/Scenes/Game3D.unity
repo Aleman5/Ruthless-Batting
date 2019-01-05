@@ -12240,7 +12240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1292408152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18894,6 +18894,17 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1575271516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1575271513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5624261637e2d45a29bc7fa2697d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1578684990
 GameObject:
   m_ObjectHideFlags: 0
@@ -20710,6 +20721,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114929660589158376, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
+    - {fileID: 82066594954360206, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2046076101
