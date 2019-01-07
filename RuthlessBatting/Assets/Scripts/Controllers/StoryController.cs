@@ -18,22 +18,40 @@ public class StoryController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            if (index > 0)
-            {
-                panels[index].SetActive(false);
-                index--;
-                panels[index].SetActive(true);
-            }
+            PrevPanel();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            panels[index].SetActive(false);
-            index++;
-            if (index == panels.Count)
-                SaveLoad.NewGame();
-            else
-                panels[index].SetActive(true);
+            NextPanel();
         }
+
+        if (InputManager.Instance.GetPauseButton())
+            StartGame();
+    }
+
+    public void PrevPanel()
+    {
+        if (index > 0)
+        {
+            panels[index].SetActive(false);
+            index--;
+            panels[index].SetActive(true);
+        }
+    }
+
+    public void NextPanel()
+    {
+        panels[index].SetActive(false);
+        index++;
+        if (index == panels.Count)
+            StartGame();
+        else
+            panels[index].SetActive(true);
+    }
+
+    public void StartGame()
+    {
+        SaveLoad.NewGame();
     }
 }
