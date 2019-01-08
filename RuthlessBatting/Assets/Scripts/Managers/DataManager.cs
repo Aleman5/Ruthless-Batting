@@ -12,6 +12,7 @@ public class DataManager
         public string waveName;
         public int[] playerUpgrades;
         public int enemyBodies;
+        public bool saveCreated;
     }
 
 	public static DataManager current;
@@ -31,6 +32,7 @@ public class DataManager
         data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
         data.actualScene = SceneManager.GetActiveScene().name;
         data.enemyBodies = BodiesHolder.Instance.GetBodies();
+        data.saveCreated = true;
 
         PlayerMovement3D pMovScript = player.GetComponent<PlayerMovement3D>();
 

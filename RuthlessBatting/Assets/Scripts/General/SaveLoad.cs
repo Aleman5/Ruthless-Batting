@@ -14,6 +14,7 @@ public static class SaveLoad
         saveGame.data.moneyCount = 0;
         //saveGame.data.enemyBodies = new SpriteRenderer[BodiesHolder.Instance.GetMaxBodies()];
         saveGame.data.enemyBodies = 0;
+        saveGame.data.saveCreated = false;
         for (int i = 0; i < (int)Buyable.COUNT; i++)
         {
             if (i == (int)Buyable.EXTRAHP)
