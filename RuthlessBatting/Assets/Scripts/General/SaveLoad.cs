@@ -17,7 +17,7 @@ public static class SaveLoad
         saveGame.data.saveCreated = false;
         for (int i = 0; i < (int)Buyable.COUNT; i++)
         {
-            if (i == (int)Buyable.EXTRAHP)
+            if (i != (int)Buyable.EXTRAHP)
                 saveGame.data.playerUpgrades[i] = 0;
             else
                 saveGame.data.playerUpgrades[i] = 1;
