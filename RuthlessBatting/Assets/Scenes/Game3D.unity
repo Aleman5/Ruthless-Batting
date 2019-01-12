@@ -20856,6 +20856,12 @@ Prefab:
       propertyPath: tagObjective.Array.data[0]
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 212679534540455040, guid: 2a7f225b9b38fb84bb757d7e843431e2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b5e8f858717da3443a54959f410c7ccf,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114929660589158376, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
     - {fileID: 82066594954360206, guid: 2a7f225b9b38fb84bb757d7e843431e2, type: 2}
