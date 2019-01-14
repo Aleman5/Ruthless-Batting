@@ -23,6 +23,9 @@
 			<IncludedEvents>
 				<Event Id="72870192" Name="bate_pared" ObjectPath="\Events\Default Work Unit\bate_pared"/>
 				<Event Id="2360431688" Name="bath_al_aire" ObjectPath="\Events\Default Work Unit\bath_al_aire"/>
+				<Event Id="3864549211" Name="disparo_laser" ObjectPath="\Events\Default Work Unit\disparo_laser"/>
+				<Event Id="3401255271" Name="enemigo_explota" ObjectPath="\Events\Default Work Unit\enemigo_explota"/>
+				<Event Id="420892085" Name="granada" ObjectPath="\Events\Default Work Unit\granada"/>
 				<Event Id="1079158723" Name="habilidad_comprada" ObjectPath="\Events\Default Work Unit\habilidad_comprada"/>
 				<Event Id="3063919553" Name="matar_enemigo_bath" ObjectPath="\Events\Default Work Unit\matar_enemigo_bath"/>
 				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\menu"/>
@@ -55,6 +58,10 @@
 				<File Id="153040202" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>
 					<Path>SFX\menu\menu slide_FA988307.wem</Path>
+				</File>
+				<File Id="158184130" Language="SFX">
+					<ShortName>disparo laser.wav</ShortName>
+					<Path>SFX\disparo laser_A1793BE9.wem</Path>
 				</File>
 				<File Id="175276589" Language="SFX">
 					<ShortName>bate al aire\bate al aire#06.wav</ShortName>
@@ -171,6 +178,10 @@
 				<File Id="752857847" Language="SFX">
 					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
 					<Path>SFX\respiracion rtpc\resp agitad_7536F0A1.wem</Path>
+				</File>
+				<File Id="764814797" Language="SFX">
+					<ShortName>disparo granada o explosion.wav</ShortName>
+					<Path>SFX\disparo granada o explosion_A1793BE9.wem</Path>
 				</File>
 				<File Id="788638222" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>

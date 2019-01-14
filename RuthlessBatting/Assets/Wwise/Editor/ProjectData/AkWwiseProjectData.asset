@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6b9e94b84034564ab78d14cd6447ac35
-    m_lastTime: -8586571880154775808
+    m_lastTime: -8586547851374775808
     List:
     - name: bate_pared
       guid: 5a300cc3e9a1c746b7742f2139dcdd1f
@@ -224,6 +224,42 @@ MonoBehaviour:
       - ElementName: bath_al_aire
         ObjectType: 3
       Path: Default Work Unit\bath_al_aire
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: disparo_laser
+      guid: 8c781a67759cf14eb147e310141875eb
+      id: 3864549211
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: disparo_laser
+        ObjectType: 3
+      Path: Default Work Unit\disparo_laser
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: enemigo_explota
+      guid: 39942a70036620459c854bf9616fe41d
+      id: 3401255271
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemigo_explota
+        ObjectType: 3
+      Path: Default Work Unit\enemigo_explota
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: granada
+      guid: 7f0a78056cc0fd49b43fa5f1212a126e
+      id: 420892085
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: granada
+        ObjectType: 3
+      Path: Default Work Unit\granada
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

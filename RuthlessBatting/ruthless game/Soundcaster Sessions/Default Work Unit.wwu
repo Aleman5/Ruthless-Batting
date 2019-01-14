@@ -34,6 +34,10 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="disparo_laser" ID="{671A788C-9C75-4EF1-B147-E310141875EB}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="nivel2" ID="{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -46,6 +50,10 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="enemigo_explota" ID="{702A9439-6603-4520-9C85-4BF9616FE41D}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="respiracion_normal" ID="{D2E8A5BE-5B71-4282-9D26-83814AA26572}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -56,6 +64,10 @@
 						<Module>
 							<ObjectRef Name="respiracion_agitada" ID="{83C1A6F1-61F2-4E4E-ACCA-0AFB823DE87C}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="granada" ID="{05780A7F-C06C-49FD-B43F-A5F1212A126E}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="3" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -81,7 +93,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}"/>
-							<Value>100</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>

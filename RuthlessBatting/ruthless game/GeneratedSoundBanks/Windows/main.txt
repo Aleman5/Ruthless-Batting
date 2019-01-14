@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	341686896	respiracion_agitada			\Default Work Unit\respiracion_agitada	
 	409685056	nivel1			\Default Work Unit\nivel1	
 	409685059	nivel2			\Default Work Unit\nivel2	
+	420892085	granada			\Default Work Unit\granada	
 	668515409	respiracion_media			\Default Work Unit\respiracion_media	
 	756780678	menu_atras			\Default Work Unit\menu_atras	
 	1079158723	habilidad_comprada			\Default Work Unit\habilidad_comprada	
@@ -11,6 +12,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	2607556080	menu			\Default Work Unit\menu	
 	2795715930	menu_slide			\Default Work Unit\menu_slide	
 	3063919553	matar_enemigo_bath			\Default Work Unit\matar_enemigo_bath	
+	3401255271	enemigo_explota			\Default Work Unit\enemigo_explota	
+	3864549211	disparo_laser			\Default Work Unit\disparo_laser	
 	4137353766	respiracion_normal			\Default Work Unit\respiracion_normal	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -25,6 +28,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	86463283	grito2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\grito2_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\gritos\grito2		22878
 	136492028	grito5	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\grito5_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\gritos\grito5		19428
 	153040202	menu slide_03	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu slide_FA988307.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu slide\menu slide_03		10854
+	158184130	disparo laser	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\disparo laser_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\disparo laser		24174
 	175276589	bate al aire#06	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\bate al aire\bate al aire#06_50C632CB.wem		\Actor-Mixer Hierarchy\Default Work Unit\bate al aire\bate al aire#06		2470
 	200382282	sangre3	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\sangre3_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\morbo (sangrecita)\sangre3		34142
 	265189159	resp media_02	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp media_8E69F07C.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion media\resp media\resp media_02		69322
@@ -54,6 +58,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	716503316	golpes bath4	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\golpes bath4_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\golpes bath\golpes bath4		29580
 	732028916	menu slide_01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu slide_8D78F790.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu slide\menu slide_01		16620
 	752857847	resp agitad_01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp agitad_7536F0A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion agitada\resp agitada\resp agitad_01		70084
+	764814797	disparo granada o explosion	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\disparo granada o explosion_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\disparo granada o explosion		45541
 	788638222	menu slide	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu slide_55AEAC7C.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu slide\menu slide		16028
 	799756066	resp normal	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp normal_679290F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion normal\resp normal\resp normal		121963
 	832217768	resp media	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp media_B9B905B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion media\resp media\resp media		64495

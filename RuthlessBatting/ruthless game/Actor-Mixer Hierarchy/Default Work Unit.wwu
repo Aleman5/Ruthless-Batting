@@ -931,7 +931,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-20</Value>
+								<Value>-15</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1969,6 +1969,641 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="disparo granada o explosion" ID="{159BA5BD-3FC5-4D28-AC35-013E719EDBE1}" ShortID="353552581">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="disparo granada o explosion" ID="{ACEDE890-5EFD-4C4F-8E6C-382B9EC85431}" ShortID="764814797">
+							<Language>SFX</Language>
+							<AudioFile>disparo granada o explosion.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="disparo granada o explosion" ID="{ACEDE890-5EFD-4C4F-8E6C-382B9EC85431}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="disparo laser" ID="{ADE01117-3286-4FDC-97BF-7B3EB85DC7DA}" ShortID="886166513">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="disparo laser" ID="{DAF17C9F-808E-4A46-ABE8-5496E2143AC4}" ShortID="158184130">
+							<Language>SFX</Language>
+							<AudioFile>disparo laser.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="disparo laser" ID="{DAF17C9F-808E-4A46-ABE8-5496E2143AC4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="enemigo explota" ID="{2D0946E1-9B8C-42CD-AB4E-71839E999945}" ShortID="490927402">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="gritos" ID="{EAAC7D79-E381-4B71-A694-778F9349F7F1}" ShortID="817307664">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1DFDBB56-9D1A-40BC-83E0-2C5B00913BC2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="230"/>
+													<Property Name="Min" Type="Real64" Value="-230"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="grito1" ID="{EDE3F003-A8E1-419E-86B2-DDAEAB23B080}" ShortID="846826879">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito1" ID="{E38E5256-8B21-4DD1-B0F2-8891E27FE1FF}" ShortID="915038451">
+											<Language>SFX</Language>
+											<AudioFile>grito1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="65115155"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito1" ID="{E38E5256-8B21-4DD1-B0F2-8891E27FE1FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito2" ID="{E03377F1-C967-4151-927B-606C70EA6556}" ShortID="729418758">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito2" ID="{B87B8764-195D-4436-B3E8-5A2FB0A86F97}" ShortID="274584108">
+											<Language>SFX</Language>
+											<AudioFile>grito2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="86463283"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito2" ID="{B87B8764-195D-4436-B3E8-5A2FB0A86F97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito3" ID="{1204E598-BAFE-4D18-88E0-0BDF7E341A09}" ShortID="699404361">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito3" ID="{8B984AB0-51A6-42CE-B8F6-76A51F3E1F7A}" ShortID="999250813">
+											<Language>SFX</Language>
+											<AudioFile>grito3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="451758459"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito3" ID="{8B984AB0-51A6-42CE-B8F6-76A51F3E1F7A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito4" ID="{35ECD1CA-166B-4443-A888-8E6D8EA7735C}" ShortID="373421302">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito4" ID="{77574239-4EF5-4BCF-8000-5879572E3841}" ShortID="465426460">
+											<Language>SFX</Language>
+											<AudioFile>grito4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="563179024"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito4" ID="{77574239-4EF5-4BCF-8000-5879572E3841}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito5" ID="{9AC0E9B9-3757-463B-817E-06CC741220A0}" ShortID="202474753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito5" ID="{2F8F7C1F-5748-4F80-AAB0-4AA266736A99}" ShortID="655201582">
+											<Language>SFX</Language>
+											<AudioFile>grito5.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="136492028"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito5" ID="{2F8F7C1F-5748-4F80-AAB0-4AA266736A99}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito6" ID="{2D601EBD-3DAF-4ADA-9D2E-32767404A85F}" ShortID="427577198">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito6" ID="{EE388176-6877-4607-926A-5F93161340A2}" ShortID="3481629">
+											<Language>SFX</Language>
+											<AudioFile>grito6.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="384831498"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito6" ID="{EE388176-6877-4607-926A-5F93161340A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito7" ID="{3B4434EC-337A-4A7A-B892-4635EE944843}" ShortID="1042574609">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito7" ID="{69452AD0-8E04-403D-86AE-7FA9F5AE26F7}" ShortID="498289143">
+											<Language>SFX</Language>
+											<AudioFile>grito7.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="275331321"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito7" ID="{69452AD0-8E04-403D-86AE-7FA9F5AE26F7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="grito8" ID="{A911FE39-8636-4C76-88C9-06AA4FD0CF08}" ShortID="727022738">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="grito8" ID="{2BE98B5B-F4BC-4448-B2D9-151F599AFBC7}" ShortID="1054933255">
+											<Language>SFX</Language>
+											<AudioFile>grito8.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="552256101"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="grito8" ID="{2BE98B5B-F4BC-4448-B2D9-151F599AFBC7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="morbo (sangrecita)" ID="{88FD7915-BED6-4B0E-823B-D43499EA9325}" ShortID="900729875">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-230</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{28E56CC7-9F42-4944-AAEE-E7FF6BE1184D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="morbo1" ID="{1F157134-207E-45EF-9ECE-31C53E30737E}" ShortID="598368643">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="morbo1" ID="{4DB02EFC-466D-46B3-958F-1069F9E411A1}" ShortID="240930210">
+											<Language>SFX</Language>
+											<AudioFile>matar un enemigo\morbo (sangrecita)\morbo1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="316710089"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="morbo1" ID="{4DB02EFC-466D-46B3-958F-1069F9E411A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="morbo2" ID="{AA3B22DE-806A-448E-9BAA-F58A767ADF76}" ShortID="523332950">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="morbo2" ID="{D6168B8A-3366-4329-A3D5-D7B857E061F4}" ShortID="1040437283">
+											<Language>SFX</Language>
+											<AudioFile>matar un enemigo\morbo (sangrecita)\morbo2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="30658184"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="morbo2" ID="{D6168B8A-3366-4329-A3D5-D7B857E061F4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="morbo3" ID="{648288C7-CB73-48BA-810A-FFE3857F64FF}" ShortID="689350114">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="morbo3" ID="{16AFD9FB-1A99-447B-82A3-0635D609D91F}" ShortID="553823409">
+											<Language>SFX</Language>
+											<AudioFile>matar un enemigo\morbo (sangrecita)\morbo3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="789769147"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="morbo3" ID="{16AFD9FB-1A99-447B-82A3-0635D609D91F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="morbo4" ID="{77199B93-9FE9-4354-8C79-472D016463D8}" ShortID="705318952">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="morbo4" ID="{E243DDA7-C1EF-4A10-B9D4-1B1C315300CA}" ShortID="88641590">
+											<Language>SFX</Language>
+											<AudioFile>matar un enemigo\morbo (sangrecita)\morbo4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="409000071"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="morbo4" ID="{E243DDA7-C1EF-4A10-B9D4-1B1C315300CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="morbo5" ID="{37762845-1351-4DDC-8421-3C3F425F868B}" ShortID="765654673">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="morbo5" ID="{A8DA97D9-5FB1-4F75-B5B0-79BC49D2FD57}" ShortID="629552460">
+											<Language>SFX</Language>
+											<AudioFile>matar un enemigo\morbo (sangrecita)\morbo5.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="540261631"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="morbo5" ID="{A8DA97D9-5FB1-4F75-B5B0-79BC49D2FD57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre1" ID="{BF04D1C7-1A01-4F75-AE1B-E8C4FCBBFFED}" ShortID="803079913">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre1" ID="{D786C104-D06B-45CC-9E61-8AC78CE84019}" ShortID="230542431">
+											<Language>SFX</Language>
+											<AudioFile>sangre1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="390293228"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre1" ID="{D786C104-D06B-45CC-9E61-8AC78CE84019}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre2" ID="{AF5C0288-DBD1-40C9-9867-1BB02DA8846E}" ShortID="765666635">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre2" ID="{44EF9F0D-2DEB-43FA-AEC9-F4495E1E9874}" ShortID="779978941">
+											<Language>SFX</Language>
+											<AudioFile>sangre2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="704379521"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre2" ID="{44EF9F0D-2DEB-43FA-AEC9-F4495E1E9874}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre3" ID="{502EBFDF-F94D-4574-975C-AC2C38A2EF88}" ShortID="680017176">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre3" ID="{D2110C4C-8BCB-4A8C-A81D-B418060A51D6}" ShortID="779173817">
+											<Language>SFX</Language>
+											<AudioFile>sangre3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="200382282"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre3" ID="{D2110C4C-8BCB-4A8C-A81D-B418060A51D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre4" ID="{8AC4061B-F81E-4C84-961F-A8520FCB14AE}" ShortID="494330038">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre4" ID="{76DE312D-56DD-4188-BB4B-C27BB9983E7D}" ShortID="187995810">
+											<Language>SFX</Language>
+											<AudioFile>sangre4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="449438330"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre4" ID="{76DE312D-56DD-4188-BB4B-C27BB9983E7D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre5" ID="{193B1AE1-7190-4A75-BC6E-94EE9E72CC63}" ShortID="248583967">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre5" ID="{798B22B8-3E3B-495D-ABD6-BFA8121331E6}" ShortID="665549517">
+											<Language>SFX</Language>
+											<AudioFile>sangre5.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="305260296"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre5" ID="{798B22B8-3E3B-495D-ABD6-BFA8121331E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre6" ID="{46C67194-E926-4AA7-A04C-AFF239B36F24}" ShortID="282174433">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre6" ID="{49B48D9E-40A4-4A33-A17E-1858277F3175}" ShortID="861408768">
+											<Language>SFX</Language>
+											<AudioFile>sangre6.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="833636875"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre6" ID="{49B48D9E-40A4-4A33-A17E-1858277F3175}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sangre7" ID="{75244BA8-2C43-4AB6-9827-6846B899743A}" ShortID="308989400">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sangre7" ID="{F7E20A25-5B81-4B54-B122-6729E0009788}" ShortID="560354610">
+											<Language>SFX</Language>
+											<AudioFile>sangre7.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="545788684"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sangre7" ID="{F7E20A25-5B81-4B54-B122-6729E0009788}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="disparo granada o explosion" ID="{432ABAB7-76DF-4219-952E-0046553564FA}" ShortID="847508274">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{31382A57-A637-4932-9BF8-5DB57788F22E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="disparo granada o explosion" ID="{9C4AFD2E-9559-4C72-AC91-1AD0FD216892}" ShortID="938636002">
+									<Language>SFX</Language>
+									<AudioFile>disparo granada o explosion.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="764814797"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="disparo granada o explosion" ID="{9C4AFD2E-9559-4C72-AC91-1AD0FD216892}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

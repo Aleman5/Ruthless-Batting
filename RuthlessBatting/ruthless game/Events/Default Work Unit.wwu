@@ -198,6 +198,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{DBB39397-1681-462F-B9F9-ADA44F0E8590}" ShortID="751271503">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="nivel2" ID="{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}">
@@ -230,6 +241,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5E12E270-148C-45A5-9BC1-DB5A9E25720B}" ShortID="814138420">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B79A2AE-2F78-49C2-9A9F-149CDD56F9D9}" ShortID="756322860">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -272,6 +305,48 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="menu atras" ID="{6ECC2B5E-1824-4915-AE5D-35F8E7A73C1C}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="disparo_laser" ID="{671A788C-9C75-4EF1-B147-E310141875EB}">
+					<ChildrenList>
+						<Action Name="" ID="{89F6C784-1409-49C1-BC4F-190219092DF9}" ShortID="503076611">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="disparo laser" ID="{ADE01117-3286-4FDC-97BF-7B3EB85DC7DA}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="granada" ID="{05780A7F-C06C-49FD-B43F-A5F1212A126E}">
+					<ChildrenList>
+						<Action Name="" ID="{B08378DE-FF7E-4560-B1BA-31E05C3DA158}" ShortID="866788222">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="disparo granada o explosion" ID="{159BA5BD-3FC5-4D28-AC35-013E719EDBE1}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="enemigo_explota" ID="{702A9439-6603-4520-9C85-4BF9616FE41D}">
+					<ChildrenList>
+						<Action Name="" ID="{D9D57E2F-A018-49CF-B264-47A6FAD0DB33}" ShortID="977955672">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="enemigo explota" ID="{2D0946E1-9B8C-42CD-AB4E-71839E999945}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
