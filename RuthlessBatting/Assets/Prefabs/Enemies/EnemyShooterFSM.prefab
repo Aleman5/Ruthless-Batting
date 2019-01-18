@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4488459408810382}
   - component: {fileID: 212856416976011018}
   - component: {fileID: 95723173138718078}
+  - component: {fileID: 114355415694899340}
   - component: {fileID: 114382943086607120}
   m_Layer: 0
   m_Name: Enemy_Mesh
@@ -199,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 1380224171595738}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 312a0343670c0704ca6838fe5a3b1f83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -227,14 +228,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   player: {fileID: 0}
+  deathBodyHolder: {fileID: 0}
   rb: {fileID: 0}
   nav: {fileID: 0}
+  health: {fileID: 0}
   actualTime: 0
   onAttack:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114355415694899340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1380224171595738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a43187f17a198846b5447877d8722e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114382943086607120
 MonoBehaviour:
   m_ObjectHideFlags: 1

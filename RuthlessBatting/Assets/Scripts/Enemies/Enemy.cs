@@ -54,6 +54,8 @@ public class Enemy : EnemyBase
     {
         //Debug.Log((States)fsm.GetState());
 
+        Updating();
+
         switch (fsm.GetState())
         {
             case (int)States.Patrol:
@@ -73,6 +75,11 @@ public class Enemy : EnemyBase
                     Die();
                 break;
         }
+    }
+
+    virtual protected void Updating()
+    {
+
     }
 
     virtual protected void Patrolling()

@@ -19,7 +19,10 @@ public class Bullet : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position , target, speed * Time.deltaTime);
 
         if (transform.position.x == target.x && transform.position.y == target.y && transform.position.z == target.z)
+        {
+            AudioManager.Instance.RunAudio(Audios.bate_pared);
             DestroyBullet();
+        }
     }
 
 
@@ -29,6 +32,8 @@ public class Bullet : MonoBehaviour {
         {
             Health health = collision.GetComponent<Health>();
             health.Amount -= 1;
+            AudioManager.Instance.RunAudio(Audios.matar_enemigo_bath);
+            DestroyBullet();
         }
     }
 

@@ -2,6 +2,13 @@
 
 public class EnemyShooter : Enemy
 {
+    protected override void Updating()
+    {
+        //base.Updating();
+
+        actualTime -= Time.deltaTime;
+    }
+
     protected override void Patrolling()
     {
         //base.Patrol();
@@ -36,7 +43,6 @@ public class EnemyShooter : Enemy
 
         if (!PlayerOnAttackRange())
         {
-            actualTime = 0;
             OnEnemyOutOfAttackRange();
             return;
         }
@@ -48,8 +54,6 @@ public class EnemyShooter : Enemy
             nav.speed = 0;
             attackFSM.Attack();
         }
-        actualTime -= Time.deltaTime;
-        
     }
 
     protected override void Attack()
