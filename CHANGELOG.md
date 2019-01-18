@@ -1,12 +1,92 @@
 # Changelog
 All notable changes will be documented here.
 
-## [unrealeased]
+
+## [v0.16]
 ### Added
-- 
+- New design for the Player.
 
 ### Updated
-- 
+- User can skip the Storyboard.
+- Menu canvas.
+- Improved Enemy Shooter.
+- Configured music.
+
+
+## [v0.15]
+### Added
+- Sprites for Blood Particles.
+- Art for publication.
+- SFX.
+
+### Updated
+- Corrected HUD Sprites on the Level 1 and 2.
+- Implementation of the ilumination on the Level 1.
+- Configured music.
+
+
+## [v0.14]
+### Added
+- New font (Regencie Light).
+- Description of the game on itch.io
+
+### Updated
+- Grenade can't kill through a wall.
+- Music configured in all scenes.
+- HUD on the Level 1 and 2.
+
+
+## [v0.13]
+### Added
+- Transparency on the Furnitures of Level 1.
+
+### Fixed
+- Player now can't float on Level 2.
+- Player now can't leave Level 2 (walking).
+- Player now can't get on couch.
+- Enemies now can't attack being dead.
+- Enemies now can correctly kill the Player.
+
+
+## [v0.12]
+### Added
+- Furnitures of the Level 1.
+
+### Updated
+- Enemies can go up and down from the floors of the Level 2.
+
+### Fixed
+- Enemies now can't attack being dead.
+- Enemy's body is being save when reseting the Level.
+
+
+## [v0.11]
+### Added
+- Transparency on the upfloor of the Level 2.
+
+
+### Updated
+- Level 2.
+
+### Fixed
+- Enemies now can´t kill Player through the walls.
+- Blood and Multiplier appear correctly on the Level 2.
+- Enemy shows correctly his animations.
+
+
+## [v0.10]
+### Added
+- Player can throw a Grenade.
+- Enemy Double Hit.
+- Storyboard (N1).
+- Save & Load system.
+- Ilumination on the Level 1.
+- Level 2.
+- Animations of Enemy Melee.
+
+### Updated
+- Buy System.
+
 
 ## [v0.9]
 ### Added
