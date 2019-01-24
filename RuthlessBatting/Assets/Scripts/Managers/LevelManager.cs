@@ -119,13 +119,14 @@ public class LevelManager : MonoBehaviour
 
         // Para Testing nomás.
         if (Input.GetKey(KeyCode.J))
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
     }
 
     void ChangeLevel2()
     {
         MusicManager.Instance.Stop();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Loading");
     }
 
     IEnumerator GoToMenu()
