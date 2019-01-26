@@ -8,6 +8,7 @@ public class HudManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyChange;
     //[SerializeField] TextMeshProUGUI waveText;
     [SerializeField] TextMeshProUGUI timeLeft;
+    [SerializeField] TextMeshProUGUI saving;
 
     [Header("Scripts")]
     [SerializeField] WaveSpawner spawner;
@@ -16,6 +17,10 @@ public class HudManager : MonoBehaviour
     [Header("Images")]
     [SerializeField] Image hud;
 
+    [Header("Variables")]
+    [SerializeField] float timeSaving;
+
+    float timeSavingLeft;
     string waveText = "";
 
     void Start()
@@ -26,12 +31,22 @@ public class HudManager : MonoBehaviour
 
         moneyChange.text = "$" + moneyHolder.ActualMoney;
         //waveText.text = spawner.GetActualWaveName();
+
+        spawner.OnCountdown.AddListener(ChangeSavingState);
+        timeSavingLeft = 0;
     }
 
     void Update()
     {
         if (timeLeft.enabled)
             TimeText();
+
+        if (timeSavingLeft >= 0)
+        {
+            timeSavingLeft -= Time.deltaTime;
+            if (timeSavingLeft < 0)
+                ChangeSavingState();
+        }
     }
 
     void OnMoneyChanged()
@@ -66,5 +81,13 @@ public class HudManager : MonoBehaviour
             CountdownTextSituation();
             hud.enabled = false;
         }
+    }
+
+    void ChangeSavingState()
+    {
+        saving.enabled = !saving.enabled;
+
+        if (saving.enabled)
+            timeSavingLeft = timeSaving;
     }
 }
