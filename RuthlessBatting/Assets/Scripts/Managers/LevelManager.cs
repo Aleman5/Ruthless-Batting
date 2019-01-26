@@ -16,6 +16,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject restartText;
 
+    [Header("Waves Checkpoints")]
+    [SerializeField] int[] checkpoints;
+
     bool gameWon = false;
     bool alive = true;
 
@@ -38,6 +41,7 @@ public class LevelManager : MonoBehaviour
         pauseScript.OnPause.AddListener(PauseGame);
         pauseScript.OnResume.AddListener(ContinueGame);
         pauseScript.OnReturn.AddListener(ReturnMenu);
+        waveSpawnerScript.OnCountdown.AddListener(Save);
     }
 
     void IsWin()
@@ -84,6 +88,13 @@ public class LevelManager : MonoBehaviour
         alive = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
+    }
+
+    public void Save()
+    {
+        foreach (int checkpoint in checkpoints)
+            if (checkpoint == waveSpawnerScript.GetActualWaveIndex())
+                SaveLoad.Save();
     }
 
     void Update()

@@ -15652,6 +15652,7 @@ MonoBehaviour:
   winScreen: {fileID: 2083235098}
   pauseCanvas: {fileID: 376142316}
   restartText: {fileID: 1982700850}
+  checkpoints: 010000000300000005000000
 --- !u!4 &1826606858
 Transform:
   m_ObjectHideFlags: 0
