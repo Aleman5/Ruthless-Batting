@@ -45,7 +45,7 @@ public abstract class EnemyBase : MonoBehaviour
 
         health = GetComponent<Health>();
 
-        health.OnDeath.AddListener(OnNoHealth);
+        health.OnDeath().AddListener(OnNoHealth);
     }
 
     protected void Update()
@@ -66,6 +66,11 @@ public abstract class EnemyBase : MonoBehaviour
     public void EnemyInAttackRange()
     {
         
+    }
+
+    public void StopMoving()
+    {
+
     }
 
     abstract protected void OnUpdate();

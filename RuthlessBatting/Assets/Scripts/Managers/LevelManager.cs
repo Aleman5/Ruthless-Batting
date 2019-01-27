@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         waveSpawnerScript.OnLevelComplete.AddListener(IsWin);
-        PlayerHealthScript.OnDeath.AddListener(Restart);
+        PlayerHealthScript.OnDeath().AddListener(Restart);
         pauseScript.OnPause.AddListener(PauseGame);
         pauseScript.OnResume.AddListener(ContinueGame);
         pauseScript.OnReturn.AddListener(ReturnMenu);

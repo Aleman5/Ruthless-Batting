@@ -26,16 +26,16 @@ public class Health : MonoBehaviour
             if (amount <= 0)
             {
                 amount = 0;
-                OnDeath.Invoke();
+                onDeath.Invoke();
             }
             else if (prevHealth > amount)
                 OnHit.Invoke();
         }
     }
 
-    public UnityEvent OnDeath
+    public UnityEvent OnDeath()
     {
-        get { return onDeath; }
+        return onDeath;
     }
     public UnityEvent OnHit
     {

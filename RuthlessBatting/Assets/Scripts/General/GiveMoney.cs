@@ -14,7 +14,7 @@ public class GiveMoney : MonoBehaviour
         moneyToGive = Random.Range(4, 8);
 
         health = GetComponent<Health>();
-        health.OnDeath.AddListener(GiveMoneyToPlayer);
+        health.OnDeath().AddListener(GiveMoneyToPlayer);
 
         moneyHolder = GameObject.Find("Player3D").GetComponent<MoneyHolder>();
     }

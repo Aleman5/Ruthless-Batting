@@ -32,7 +32,7 @@ public class Enemy : EnemyBase
     {
         fsm = new EnemyFSM((int)States.Count, (int)Events.Count, (int)States.Patrol);
 
-                                  // Origin             // Event                      // Destiny
+                                  // Origin             // Event                       // Destiny
         fsm.SetRelation( (int)States.Patrol,   (int)Events.InSight,           (int)States.Chase    );
         fsm.SetRelation( (int)States.Recovery, (int)Events.InSight,           (int)States.Chase    );
         fsm.SetRelation( (int)States.Chase,    (int)Events.InAttackRange,     (int)States.Attack   );
@@ -107,7 +107,7 @@ public class Enemy : EnemyBase
         alive = false;
 
         Transform t1 = transform.GetChild(1);
-        t1.GetComponent<EnemyAnimationFSM>().enabled = false;
+        t1.GetComponent<IAnimation>().DisableAnim();
 
         // Mesh is not a slave anymore. Mesh is a free elf.
         t1.SetParent(deathBodyHolder);

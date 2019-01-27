@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 
-public class EnemyAnimationFSM : MonoBehaviour, IAnimation
+public class EnemyAnimationBombFSM : MonoBehaviour, IAnimation
 {
+    [SerializeField] EnemyExplodeFSM atkScript;
+
     Animator anim;
     Enemy fsmScript;
 
@@ -9,10 +11,11 @@ public class EnemyAnimationFSM : MonoBehaviour, IAnimation
 
     void Awake()
     {
-        anim = GetComponent<Animator>();
-        fsmScript = transform.GetComponentInParent<Enemy>();
-        transform.GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
-        transform.GetComponentInParent<Health>().OnDeath().AddListener(Death);
+        anim      = GetComponent<Animator>();
+        fsmScript = GetComponentInParent<Enemy>();
+        GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
+        GetComponentInParent<Health>().OnDeath().AddListener(Death);
+        atkScript.OnExplode().AddListener(Explode);
     }
 
     void Update()
@@ -27,12 +30,17 @@ public class EnemyAnimationFSM : MonoBehaviour, IAnimation
             anim.speed = 1.6f;
         else if (fsmScript.PlayerOnAttackRange())
             anim.speed = 1f;
-        
+
     }
 
     void Attacking()
     {
         anim.SetTrigger("Attack");
+    }
+
+    void Explode()
+    {
+        anim.SetBool("ExplodeSuccess", true);
     }
 
     void Death()
@@ -41,6 +49,7 @@ public class EnemyAnimationFSM : MonoBehaviour, IAnimation
 
         anim.SetInteger("Direction", dir);
         anim.SetTrigger("Death");
+       
 
         enabled = false;
     }

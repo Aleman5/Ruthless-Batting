@@ -46,7 +46,7 @@ public class BodiesHolder : MonoBehaviour
 
     void AddToListener(Health health)
     {
-        health.OnDeath.AddListener(CheckLimit);
+        health.OnDeath().AddListener(CheckLimit);
 	}
 
     void CheckLimit()

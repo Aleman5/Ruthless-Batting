@@ -15,7 +15,7 @@ public class ChangeParticlePosition : MonoBehaviour
         }
         
         pl = go.GetComponent<ParticleLauncher>();
-        GetComponentInParent<Health>().OnDeath.AddListener(Splash);
+        GetComponentInParent<Health>().OnDeath().AddListener(Splash);
     }
 
     void Splash()

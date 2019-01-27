@@ -52,13 +52,13 @@ public class MoneyManager : MonoBehaviour
     public void AddToListeners(Health health)
     {
         if (shakerScript)
-            health.OnDeath.AddListener(shakerScript.Shake);
+            health.OnDeath().AddListener(shakerScript.Shake);
 
         if (zoomKillScript)
-            health.OnDeath.AddListener(zoomKillScript.ReduceSize);
+            health.OnDeath().AddListener(zoomKillScript.ReduceSize);
 
         if (moneyHolderScript)
-            health.OnDeath.AddListener(AddMoney);
+            health.OnDeath().AddListener(AddMoney);
     }
 
     void AddMoney()

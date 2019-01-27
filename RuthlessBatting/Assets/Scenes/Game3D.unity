@@ -19926,7 +19926,7 @@ MonoBehaviour:
   waves:
   - name: wave 1
     enemies:
-    - enemy: {fileID: 4990710073482848, guid: 60cdce2d016ab054ca62fcaca413d4bf, type: 2}
+    - enemy: {fileID: 4990710073482848, guid: 1c464fb36bc23b3408211c179b2f4c9b, type: 2}
       count: 8
   - name: wave 2
     enemies:
