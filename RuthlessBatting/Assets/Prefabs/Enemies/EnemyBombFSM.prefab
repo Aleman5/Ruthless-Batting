@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a0d63a374feab418e82f3be495829a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  atkScript: {fileID: 114660220655634256}
 --- !u!114 &114382943086607120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +267,11 @@ MonoBehaviour:
   enemyHealth: {fileID: 114408888503471204}
   explosion: {fileID: 1737091164294080, guid: 7359f2a671a8c63428afb271d45e7ace, type: 2}
   timeToExplode: 0.6
+  onExplode:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114692951015604220
 MonoBehaviour:
   m_ObjectHideFlags: 1
