@@ -2,6 +2,10 @@
 {
     bate_pared,
     bath_al_aire,
+    disparo_laser,
+    enemigo_explota,
+    granada,
+    habilidad_cancelada,
     habilidad_comprada,
     matar_enemigo_bath,
     menu,
@@ -12,5 +16,9 @@
     respiracion_normal,
     menu_atras,
     menu_clic,
-    menu_slide
+    menu_slide,
+    pausa_on,
+    pausa_off,
+    musica_on,
+    musica_off
 }

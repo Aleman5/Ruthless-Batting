@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     public void RunAudio(Audios audio)
     {
+        if (audio == Audios.menu || audio == Audios.nivel1 || audio == Audios.nivel2)
+            AkSoundEngine.StopAll();
         AkSoundEngine.PostEvent(audio.ToString(), gameObject);
     }
 
