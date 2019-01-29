@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,7 +28,7 @@ public class StoryController : MonoBehaviour {
         }
 
         if (InputManager.Instance.GetPauseButton())
-            StartGame();
+            LoadNextScene();
     }
 
     public void PrevPanel()
@@ -45,13 +46,16 @@ public class StoryController : MonoBehaviour {
         panels[index].SetActive(false);
         index++;
         if (index == panels.Count)
-            StartGame();
+            LoadNextScene();
         else
             panels[index].SetActive(true);
     }
 
-    public void StartGame()
+    public void LoadNextScene()
     {
-        SaveLoad.NewGame();
+        if (!File.Exists(Application.persistentDataPath + "/rbSave.bp"))
+            SceneLoaderManager.Instance.StartNewGame();
+        else
+            SceneLoaderManager.Instance.LoadNextScene(SceneLoaderManager.Instance.GetCurrentScene());
     }
 }

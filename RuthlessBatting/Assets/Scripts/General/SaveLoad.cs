@@ -9,7 +9,7 @@ public static class SaveLoad
 
     public static void NewGame()
     {
-        saveGame.data.actualScene = "Game3D";
+        saveGame.data.actualScene = SceneEnum.Menu;
         saveGame.data.waveName = "wave1";
         saveGame.data.moneyCount = 0;
         //saveGame.data.enemyBodies = new SpriteRenderer[BodiesHolder.Instance.GetMaxBodies()];
@@ -28,7 +28,7 @@ public static class SaveLoad
         bf.Serialize(file, saveGame);
         file.Close();
 
-        SceneManager.LoadScene(saveGame.data.actualScene);
+        SceneLoaderManager.Instance.LoadNextScene(saveGame.data.actualScene);
     }
 
     public static void Save()
@@ -48,7 +48,7 @@ public static class SaveLoad
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/rbSave.bp", FileMode.Open);
             saveGame = (DataManager)bf.Deserialize(file);
-            SceneManager.LoadScene(saveGame.data.actualScene);
+            SceneLoaderManager.Instance.LoadNextScene(saveGame.data.actualScene);
             file.Close();
         }
         else

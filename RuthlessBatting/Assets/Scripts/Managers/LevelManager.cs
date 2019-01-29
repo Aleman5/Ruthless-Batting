@@ -113,7 +113,7 @@ public class LevelManager : MonoBehaviour
                 Time.timeScale = 1f;
 
                 UpperFloorObjects.EmptyList();
-                SceneManager.LoadScene(actualScene.name);
+                SceneLoaderManager.Instance.ReloadScene(actualScene);
             }
             if (InputManager.Instance.GetPauseButton())
             {
@@ -130,23 +130,23 @@ public class LevelManager : MonoBehaviour
 
         // Para Testing nomás.
         if (Input.GetKey(KeyCode.J))
-            SceneManager.LoadScene(4);
+            SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Game3D);
     }
 
     void ChangeLevel2()
     {
         MusicManager.Instance.Stop();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Loading");
+        
+        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Level2); // Here will be the StoryboardN2
     }
 
     IEnumerator GoToMenu()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(0.05f);//fadeTime);
+        yield return new WaitForSeconds(0.05f);//fadeTime;
         MusicManager.Instance.Stop();
 
-        SceneManager.LoadScene("Menu");
+        SceneLoaderManager.Instance.ReturnMenu();
     }
 
     static public LevelManager Instance

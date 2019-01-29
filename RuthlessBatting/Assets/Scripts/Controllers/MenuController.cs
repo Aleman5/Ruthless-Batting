@@ -31,6 +31,17 @@ public class MenuController : MonoBehaviour
         StartCoroutine(ChangeScene());
     }
 
+
+    public void NewGame()
+    {
+        SceneLoaderManager.Instance.StartNewGame();
+    }
+
+    public void Load()
+    {
+        SceneLoaderManager.Instance.LoadSavedScene();
+    }
+
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -40,21 +51,11 @@ public class MenuController : MonoBehaviour
 #endif
     }
 
-    public void Load()
-    {
-        SaveLoad.Load();
-    }
-
-    public void NewGame()
-    {
-        SaveLoad.NewGame();
-    }
-
     IEnumerator ChangeScene()
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
         //yield return new WaitForSeconds(fadeTime);
         yield return new WaitForSeconds(0.2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.StoryboardN1);
     }
 }

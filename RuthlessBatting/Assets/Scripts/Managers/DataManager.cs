@@ -7,11 +7,22 @@ public class DataManager
     [System.Serializable]
     public struct Data
     {
-        public string actualScene;
+        /// <summary>
+        /// Scene saved
+        /// </summary>
+        public SceneEnum actualScene;
         public int moneyCount;
         public string waveName;
         public int[] playerUpgrades;
+
+        /// <summary>
+        /// Count of bodies saved
+        /// </summary>
         public int enemyBodies;
+
+        /// <summary>
+        /// Is a game already created?
+        /// </summary>
         public bool saveCreated;
     }
 
@@ -30,7 +41,7 @@ public class DataManager
 
         data.moneyCount = player.GetComponent<MoneyHolder>().ActualMoney;
         data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
-        data.actualScene = SceneManager.GetActiveScene().name;
+        data.actualScene = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
         data.enemyBodies = BodiesHolder.Instance.GetBodies();
         data.saveCreated = true;
 
