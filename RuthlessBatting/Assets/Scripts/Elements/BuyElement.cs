@@ -76,7 +76,10 @@ public class BuyElement : MonoBehaviour
                     //enabled = false;
                 }
                 else
+                {
+                    AudioManager.Instance.RunAudio(Audios.habilidad_cancelada);
                     OnNotEnoughMoney.Invoke();
+                }
             }
         }
         else if (isOnRange)
