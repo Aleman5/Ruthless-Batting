@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,6 +14,24 @@ public class AudioManager : MonoBehaviour
         soundOn = true;
         if (PlayerPrefs.HasKey("Sound") && PlayerPrefs.GetInt("Sound") == 0)
             soundOn = false;
+
+        SceneEnum sE = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
+
+        switch (sE)
+        {
+            case SceneEnum.Menu:
+                AudioManager.Instance.RunAudio(Audios.menu);
+                break;
+            case SceneEnum.StoryboardN1:
+                AudioManager.Instance.RunAudio(Audios.menu);
+                break;
+            case SceneEnum.Game3D:
+                AudioManager.Instance.RunAudio(Audios.nivel1);
+                break;
+            case SceneEnum.Level2:
+                AudioManager.Instance.RunAudio(Audios.nivel2);
+                break;
+        }
     }
 
     public void RunAudio(Audios audio)

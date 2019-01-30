@@ -22,16 +22,30 @@ public class LevelManager : MonoBehaviour
     bool gameWon = false;
     bool alive = true;
 
-    Scene actualScene;
-
     void Awake()
     {
         if (Instance == this)
         {
             //DontDestroyOnLoad(gameObject);
         }
-        MusicManager.Instance.Play();
-        actualScene = SceneManager.GetActiveScene();
+
+        //SceneEnum sE = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
+
+        //switch (sE)
+        //{
+        //    case SceneEnum.Menu:
+        //        AudioManager.Instance.RunAudio(Audios.menu);
+        //        break;
+        //    case SceneEnum.StoryboardN1:
+        //        AudioManager.Instance.RunAudio(Audios.menu);
+        //        break;
+        //    case SceneEnum.Game3D:
+        //        AudioManager.Instance.RunAudio(Audios.nivel1);
+        //        break;
+        //    case SceneEnum.Level2:
+        //        AudioManager.Instance.RunAudio(Audios.nivel2);
+        //        break;
+        //}
     }
 
     void Start()
@@ -113,7 +127,7 @@ public class LevelManager : MonoBehaviour
                 Time.timeScale = 1f;
 
                 UpperFloorObjects.EmptyList();
-                SceneLoaderManager.Instance.ReloadScene(actualScene);
+                SceneLoaderManager.Instance.ReloadScene(SceneManager.GetActiveScene());
             }
             if (InputManager.Instance.GetPauseButton())
             {
@@ -135,8 +149,6 @@ public class LevelManager : MonoBehaviour
 
     void ChangeLevel2()
     {
-        MusicManager.Instance.Stop();
-        
         SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Level2); // Here will be the StoryboardN2
     }
 
@@ -144,8 +156,6 @@ public class LevelManager : MonoBehaviour
     {
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(0.05f);//fadeTime;
-        MusicManager.Instance.Stop();
-
         SceneLoaderManager.Instance.ReturnMenu();
     }
 
