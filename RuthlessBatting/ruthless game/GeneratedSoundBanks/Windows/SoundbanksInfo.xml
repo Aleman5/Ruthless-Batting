@@ -26,17 +26,28 @@
 				<Event Id="3864549211" Name="disparo_laser" ObjectPath="\Events\Default Work Unit\disparo_laser"/>
 				<Event Id="3401255271" Name="enemigo_explota" ObjectPath="\Events\Default Work Unit\enemigo_explota"/>
 				<Event Id="420892085" Name="granada" ObjectPath="\Events\Default Work Unit\granada"/>
+				<Event Id="274328982" Name="habilidad_cancelada" ObjectPath="\Events\Default Work Unit\habilidad_cancelada"/>
 				<Event Id="1079158723" Name="habilidad_comprada" ObjectPath="\Events\Default Work Unit\habilidad_comprada"/>
 				<Event Id="3063919553" Name="matar_enemigo_bath" ObjectPath="\Events\Default Work Unit\matar_enemigo_bath"/>
 				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\menu"/>
 				<Event Id="756780678" Name="menu_atras" ObjectPath="\Events\Default Work Unit\menu_atras"/>
 				<Event Id="1280036882" Name="menu_clic" ObjectPath="\Events\Default Work Unit\menu_clic"/>
 				<Event Id="2795715930" Name="menu_slide" ObjectPath="\Events\Default Work Unit\menu_slide"/>
+				<Event Id="555663540" Name="morir" ObjectPath="\Events\Default Work Unit\morir"/>
+				<Event Id="838085013" Name="musica_off" ObjectPath="\Events\Default Work Unit\musica_off"/>
+				<Event Id="4178440745" Name="musica_on" ObjectPath="\Events\Default Work Unit\musica_on"/>
 				<Event Id="409685056" Name="nivel1" ObjectPath="\Events\Default Work Unit\nivel1"/>
 				<Event Id="409685059" Name="nivel2" ObjectPath="\Events\Default Work Unit\nivel2"/>
+				<Event Id="409685058" Name="nivel3" ObjectPath="\Events\Default Work Unit\nivel3"/>
+				<Event Id="2659475283" Name="pausa_off" ObjectPath="\Events\Default Work Unit\pausa_off"/>
+				<Event Id="549173535" Name="pausa_on" ObjectPath="\Events\Default Work Unit\pausa_on"/>
 				<Event Id="341686896" Name="respiracion_agitada" ObjectPath="\Events\Default Work Unit\respiracion_agitada"/>
 				<Event Id="668515409" Name="respiracion_media" ObjectPath="\Events\Default Work Unit\respiracion_media"/>
 				<Event Id="4137353766" Name="respiracion_normal" ObjectPath="\Events\Default Work Unit\respiracion_normal"/>
+				<Event Id="91635630" Name="storyboard1a" ObjectPath="\Events\Default Work Unit\storyboard1a"/>
+				<Event Id="91635629" Name="storyboard1b" ObjectPath="\Events\Default Work Unit\storyboard1b"/>
+				<Event Id="108413187" Name="storyboard2a" ObjectPath="\Events\Default Work Unit\storyboard2a"/>
+				<Event Id="108413184" Name="storyboard2b" ObjectPath="\Events\Default Work Unit\storyboard2b"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="22642979" Language="SFX">
@@ -123,6 +134,10 @@
 					<ShortName>grito3.wav</ShortName>
 					<Path>SFX\grito3_A1793BE9.wem</Path>
 				</File>
+				<File Id="460914288" Language="SFX">
+					<ShortName>Storyboard 2\Ruth_Story2.wav</ShortName>
+					<Path>SFX\Storyboard 2\Ruth_Story2_CB1F3167.wem</Path>
+				</File>
 				<File Id="484510687" Language="SFX">
 					<ShortName>menu\menu atras.wav</ShortName>
 					<Path>SFX\menu\menu atras_DE932BAD.wem</Path>
@@ -203,6 +218,10 @@
 					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
 					<Path>SFX\respiracion rtpc\resp agitad_DBD7A50D.wem</Path>
 				</File>
+				<File Id="854637245" Language="SFX">
+					<ShortName>Storyboard 2\Ruth_Story2_2.wav</ShortName>
+					<Path>SFX\Storyboard 2\Ruth_Story2_2_CB1F3167.wem</Path>
+				</File>
 				<File Id="878297216" Language="SFX">
 					<ShortName>bate al aire\bate al aire#04.wav</ShortName>
 					<Path>SFX\bate al aire\bate al aire#04_99DCC3D4.wem</Path>
@@ -210,6 +229,10 @@
 				<File Id="886800314" Language="SFX">
 					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
 					<Path>SFX\respiracion rtpc\resp agitad_6E09BAC3.wem</Path>
+				</File>
+				<File Id="894164282" Language="SFX">
+					<ShortName>Storyboard 1\Ruth_story1_2.wav</ShortName>
+					<Path>SFX\Storyboard 1\Ruth_story1_2_CB1F3167.wem</Path>
 				</File>
 				<File Id="898991215" Language="SFX">
 					<ShortName>golpes bath1.wav</ShortName>
@@ -238,6 +261,10 @@
 				<File Id="1064015697" Language="SFX">
 					<ShortName>respiracion rtpc\resp media.wav</ShortName>
 					<Path>SFX\respiracion rtpc\resp media_FDC49EF7.wem</Path>
+				</File>
+				<File Id="1068541188" Language="SFX">
+					<ShortName>Storyboard 1\Ruth_story1_1.wav</ShortName>
+					<Path>SFX\Storyboard 1\Ruth_story1_1_CB1F3167.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

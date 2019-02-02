@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6b9e94b84034564ab78d14cd6447ac35
-    m_lastTime: -8586547851374775808
+    m_lastTime: -8586525363774775808
     List:
     - name: bate_pared
       guid: 5a300cc3e9a1c746b7742f2139dcdd1f
@@ -260,6 +260,18 @@ MonoBehaviour:
       - ElementName: granada
         ObjectType: 3
       Path: Default Work Unit\granada
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: habilidad_cancelada
+      guid: a2aad8e8ad9f614c9fa030b4ddd62ca2
+      id: 274328982
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: habilidad_cancelada
+        ObjectType: 3
+      Path: Default Work Unit\habilidad_cancelada
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -335,6 +347,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: morir
+      guid: 6474e5901cc548458b3fb4094796c64c
+      id: 555663540
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: morir
+        ObjectType: 3
+      Path: Default Work Unit\morir
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: musica_off
+      guid: ccf5264ae7259d46b5638833fd95ff3f
+      id: 838085013
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: musica_off
+        ObjectType: 3
+      Path: Default Work Unit\musica_off
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: musica_on
+      guid: b01e8409cc287a4485cd6241e9288bc3
+      id: 4178440745
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: musica_on
+        ObjectType: 3
+      Path: Default Work Unit\musica_on
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: nivel1
       guid: 309095a7a25f2142b4919f50ae8ae468
       id: 409685056
@@ -356,6 +404,42 @@ MonoBehaviour:
       - ElementName: nivel2
         ObjectType: 3
       Path: Default Work Unit\nivel2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: nivel3
+      guid: 6b21eeb34814ee43b8dda7de4490fec7
+      id: 409685058
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: nivel3
+        ObjectType: 3
+      Path: Default Work Unit\nivel3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: pausa_off
+      guid: a960e507c4c3664ebcb69e57b79e1099
+      id: 2659475283
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pausa_off
+        ObjectType: 3
+      Path: Default Work Unit\pausa_off
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: pausa_on
+      guid: e3aee52401cb6b4e8028b6557c3b89a7
+      id: 549173535
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pausa_on
+        ObjectType: 3
+      Path: Default Work Unit\pausa_on
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -392,6 +476,54 @@ MonoBehaviour:
       - ElementName: respiracion_normal
         ObjectType: 3
       Path: Default Work Unit\respiracion_normal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: storyboard1a
+      guid: af5c9a73f3d6234d9bf6d29b711c5150
+      id: 91635630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: storyboard1a
+        ObjectType: 3
+      Path: Default Work Unit\storyboard1a
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: storyboard1b
+      guid: 1e2b2da375e8814c96af03b6b0c19e13
+      id: 91635629
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: storyboard1b
+        ObjectType: 3
+      Path: Default Work Unit\storyboard1b
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: storyboard2a
+      guid: c5f0670aa82c664e9599177fea346e04
+      id: 108413187
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: storyboard2a
+        ObjectType: 3
+      Path: Default Work Unit\storyboard2a
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: storyboard2b
+      guid: ccb8ef2eb17d5a46a53afe5eab68cf7d
+      id: 108413184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: storyboard2b
+        ObjectType: 3
+      Path: Default Work Unit\storyboard2b
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -532,14 +664,190 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 41aa8a74ec26414fbe233c182645f919
-    m_lastTime: -8586572316194775808
-    List: []
+    m_lastTime: -8586525366114775808
+    List:
+    - name: musica
+      guid: 6d42d8ddcaeda84fac5abfda421a2f26
+      id: 1730564739
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: musica
+        ObjectType: 9
+      Path: Default Work Unit\musica
+      values:
+      - name: lvl1
+        guid: d5fdbfcfd702494b964de0e6a7519144
+        id: 141331490
+        PathAndIcons:
+        - ElementName: lvl1
+          ObjectType: 8
+      - name: lvl2
+        guid: b6559b9a28ad1d46b15d1daffa52b3a9
+        id: 141331489
+        PathAndIcons:
+        - ElementName: lvl2
+          ObjectType: 8
+      - name: lvl3
+        guid: f895b3f18c3fc142af60bd9e378e1693
+        id: 141331488
+        PathAndIcons:
+        - ElementName: lvl3
+          ObjectType: 8
+      - name: menu
+        guid: ecd757454ff7114497df690eff2e6805
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 8
+      - name: None
+        guid: 2a5391d7f79c264793444fb9d79bf7bb
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: storyboard
+        guid: b45e3c204e8c5a4e88e1c0407378f413
+        id: 2237101708
+        PathAndIcons:
+        - ElementName: storyboard
+          ObjectType: 8
+    - name: pausa
+      guid: 639c1cfed41a0541bee66e90473d40ad
+      id: 3092587489
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pausa
+        ObjectType: 9
+      Path: Default Work Unit\pausa
+      values:
+      - name: None
+        guid: fe2d23e494f0154a9edf91ebd1ca5ea9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: off
+        guid: b3c240a9642e334f8c4c9e6e5dd34c7d
+        id: 930712164
+        PathAndIcons:
+        - ElementName: off
+          ObjectType: 8
+      - name: on
+        guid: 1362c18c1ee4a24d94cddff09cd79142
+        id: 1651971902
+        PathAndIcons:
+        - ElementName: on
+          ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b4091e37d6a9634ba6b3e0f207941d25
-    m_lastTime: -8586572316194775808
-    List: []
+    m_lastTime: -8586525371534775808
+    List:
+    - name: musica_ppal
+      guid: ca1466adf3fb124382619328e4351778
+      id: 2571124277
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: musica_ppal
+        ObjectType: 11
+      Path: Default Work Unit\musica_ppal
+      values:
+      - name: lvl1
+        guid: c9ac421a212691488b1a551af361c818
+        id: 141331490
+        PathAndIcons:
+        - ElementName: lvl1
+          ObjectType: 10
+      - name: lvl2
+        guid: cac09fab2ff4984781c8e895f6634c51
+        id: 141331489
+        PathAndIcons:
+        - ElementName: lvl2
+          ObjectType: 10
+      - name: lvl3
+        guid: f592326dc5d52b4e830c000c1f5aab05
+        id: 141331488
+        PathAndIcons:
+        - ElementName: lvl3
+          ObjectType: 10
+      - name: menu
+        guid: 76fd32376ed7464894595f1cda04249a
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 10
+      - name: storyboard1a
+        guid: 81737a4d2d1df844b3f740ef9e4616d9
+        id: 91635630
+        PathAndIcons:
+        - ElementName: storyboard1a
+          ObjectType: 10
+      - name: storyboard1b
+        guid: effe2fbab525c24fb8bdc377aa655fc1
+        id: 91635629
+        PathAndIcons:
+        - ElementName: storyboard1b
+          ObjectType: 10
+      - name: storyboard2a
+        guid: 78cbb30b8d7aa640a225ef66987c802d
+        id: 108413187
+        PathAndIcons:
+        - ElementName: storyboard2a
+          ObjectType: 10
+      - name: storyboard2b
+        guid: a6df66ce928b5e43b4f4e5c303a1f25f
+        id: 108413184
+        PathAndIcons:
+        - ElementName: storyboard2b
+          ObjectType: 10
+    - name: Storyboard1
+      guid: 47cdc6f07a466f459d5d5b3b62d5fccb
+      id: 1957666389
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storyboard1
+        ObjectType: 11
+      Path: Default Work Unit\Storyboard1
+      values:
+      - name: a
+        guid: 93822bdf4d46774bb3d912fb03d9ae55
+        id: 84696446
+        PathAndIcons:
+        - ElementName: a
+          ObjectType: 10
+      - name: b
+        guid: d9915d6a4dc98d4081e66e04b3a24f55
+        id: 84696445
+        PathAndIcons:
+        - ElementName: b
+          ObjectType: 10
+    - name: Storyboard2
+      guid: 27736d1622a92a4db382ac4f3595a149
+      id: 1957666390
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storyboard2
+        ObjectType: 11
+      Path: Default Work Unit\Storyboard2
+      values:
+      - name: a
+        guid: c3c29c8d7f8b9d4e9800d6fe9fdec689
+        id: 84696446
+        PathAndIcons:
+        - ElementName: a
+          ObjectType: 10
+      - name: b
+        guid: 4e6d7f6f07bdc44ba9ff1df397e28400
+        id: 84696445
+        PathAndIcons:
+        - ElementName: b
+          ObjectType: 10
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 

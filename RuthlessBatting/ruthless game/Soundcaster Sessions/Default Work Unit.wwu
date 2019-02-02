@@ -22,6 +22,10 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="pausa_off" ID="{07E560A9-C3C4-4E66-BCB6-9E57B79E1099}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="nivel1" ID="{A7959030-5FA2-4221-B491-9F50AE8AE468}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -38,6 +42,10 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="pausa_on" ID="{24E5AEE3-CB01-4E6B-8028-B6557C3B89A7}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="nivel2" ID="{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -50,8 +58,12 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="enemigo_explota" ID="{702A9439-6603-4520-9C85-4BF9616FE41D}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<ObjectRef Name="habilidad_cancelada" ID="{E8D8AAA2-9FAD-4C61-9FA0-30B4DDD62CA2}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="enemigo_explota" ID="{702A9439-6603-4520-9C85-4BF9616FE41D}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="respiracion_normal" ID="{D2E8A5BE-5B71-4282-9D26-83814AA26572}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
@@ -68,6 +80,14 @@
 						<Module>
 							<ObjectRef Name="granada" ID="{05780A7F-C06C-49FD-B43F-A5F1212A126E}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="musica_off" ID="{4A26F5CC-25E7-469D-B563-8833FD95FF3F}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="musica_on" ID="{09841EB0-28CC-447A-85CD-6241E9288BC3}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="3" Y="5"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -124,8 +144,15 @@
 							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="off" ID="{A940C2B3-2E64-4F33-8C4C-9E6E5DD34C7D}"/>
+						<CurrentStateRef Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
+						<CurrentSwitchRef Name="a" ID="{DF2B8293-464D-4B77-B3D9-12FB03D9AE55}"/>
+						<CurrentSwitchRef Name="b" ID="{6F7F6D4E-BD07-4BC4-A9FF-1DF397E28400}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

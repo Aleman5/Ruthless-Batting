@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{748AAA41-26EC-4F41-BE23-3C182645F919}" SchemaVersion="89">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{748AAA41-26EC-4F41-BE23-3C182645F919}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{748AAA41-26EC-4F41-BE23-3C182645F919}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="pausa" ID="{FE1C9C63-1AD4-4105-BEE6-6E90473D40AD}">
+					<ChildrenList>
+						<State Name="None" ID="{E4232DFE-F094-4A15-9EDF-91EBD1CA5EA9}"/>
+						<State Name="on" ID="{8CC16213-E41E-4DA2-94CD-DFF09CD79142}"/>
+						<State Name="off" ID="{A940C2B3-2E64-4F33-8C4C-9E6E5DD34C7D}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="musica" ID="{DDD8426D-EDCA-4FA8-AC5A-BFDA421A2F26}">
+					<ChildrenList>
+						<State Name="None" ID="{D791532A-9CF7-4726-9344-4FB9D79BF7BB}"/>
+						<State Name="menu" ID="{4557D7EC-F74F-4411-97DF-690EFF2E6805}"/>
+						<State Name="lvl1" ID="{CFBFFDD5-02D7-4B49-964D-E0E6A7519144}"/>
+						<State Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}"/>
+						<State Name="storyboard" ID="{203C5EB4-8C4E-4E5A-88E1-C0407378F413}"/>
+						<State Name="lvl3" ID="{F1B395F8-3F8C-42C1-AF60-BD9E378E1693}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

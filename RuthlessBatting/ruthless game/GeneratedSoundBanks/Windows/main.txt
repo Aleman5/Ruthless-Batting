@@ -1,25 +1,66 @@
 Event	ID	Name			Wwise Object Path	Notes
 	72870192	bate_pared			\Default Work Unit\bate_pared	
+	91635629	storyboard1b			\Default Work Unit\storyboard1b	
+	91635630	storyboard1a			\Default Work Unit\storyboard1a	
+	108413184	storyboard2b			\Default Work Unit\storyboard2b	
+	108413187	storyboard2a			\Default Work Unit\storyboard2a	
+	274328982	habilidad_cancelada			\Default Work Unit\habilidad_cancelada	
 	341686896	respiracion_agitada			\Default Work Unit\respiracion_agitada	
 	409685056	nivel1			\Default Work Unit\nivel1	
+	409685058	nivel3			\Default Work Unit\nivel3	
 	409685059	nivel2			\Default Work Unit\nivel2	
 	420892085	granada			\Default Work Unit\granada	
+	549173535	pausa_on			\Default Work Unit\pausa_on	
+	555663540	morir			\Default Work Unit\morir	
 	668515409	respiracion_media			\Default Work Unit\respiracion_media	
 	756780678	menu_atras			\Default Work Unit\menu_atras	
+	838085013	musica_off			\Default Work Unit\musica_off	
 	1079158723	habilidad_comprada			\Default Work Unit\habilidad_comprada	
 	1280036882	menu_clic			\Default Work Unit\menu_clic	
 	2360431688	bath_al_aire			\Default Work Unit\bath_al_aire	
 	2607556080	menu			\Default Work Unit\menu	
+	2659475283	pausa_off			\Default Work Unit\pausa_off	
 	2795715930	menu_slide			\Default Work Unit\menu_slide	
 	3063919553	matar_enemigo_bath			\Default Work Unit\matar_enemigo_bath	
 	3401255271	enemigo_explota			\Default Work Unit\enemigo_explota	
 	3864549211	disparo_laser			\Default Work Unit\disparo_laser	
 	4137353766	respiracion_normal			\Default Work Unit\respiracion_normal	
+	4178440745	musica_on			\Default Work Unit\musica_on	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1730564739	musica			\Default Work Unit\musica	
+	3092587489	pausa			\Default Work Unit\pausa	
+
+State	ID	Name	State Group			Notes
+	0	None	musica			
+	141331488	lvl3	musica			
+	141331489	lvl2	musica			
+	141331490	lvl1	musica			
+	2237101708	storyboard	musica			
+	2607556080	menu	musica			
+	0	None	pausa			
+	930712164	off	pausa			
+	1651971902	on	pausa			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	55029625	lvl2	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Musica_Menu		
+	134896717	on	pausa	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel1		
+	138613833	menu	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel2		
+	185424748	lvl2	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel1		
+	278879763	lvl1	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Musica_Menu		
+	426772500	storyboard	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel2		
+	428483109	lvl1	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel2		
+	501891409	menu	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel1		
+	564858646	storyboard	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Musica_Menu		
+	643128481	on	pausa	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel2		
+	878728849	storyboard	musica	\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel1		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2729607096	agitacion			\Default Work Unit\agitacion	
 
 Effect plug-ins	ID	Name	Type				Notes
+	1735130781	Aliasing	Wwise Tremolo			
+	2180422931	One_Tap_Quarter_Second	Wwise Delay			
 	3451596814	Hall_Medium	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -44,14 +85,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	407723403	golpes bath2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\golpes bath2_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\golpes bath\golpes bath2		23975
 	449438330	sangre4	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\sangre4_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\morbo (sangrecita)\sangre4		32702
 	451758459	grito3	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\grito3_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\gritos\grito3		22871
+	460914288	Ruth_Story2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Storyboard 2\Ruth_Story2_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Storyboard 2a\Ruth_Story2\Ruth_Story2		301108
 	484510687	menu atras	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu atras_DE932BAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu atras\menu atras		24316
-	486112213	Ruth_nivel2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Ruth_nivel2\Ruth_nivel2_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\Ruth_nivel2\Ruth_nivel2\Ruth_nivel2		2321586
+	486112213	Ruth_nivel2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Ruth_nivel2\Ruth_nivel2_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel2\Ruth_nivel2\Ruth_nivel2		2321586
 	529332982	bate al aire#03	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\bate al aire\bate al aire#03_9BC1C015.wem		\Actor-Mixer Hierarchy\Default Work Unit\bate al aire\bate al aire#03		6402
 	542588298	golpes bath3	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\golpes bath3_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\golpes bath\golpes bath3		23777
 	545788684	sangre7	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\sangre7_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\morbo (sangrecita)\sangre7		29243
 	552256101	grito8	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\grito8_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\gritos\grito8		20241
 	563179024	grito4	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\grito4_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\gritos\grito4		22405
-	566891829	Ruth_nivel1	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Ruth_nivel1\Ruth_nivel1_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\Ruth_nivel1\Ruth_nivel1\Ruth_nivel1		2977615
+	566891829	Ruth_nivel1	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Ruth_nivel1\Ruth_nivel1_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Ruth_nivel1\Ruth_nivel1\Ruth_nivel1		2977615
 	651555151	menu clic_01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu clic_B829FD71.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu clic\menu clic_01		30029
 	660180741	resp normal_02	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp normal_55F4FAE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion normal\resp normal\resp normal_02		158637
 	704379521	sangre2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\sangre2_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\morbo (sangrecita)\sangre2		31665
@@ -64,13 +106,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	832217768	resp media	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp media_B9B905B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion media\resp media\resp media		64495
 	833636875	sangre6	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\sangre6_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\morbo (sangrecita)\sangre6		27221
 	852612019	resp agitad	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp agitad_DBD7A50D.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion agitada\resp agitada\resp agitad		79295
+	854637245	Ruth_Story2_2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Storyboard 2\Ruth_Story2_2_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Storyboard 2b\Ruth_Story2_2\Ruth_Story2_2		346865
 	878297216	bate al aire#04	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\bate al aire\bate al aire#04_99DCC3D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\bate al aire\bate al aire#04		4342
 	886800314	resp agitad_02	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp agitad_6E09BAC3.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion agitada\resp agitada\resp agitad_02		65513
+	894164282	Ruth_story1_2	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Storyboard 1\Ruth_story1_2_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Storyboard 1b\Ruth_story1_2\Ruth_story1_2		243799
 	898991215	golpes bath1	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\golpes bath1_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\golpes bath\golpes bath1		23162
-	942580077	Ruthless Menu final	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Musica_Menu\Ruthless Menu final_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\Musica_Menu\Ruthless Menu final\Ruthless Menu final		1677350
+	942580077	Ruthless Menu final	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Musica_Menu\Ruthless Menu final_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Musica_Menu\Ruthless Menu final\Ruthless Menu final		1677350
 	950241008	bate al aire#01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\bate al aire\bate al aire#01_CAF1CB35.wem		\Actor-Mixer Hierarchy\Default Work Unit\bate al aire\bate al aire#01		9343
 	968144958	golpes bath5	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\golpes bath5_A1793BE9.wem		\Actor-Mixer Hierarchy\Default Work Unit\matar un enemigo\golpes bath\golpes bath5		25609
 	996366000	menu atras_01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\menu\menu atras_453B7232.wem		\Actor-Mixer Hierarchy\Default Work Unit\menu\menu atras\menu atras_01		26788
 	1058815598	bate al aire#05	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\bate al aire\bate al aire#05_2AFF91F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\bate al aire\bate al aire#05		5343
 	1064015697	resp media_01	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\respiracion rtpc\resp media_FDC49EF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\respiracion rtpc\respiracion media\resp media\resp media_01		80474
+	1068541188	Ruth_story1_1	D:\Repositories\Des-VJ-III---Game\RuthlessBatting\ruthless game\.cache\Windows\SFX\Storyboard 1\Ruth_story1_1_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\musica\Storyboard 1a\Ruth_story1_1\Ruth_story1_1		261217
 
