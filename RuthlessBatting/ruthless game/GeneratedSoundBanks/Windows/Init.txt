@@ -1,3 +1,17 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1730564739	musica			\Default Work Unit\musica	
+	3092587489	pausa			\Default Work Unit\pausa	
+
+State	ID	Name	State Group			Notes
+	141331489	lvl2	musica			
+	141331490	lvl1	musica			
+	748895195	None	musica			
+	2237101708	storyboard	musica			
+	2607556080	menu	musica			
+	0	None	pausa			
+	930712164	off	pausa			
+	1651971902	on	pausa			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Reflect Acoustic Textures\Textures\Mountain	

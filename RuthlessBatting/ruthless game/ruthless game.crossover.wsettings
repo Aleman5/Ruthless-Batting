@@ -4,9 +4,11 @@
 		<UserProjectSettings Name="" ID="{0C67FCBD-6D13-49AB-8841-525FE866526A}">
 			<PropertyList>
 				<Property Name="Event Action List\{05780A7F-C06C-49FD-B43F-A5F1212A126E}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{07E560A9-C3C4-4E66-BCB6-9E57B79E1099}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0E659EA0-C5A2-41C6-8DF8-835A420E07F6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{24629EFD-3219-42E1-8B69-64893E898844}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{24E5AEE3-CB01-4E6B-8028-B6557C3B89A7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2D18A62F-29ED-4C1F-8826-F267BE529940}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{53C5F8D9-AA47-473A-8D42-6EB902E0B55F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{671A788C-9C75-4EF1-B147-E310141875EB}\x64_Expand States" Type="string" Value=""/>
@@ -18,6 +20,7 @@
 				<Property Name="Event Action List\{C30C305A-A1E9-46C7-B774-2F2139DCDD1F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D15C9230-A402-4B2B-A90E-BB91E48E2CDC}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D2E8A5BE-5B71-4282-9D26-83814AA26572}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E8D8AAA2-9FAD-4C61-9FA0-30B4DDD62CA2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{EE4C4702-8357-44BB-92EE-7F694A68EF1D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F02BF51D-8236-4DD3-8864-BE2480BD3873}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
@@ -68,10 +71,10 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value="dVkv4bLwdkKI49F8ck50PQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="FTaW2rW09UOiaU2AbqfukbMpE2hyfwlLl1Hr16sy+CY="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="FTaW2rW09UOiaU2AbqfukXpyru55y49JixcTJmvxvi0="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="QaqKdOwmQU++IzwYJkX5GQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="/4wqWtFvPUqWiRn7tgAVQA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="FTPvYfWaCESTvjDjqm7VzQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
@@ -80,7 +83,7 @@
 				<Property Name="RTPC\GameParameterSimValue\{28387EE3-C13A-4316-B9C3-DB5C521624AF}" Type="Real64" Value="1"/>
 				<Property Name="RTPC\GameParameterSimValue\{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}" Type="Real64" Value="75"/>
 				<Property Name="RTPC\GameParameterSimValue\{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" Type="Real64" Value="6"/>
-				<Property Name="RTPC\GameParameterSimValue\{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" Type="Real64" Value="100"/>
+				<Property Name="RTPC\GameParameterSimValue\{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" Type="Real64" Value="0"/>
 				<Property Name="RTPC\GameParameterSimValue\{9112AA05-F577-44FD-9F4E-4424158129E6}" Type="Real64" Value="0"/>
 				<Property Name="RTPC\GameParameterSimValue\{A2AE79DC-CA3A-46BA-9652-9986C322A87B}" Type="Real64" Value="50"/>
 				<Property Name="RTPC\GameParameterSimValue\{A34890AB-B9D5-4526-A64D-5290C43EF2DC}" Type="Real64" Value="50"/>

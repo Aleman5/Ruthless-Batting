@@ -61,7 +61,7 @@
 								<AudioFileSource Name="bate al aire#01" ID="{0A1968A6-AD4D-42E8-A567-C3AAF95945B4}" ShortID="950241008">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.056084522304497"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0280422611522485"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.80422611522485E-02"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>bate al aire\bate al aire#01.wav</AudioFile>
@@ -83,8 +83,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="bate al aire#02" ID="{00D829F5-035F-45CF-A238-6449D836CCB5}" ShortID="284596102">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0864419159994382"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0416773523568721"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="8.64419159994382E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.16773523568721E-02"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>bate al aire\bate al aire#02.wav</AudioFile>
@@ -106,8 +106,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="bate al aire#03" ID="{2D63988E-795D-4DB3-A79B-E2FF0A9CE82D}" ShortID="529332982">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0757294864848594"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0991949611703088"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.57294864848594E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="9.91949611703088E-02"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.695431340677864"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -130,8 +130,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="bate al aire#04" ID="{CEA3F509-A03F-4F5F-964F-423508327203}" ShortID="878297216">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0336825747998314"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0691148937451087"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.36825747998314E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="6.91148937451087E-02"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>bate al aire\bate al aire#04.wav</AudioFile>
@@ -153,7 +153,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="bate al aire#05" ID="{91AC50E9-0EFE-47B4-A206-EFAF4670D1EA}" ShortID="1058815598">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0593511829510565"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.93511829510565E-02"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.134575356691349"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -177,7 +177,7 @@
 								<AudioFileSource Name="bate al aire#06" ID="{5BB276AF-E095-4DEB-9438-BDF44F0A7E1B}" ShortID="175276589">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.019017593763169"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0276838390223346"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.76838390223346E-02"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>bate al aire\bate al aire#06.wav</AudioFile>
@@ -216,6 +216,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<BlendContainer Name="matar un enemigo" ID="{DB85515E-945D-4BB4-A061-B150AC2F220C}" ShortID="61202276">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
@@ -226,6 +233,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="golpes bath" ID="{BA593399-1618-4C34-AFBE-C04245F456A0}" ShortID="268343782">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
@@ -346,6 +360,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -527,11 +546,6 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1556,7 +1570,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu atras" ID="{B48795F0-3CFF-4686-94BF-1AA146C3CCFB}" ShortID="22642979">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0905067926875765"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.05067926875765E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="1.11323355005719"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.470635321975397"/>
 												<Property Name="TrimEnd" Type="Real64" Value="2.26266981718942"/>
@@ -1608,7 +1622,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu atras" ID="{37A1AC22-607D-4712-A5B7-44D475C74B8D}" ShortID="610518036">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0724054341500615"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="7.24054341500615E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.950321323219553"/>
 												<Property Name="TrimBegin" Type="Real64" Value="5.03217767342925"/>
 												<Property Name="TrimEnd" Type="Real64" Value="6.80611081010576"/>
@@ -1648,7 +1662,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu clic" ID="{AAE585C9-332E-4BEB-9247-A8B7743E46F4}" ShortID="190727780">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0887005598699657"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.87005598699657E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="1.52762075331608"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.887005598699658"/>
 												<Property Name="TrimEnd" Type="Real64" Value="3.08480835992214"/>
@@ -1676,7 +1690,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu clic" ID="{52097EE9-8507-4BBA-AF30-B5DCCBBD7DB9}" ShortID="651555151">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0887005598699657"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.87005598699657E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.798305038829692"/>
 												<Property Name="TrimBegin" Type="Real64" Value="3.23264262637208"/>
 												<Property Name="TrimEnd" Type="Real64" Value="5.46001224088456"/>
@@ -1748,7 +1762,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{6B4AFF3E-1C6E-45B4-9073-2EFC2B893D6C}" ShortID="788638222">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.492935404250196"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.70884273473401"/>
@@ -1799,7 +1813,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{F19E26EF-5AE5-4CC2-8919-BC28259FEA5E}" ShortID="371803262">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="3.99277677442658"/>
 												<Property Name="TrimEnd" Type="Real64" Value="4.69931752051853"/>
@@ -1824,7 +1838,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{BAEEFAF1-1A1C-4C17-8C1E-251F87841166}" ShortID="153040202">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="5.86593131057733"/>
 												<Property Name="TrimEnd" Type="Real64" Value="6.53960969638593"/>
@@ -1856,7 +1870,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{6BD2D4D8-74E2-4500-8E8C-E598F5F138EC}" ShortID="512938099">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="7.39403106375294"/>
 												<Property Name="TrimEnd" Type="Real64" Value="8.06770944956154"/>
@@ -1888,7 +1902,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{FBDE8D13-01D3-4BED-8D82-201E44E95A05}" ShortID="928859974">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="9.4972221218871"/>
 												<Property Name="TrimEnd" Type="Real64" Value="10.0394510665623"/>
@@ -1920,7 +1934,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{1DEF1E41-24B9-42E5-BD7D-8B6D8FA2E632}" ShortID="39813892">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="11.8304497020047"/>
 												<Property Name="TrimEnd" Type="Real64" Value="13.0299258523468"/>
@@ -1952,7 +1966,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="menu slide" ID="{2A7D7B83-F096-4D62-B584-54EDF9546B89}" ShortID="997935061">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 												<Property Name="TrimBegin" Type="Real64" Value="13.522861256597"/>
 												<Property Name="TrimEnd" Type="Real64" Value="14.4265761643891"/>
@@ -1970,6 +1984,21 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="disparo granada o explosion" ID="{159BA5BD-3FC5-4D28-AC35-013E719EDBE1}" ShortID="353552581">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{13FF019F-B653-44C7-821D-8D96AD829A48}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="253"/>
+											<Property Name="Min" Type="Real64" Value="-253"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
@@ -2251,7 +2280,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2580,6 +2609,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2604,6 +2638,236 @@
 						</Sound>
 					</ChildrenList>
 				</BlendContainer>
+				<BlendContainer Name="cachiporra" ID="{EEAE727A-CB79-498F-8B17-13266BF1BE2D}" ShortID="1042779605">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="disparo laser_01" ID="{8F99ECE1-8698-4064-8432-92CD72DA51F7}" ShortID="1022549320">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>55</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1410</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+									<ObjectRef Name="Aliasing" ID="{4CCC0D23-78CD-4B09-A62B-D3CB5E071A2F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="disparo laser" ID="{D7EEDC71-B6B6-484D-8C79-57E57F1C3A6D}" ShortID="769834401">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.34754078622599E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.68442598278249E-02"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.88483535006923E-02"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.301512250918067"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>disparo laser.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="disparo laser" ID="{D7EEDC71-B6B6-484D-8C79-57E57F1C3A6D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="golpes bath" ID="{7B7F366D-BD1D-46DB-B9AC-49B45731DD6A}" ShortID="440503921">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="golpes bath1" ID="{C1EFCC93-95F2-41DC-87B5-FAD374FBDBEF}" ShortID="1306106">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="golpes bath1" ID="{E9A0E4B4-D12D-408A-AD65-E5EA2EE245AF}" ShortID="424461538">
+											<Language>SFX</Language>
+											<AudioFile>golpes bath1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="898991215"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="golpes bath1" ID="{E9A0E4B4-D12D-408A-AD65-E5EA2EE245AF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="golpes bath2" ID="{4B203531-BF8D-4D5C-AB47-FEBCF8CE498F}" ShortID="84110649">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="golpes bath2" ID="{09FC241C-B27E-4EAF-ABD9-7CAD2715E931}" ShortID="11506895">
+											<Language>SFX</Language>
+											<AudioFile>golpes bath2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="407723403"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="golpes bath2" ID="{09FC241C-B27E-4EAF-ABD9-7CAD2715E931}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="golpes bath3" ID="{54A11DEA-7FF1-438A-9268-1F30D15F98B9}" ShortID="873416800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="golpes bath3" ID="{05DCA5B9-CB7E-4E1C-BBFE-23FE3FFEEF03}" ShortID="501309730">
+											<Language>SFX</Language>
+											<AudioFile>golpes bath3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="542588298"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="golpes bath3" ID="{05DCA5B9-CB7E-4E1C-BBFE-23FE3FFEEF03}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="golpes bath4" ID="{DBFC5FCF-B821-44D1-BE61-F64B4070ED6B}" ShortID="1009713601">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="golpes bath4" ID="{EE4964BC-2B51-4BC1-9B3B-E720E1A4B399}" ShortID="809912747">
+											<Language>SFX</Language>
+											<AudioFile>golpes bath4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="716503316"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="golpes bath4" ID="{EE4964BC-2B51-4BC1-9B3B-E720E1A4B399}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="golpes bath5" ID="{BF3CCBB9-B079-434B-91C7-059F512C96C4}" ShortID="466535298">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="golpes bath5" ID="{2FDAAAFA-B8C6-4F88-994D-D16BEFA06D40}" ShortID="280224678">
+											<Language>SFX</Language>
+											<AudioFile>golpes bath5.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="968144958"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="golpes bath5" ID="{2FDAAAFA-B8C6-4F88-994D-D16BEFA06D40}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="habilidad cancelada" ID="{61126233-FAEE-415D-8767-B0B100C1B94D}" ShortID="456393184">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideEffect" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+							<ObjectRef Name="Aliasing" ID="{4CCC0D23-78CD-4B09-A62B-D3CB5E071A2F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+							<ObjectRef Name="One_Tap_Quarter_Second" ID="{6BD2D67D-601A-45A6-AD4C-2C089078EBED}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="disparo laser" ID="{2BDE569B-A0A9-4C5E-891B-069C809E81F6}" ShortID="759282547">
+							<Language>SFX</Language>
+							<AudioFile>disparo laser.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="158184130"/>
+							</ConvertedFileIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="disparo laser" ID="{2BDE569B-A0A9-4C5E-891B-069C809E81F6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

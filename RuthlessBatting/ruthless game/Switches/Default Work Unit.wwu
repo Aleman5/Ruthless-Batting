@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}" SchemaVersion="89">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="musica_ppal" ID="{AD6614CA-FBF3-4312-8261-9328E4351778}">
+					<ChildrenList>
+						<Switch Name="menu" ID="{3732FD76-D76E-4846-9459-5F1CDA04249A}"/>
+						<Switch Name="lvl1" ID="{1A42ACC9-2621-4891-8B1A-551AF361C818}"/>
+						<Switch Name="lvl2" ID="{AB9FC0CA-F42F-4798-81C8-E895F6634C51}"/>
+						<Switch Name="lvl3" ID="{6D3292F5-D5C5-4E2B-830C-000C1F5AAB05}"/>
+						<Switch Name="storyboard1a" ID="{4D7A7381-1D2D-44F8-B3F7-40EF9E4616D9}"/>
+						<Switch Name="storyboard1b" ID="{BA2FFEEF-25B5-4FC2-B8BD-C377AA655FC1}"/>
+						<Switch Name="storyboard2a" ID="{0BB3CB78-7A8D-40A6-A225-EF66987C802D}"/>
+						<Switch Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Storyboard1" ID="{F0C6CD47-467A-456F-9D5D-5B3B62D5FCCB}">
+					<ChildrenList>
+						<Switch Name="b" ID="{6A5D91D9-C94D-408D-81E6-6E04B3A24F55}"/>
+						<Switch Name="a" ID="{DF2B8293-464D-4B77-B3D9-12FB03D9AE55}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Storyboard2" ID="{166D7327-A922-4D2A-B382-AC4F3595A149}">
+					<ChildrenList>
+						<Switch Name="b" ID="{6F7F6D4E-BD07-4BC4-A9FF-1DF397E28400}"/>
+						<Switch Name="a" ID="{8D9CC2C3-8B7F-4E9D-9800-D6FE9FDEC689}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

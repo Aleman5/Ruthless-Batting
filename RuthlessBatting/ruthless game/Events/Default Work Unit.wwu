@@ -122,6 +122,11 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -133,10 +138,30 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7318A732-F528-43C3-9ACA-638032BCF222}" ShortID="924388539">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{4557D7EC-F74F-4411-97DF-690EFF2E6805}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -146,7 +171,17 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C3B3D440-AF34-43BB-B44D-A74A2A463D56}" ShortID="44043282">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{3732FD76-D76E-4846-9459-5F1CDA04249A}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -161,7 +196,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -191,6 +226,11 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -202,10 +242,40 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D63E8E68-09C5-40E9-B5B5-1DDC250EB2AA}" ShortID="909517458">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl1" ID="{CFBFFDD5-02D7-4B49-964D-E0E6A7519144}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EF2FE0D0-B8BF-4737-8BC0-33C91D6795EF}" ShortID="662680793">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl1" ID="{1A42ACC9-2621-4891-8B1A-551AF361C818}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -219,7 +289,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Ruth_nivel2" ID="{727F3760-06DE-433E-BB71-37F595E0ADC2}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -248,6 +318,11 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -259,10 +334,40 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F69268C7-52A5-463C-9A94-4E48CF566D7B}" ShortID="389532580">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B8E5DAF5-58BD-4338-8D32-CDFB05F9C34F}" ShortID="803684749">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl2" ID="{AB9FC0CA-F42F-4798-81C8-E895F6634C51}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -347,6 +452,487 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="enemigo explota" ID="{2D0946E1-9B8C-42CD-AB4E-71839E999945}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pausa_on" ID="{24E5AEE3-CB01-4E6B-8028-B6557C3B89A7}">
+					<ChildrenList>
+						<Action Name="" ID="{ABA169AD-C504-4C19-BD8A-FED4EF671E65}" ShortID="545188881">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="on" ID="{8CC16213-E41E-4DA2-94CD-DFF09CD79142}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pausa_off" ID="{07E560A9-C3C4-4E66-BCB6-9E57B79E1099}">
+					<ChildrenList>
+						<Action Name="" ID="{F79D2E05-0D3E-48E4-A028-C2F6507931C2}" ShortID="271308355">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="off" ID="{A940C2B3-2E64-4F33-8C4C-9E6E5DD34C7D}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="habilidad_cancelada" ID="{E8D8AAA2-9FAD-4C61-9FA0-30B4DDD62CA2}">
+					<ChildrenList>
+						<Action Name="" ID="{71424630-2024-4906-AE7B-2D26BFFA92B0}" ShortID="530962176">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="habilidad cancelada" ID="{61126233-FAEE-415D-8767-B0B100C1B94D}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="morir" ID="{90E57464-C51C-4548-8B3F-B4094796C64C}"/>
+				<Event Name="musica_on" ID="{09841EB0-28CC-447A-85CD-6241E9288BC3}">
+					<ChildrenList>
+						<Action Name="" ID="{D49D7D7F-09A9-4278-BFB3-5699E2FF7F01}" ShortID="802637890">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="musica_off" ID="{4A26F5CC-25E7-469D-B563-8833FD95FF3F}">
+					<ChildrenList>
+						<Action Name="" ID="{43572ED2-243D-4EF7-B377-FB267DBCD7B0}" ShortID="234840568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="nivel3" ID="{B3EE216B-1448-43EE-B8DD-A7DE4490FEC7}">
+					<ChildrenList>
+						<Action Name="" ID="{E23120C3-BCB9-4EE9-AB3E-1C8A0629DB1D}" ShortID="241923013">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{628424CE-6A5E-4CA2-B45F-B141FFC1BC9B}" ShortID="597553383">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DEDB6F55-4B82-4B72-8ECF-D5D1F2D9376F}" ShortID="17497252">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{04AAAD3C-696A-47FB-A53A-D1192A0CA8AC}" ShortID="388155776">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2D0046C2-B357-4BBE-BBB5-788D6BE4F6E3}" ShortID="557388297">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A3A92F4-6D8B-4AD0-AB5B-B1A507FCDD45}" ShortID="119090357">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl3" ID="{F1B395F8-3F8C-42C1-AF60-BD9E378E1693}" WorkUnitID="{748AAA41-26EC-4F41-BE23-3C182645F919}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9B85B174-E6CA-47E9-A5A0-4E38DAA767CC}" ShortID="152690814">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lvl3" ID="{6D3292F5-D5C5-4E2B-830C-000C1F5AAB05}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="storyboard1a" ID="{739A5CAF-D6F3-4D23-9BF6-D29B711C5150}">
+					<ChildrenList>
+						<Action Name="" ID="{351A1838-E69D-4E6D-89AD-CDB7F0ED5C81}" ShortID="425485724">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2F02EDC4-181D-459E-B3B3-7B29161BA7E3}" ShortID="62821113">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0719ACDD-D1FF-4BDB-A842-762047426FAF}" ShortID="412556031">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{63D04BC8-3B89-4F1C-B34E-8321EC73BE66}" ShortID="773974776">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3281CE4C-211A-4BFD-BD63-5FCDD4D841B5}" ShortID="169793655">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{306BC03E-D10C-48C9-BC2C-B76C9428D3D3}" ShortID="729898511">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="storyboard1a" ID="{4D7A7381-1D2D-44F8-B3F7-40EF9E4616D9}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="storyboard1b" ID="{A32D2B1E-E875-4C81-96AF-03B6B0C19E13}">
+					<ChildrenList>
+						<Action Name="" ID="{BFE9AF7F-D34F-4886-A01B-072C02A3F5EA}" ShortID="915829195">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{86F5359D-039B-4A6C-A331-C7014D588E8B}" ShortID="807549473">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0C425610-065E-4DA7-AC23-F00E562CFDFC}" ShortID="128478319">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5579A9C2-5521-4CDC-930F-AE60E44F29DE}" ShortID="784382075">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E2955F9-826A-43B1-8DE3-AC7D8FD2B93D}" ShortID="185469268">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FA359DC-EC3F-4850-839F-99F511783B07}" ShortID="76047303">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="storyboard1b" ID="{BA2FFEEF-25B5-4FC2-B8BD-C377AA655FC1}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="storyboard2a" ID="{0A67F0C5-2CA8-4E66-9599-177FEA346E04}">
+					<ChildrenList>
+						<Action Name="" ID="{406588BE-C6D9-46E4-B198-ABFE1A141B4E}" ShortID="291948566">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{478A1D0F-8F8A-43E7-B1F3-3681347B95E4}" ShortID="197049564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AEBC9DC3-2158-4A86-A7CB-F5518D3B5EA1}" ShortID="754790967">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8FBED3F5-C4FA-4BCE-8FAF-40975921F447}" ShortID="821682027">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D9F4B560-5FDF-4237-B0F8-04C605D220C3}" ShortID="914058030">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{78090F02-7988-44C9-ADD2-989EE6F9E21B}" ShortID="443914511">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="storyboard2a" ID="{0BB3CB78-7A8D-40A6-A225-EF66987C802D}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="storyboard2b" ID="{2EEFB8CC-7DB1-465A-A53A-FE5EAB68CF7D}">
+					<ChildrenList>
+						<Action Name="" ID="{498A24FD-44D2-4C72-B006-D9EC404FC1C9}" ShortID="638957658">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{495D01AD-5C08-4302-B7E6-E4693E0F533E}" ShortID="375600492">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="agitacion" ID="{58FAEB6D-0102-4557-ADB2-9FDBAA49EF93}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4EF44BB0-6641-495F-98C3-C750D34BEB9E}" ShortID="280088359">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="respiracion rtpc" ID="{681329B3-7F72-4B09-9751-EBD7AB32F826}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E5E9FFF-A961-46A1-BDEA-C48C9BC9BADD}" ShortID="14873823">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Musica_Menu" ID="{2A7284AE-CE6E-44DA-9D1F-55E050C1F8A6}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3CF8CEF0-C1AC-4041-87CE-2FEA2E4F7957}" ShortID="1039443354">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ruth_nivel1" ID="{A69AED0D-11C3-489B-9750-11ABD4285232}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{11107F70-A4CD-4E00-B013-FC6EE76B8024}" ShortID="1855058">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
