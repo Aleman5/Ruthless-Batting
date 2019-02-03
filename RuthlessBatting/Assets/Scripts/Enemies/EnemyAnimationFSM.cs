@@ -2,6 +2,8 @@
 
 public class EnemyAnimationFSM : MonoBehaviour, IAnimation
 {
+    [SerializeField] float mountOfPossibleDeaths = 2;
+
     Animator anim;
     Enemy fsmScript;
 
@@ -12,7 +14,6 @@ public class EnemyAnimationFSM : MonoBehaviour, IAnimation
         anim = GetComponent<Animator>();
         fsmScript = transform.GetComponentInParent<Enemy>();
         transform.GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
-        transform.GetComponentInParent<Health>().OnDeath().AddListener(Death);
     }
 
     void Update()
@@ -35,10 +36,18 @@ public class EnemyAnimationFSM : MonoBehaviour, IAnimation
         anim.SetTrigger("Attack");
     }
 
-    void Death()
+    public void Death()
     {
         int dir = fsmScript.GetDistance().x >= 0 ? 1 : 0;
+        float whichDeath = Random.Range(0, mountOfPossibleDeaths);
 
+        if (whichDeath == 0)
+            anim.SetFloat("WhichDeath", 0.0f);
+        else
+        {
+            float f = whichDeath / mountOfPossibleDeaths;
+            anim.SetFloat("WhichDeath", f);
+        }
         anim.SetInteger("Direction", dir);
         anim.SetTrigger("Death");
 

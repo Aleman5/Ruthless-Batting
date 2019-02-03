@@ -107,7 +107,9 @@ public class Enemy : EnemyBase
         alive = false;
 
         Transform t1 = transform.GetChild(1);
-        t1.GetComponent<IAnimation>().DisableAnim();
+        IAnimation anim = t1.GetComponent<IAnimation>();
+        anim.Death();
+        anim.DisableAnim();
 
         // Mesh is not a slave anymore. Mesh is a free elf.
         t1.SetParent(deathBodyHolder);

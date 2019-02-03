@@ -3,6 +3,7 @@
 public class EnemyAnimationBombFSM : MonoBehaviour, IAnimation
 {
     [SerializeField] EnemyExplodeFSM atkScript;
+    [SerializeField] int mountOfPossibleDeaths = 2;
 
     Animator anim;
     Enemy fsmScript;
@@ -14,7 +15,6 @@ public class EnemyAnimationBombFSM : MonoBehaviour, IAnimation
         anim      = GetComponent<Animator>();
         fsmScript = GetComponentInParent<Enemy>();
         GetComponentInParent<EnemyBase>().OnAttack.AddListener(Attacking);
-        GetComponentInParent<Health>().OnDeath().AddListener(Death);
         atkScript.OnExplode().AddListener(Explode);
     }
 
@@ -43,10 +43,16 @@ public class EnemyAnimationBombFSM : MonoBehaviour, IAnimation
         anim.SetBool("ExplodeSuccess", true);
     }
 
-    void Death()
+    public void Death()
     {
         int dir = fsmScript.GetDistance().x >= 0 ? 1 : 0;
-
+        int whichDeath = Random.Range(0, mountOfPossibleDeaths);
+        
+        if (whichDeath == 0)
+            anim.SetFloat("WhichDeath", 0.0f);
+        else
+            anim.SetFloat("WhichDeath", whichDeath / mountOfPossibleDeaths);
+        
         anim.SetInteger("Direction", dir);
         anim.SetTrigger("Death");
        
