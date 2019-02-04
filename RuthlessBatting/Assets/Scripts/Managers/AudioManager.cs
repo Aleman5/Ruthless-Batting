@@ -53,10 +53,10 @@ public class AudioManager : MonoBehaviour
             AkSoundEngine.PostEvent(Audios.pausa_off.ToString(), gameObject);
     }
 
-    public void ChangeSoundState()
+    public void ChangeSoundState(bool isActive)
     {
-        soundOn = !soundOn;
-        if (soundOn)
+        //soundOn = !soundOn;
+        if (isActive)
             AkSoundEngine.PostEvent(Audios.musica_on.ToString(), gameObject);
         else
             AkSoundEngine.PostEvent(Audios.musica_off.ToString(), gameObject);

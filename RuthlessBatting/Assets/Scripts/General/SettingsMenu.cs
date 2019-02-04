@@ -51,6 +51,11 @@ public class SettingsMenu : MonoBehaviour {
         QualitySettings.SetQualityLevel(qualityIndex);
     }*/
 
+    public void SetMusic(bool isActive)
+    {
+        AudioManager.Instance.ChangeSoundState(isActive);
+    }
+
     public void SetFullScreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
