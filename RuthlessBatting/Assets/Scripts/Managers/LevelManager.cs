@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
         winScreen.gameObject.SetActive(true);
         gameWon = true;
 
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     void PauseGame()
@@ -149,7 +149,7 @@ public class LevelManager : MonoBehaviour
 
     void ChangeLevel2()
     {
-        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Level2); // Here will be the StoryboardN2
+        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Game3D);
     }
 
     IEnumerator GoToMenu()
