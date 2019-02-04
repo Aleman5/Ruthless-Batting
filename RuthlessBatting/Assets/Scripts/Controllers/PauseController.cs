@@ -33,11 +33,15 @@ public class PauseController : MonoBehaviour {
 
     void OnEnable()
     {
+        AudioManager.Instance.RunAudio(Audios.pausa_on);
+
         Pause();
     }
 
     void OnDisable()
     {
+        AudioManager.Instance.RunAudio(Audios.pausa_off);
+
         Resume();
     }
 

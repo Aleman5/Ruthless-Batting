@@ -20,26 +20,26 @@ public class AudioManager : MonoBehaviour
         switch (sE)
         {
             case SceneEnum.Menu:
-                AudioManager.Instance.RunAudio(Audios.menu);
+                RunAudio(Audios.menu);
                 break;
             case SceneEnum.StoryboardN1:
-                AudioManager.Instance.RunAudio(Audios.storyboard1a);
+                RunAudio(Audios.storyboard1a);
                 break;
             case SceneEnum.Game3D:
-                AudioManager.Instance.RunAudio(Audios.nivel1);
+                RunAudio(Audios.nivel1);
                 break;
             case SceneEnum.StoryboardN2:
-                AudioManager.Instance.RunAudio(Audios.nivel2);
+                RunAudio(Audios.storyboard2a);
                 break;
             case SceneEnum.Level2:
-                AudioManager.Instance.RunAudio(Audios.nivel2);
+                RunAudio(Audios.nivel2);
                 break;
         }
     }
 
     public void RunAudio(Audios audio)
     {
-        if (audio == Audios.menu || audio == Audios.nivel1 || audio == Audios.nivel2)
+        if (audio == Audios.menu || audio == Audios.nivel1 || audio == Audios.nivel2 || audio == Audios.storyboard1a || audio == Audios.storyboard2a)
             AkSoundEngine.StopAll();
         AkSoundEngine.PostEvent(audio.ToString(), gameObject);
     }
