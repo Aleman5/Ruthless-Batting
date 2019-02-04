@@ -108,7 +108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4469108330093242}
   - component: {fileID: 65878554992776858}
-  - component: {fileID: 82066594954360206}
   - component: {fileID: 114042219774996432}
   m_Layer: 10
   m_Name: Bat_Collider
@@ -158,7 +157,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4897277581937132}
   - component: {fileID: 65266332067496760}
-  - component: {fileID: 114929660589158376}
   m_Layer: 15
   m_Name: Player_Limit
   m_TagString: LimitCollider
@@ -188,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047805655195658}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.35, z: -0.67}
+  m_LocalPosition: {x: 0, y: 0.35, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4501347368448480}
@@ -369,103 +367,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 0.45}
+  m_Size: {x: 1.1, y: 1.2, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0.9}
---- !u!82 &82066594954360206
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1788857080641116}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!95 &95303688361263392
 Animator:
   serializedVersion: 3
@@ -514,7 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbodyToUse: {fileID: 54393337213823670}
-  movSpeed: 180
+  speed: 180
+  speedOnStairs: 120
   dashForce: 4000
 --- !u!114 &114042219774996432
 MonoBehaviour:
@@ -531,8 +435,9 @@ MonoBehaviour:
   obstacules:
     serializedVersion: 2
     m_Bits: 8192
-  tagObjective: Enemy
-  audioClip: {fileID: 8300000, guid: 95b7d93c4a720e34dbdf18770e75b4da, type: 3}
+  tagObjective:
+  - Enemy
+  - Wall
 --- !u!114 &114095197683801552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -615,20 +520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5d0c0a09e8b52498aaa1feb5bcbdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114929660589158376
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929250221306770}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbodyToUse: {fileID: 54393337213823670}
-  movSpeed: 180
-  dashForce: 1500
 --- !u!114 &114981183446677656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -732,7 +623,7 @@ SpriteRenderer:
   m_SortingLayerID: 687432105
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300004, guid: 6d4f55b778bfde34aa8b623bc6c8f06c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5e8f858717da3443a54959f410c7ccf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
