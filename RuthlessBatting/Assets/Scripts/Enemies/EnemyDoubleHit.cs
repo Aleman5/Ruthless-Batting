@@ -6,14 +6,12 @@ public class EnemyDoubleHit : Enemy
     [SerializeField] float timeTaunted;
     [SerializeField] float forceOnHitted;
 
-    Health health;
     float timeLeftTaunted;
 
     override protected void Awake()
     {
         base.Awake();
 
-        health = GetComponent<Health>();
         health.OnHit.AddListener(OnHit);
 
         timeLeftTaunted = timeTaunted;

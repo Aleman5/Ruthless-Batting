@@ -38,6 +38,7 @@ public class EnemyExplodeFSM : MonoBehaviour, IAttack
         Vector3 explosionPos = transform.position;
         explosionPos.y = 0.1f;
         Instantiate(explosion, explosionPos, transform.rotation);
+        AudioManager.Instance.RunAudio(Audios.enemigo_explota);
 
         onExplode.Invoke();
 
