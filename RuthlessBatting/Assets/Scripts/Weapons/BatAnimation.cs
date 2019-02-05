@@ -11,7 +11,7 @@ public class BatAnimation : MonoBehaviour
         script = GetComponentInParent<Bat>();
         script.OnAttack.AddListener(Attacking);
         anim = GetComponent<Animator>();
-        anim.speed = 1.20f;
+        anim.speed = 2.55f;
         speed = anim.speed;
     }
 

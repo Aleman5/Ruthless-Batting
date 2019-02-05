@@ -26,10 +26,10 @@ public class Bat : MonoBehaviour, IWeapon
 
     void Awake()
     {
-        cooldown = 1.5f;
-        attackRate = 0.55f;
+        cooldown = 0.1f;
+        attackRate = 0.21f;
 
-        timeToDisappearHitBox = 0.4f;
+        timeToDisappearHitBox = 0.19f;
         origTimeToDisappearHitBox = timeToDisappearHitBox;
 
         batBoxCollider.enabled = false;

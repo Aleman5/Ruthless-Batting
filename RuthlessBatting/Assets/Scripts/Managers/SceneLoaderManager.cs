@@ -76,8 +76,6 @@ public class SceneLoaderManager : MonoBehaviour
     /// <param name="sceneIndex"></param>
     public void LoadNextScene(SceneEnum sceneIndex)
     {
-        Debug.Log(sceneIndex.ToString());
-
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
         {
             currentScene = sceneIndex;
