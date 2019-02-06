@@ -181,6 +181,11 @@ public class WaveSpawner : MonoBehaviour
         return nextWave + 1;
     }
 
+    public int GetMountOfWaves()
+    {
+        return waves.Length;
+    }
+
     public float TimeLeft { get; set; }
 
     public UnityEvent OnWaveChange

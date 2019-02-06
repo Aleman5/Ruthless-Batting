@@ -159,6 +159,11 @@ public class LevelManager : MonoBehaviour
         SceneLoaderManager.Instance.ReturnMenu();
     }
 
+    public int[] GetCheckpoints()
+    {
+        return checkpoints;
+    }
+
     static public LevelManager Instance
     {
         get
