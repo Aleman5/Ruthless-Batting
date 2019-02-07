@@ -3,9 +3,10 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3092587489	pausa			\Default Work Unit\pausa	
 
 State	ID	Name	State Group			Notes
+	0	None	musica			
+	141331488	lvl3	musica			
 	141331489	lvl2	musica			
 	141331490	lvl1	musica			
-	748895195	None	musica			
 	2237101708	storyboard	musica			
 	2607556080	menu	musica			
 	0	None	pausa			

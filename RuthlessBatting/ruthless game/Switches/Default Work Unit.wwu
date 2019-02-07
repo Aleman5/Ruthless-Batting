@@ -15,18 +15,6 @@
 						<Switch Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="Storyboard1" ID="{F0C6CD47-467A-456F-9D5D-5B3B62D5FCCB}">
-					<ChildrenList>
-						<Switch Name="b" ID="{6A5D91D9-C94D-408D-81E6-6E04B3A24F55}"/>
-						<Switch Name="a" ID="{DF2B8293-464D-4B77-B3D9-12FB03D9AE55}"/>
-					</ChildrenList>
-				</SwitchGroup>
-				<SwitchGroup Name="Storyboard2" ID="{166D7327-A922-4D2A-B382-AC4F3595A149}">
-					<ChildrenList>
-						<Switch Name="b" ID="{6F7F6D4E-BD07-4BC4-A9FF-1DF397E28400}"/>
-						<Switch Name="a" ID="{8D9CC2C3-8B7F-4E9D-9800-D6FE9FDEC689}"/>
-					</ChildrenList>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

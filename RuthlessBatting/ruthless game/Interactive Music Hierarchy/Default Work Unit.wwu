@@ -4,6 +4,36 @@
 		<WorkUnit Name="Default Work Unit" ID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="musica" ID="{65B9D0A4-CC0D-49DD-98A9-4F3804C51628}" ShortID="991515699">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{7D34B8D5-64C7-45D7-BA35-7EAA577A481B}" ShortID="66037455">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="volumen_musica" ID="{6B9D36DA-EB7E-4CA3-9905-DBBE1276C4CA}" WorkUnitID="{61EF3315-9AF5-4408-93BE-30E3AA6ED5CD}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{CB3A3EF8-9042-4FF1-8C6A-8A3EB7515C15}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>

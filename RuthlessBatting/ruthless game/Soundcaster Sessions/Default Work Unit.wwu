@@ -104,6 +104,10 @@
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="volumen_sfx" ID="{1717D68E-E181-44AD-9D79-C224FA9FE96C}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="RPM" ID="{9112AA05-F577-44FD-9F4E-4424158129E6}"/>
 							<Value>0</Value>
 						</RTPCValue>
@@ -136,6 +140,10 @@
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="volumen_musica" ID="{6B9D36DA-EB7E-4CA3-9905-DBBE1276C4CA}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
 							<Value>75</Value>
 						</RTPCValue>
@@ -149,9 +157,7 @@
 						<CurrentStateRef Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
-						<CurrentSwitchRef Name="a" ID="{DF2B8293-464D-4B77-B3D9-12FB03D9AE55}"/>
-						<CurrentSwitchRef Name="b" ID="{6F7F6D4E-BD07-4BC4-A9FF-1DF397E28400}"/>
+						<CurrentSwitchRef Name="menu" ID="{3732FD76-D76E-4846-9459-5F1CDA04249A}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
