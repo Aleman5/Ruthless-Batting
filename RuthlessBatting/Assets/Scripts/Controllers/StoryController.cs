@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 public class StoryController : MonoBehaviour {
 
     [SerializeField] List<GameObject> panels;
+    [SerializeField] int importantPanel;
     int index = 0;
+    bool impPanelState = false;
 
 	void Awake ()
     {
@@ -48,7 +50,25 @@ public class StoryController : MonoBehaviour {
         if (index == panels.Count)
             LoadNextScene();
         else
+        {
             panels[index].SetActive(true);
+
+            if (index == importantPanel && !impPanelState)
+            {
+                switch (SceneLoaderManager.Instance.GetCurrentScene())
+                {
+                    case SceneEnum.StoryboardN1:
+                        AudioManager.Instance.RunAudio(Audios.storyboard1b);
+                        impPanelState = true;
+                        break;
+                    case SceneEnum.StoryboardN2:
+                        AudioManager.Instance.RunAudio(Audios.storyboard2b);
+                        impPanelState = true;
+                        break;
+                }
+                Debug.Log("Llegue lince");
+            }
+        }
     }
 
     public void LoadNextScene()

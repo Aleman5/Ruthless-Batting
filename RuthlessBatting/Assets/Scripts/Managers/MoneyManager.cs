@@ -32,6 +32,7 @@ public class MoneyManager : MonoBehaviour
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        AudioManager.Instance.RunAudio(Audios.respiracion_normal);
     }
 
     void Update()
@@ -46,6 +47,7 @@ public class MoneyManager : MonoBehaviour
         else if (moneyMultiplier > 1.0f)
         {
             moneyMultiplier = 1.0f;
+            AudioManager.Instance.RunAudio(Audios.respiracion_normal);
         }
     }
 
@@ -76,6 +78,13 @@ public class MoneyManager : MonoBehaviour
 
         timeLeft = timeToTurnBack;
         moneyMultiplier += 0.2f;
+
+        if (moneyMultiplier < 1.8f)
+            AudioManager.Instance.RunAudio(Audios.respiracion_media);
+        else
+            AudioManager.Instance.RunAudio(Audios.respiracion_agitada);
+
+
     }
 
     static public MoneyManager Instance
