@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GranadeLauncher : MonoBehaviour, IWeapon
+public class GrenadeLauncher : MonoBehaviour, IWeapon
 {
     // Hacer que la animacion de la granada dure el tiempo en llegar hasta el punto objetivo (a discusión).
 
@@ -30,7 +30,7 @@ public class GranadeLauncher : MonoBehaviour, IWeapon
     {
         GameObject g = Instantiate(granade, transform.position, transform.rotation);
 
-        Granade gr = g.GetComponent<Granade>();
+        Grenade gr = g.GetComponent<Grenade>();
 
         Vector3 dest = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 diff = dest - transform.position;

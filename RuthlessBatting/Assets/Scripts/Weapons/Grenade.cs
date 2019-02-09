@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Granade : MonoBehaviour
+public class Grenade : MonoBehaviour
 {
     [SerializeField] GameObject explosion;
     [SerializeField] float speed;
