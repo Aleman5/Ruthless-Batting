@@ -115,6 +115,7 @@ public class HudManager : MonoBehaviour
     {
         int time = Mathf.FloorToInt(spawner.TimeLeft);
         //hud.enabled = true;
+        nextWaveComming.color = new Color(255, 255, 255);
         nextWaveComming.enabled = true;
         nextWaveComming.color = new Color(nextWaveComming.color.r, nextWaveComming.color.g, nextWaveComming.color.b, Mathf.PingPong(Time.time, 0.5f));
         if (time > 0)
