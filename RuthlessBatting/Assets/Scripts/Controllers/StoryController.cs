@@ -54,8 +54,7 @@ public class StoryController : MonoBehaviour {
             panels[index].SetActive(true);
 
             if (index == importantPanel && !impPanelState)
-            {
-                switch (SceneLoaderManager.Instance.GetCurrentScene())
+                switch (SceneLoaderManager.Instance.GetNextScene())
                 {
                     case SceneEnum.StoryboardN1:
                         AudioManager.Instance.RunAudio(Audios.storyboard1b);
@@ -66,8 +65,6 @@ public class StoryController : MonoBehaviour {
                         impPanelState = true;
                         break;
                 }
-                Debug.Log("Llegue lince");
-            }
         }
     }
 
