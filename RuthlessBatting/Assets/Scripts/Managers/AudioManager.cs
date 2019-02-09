@@ -44,6 +44,18 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.PostEvent(audio.ToString(), gameObject);
     }
 
+    /// <summary>
+    /// True = NextCanvas() else False = PrevCanvas()
+    /// </summary>
+    /// <param name="isClickOrHighlight"></param>
+    public void RunButtonClick(bool isClickOrHighlight)
+    {
+        if (isClickOrHighlight)
+            AkSoundEngine.PostEvent(Audios.menu_clic.ToString(), gameObject);
+        else
+            AkSoundEngine.PostEvent(Audios.menu_atras.ToString(), gameObject);
+    }
+
     public void GamePaused()
     {
         paused = !paused;

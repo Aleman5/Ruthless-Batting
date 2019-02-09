@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 
 public class MenuController : MonoBehaviour
 {
+    [Header("Menu")]
     [SerializeField] Button btnContinue;
 
     void Awake()
@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
             if (SaveLoad.saveGame.data.saveCreated)
                 return;
-
+        
         btnContinue.enabled = false;
         btnContinue.GetComponentInChildren<Text>().color = new Color(0.3f, 0.3f, 0.3f);
     }
