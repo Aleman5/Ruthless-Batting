@@ -1126,11 +1126,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 223396030712903446, guid: add6326da89aa9a4daa0ab4d23eb2f25,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 416906190}
     - target: {fileID: 114325170376779700, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: levelManager
@@ -1146,17 +1141,27 @@ Prefab:
       propertyPath: moneyHolder
       value: 
       objectReference: {fileID: 56053422}
-    - target: {fileID: 114325170376779700, guid: add6326da89aa9a4daa0ab4d23eb2f25,
+    - target: {fileID: 223396030712903446, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
-      propertyPath: hud
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 449200316}
+      objectReference: {fileID: 416906190}
     - target: {fileID: 114375268836344018, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114375268836344018, guid: add6326da89aa9a4daa0ab4d23eb2f25,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114874219073565336, guid: add6326da89aa9a4daa0ab4d23eb2f25,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114874219073565336, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -1170,6 +1175,11 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224065990158161778, guid: add6326da89aa9a4daa0ab4d23eb2f25,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
@@ -3286,12 +3296,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &449200316 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114837818202187540, guid: ca9355a040708ca458e8b20ba063dd96,
-    type: 2}
-  m_PrefabInternal: {fileID: 1433931560}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &450202082
 GameObject:
   m_ObjectHideFlags: 0
@@ -13096,6 +13100,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 50179554e6595b147a03429703817c84,
         type: 3}
+    - target: {fileID: 1653932233383838, guid: ca9355a040708ca458e8b20ba063dd96, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9355a040708ca458e8b20ba063dd96, type: 2}
   m_IsPrefabAsset: 0
@@ -20096,7 +20104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToStartFirstWave: 1
-  timeBetweenWaves: 3
+  timeBetweenWaves: 4
   rate: 1
   waves:
   - name: wave 1
