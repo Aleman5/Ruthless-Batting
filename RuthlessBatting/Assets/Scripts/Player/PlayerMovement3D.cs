@@ -25,7 +25,7 @@ public class PlayerMovement3D : MonoBehaviour
             
             if (upgValues[(int)Buyable.MOVSPEED] > 0) SetStats(upgValues[(int)Buyable.MOVSPEED]);
             if (upgValues[(int)Buyable.ATKSPEED] > 0) GetComponentInChildren<Bat>().SetStats(upgValues[(int)Buyable.ATKSPEED]);
-            if (upgValues[(int)Buyable.GRENADE ] > 0) GetComponentInChildren<GranadeLauncher>().SetStats(upgValues[(int)Buyable.GRENADE]);
+            if (upgValues[(int)Buyable.GRENADE ] > 0) GetComponentInChildren<GrenadeLauncher>().SetStats(upgValues[(int)Buyable.GRENADE]);
             if (upgValues[(int)Buyable.EXTRAHP ] > 0) GetComponent<Health>().Amount = upgValues[(int)Buyable.EXTRAHP];
         }
 
@@ -107,7 +107,7 @@ public class PlayerMovement3D : MonoBehaviour
             case (int)Buyable.ATKSPEED:
                 return GetComponentInChildren<Bat>().GetUpgradeValue();
             case (int)Buyable.GRENADE:
-                return GetComponentInChildren<GranadeLauncher>().GetUpgradeValue();
+                return GetComponentInChildren<GrenadeLauncher>().GetUpgradeValue();
             case (int)Buyable.EXTRAHP:
                 return (int)GetComponent<Health>().Amount;
         }

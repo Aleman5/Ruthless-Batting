@@ -100,7 +100,7 @@ public class HudManager : MonoBehaviour
         int waveCleared = spawner.GetActualWaveIndex() - 2;
         bool isSaveWave = false;
 
-        if (waveCleared == -1) { Debug.Log("Initial wave don´t change"); return; }
+        if (waveCleared == -1)  return;
 
         foreach (int checkpoint in checkpoints)
             if (waveCleared == checkpoint - 1) isSaveWave = true;

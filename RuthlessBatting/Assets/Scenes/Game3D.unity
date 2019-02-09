@@ -1176,10 +1176,9 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224065990158161778, guid: add6326da89aa9a4daa0ab4d23eb2f25,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
+    - target: {fileID: 1656395664057144, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224106753185969578, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
@@ -7140,7 +7139,7 @@ SpriteRenderer:
   m_Size: {x: 26.386667, y: 27.053333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1143881044
@@ -19089,7 +19088,7 @@ SpriteRenderer:
   m_Size: {x: 8, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1684127483 stripped

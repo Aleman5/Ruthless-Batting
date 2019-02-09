@@ -6,11 +6,11 @@ public class BuyableGrenade : MonoBehaviour, IBuyable
     [SerializeField] GameObject grenade;
 
     Buyable buyable = Buyable.GRENADE;
-    GranadeLauncher grScript;
+    GrenadeLauncher grScript;
 
     void Start ()
     {
-        grScript = grenade.GetComponent<GranadeLauncher>();
+        grScript = grenade.GetComponent<GrenadeLauncher>();
 	}
 
     public void Buy(Transform player, int level)
