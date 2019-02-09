@@ -12,6 +12,7 @@ public class HudManager : MonoBehaviour
     //[SerializeField] TextMeshProUGUI waveText;
     [SerializeField] TextMeshProUGUI timeLeft;
     [SerializeField] TextMeshProUGUI saving;
+    [SerializeField] TextMeshProUGUI nextWaveComming;
 
     [Header("Scripts")]
     [SerializeField] LevelManager levelManager;
@@ -19,7 +20,7 @@ public class HudManager : MonoBehaviour
     [SerializeField] MoneyHolder moneyHolder;
 
     [Header("Images")]
-    [SerializeField] Image hud;
+    //[SerializeField] Image hud;
     [SerializeField] Image cross;
 
     [Header("Sprites")]
@@ -113,18 +114,24 @@ public class HudManager : MonoBehaviour
     void TimeText()
     {
         int time = Mathf.FloorToInt(spawner.TimeLeft);
-        hud.enabled = true;
+        //hud.enabled = true;
+        nextWaveComming.enabled = true;
+        nextWaveComming.color = new Color(nextWaveComming.color.r, nextWaveComming.color.g, nextWaveComming.color.b, Mathf.PingPong(Time.time, 0.5f));
         if (time > 0)
             timeLeft.text = "" + time;
         else
+        {
             timeLeft.text = "0";
+            nextWaveComming.color = new Color(nextWaveComming.color.r, 0, 0);
+        }
            // timeLeft.text = "Starts " + waveText + "...";
 
         if (time <= -2)
         {
             timeLeft.text = "";
             CountdownTextSituation();
-            hud.enabled = false;
+            //hud.enabled = false;
+            nextWaveComming.enabled = false;
         }
     }
 

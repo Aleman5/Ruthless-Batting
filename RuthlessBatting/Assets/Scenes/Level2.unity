@@ -9012,6 +9012,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 50179554e6595b147a03429703817c84,
         type: 3}
+    - target: {fileID: 1653932233383838, guid: ca9355a040708ca458e8b20ba063dd96, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9355a040708ca458e8b20ba063dd96, type: 2}
   m_IsPrefabAsset: 0
@@ -17006,7 +17010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToStartFirstWave: 1
-  timeBetweenWaves: 1
+  timeBetweenWaves: 4
   rate: 1
   waves:
   - name: wave 1
