@@ -48,7 +48,6 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         state = SpawnStates.COUNTING;
-        AudioManager.Instance.RunAudio(Audios.respiracion_normal);
         Invoke("StartCountdown", timeToStartFirstWave);
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
         {
@@ -96,7 +95,6 @@ public class WaveSpawner : MonoBehaviour
     {
         state = SpawnStates.COUNTING;
         TimeLeft = timeBetweenWaves;
-        AudioManager.Instance.RunAudio(Audios.respiracion_normal);
 
         nextWave++;
 

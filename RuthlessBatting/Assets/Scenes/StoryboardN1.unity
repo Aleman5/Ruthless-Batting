@@ -507,6 +507,7 @@ MonoBehaviour:
   - {fileID: 1843051385}
   - {fileID: 1884628989}
   - {fileID: 167237950}
+  importantPanel: 5
 --- !u!1 &153872314
 GameObject:
   m_ObjectHideFlags: 0
