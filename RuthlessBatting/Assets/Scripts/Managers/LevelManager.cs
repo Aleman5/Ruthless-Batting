@@ -19,34 +19,11 @@ public class LevelManager : MonoBehaviour
     [Header("Waves Checkpoints")]
     [SerializeField] int[] checkpoints;
 
+    [Header("Scene")]
+    [SerializeField] SceneEnum actualScene;
+
     bool gameWon = false;
     bool alive = true;
-
-    void Awake()
-    {
-        if (Instance == this)
-        {
-            //DontDestroyOnLoad(gameObject);
-        }
-
-        //SceneEnum sE = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
-
-        //switch (sE)
-        //{
-        //    case SceneEnum.Menu:
-        //        AudioManager.Instance.RunAudio(Audios.menu);
-        //        break;
-        //    case SceneEnum.StoryboardN1:
-        //        AudioManager.Instance.RunAudio(Audios.menu);
-        //        break;
-        //    case SceneEnum.Game3D:
-        //        AudioManager.Instance.RunAudio(Audios.nivel1);
-        //        break;
-        //    case SceneEnum.Level2:
-        //        AudioManager.Instance.RunAudio(Audios.nivel2);
-        //        break;
-        //}
-    }
 
     void Start()
     {
@@ -144,12 +121,14 @@ public class LevelManager : MonoBehaviour
 
         // Para Testing nomás.
         if (Input.GetKey(KeyCode.J))
-            SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Game3D);
+        {
+            SceneLoaderManager.Instance.LoadNextScene(actualScene);
+        }
     }
 
     void ChangeLevel2()
     {
-        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Game3D);
+        SceneLoaderManager.Instance.LoadNextScene(actualScene);
     }
 
     IEnumerator GoToMenu()
