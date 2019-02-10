@@ -56,6 +56,6 @@ public class MenuController : MonoBehaviour
         //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
         //yield return new WaitForSeconds(fadeTime);
         yield return new WaitForSeconds(0.2f);
-        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.StoryboardN1);
+        SceneLoaderManager.Instance.LoadNextScene(SceneEnum.Menu);
     }
 }
