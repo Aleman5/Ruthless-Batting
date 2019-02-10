@@ -813,6 +813,10 @@ Prefab:
       propertyPath: hud
       value: 
       objectReference: {fileID: 1175414801}
+    - target: {fileID: 1610350602923808, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
   m_IsPrefabAsset: 0
@@ -1868,6 +1872,11 @@ Transform:
   m_Father: {fileID: 1484826706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &273840774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1610350602923808, guid: add6326da89aa9a4daa0ab4d23eb2f25,
+    type: 2}
+  m_PrefabInternal: {fileID: 51282526}
 --- !u!114 &284243726 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114628955291883418, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
@@ -10248,7 +10257,7 @@ MonoBehaviour:
   pauseScript: {fileID: 376142318}
   winScreen: {fileID: 2083235098}
   pauseCanvas: {fileID: 376142316}
-  restartText: {fileID: 0}
+  restartText: {fileID: 273840774}
   checkpoints: 010000000300000005000000
 --- !u!4 &1826606858
 Transform:
