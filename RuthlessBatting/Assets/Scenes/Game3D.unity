@@ -295,7 +295,7 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: distanceToInteract
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1399294804043654, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_IsActive
@@ -20338,7 +20338,7 @@ Prefab:
     - target: {fileID: 114546003849428298, guid: 4a1c1ad7a695fad49b5aa12b2c98db25,
         type: 2}
       propertyPath: distanceToInteract
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1399294804043654, guid: 4a1c1ad7a695fad49b5aa12b2c98db25, type: 2}
       propertyPath: m_IsActive

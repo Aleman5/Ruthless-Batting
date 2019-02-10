@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: {fileID: 0}
-  distanceToInteract: 3
-  levelOfTheElement: 1
+  obstacules:
+    serializedVersion: 2
+    m_Bits: 8192
+  distanceToInteract: 2.5
   priceOfTheElement: 50
   extraPercentagePerLevelUp: 0
   onInteract:
