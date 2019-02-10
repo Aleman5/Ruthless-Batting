@@ -7,6 +7,7 @@ using TMPro;
 public class BuyElement : MonoBehaviour
 {
     [SerializeField] Transform objective;
+    [SerializeField] LayerMask obstacules;
     [SerializeField] float distanceToInteract;
     [Range(0,500)]
     [SerializeField] int priceOfTheElement;
@@ -56,7 +57,7 @@ public class BuyElement : MonoBehaviour
     {
         Vector3 dist = objective.position - transform.position;
 
-        if (dist.magnitude < distanceToInteract)
+        if (dist.magnitude < distanceToInteract && Physics.Raycast(transform.position, dist, dist.magnitude, obstacules))
         {
             if (!isOnRange)
             {
