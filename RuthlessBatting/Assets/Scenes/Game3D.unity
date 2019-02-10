@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 18978319}
   - component: {fileID: 18978320}
   m_Layer: 0
-  m_Name: Sillon1-R1
+  m_Name: Divan1-R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 49218158}
   - component: {fileID: 49218159}
   m_Layer: 0
-  m_Name: Mueble1-C
+  m_Name: Fitment1-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193015229}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &49218159
 SpriteRenderer:
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 91087522}
   - component: {fileID: 91087521}
   m_Layer: 12
-  m_Name: Mesa-C
+  m_Name: Table-C
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -798,7 +798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193015229}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &91087520
 SpriteRenderer:
@@ -1612,7 +1612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193015229}
   m_Layer: 0
-  m_Name: Amueblado
+  m_Name: Furnitures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,8 +1629,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 285153404}
-  - {fileID: 49218158}
   - {fileID: 91087519}
+  - {fileID: 49218158}
   - {fileID: 863310363}
   - {fileID: 310382660}
   - {fileID: 201336041}
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 201336041}
   - component: {fileID: 201336042}
   m_Layer: 0
-  m_Name: Mueble1-E
+  m_Name: Fitment1-E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1740,7 +1740,7 @@ GameObject:
   - component: {fileID: 201977393}
   - component: {fileID: 201977394}
   m_Layer: 0
-  m_Name: Cama-R2
+  m_Name: Bed-R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 285153404}
   - component: {fileID: 285153405}
   m_Layer: 0
-  m_Name: "Ba\xF1o1"
+  m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2345,7 +2345,7 @@ GameObject:
   - component: {fileID: 303412409}
   - component: {fileID: 303412410}
   m_Layer: 0
-  m_Name: Mueble3.1-G
+  m_Name: Fitment3.1-G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2420,7 +2420,7 @@ GameObject:
   - component: {fileID: 310382660}
   - component: {fileID: 310382661}
   m_Layer: 0
-  m_Name: Mueble3-C
+  m_Name: Fitment3-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2572,7 +2572,7 @@ GameObject:
   - component: {fileID: 347446518}
   - component: {fileID: 347446517}
   m_Layer: 12
-  m_Name: Mueble2.2-G
+  m_Name: Fitment2.2-G
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2993,7 +2993,7 @@ GameObject:
   - component: {fileID: 394328358}
   - component: {fileID: 394328359}
   m_Layer: 0
-  m_Name: Sillon2.2-R1
+  m_Name: Divan2.2-R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3360,7 +3360,7 @@ GameObject:
   - component: {fileID: 452525339}
   - component: {fileID: 452525340}
   m_Layer: 0
-  m_Name: iluminacion 3
+  m_Name: Illumination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4144,7 +4144,7 @@ GameObject:
   - component: {fileID: 615845819}
   - component: {fileID: 615845818}
   m_Layer: 12
-  m_Name: Mueble-R1
+  m_Name: Fitment-R1
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4302,7 +4302,7 @@ GameObject:
   - component: {fileID: 637750168}
   - component: {fileID: 637750169}
   m_Layer: 0
-  m_Name: CamaShinu
+  m_Name: BedShinu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4547,7 +4547,7 @@ GameObject:
   - component: {fileID: 664091364}
   - component: {fileID: 664091365}
   m_Layer: 0
-  m_Name: Mueble3.2-G
+  m_Name: Fitment3.2-G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4657,7 +4657,7 @@ GameObject:
   - component: {fileID: 686013849}
   - component: {fileID: 686013848}
   m_Layer: 12
-  m_Name: Mueble.2-R2
+  m_Name: Fitment.2-R2
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5079,7 +5079,7 @@ GameObject:
   - component: {fileID: 863310363}
   - component: {fileID: 863310364}
   m_Layer: 0
-  m_Name: Mueble2-C
+  m_Name: Fitment2-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5156,7 +5156,7 @@ GameObject:
   - component: {fileID: 865068633}
   - component: {fileID: 865068632}
   m_Layer: 12
-  m_Name: Mueble2-E
+  m_Name: Fitment2-E
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5987,7 +5987,7 @@ GameObject:
   - component: {fileID: 1025326376}
   - component: {fileID: 1025326377}
   m_Layer: 0
-  m_Name: Mueble.1-R2
+  m_Name: Fitment.1-R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6062,7 +6062,7 @@ GameObject:
   - component: {fileID: 1027838269}
   - component: {fileID: 1027838270}
   m_Layer: 0
-  m_Name: Mueble1-G
+  m_Name: Fitment1-G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6742,7 +6742,7 @@ GameObject:
   - component: {fileID: 1138888923}
   - component: {fileID: 1138888924}
   m_Layer: 12
-  m_Name: WallSprite v0.1
+  m_Name: WallSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12071,7 +12071,7 @@ GameObject:
   - component: {fileID: 1343562096}
   - component: {fileID: 1343562097}
   m_Layer: 0
-  m_Name: Sillon2.1-R1
+  m_Name: Divan2.1-R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18781,7 +18781,7 @@ GameObject:
   - component: {fileID: 1669914858}
   - component: {fileID: 1669914859}
   m_Layer: 0
-  m_Name: FurnitureSprite v0.1
+  m_Name: FurnitureSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18964,7 +18964,7 @@ GameObject:
   - component: {fileID: 1733153364}
   - component: {fileID: 1733153365}
   m_Layer: 0
-  m_Name: FloorSprite v0.1
+  m_Name: FloorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19039,7 +19039,7 @@ GameObject:
   - component: {fileID: 1747075168}
   - component: {fileID: 1747075169}
   m_Layer: 0
-  m_Name: MuebleShinu2
+  m_Name: FitmentShinu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19495,7 +19495,7 @@ GameObject:
   - component: {fileID: 1837547076}
   - component: {fileID: 1837547077}
   m_Layer: 0
-  m_Name: Mueble-Pasillo
+  m_Name: Fitment-Corridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19570,7 +19570,7 @@ GameObject:
   - component: {fileID: 1843506768}
   - component: {fileID: 1843506769}
   m_Layer: 0
-  m_Name: Mueble2.1-G
+  m_Name: Fitment2.1-G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19738,7 +19738,7 @@ GameObject:
   - component: {fileID: 1986472374}
   - component: {fileID: 1986472375}
   m_Layer: 0
-  m_Name: MuebleShinu1
+  m_Name: FitmentShinu1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
