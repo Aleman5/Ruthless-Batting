@@ -27,6 +27,9 @@ public abstract class EnemyBase : MonoBehaviour
     [HideInInspector] public Health health;
     [HideInInspector] public float actualTime = 0.0f;
 
+    protected const string bloodLayer = "Blood";
+    protected int bloodSortingOrder = 0;
+
     [HideInInspector][SerializeField] UnityEvent onAttack;
 
     virtual protected void Awake()

@@ -107,6 +107,11 @@ public class Enemy : EnemyBase
         alive = false;
 
         Transform t1 = transform.GetChild(1);
+
+        SpriteRenderer sR = t1.GetComponent<SpriteRenderer>();
+        sR.sortingLayerName = bloodLayer;
+        sR.sortingOrder = bloodSortingOrder;
+
         IAnimation anim = t1.GetComponent<IAnimation>();
         anim.Death();
         anim.DisableAnim();
