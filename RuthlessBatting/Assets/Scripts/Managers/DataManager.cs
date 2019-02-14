@@ -37,28 +37,39 @@ public class DataManager
 
     public void SetPreparations()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        data.moneyCount = player.GetComponent<MoneyHolder>().ActualMoney;
-        data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
         data.actualScene = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
-        data.enemyBodies = BodiesHolder.Instance.GetBodies();
+
+        if (data.actualScene != SceneEnum.StoryboardN1 && data.actualScene != SceneEnum.StoryboardN2)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            data.moneyCount = player.GetComponent<MoneyHolder>().ActualMoney;
+            data.waveName = GameObject.FindGameObjectWithTag("WaveSpawner").GetComponent<WaveSpawner>().GetActualWaveName();
+            data.enemyBodies = BodiesHolder.Instance.GetBodies();
+
+            PlayerMovement3D pMovScript = player.GetComponent<PlayerMovement3D>();
+
+            for (int i = 0; i < (int)Buyable.COUNT; i++)
+                data.playerUpgrades[i] = pMovScript.GetUpgradeValue(i);
+
+            //SpriteRenderer[] srs = BodiesHolder.Instance.GetBodies();
+
+            /*if (srs != null)
+                for (int i = 0; i < data.enemyBodies.Length; i++)
+                {
+                    if (i < srs.Length)
+                        data.enemyBodies[i] = srs[i];
+                    else
+                        data.enemyBodies[i] = null;
+                }*/
+        }
+        else
+        {
+            data.waveName = "wave 1";
+        }
+
         data.saveCreated = true;
 
-        PlayerMovement3D pMovScript = player.GetComponent<PlayerMovement3D>();
 
-        for (int i = 0; i < (int)Buyable.COUNT; i++)
-            data.playerUpgrades[i] = pMovScript.GetUpgradeValue(i);
-
-        //SpriteRenderer[] srs = BodiesHolder.Instance.GetBodies();
-
-        /*if (srs != null)
-            for (int i = 0; i < data.enemyBodies.Length; i++)
-            {
-                if (i < srs.Length)
-                    data.enemyBodies[i] = srs[i];
-                else
-                    data.enemyBodies[i] = null;
-            }*/
     }
 }
