@@ -14,6 +14,7 @@ public class MoneyHolder : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
         {
             actualMoney = SaveLoad.saveGame.data.moneyCount;
+            OnMoneyChange.Invoke();
         }
     }
 
