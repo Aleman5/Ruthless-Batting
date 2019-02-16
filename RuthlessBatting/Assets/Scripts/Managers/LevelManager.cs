@@ -122,12 +122,14 @@ public class LevelManager : MonoBehaviour
         // Para Testing nomás.
         if (Input.GetKey(KeyCode.J))
         {
+            SaveLoad.Save();
             SceneLoaderManager.Instance.LoadNextScene(actualScene);
         }
     }
 
     void ChangeLevel2()
     {
+        SaveLoad.Save();
         SceneLoaderManager.Instance.LoadNextScene(actualScene);
     }
 
