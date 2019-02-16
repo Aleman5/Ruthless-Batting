@@ -1511,6 +1511,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770139374}
   m_CullTransparentMesh: 0
+--- !u!114 &793452742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114634352761788422, guid: 6a29008d16802f94580d71ae501f4f00,
+    type: 2}
+  m_PrefabInternal: {fileID: 824817178}
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &824817178
 Prefab:
   m_ObjectHideFlags: 0
@@ -1518,6 +1524,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 224647339953592170, guid: 6a29008d16802f94580d71ae501f4f00,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1638,9 +1649,61 @@ Prefab:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 46118209}
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 824817179}
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SavePlayerPrefs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581117486161756, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259625456851644, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 824817180}
+    - target: {fileID: 114259625456851644, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: toggle1
+      value: 
+      objectReference: {fileID: 1969972017}
+    - target: {fileID: 114259625456851644, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: toggle2
+      value: 
+      objectReference: {fileID: 793452742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a29008d16802f94580d71ae501f4f00, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &824817179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114259625456851644, guid: 6a29008d16802f94580d71ae501f4f00,
+    type: 2}
+  m_PrefabInternal: {fileID: 824817178}
+  m_Script: {fileID: 11500000, guid: db5c8cce4540b0a4c8e4ac2c0bd8d3ab, type: 3}
+--- !u!114 &824817180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114681591795486406, guid: 6a29008d16802f94580d71ae501f4f00,
+    type: 2}
+  m_PrefabInternal: {fileID: 824817178}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &843842972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,6 +5362,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963315375}
   m_CullTransparentMesh: 0
+--- !u!114 &1969972017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114301875906591690, guid: 6a29008d16802f94580d71ae501f4f00,
+    type: 2}
+  m_PrefabInternal: {fileID: 824817178}
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1978972187
 GameObject:
   m_ObjectHideFlags: 0
