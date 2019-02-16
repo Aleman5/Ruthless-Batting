@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     void Awake()
     {
         SceneLoaderManager.Instance.Initialize();
+        PlayerPrefsManager.Instance.Initialize();
         
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
             if (SaveLoad.saveGame.data.saveCreated)

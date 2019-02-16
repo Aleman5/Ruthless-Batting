@@ -991,6 +991,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 114275920954726534}
+  slider: {fileID: 114858370912457006}
+  toggle1: {fileID: 114062102929888322}
+  toggle2: {fileID: 114815180735725148}
 --- !u!114 &114101697822187930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2542,6 +2545,17 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_MethodName: RunButtonClick
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114101557252700192}
+        m_MethodName: SavePlayerPrefs
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
