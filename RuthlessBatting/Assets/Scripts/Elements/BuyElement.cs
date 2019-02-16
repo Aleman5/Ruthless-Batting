@@ -42,7 +42,16 @@ public class BuyElement : MonoBehaviour
         text.text = "" + priceOfTheElement;
         moneyHolder = objective.GetComponent<MoneyHolder>();
 
-        switch (SceneManager.GetActiveScene().name)
+        switch(SceneLoaderManager.Instance.GetCurrentScene())
+        {
+            case SceneEnum.Game3D:
+                actualLevelScene = 1;
+                break;
+            case SceneEnum.Level2:
+                actualLevelScene = 2;
+                break;
+        }
+        /*switch (SceneManager.GetActiveScene().name)
         {
             case "Game3D":
                 actualLevelScene = 1;
@@ -50,7 +59,7 @@ public class BuyElement : MonoBehaviour
             case "Level2":
                 actualLevelScene = 2;
                 break;
-        }
+        }*/
     }
 
     void Update()
