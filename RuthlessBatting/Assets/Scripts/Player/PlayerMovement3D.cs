@@ -11,6 +11,8 @@ public class PlayerMovement3D : MonoBehaviour
     int upgMovLevel; // Upgrade level
     float angleOfTheStairs = 36.0f; // Angle of the Stairs.
     float originalMovSpeed;
+    float dashCooldownTime = 0.6f;
+    float dashCooldown;
     bool isOnStairs = false;
     Vector3 movForce;
     Vector3 stairsDir;
@@ -35,6 +37,8 @@ public class PlayerMovement3D : MonoBehaviour
 
         stairsDir.y = 0.587785f;
         stairsDir.z = 0.809017f;
+
+        dashCooldown = dashCooldownTime;
     }
 
     void Update()
@@ -59,8 +63,10 @@ public class PlayerMovement3D : MonoBehaviour
             movForce = movForce.normalized * speedOnStairs;
         }
 
-        if (InputManager.Instance.GetDashButton())
+        dashCooldown -= Time.deltaTime;
+        if (InputManager.Instance.GetDashButton() && dashCooldown < 0)
         {
+            dashCooldown = dashCooldownTime;
             MakeForceMovement();
         }
 
