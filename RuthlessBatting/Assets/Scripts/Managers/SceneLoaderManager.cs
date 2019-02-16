@@ -114,9 +114,15 @@ public class SceneLoaderManager : MonoBehaviour
 
     public SceneEnum GetNextScene()
     {
-        currentScene++;
-        
-        return currentScene;
+        SceneEnum sE = currentScene;
+        sE++;
+
+        return sE;
+    }
+
+    public SceneEnum GoToNextScene()
+    {
+        return ++currentScene;
     }
 
     public static SceneLoaderManager Instance
