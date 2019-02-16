@@ -43,6 +43,8 @@ public class PlayerMovement3D : MonoBehaviour
 
     void Update()
     {
+        dashCooldown -= Time.deltaTime;
+
         movForce = Vector3.zero;
 
         movForce.x = InputManager.Instance.GetHorizontalAxis();
@@ -53,6 +55,12 @@ public class PlayerMovement3D : MonoBehaviour
             movForce.x *= speed;
             movForce.z *= speed;
             movForce.y = 0;
+
+            if (InputManager.Instance.GetDashButton() && dashCooldown < 0)
+            {
+                dashCooldown = dashCooldownTime;
+                MakeForceMovement();
+            }
         }
         else
         {
@@ -61,13 +69,6 @@ public class PlayerMovement3D : MonoBehaviour
             movForce.y = movForce.z * stairsDir.y;
 
             movForce = movForce.normalized * speedOnStairs;
-        }
-
-        dashCooldown -= Time.deltaTime;
-        if (InputManager.Instance.GetDashButton() && dashCooldown < 0)
-        {
-            dashCooldown = dashCooldownTime;
-            MakeForceMovement();
         }
 
         // Para Testing nomás
