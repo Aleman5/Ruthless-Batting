@@ -7,6 +7,10 @@ public class WorldTransparency : MonoBehaviour
     // Saving the last dist to make less operations per frame.
     float prevDist = 0.0f;
 
+    const string overWallLayer = "OverWall";
+    const string overWallUpLayer = "OverWallUp";
+    int overWallSortingOrder = 0;
+
     private void Awake()
     {
         maxDist = GetComponent<BoxCollider>().size.z;
@@ -16,8 +20,11 @@ public class WorldTransparency : MonoBehaviour
     {
         SpriteRenderer sprRend = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
 
+        sprRend.sortingLayerName = overWallUpLayer;
+        sprRend.sortingOrder = overWallSortingOrder;
+
         // Just remove it, it doens't matter if exists on the list or not.
-        if(UpperFloorObjects.objects.Remove(sprRend))
+        if (UpperFloorObjects.objects.Remove(sprRend))
         {
             Color color = sprRend.material.color;
             color.a = 1.0f;
@@ -52,10 +59,18 @@ public class WorldTransparency : MonoBehaviour
     {
         float dist = (col.transform.position - transform.position).magnitude;
         
+        SpriteRenderer sprRend = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
+
         if (dist > maxDist / 2.0f) // This Collider is on the UpperFloor.
         {
-            UpperFloorObjects.objects.Add(col.transform.parent.GetComponentInChildren<SpriteRenderer>());
+            UpperFloorObjects.objects.Add(sprRend);
         }
+        else
+        {
+            sprRend.sortingLayerName = overWallLayer;
+            sprRend.sortingOrder = overWallSortingOrder;
+        }
+
 
         if (col.transform.parent.CompareTag("Player"))
             col.transform.parent.GetComponent<PlayerMovement3D>().IsOnStairs = false;
