@@ -23,7 +23,7 @@ public class TransparentableWall : MonoBehaviour
         if (col.CompareTag("LimitCollider"))
         {
             IncreaseCounter();
-
+            Debug.Log("Holus");
             SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
             sprRenderer.sortingLayerName = behindWallLayer;
             sprRenderer.sortingOrder = behindWallSortingOrder;
