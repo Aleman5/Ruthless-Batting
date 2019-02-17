@@ -2901,11 +2901,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 2.157187, y: 0.5, z: 12.91019}
+  m_Extents: {x: 2.157187, y: 0.5, z: 13.039795}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: -4.06931, y: 0, z: -4.520836}
+  m_Center: {x: -4.06931, y: 0, z: -4.39123}
   m_TimeToStationary: 0.5
 --- !u!65 &503087145
 BoxCollider:
@@ -2917,8 +2917,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.314374, y: 1, z: 25.820381}
-  m_Center: {x: -4.0693097, y: 0, z: -4.520836}
+  m_Size: {x: 4.314374, y: 1, z: 26.07959}
+  m_Center: {x: -4.0693097, y: 0, z: -4.39123}
 --- !u!1 &509196825
 GameObject:
   m_ObjectHideFlags: 0
@@ -8893,11 +8893,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 2.157187, y: 0.5, z: 12.91019}
+  m_Extents: {x: 2.157187, y: 0.5, z: 13.039795}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: -4.06931, y: 0, z: -4.520836}
+  m_Center: {x: -4.06931, y: 0, z: -4.39123}
   m_TimeToStationary: 0.5
 --- !u!65 &1616262646
 BoxCollider:
@@ -8909,8 +8909,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.314374, y: 1, z: 25.82038}
-  m_Center: {x: -4.0693097, y: 0, z: -4.520836}
+  m_Size: {x: 4.314374, y: 1, z: 26.079594}
+  m_Center: {x: -4.0693097, y: 0, z: -4.3912296}
 --- !u!1 &1631652497
 GameObject:
   m_ObjectHideFlags: 0
@@ -9836,6 +9836,7 @@ Transform:
   - {fileID: 536504037}
   - {fileID: 795694842}
   - {fileID: 1874741119}
+  - {fileID: 2064495860}
   m_Father: {fileID: 414828296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11147,7 +11148,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 44.65116, y: 32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -12100,6 +12101,81 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1709251, y: 0.19423795, z: 5.5629077}
   m_Center: {x: -24.223154, y: 0.406, z: -0.5439}
+--- !u!1 &2064495859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2064495860}
+  - component: {fileID: 2064495861}
+  m_Layer: 0
+  m_Name: Level2-DownWalls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2064495860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2064495859}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 3.44, y: 0, z: -3.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1737338409}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &2064495861
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2064495859}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -391917083
+  m_SortingLayer: 7
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e2a22bbab2fe89c4397f9432820b4126, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 13.76}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2083235094
 GameObject:
   m_ObjectHideFlags: 0
