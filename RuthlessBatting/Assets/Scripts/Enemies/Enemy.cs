@@ -109,8 +109,17 @@ public class Enemy : EnemyBase
         Transform t1 = transform.GetChild(1);
 
         SpriteRenderer sR = t1.GetComponent<SpriteRenderer>();
-        sR.sortingLayerName = bloodLayer;
-        sR.sortingOrder = bloodSortingOrder;
+        if (sR.sortingLayerName != "OverWallUp" && sR.sortingLayerName != "BehindWallUp")
+        {
+            sR.sortingLayerName = overBloodLayer;
+            sR.sortingOrder = overBloodSortingOrder;
+        }
+        else
+        {
+            sR.sortingLayerName = overBloodUpLayer;
+            sR.sortingOrder = overBloodSortingOrder;
+        }
+
 
         IAnimation anim = t1.GetComponent<IAnimation>();
         anim.Death();

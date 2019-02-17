@@ -53,6 +53,9 @@ TagManager:
   - name: Blood
     uniqueID: 2085625033
     locked: 0
+  - name: OverBlood
+    uniqueID: 55593373
+    locked: 0
   - name: Furniture
     uniqueID: 3365181749
     locked: 0
@@ -70,4 +73,25 @@ TagManager:
     locked: 0
   - name: Text
     uniqueID: 2080920143
+    locked: 0
+  - name: FloorUp
+    uniqueID: 2507721599
+    locked: 0
+  - name: BloodUp
+    uniqueID: 3966910463
+    locked: 0
+  - name: OverBloodUp
+    uniqueID: 266829561
+    locked: 0
+  - name: BehindWallUp
+    uniqueID: 1794834899
+    locked: 0
+  - name: WallUp
+    uniqueID: 1534866049
+    locked: 0
+  - name: OverWallUp
+    uniqueID: 1642988637
+    locked: 0
+  - name: Wall ChangeUp
+    uniqueID: 638719217
     locked: 0

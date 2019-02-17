@@ -5,8 +5,10 @@ public class TransparentableWall : MonoBehaviour
     [Range(0, 0.99f)]
     [SerializeField] float levelOfTransparency = 0.55f;
     [SerializeField] const string overWallLayer = "OverWall";
+    [SerializeField] const string overWallUpLayer = "OverWallUp";
     [SerializeField] int overWallSortingOrder = 0;
     [SerializeField] const string behindWallLayer = "BehindWall";
+    [SerializeField] const string behindWallUpLayer = "BehindWallUp";
     [SerializeField] int behindWallSortingOrder = 0;
 
     SpriteRenderer spriteRenderer;
@@ -23,10 +25,20 @@ public class TransparentableWall : MonoBehaviour
         if (col.CompareTag("LimitCollider"))
         {
             IncreaseCounter();
-            Debug.Log("Holus");
+            
             SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
-            sprRenderer.sortingLayerName = behindWallLayer;
-            sprRenderer.sortingOrder = behindWallSortingOrder;
+
+            if (behindWallSortingOrder == 2)
+            {
+                sprRenderer.sortingLayerName = behindWallLayer;
+                sprRenderer.sortingOrder = behindWallSortingOrder;
+            }
+            else
+            {
+                sprRenderer.sortingLayerName = behindWallUpLayer;
+                sprRenderer.sortingOrder = behindWallSortingOrder;
+            }
+
         }
     }
 
@@ -44,8 +56,17 @@ public class TransparentableWall : MonoBehaviour
             DecreaseCounter();
 
             SpriteRenderer sprRenderer = col.transform.parent.GetComponentInChildren<SpriteRenderer>();
-            sprRenderer.sortingLayerName = overWallLayer;
-            sprRenderer.sortingOrder = overWallSortingOrder;
+
+            if (overWallSortingOrder == 4)
+            {
+                sprRenderer.sortingLayerName = overWallLayer;
+                sprRenderer.sortingOrder = overWallSortingOrder;
+            }
+            else
+            {
+                sprRenderer.sortingLayerName = overWallUpLayer;
+                sprRenderer.sortingOrder = overWallSortingOrder;
+            }
         }
     }
 
