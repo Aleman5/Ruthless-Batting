@@ -54,21 +54,11 @@ public class DataManager
 
             //Debug.Log("Actual Scene: " + data.actualScene + "; Money: " + data.moneyCount + "; Wave: " + data.waveName + "; Bodies: " + data.enemyBodies +
             //    "; Upgrade[0]: " + data.playerUpgrades[0] + "; Upgrade[1]: " + data.playerUpgrades[1] + "; Upgrade[2]: " + data.playerUpgrades[2] + "; Upgrade[3]: " + data.playerUpgrades[3]);
-            
-            //SpriteRenderer[] srs = BodiesHolder.Instance.GetBodies();
-
-            /*if (srs != null)
-                for (int i = 0; i < data.enemyBodies.Length; i++)
-                {
-                    if (i < srs.Length)
-                        data.enemyBodies[i] = srs[i];
-                    else
-                        data.enemyBodies[i] = null;
-                }*/
         }
         else
         {
             data.waveName = "wave 1";
+            data.enemyBodies = 0;
         }
 
         data.saveCreated = true;
