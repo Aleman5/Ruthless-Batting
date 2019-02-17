@@ -74,7 +74,9 @@ public class TransparentableWall : MonoBehaviour
     {
         countOfObjects--;
         if (countOfObjects == 0 && isTransparent)
+        {
             TurnOffTransparent();
+        }
     }
 
     void MakeTransparent()

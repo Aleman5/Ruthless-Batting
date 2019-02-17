@@ -7,7 +7,8 @@ enum SpawnStates
 {
     COUNTING,
     SPAWNING,
-    WAITING
+    WAITING,
+    WON
 }
 
 [System.Serializable]
@@ -62,6 +63,10 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G)) waveCompleted = true;
+
+        if (state == SpawnStates.WON) return;
+
         if(state == SpawnStates.WAITING)
         {
             if(waveCompleted)
@@ -96,16 +101,17 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnStates.COUNTING;
         TimeLeft = timeBetweenWaves;
 
-        nextWave++;
+        
 
-        if (nextWave > waves.Length - 1)
+        if (nextWave > waves.Length - 2)
         {
             OnLevelComplete.Invoke();
 
-            gameObject.SetActive(false);
+            state = SpawnStates.WON;
         }
         else
         {
+            nextWave++;
             onCountdown.Invoke();
         }
 
