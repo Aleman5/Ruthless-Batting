@@ -646,6 +646,11 @@
 						<Action Name="" ID="{0719ACDD-D1FF-4BDB-A842-762047426FAF}" ShortID="412556031">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -728,6 +733,11 @@
 						<Action Name="" ID="{0C425610-065E-4DA7-AC23-F00E562CFDFC}" ShortID="128478319">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -805,6 +815,11 @@
 						<Action Name="" ID="{AEBC9DC3-2158-4A86-A7CB-F5518D3B5EA1}" ShortID="754790967">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -887,6 +902,11 @@
 						<Action Name="" ID="{4EF44BB0-6641-495F-98C3-C750D34BEB9E}" ShortID="280088359">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -933,6 +953,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}" WorkUnitID="{371E09B4-A9D6-4B63-A6B3-E0F207941D25}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="cachiporrazo_electrico" ID="{74C43E96-E6F8-4B09-A6C6-5E5A383DD027}">
+					<ChildrenList>
+						<Action Name="" ID="{812942F9-89FB-4602-99C3-C908C72FA46A}" ShortID="366205770">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cachiporra" ID="{EEAE727A-CB79-498F-8B17-13266BF1BE2D}" WorkUnitID="{DA963615-B4B5-43F5-A269-4D806EA7EE91}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

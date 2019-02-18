@@ -1803,9 +1803,9 @@
 												<AudioFileSource Name="menu slide" ID="{6B4AFF3E-1C6E-45B4-9073-2EFC2B893D6C}" ShortID="788638222">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0657247205666929"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.492935404250196"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.70884273473401"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.788696646800311"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>menu\menu slide.wav</AudioFile>
@@ -1828,10 +1828,10 @@
 												<AudioFileSource Name="menu slide" ID="{87B5E8A1-C79E-4A89-9EF0-7674AACB09FD}" ShortID="732028916">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.131449441133385"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.071201780613917"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="1.80742981558405"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.03976832620954"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.0648516378036"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>menu\menu slide.wav</AudioFile>
@@ -1854,9 +1854,9 @@
 												<AudioFileSource Name="menu slide" ID="{F19E26EF-5AE5-4CC2-8919-BC28259FEA5E}" ShortID="371803262">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.99277677442658"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.69931752051853"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.158834741369508"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.24593866105384"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.46197825180547"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>menu\menu slide.wav</AudioFile>
@@ -1879,9 +1879,9 @@
 												<AudioFileSource Name="menu slide" ID="{BAEEFAF1-1A1C-4C17-8C1E-251F87841166}" ShortID="153040202">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.86593131057733"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.53960969638593"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0985870808500394"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.09961920592557"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.44102261553589"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>menu\menu slide.wav</AudioFile>
@@ -2679,13 +2679,6 @@
 							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="cachiporra" ID="{EEAE727A-CB79-498F-8B17-13266BF1BE2D}" ShortID="1042779605">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
@@ -2695,57 +2688,32 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="disparo laser_01" ID="{8F99ECE1-8698-4064-8432-92CD72DA51F7}" ShortID="1022549320">
+								<RandomSequenceContainer Name="golpes bath" ID="{7B7F366D-BD1D-46DB-B9AC-49B45731DD6A}" ShortID="440503921">
 									<PropertyList>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>55</Value>
+												<Value>46</Value>
 											</ValueList>
 										</Property>
-										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-1410</Value>
+												<Value>-200</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{612C44EA-7E20-4F40-95BF-C4EDDB000C3D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="101"/>
+															<Property Name="Min" Type="Real64" Value="-152"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
-										</Reference>
-										<Reference Name="Effect0" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
-											<ObjectRef Name="Aliasing" ID="{4CCC0D23-78CD-4B09-A62B-D3CB5E071A2F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="disparo laser" ID="{D7EEDC71-B6B6-484D-8C79-57E57F1C3A6D}" ShortID="769834401">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0134754078622599"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0168442598278249"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0488483535006923"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.301512250918067"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>disparo laser.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="disparo laser" ID="{D7EEDC71-B6B6-484D-8C79-57E57F1C3A6D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<RandomSequenceContainer Name="golpes bath" ID="{7B7F366D-BD1D-46DB-B9AC-49B45731DD6A}" ShortID="440503921">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-15</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2866,6 +2834,161 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="golpes bath5" ID="{2FDAAAFA-B8C6-4F88-994D-D16BEFA06D40}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="electricidad" ID="{65FA5A23-736B-4066-A701-7D26AB3ACEAC}" ShortID="101004891">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{10D5DCE0-BFC5-4E16-8295-CC6F3235630C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="12"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{08FF3BD1-2A77-44C8-8560-982281E4C7BD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="25"/>
+															<Property Name="Min" Type="Real64" Value="-25"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3C940A2E-50AA-4A2B-BA88-7664FB8751B3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="cahiporra electrica1" ID="{F36A5D3F-2DC1-40CD-AADC-8B5A15706821}" ShortID="950602708">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cahiporra electrica1" ID="{86EC516A-EDE9-408A-AA44-9D77C583D41B}" ShortID="1002360302">
+													<Language>SFX</Language>
+													<AudioFile>cahiporra electrica1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cahiporra electrica1" ID="{86EC516A-EDE9-408A-AA44-9D77C583D41B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="cahiporra electrica2" ID="{23D591F6-A00C-45DD-A5C8-97FC90E77753}" ShortID="915169408">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cahiporra electrica2" ID="{DD703A59-93AE-4FE5-B9CB-5295D4BA9ABA}" ShortID="209742014">
+													<Language>SFX</Language>
+													<AudioFile>cahiporra electrica2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cahiporra electrica2" ID="{DD703A59-93AE-4FE5-B9CB-5295D4BA9ABA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="cahiporra electrica3" ID="{A6E34AD7-D519-4FD3-98BA-778E5D10EE10}" ShortID="958458013">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>350</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cahiporra electrica3" ID="{6EFEC6EA-F586-4898-ABF7-BC3D1FDACCD4}" ShortID="591354261">
+													<Language>SFX</Language>
+													<AudioFile>cahiporra electrica3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cahiporra electrica3" ID="{6EFEC6EA-F586-4898-ABF7-BC3D1FDACCD4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="cahiporra electrica4" ID="{2139F287-4144-4E2F-9D61-B19991640A36}" ShortID="64826533">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-330</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0BA01DF5-50B0-4EAA-B585-085057F93F2D}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E12F5975-F0B2-4276-88E3-D17C724E743D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="cahiporra electrica4" ID="{5B8A62B0-CEDC-476A-B40B-3A5231A66923}" ShortID="481518316">
+													<Language>SFX</Language>
+													<AudioFile>cahiporra electrica4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="cahiporra electrica4" ID="{5B8A62B0-CEDC-476A-B40B-3A5231A66923}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>

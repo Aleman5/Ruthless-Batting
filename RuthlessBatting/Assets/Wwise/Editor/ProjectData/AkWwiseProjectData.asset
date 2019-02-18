@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6b9e94b84034564ab78d14cd6447ac35
-    m_lastTime: -8586522675194775808
+    m_lastTime: -8586512333148575808
     List:
     - name: bate_pared
       guid: 5a300cc3e9a1c746b7742f2139dcdd1f
@@ -224,6 +224,18 @@ MonoBehaviour:
       - ElementName: bath_al_aire
         ObjectType: 3
       Path: Default Work Unit\bath_al_aire
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: cachiporrazo_electrico
+      guid: 963ec474f8e6094ba6c65e5a383dd027
+      id: 795831195
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: cachiporrazo_electrico
+        ObjectType: 3
+      Path: Default Work Unit\cachiporrazo_electrico
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -762,7 +774,7 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b4091e37d6a9634ba6b3e0f207941d25
-    m_lastTime: -8586522675194775808
+    m_lastTime: -8586522675193475808
     List:
     - name: musica_ppal
       guid: ca1466adf3fb124382619328e4351778

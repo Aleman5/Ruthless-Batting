@@ -26,6 +26,14 @@
 							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="storyboard1a" ID="{739A5CAF-D6F3-4D23-9BF6-D29B711C5150}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="storyboard2b" ID="{2EEFB8CC-7DB1-465A-A53A-FE5EAB68CF7D}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="nivel1" ID="{A7959030-5FA2-4221-B491-9F50AE8AE468}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -46,6 +54,10 @@
 							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="storyboard1b" ID="{A32D2B1E-E875-4C81-96AF-03B6B0C19E13}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="nivel2" ID="{0BAC8870-6C7B-4963-8C60-FBF8FBE2CEE5}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -64,6 +76,10 @@
 						<Module>
 							<ObjectRef Name="enemigo_explota" ID="{702A9439-6603-4520-9C85-4BF9616FE41D}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
 							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="storyboard2a" ID="{0A67F0C5-2CA8-4E66-9599-177FEA346E04}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
+							<Position X="2" Y="5"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="respiracion_normal" ID="{D2E8A5BE-5B71-4282-9D26-83814AA26572}" WorkUnitID="{B8949E6B-3440-4A56-B78D-14CD6447AC35}"/>
@@ -157,7 +173,7 @@
 						<CurrentStateRef Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="menu" ID="{3732FD76-D76E-4846-9459-5F1CDA04249A}"/>
+						<CurrentSwitchRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="72870192" Name="bate_pared" ObjectPath="\Events\Default Work Unit\bate_pared"/>
 				<Event Id="2360431688" Name="bath_al_aire" ObjectPath="\Events\Default Work Unit\bath_al_aire"/>
+				<Event Id="795831195" Name="cachiporrazo_electrico" ObjectPath="\Events\Default Work Unit\cachiporrazo_electrico"/>
 				<Event Id="3864549211" Name="disparo_laser" ObjectPath="\Events\Default Work Unit\disparo_laser"/>
 				<Event Id="3401255271" Name="enemigo_explota" ObjectPath="\Events\Default Work Unit\enemigo_explota"/>
 				<Event Id="420892085" Name="granada" ObjectPath="\Events\Default Work Unit\granada"/>
@@ -68,7 +69,7 @@
 				</File>
 				<File Id="153040202" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>
-					<Path>SFX\menu\menu slide_FA988307.wem</Path>
+					<Path>SFX\menu\menu slide_13AFF9A2.wem</Path>
 				</File>
 				<File Id="158184130" Language="SFX">
 					<ShortName>disparo laser.wav</ShortName>
@@ -81,6 +82,10 @@
 				<File Id="200382282" Language="SFX">
 					<ShortName>sangre3.wav</ShortName>
 					<Path>SFX\sangre3_A1793BE9.wem</Path>
+				</File>
+				<File Id="209742014" Language="SFX">
+					<ShortName>cahiporra electrica2.wav</ShortName>
+					<Path>SFX\cahiporra electrica2_A1793BE9.wem</Path>
 				</File>
 				<File Id="265189159" Language="SFX">
 					<ShortName>respiracion rtpc\resp media.wav</ShortName>
@@ -100,7 +105,7 @@
 				</File>
 				<File Id="371803262" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>
-					<Path>SFX\menu\menu slide_F461D75A.wem</Path>
+					<Path>SFX\menu\menu slide_6662BC8A.wem</Path>
 				</File>
 				<File Id="372640633" Language="SFX">
 					<ShortName>respiracion rtpc\resp normal.wav</ShortName>
@@ -138,6 +143,10 @@
 					<ShortName>Storyboard 2\Ruth_Story2.wav</ShortName>
 					<Path>SFX\Storyboard 2\Ruth_Story2_CB1F3167.wem</Path>
 				</File>
+				<File Id="481518316" Language="SFX">
+					<ShortName>cahiporra electrica4.wav</ShortName>
+					<Path>SFX\cahiporra electrica4_A1793BE9.wem</Path>
+				</File>
 				<File Id="484510687" Language="SFX">
 					<ShortName>menu\menu atras.wav</ShortName>
 					<Path>SFX\menu\menu atras_DE932BAD.wem</Path>
@@ -170,6 +179,10 @@
 					<ShortName>Ruth_nivel1\Ruth_nivel1.wav</ShortName>
 					<Path>SFX\Ruth_nivel1\Ruth_nivel1_CB1F3167.wem</Path>
 				</File>
+				<File Id="591354261" Language="SFX">
+					<ShortName>cahiporra electrica3.wav</ShortName>
+					<Path>SFX\cahiporra electrica3_A1793BE9.wem</Path>
+				</File>
 				<File Id="651555151" Language="SFX">
 					<ShortName>menu\menu clic.wav</ShortName>
 					<Path>SFX\menu\menu clic_B829FD71.wem</Path>
@@ -188,7 +201,7 @@
 				</File>
 				<File Id="732028916" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>
-					<Path>SFX\menu\menu slide_8D78F790.wem</Path>
+					<Path>SFX\menu\menu slide_7089D8D9.wem</Path>
 				</File>
 				<File Id="752857847" Language="SFX">
 					<ShortName>respiracion rtpc\resp agitad.wav</ShortName>
@@ -200,7 +213,7 @@
 				</File>
 				<File Id="788638222" Language="SFX">
 					<ShortName>menu\menu slide.wav</ShortName>
-					<Path>SFX\menu\menu slide_55AEAC7C.wem</Path>
+					<Path>SFX\menu\menu slide_269DB51D.wem</Path>
 				</File>
 				<File Id="799756066" Language="SFX">
 					<ShortName>respiracion rtpc\resp normal.wav</ShortName>
@@ -253,6 +266,10 @@
 				<File Id="996366000" Language="SFX">
 					<ShortName>menu\menu atras.wav</ShortName>
 					<Path>SFX\menu\menu atras_453B7232.wem</Path>
+				</File>
+				<File Id="1002360302" Language="SFX">
+					<ShortName>cahiporra electrica1.wav</ShortName>
+					<Path>SFX\cahiporra electrica1_A1793BE9.wem</Path>
 				</File>
 				<File Id="1058815598" Language="SFX">
 					<ShortName>bate al aire\bate al aire#05.wav</ShortName>
