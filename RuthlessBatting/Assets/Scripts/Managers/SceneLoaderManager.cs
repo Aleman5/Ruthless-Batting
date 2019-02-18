@@ -6,9 +6,11 @@ public enum SceneEnum
 {
     Menu = 0,
     StoryboardN1,
-    Game3D,
+    Level1,
     StoryboardN2,
     Level2,
+    StoryboardN3,
+    Level3,
     Loading,
     TotalScenes
 };
