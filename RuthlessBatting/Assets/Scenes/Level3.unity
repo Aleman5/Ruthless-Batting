@@ -958,9 +958,11 @@ GameObject:
   m_Component:
   - component: {fileID: 68884721}
   - component: {fileID: 68884720}
-  m_Layer: 0
+  - component: {fileID: 68884723}
+  - component: {fileID: 68884722}
+  m_Layer: 12
   m_Name: Level3-Walls_28
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,6 +1026,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &68884722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68884719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &68884723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68884719}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.05, y: 2.1666672, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &69856210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,8 +2121,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300050, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2558,9 +2586,11 @@ GameObject:
   m_Component:
   - component: {fileID: 170447385}
   - component: {fileID: 170447384}
-  m_Layer: 0
+  - component: {fileID: 170447387}
+  - component: {fileID: 170447386}
+  m_Layer: 12
   m_Name: Level3-Walls_6
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2624,6 +2654,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &170447386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170447383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1166668, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &170447387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170447383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &175186870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,9 +2860,11 @@ GameObject:
   m_Component:
   - component: {fileID: 188653662}
   - component: {fileID: 188653661}
-  m_Layer: 0
+  - component: {fileID: 188653664}
+  - component: {fileID: 188653663}
+  m_Layer: 12
   m_Name: Level3-Walls_16
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2870,6 +2928,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &188653663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188653660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.35, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &188653664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188653660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &189295183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,9 +4279,11 @@ GameObject:
   m_Component:
   - component: {fileID: 268814208}
   - component: {fileID: 268814209}
-  m_Layer: 0
+  - component: {fileID: 268814211}
+  - component: {fileID: 268814210}
+  m_Layer: 12
   m_Name: Level3-Walls_65
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4261,6 +4347,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &268814210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268814207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &268814211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268814207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.783334, y: 2.2833338, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &269113137
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,8 +6229,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300082, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6210,9 +6322,11 @@ GameObject:
   m_Component:
   - component: {fileID: 392783643}
   - component: {fileID: 392783642}
-  m_Layer: 0
+  - component: {fileID: 392783645}
+  - component: {fileID: 392783644}
+  m_Layer: 12
   m_Name: Level3-Walls_40
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6276,6 +6390,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &392783644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392783641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.483335, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &392783645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392783641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &394328357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8706,9 +8846,11 @@ GameObject:
   m_Component:
   - component: {fileID: 591866179}
   - component: {fileID: 591866178}
-  m_Layer: 0
+  - component: {fileID: 591866181}
+  - component: {fileID: 591866180}
+  m_Layer: 12
   m_Name: Level3-Walls_27
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8772,6 +8914,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &591866180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591866177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.616667, y: 2.133334, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &591866181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591866177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &613158881
 GameObject:
   m_ObjectHideFlags: 0
@@ -8781,9 +8949,11 @@ GameObject:
   m_Component:
   - component: {fileID: 613158883}
   - component: {fileID: 613158882}
-  m_Layer: 0
+  - component: {fileID: 613158885}
+  - component: {fileID: 613158884}
+  m_Layer: 12
   m_Name: Level3-Walls_37
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8847,6 +9017,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &613158884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613158881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &613158885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613158881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.933334, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &615676213
 GameObject:
   m_ObjectHideFlags: 0
@@ -9622,9 +9818,11 @@ GameObject:
   m_Component:
   - component: {fileID: 684292663}
   - component: {fileID: 684292662}
-  m_Layer: 0
+  - component: {fileID: 684292665}
+  - component: {fileID: 684292664}
+  m_Layer: 12
   m_Name: Level3-Walls_3
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9688,6 +9886,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &684292664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684292661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &684292665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684292661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.616667, y: 2.1000006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &686013845
 GameObject:
   m_ObjectHideFlags: 0
@@ -9914,8 +10138,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300078, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10128,9 +10352,11 @@ GameObject:
   m_Component:
   - component: {fileID: 730536178}
   - component: {fileID: 730536179}
-  m_Layer: 0
+  - component: {fileID: 730536181}
+  - component: {fileID: 730536180}
+  m_Layer: 12
   m_Name: Level3-Walls_61
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10194,6 +10420,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &730536180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730536177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &730536181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730536177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.766667, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &730595921
 GameObject:
   m_ObjectHideFlags: 0
@@ -10426,8 +10678,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300132, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10863,8 +11115,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300052, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11184,8 +11436,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300030, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12738,9 +12990,11 @@ GameObject:
   m_Component:
   - component: {fileID: 945617491}
   - component: {fileID: 945617490}
-  m_Layer: 0
+  - component: {fileID: 945617493}
+  - component: {fileID: 945617492}
+  m_Layer: 12
   m_Name: Level3-Walls_20
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12804,6 +13058,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &945617492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945617489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.783334, y: 2.133334, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &945617493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945617489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &955917124
 GameObject:
   m_ObjectHideFlags: 0
@@ -13186,9 +13466,11 @@ GameObject:
   m_Component:
   - component: {fileID: 996950481}
   - component: {fileID: 996950480}
-  m_Layer: 0
+  - component: {fileID: 996950483}
+  - component: {fileID: 996950482}
+  m_Layer: 12
   m_Name: Level3-Walls_10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13252,6 +13534,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &996950482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996950479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3666668, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &996950483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996950479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &999046287
 GameObject:
   m_ObjectHideFlags: 0
@@ -13899,8 +14207,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300106, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15344,9 +15652,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1199510103}
   - component: {fileID: 1199510104}
-  m_Layer: 0
+  - component: {fileID: 1199510106}
+  - component: {fileID: 1199510105}
+  m_Layer: 12
   m_Name: Level3-Walls_56
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15410,6 +15720,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1199510105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199510102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &1199510106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199510102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0666666, y: 2.2166674, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1202433955
 GameObject:
   m_ObjectHideFlags: 0
@@ -17761,9 +18097,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1402176405}
   - component: {fileID: 1402176404}
-  m_Layer: 0
+  - component: {fileID: 1402176407}
+  - component: {fileID: 1402176406}
+  m_Layer: 12
   m_Name: Level3-Walls_7
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17827,6 +18165,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &1402176406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402176403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3500001, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1402176407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402176403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1411791491
 GameObject:
   m_ObjectHideFlags: 0
@@ -17836,9 +18200,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1411791493}
   - component: {fileID: 1411791492}
-  m_Layer: 0
+  - component: {fileID: 1411791495}
+  - component: {fileID: 1411791494}
+  m_Layer: 12
   m_Name: Level3-Walls_24
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17902,6 +18268,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1411791494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411791491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &1411791495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411791491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1333334, y: 2.1666672, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1416582898
 GameObject:
   m_ObjectHideFlags: 0
@@ -18123,8 +18515,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300136, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19732,9 +20124,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1572883997}
   - component: {fileID: 1572883998}
-  m_Layer: 0
+  - component: {fileID: 1572884000}
+  - component: {fileID: 1572883999}
+  m_Layer: 12
   m_Name: Level3-Walls_63
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19798,6 +20192,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1572883999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572883996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &1572884000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572883996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.65, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1573516137
 GameObject:
   m_ObjectHideFlags: 0
@@ -20349,9 +20769,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1599580100}
   - component: {fileID: 1599580099}
-  m_Layer: 0
+  - component: {fileID: 1599580102}
+  - component: {fileID: 1599580101}
+  m_Layer: 12
   m_Name: Level3-Walls_47
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20415,6 +20837,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1599580101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599580098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &1599580102
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599580098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7000003, y: 2.1666672, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1601380580
 GameObject:
   m_ObjectHideFlags: 0
@@ -20783,9 +21231,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1634333885}
   - component: {fileID: 1634333884}
-  m_Layer: 0
+  - component: {fileID: 1634333887}
+  - component: {fileID: 1634333886}
+  m_Layer: 12
   m_Name: Level3-Walls_22
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20849,6 +21299,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1634333886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634333883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
+--- !u!65 &1634333887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634333883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.966667, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1636035386
 GameObject:
   m_ObjectHideFlags: 0
@@ -21339,9 +21815,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1674347060}
   - component: {fileID: 1674347061}
-  m_Layer: 0
+  - component: {fileID: 1674347063}
+  - component: {fileID: 1674347062}
+  m_Layer: 12
   m_Name: Level3-Walls_49
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21405,6 +21883,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1674347062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674347059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5000005, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1674347063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674347059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1676650331
 GameObject:
   m_ObjectHideFlags: 0
@@ -22537,9 +23041,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1737093710}
   - component: {fileID: 1737093709}
-  m_Layer: 0
+  - component: {fileID: 1737093712}
+  - component: {fileID: 1737093711}
+  m_Layer: 12
   m_Name: Level3-Walls_4
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22603,6 +23109,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &1737093711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737093708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3333335, y: 2.1000006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1737093712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737093708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1738131839
 GameObject:
   m_ObjectHideFlags: 0
@@ -23053,9 +23585,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1788165711}
   - component: {fileID: 1788165710}
-  m_Layer: 0
+  - component: {fileID: 1788165713}
+  - component: {fileID: 1788165712}
+  m_Layer: 12
   m_Name: Level3-Walls_9
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23119,6 +23653,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &1788165712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788165709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1000001, y: 2.1166673, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1788165713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788165709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1792327782
 GameObject:
   m_ObjectHideFlags: 0
@@ -25061,9 +25621,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1983171642}
   - component: {fileID: 1983171643}
-  m_Layer: 0
+  - component: {fileID: 1983171645}
+  - component: {fileID: 1983171644}
+  m_Layer: 12
   m_Name: Level3-Walls_60
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25127,6 +25689,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1983171644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983171641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9166667, y: 2.3000004, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1983171645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983171641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &1986472373
 GameObject:
   m_ObjectHideFlags: 0
@@ -25382,9 +25970,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2006540021}
   - component: {fileID: 2006540020}
-  m_Layer: 0
+  - component: {fileID: 2006540023}
+  - component: {fileID: 2006540022}
+  m_Layer: 12
   m_Name: Level3-Walls_43
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25448,6 +26038,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &2006540022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006540019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.466667, y: 2.1666672, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2006540023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006540019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &2007252298
 GameObject:
   m_ObjectHideFlags: 0
@@ -25844,8 +26460,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1275164195
-  m_SortingLayer: 6
+  m_SortingLayerID: 1157082113
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300108, guid: 9489734bdd2a55f4ea169aea2728fb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27565,9 +28181,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2118687499}
   - component: {fileID: 2118687498}
-  m_Layer: 0
+  - component: {fileID: 2118687501}
+  - component: {fileID: 2118687500}
+  m_Layer: 12
   m_Name: Level3-Walls_19
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27631,6 +28249,32 @@ Transform:
   m_Father: {fileID: 1377579506}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &2118687500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118687497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.1, y: 2.1500006, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2118687501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118687497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd7706eda661f4dbc9d2142a9b18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfTransparency: 0.55
+  overWallSortingOrder: 4
+  behindWallSortingOrder: 2
 --- !u!1 &2122931955
 GameObject:
   m_ObjectHideFlags: 0
