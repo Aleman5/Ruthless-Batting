@@ -8,6 +8,8 @@ public class BodiesHolder : MonoBehaviour
 
     [SerializeField] int maxBodies;
     [SerializeField] Sprite[] enemyTypes;
+    [SerializeField] Vector2 minValues;
+    [SerializeField] Vector2 maxValues;
 
     void Awake()
     {
@@ -21,7 +23,7 @@ public class BodiesHolder : MonoBehaviour
 
                 GameObject o = Instantiate(obj, transform);
 
-                o.transform.position = new Vector3(Random.Range(-6.2f, 14.3f), 0.0f, Random.Range(10.1f, -10.0f));
+                o.transform.position = new Vector3(Random.Range(minValues.x, maxValues.x), 0.0f, Random.Range(minValues.y, maxValues.y));
                 o.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
 
                 o.AddComponent<SpriteRenderer>();

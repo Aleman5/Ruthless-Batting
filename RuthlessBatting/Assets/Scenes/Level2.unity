@@ -3112,6 +3112,14 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 21300014, guid: 6c9bd16f8d3e65a42a9e51837dd87274, type: 3}
   - {fileID: 21300014, guid: 064c8292c6687ab42aad661bd3e186ed, type: 3}
+  - {fileID: 21300022, guid: 12fa2e44165f76f4fb8c8088d0d9f107, type: 3}
+  - {fileID: 21300022, guid: 11ca01c6fba24b2498c3b6a74354dfd1, type: 3}
+  - {fileID: 21300014, guid: c6ddfff0f021f864096db35e98ba13a6, type: 3}
+  - {fileID: 21300014, guid: 28db88e3b0cff774faeeb6eec3cf9cf3, type: 3}
+  - {fileID: 21300022, guid: df76b59fde777c24f83f2dda69cfde1e, type: 3}
+  - {fileID: 21300022, guid: 566d2bf21be967f4e80bdb1f94cc0780, type: 3}
+  minValues: {x: -13.4, y: 7}
+  maxValues: {x: 20.1, y: -18.5}
 --- !u!4 &523599250
 Transform:
   m_ObjectHideFlags: 0
