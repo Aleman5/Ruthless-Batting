@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
             case SceneEnum.StoryboardN1:
                 RunAudio(Audios.storyboard1a);
                 break;
-            case SceneEnum.Game3D:
+            case SceneEnum.Level1:
                 RunAudio(Audios.nivel1);
                 break;
             case SceneEnum.StoryboardN2:

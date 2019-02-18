@@ -44,7 +44,7 @@ public class BuyElement : MonoBehaviour
 
         switch((SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name))
         {
-            case SceneEnum.Game3D:
+            case SceneEnum.Level1:
                 actualLevelScene = 1;
                 break;
             case SceneEnum.Level2:
