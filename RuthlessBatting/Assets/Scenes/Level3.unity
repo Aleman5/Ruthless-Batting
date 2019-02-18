@@ -1557,32 +1557,32 @@ Prefab:
     - target: {fileID: 114375268836344018, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114375268836344018, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114874219073565336, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114874219073565336, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114260449097372154, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114260449097372154, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656395664057144, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
       propertyPath: m_IsActive
@@ -1636,16 +1636,16 @@ Prefab:
     - target: {fileID: 114479954882988544, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114479954882988544, guid: add6326da89aa9a4daa0ab4d23eb2f25,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1089503514136426, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add6326da89aa9a4daa0ab4d23eb2f25, type: 2}
@@ -11304,7 +11304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1045600106
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,7 +1,50 @@
 fileFormatVersion: 2
 guid: b1930aed77569b74b849b989c87fcc5a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Level3-Furnitures_0
+    21300002: Level3-Furnitures_1
+    21300004: Level3-Furnitures_2
+    21300006: Level3-Furnitures_3
+    21300008: Level3-Furnitures_4
+    21300010: Level3-Furnitures_5
+    21300012: Level3-Furnitures_6
+    21300014: Level3-Furnitures_7
+    21300016: Level3-Furnitures_8
+    21300018: Level3-Furnitures_9
+    21300020: Level3-Furnitures_10
+    21300022: Level3-Furnitures_11
+    21300024: Level3-Furnitures_12
+    21300026: Level3-Furnitures_13
+    21300028: Level3-Furnitures_14
+    21300030: Level3-Furnitures_15
+    21300032: Level3-Furnitures_16
+    21300034: Level3-Furnitures_17
+    21300036: Level3-Furnitures_18
+    21300038: Level3-Furnitures_19
+    21300040: Level3-Furnitures_20
+    21300042: Level3-Furnitures_21
+    21300044: Level3-Furnitures_22
+    21300046: Level3-Furnitures_23
+    21300048: Level3-Furnitures_24
+    21300050: Level3-Furnitures_25
+    21300052: Level3-Furnitures_26
+    21300054: Level3-Furnitures_27
+    21300056: Level3-Furnitures_28
+    21300058: Level3-Furnitures_29
+    21300060: Level3-Furnitures_30
+    21300062: Level3-Furnitures_31
+    21300064: Level3-Furnitures_32
+    21300066: Level3-Furnitures_33
+    21300068: Level3-Furnitures_34
+    21300070: Level3-Furnitures_35
+    21300072: Level3-Furnitures_36
+    21300074: Level3-Furnitures_37
+    21300076: Level3-Furnitures_38
+    21300078: Level3-Furnitures_39
+    21300080: Level3-Furnitures_40
+    21300082: Level3-Furnitures_41
+    21300084: Level3-Furnitures_42
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,7 +136,867 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Level3-Furnitures_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1744
+        width: 634
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e096fb6e016fc143838db949eacf014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1213
+        width: 140
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034f099d0bbab5c4a935d383f9a9ebbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1587
+        width: 140
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bef9c59e148124f9c5a7086ccf7bb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_3
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1437
+        width: 105
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b792ebf4601f14f89303d242068cc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_4
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1580
+        width: 105
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f00ce63685b86246a8401109d50a796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_5
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1197
+        width: 107
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33329e6e4212e0040bee1c12be5371b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_6
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1309
+        width: 107
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97ebf5a51f29694d911ca06f7591dc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_7
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 853
+        width: 122
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d445c6d421442b04794d3be299972878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_8
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 896
+        width: 126
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7dc760cf611651478a761d769edde6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_9
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1547
+        width: 71
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92239c5211af8b6478fa2fef73401d96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_10
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1707
+        width: 346
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016a993c16ee9c841b3c1aa6d9dfc8aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_11
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1707
+        width: 321
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a63513aa131f3843a5671936790616b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_12
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 1529
+        width: 69
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a179d1a55655408498a8f4555270f90d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_13
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 2041
+        width: 116
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c249ffb82a8effa42a5bcd7e5e823b10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_14
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 2380
+        width: 149
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3174d28259b7a94bab01b8ea297cd8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_15
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2128
+        width: 218
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467aa0a528360814b878f49f658ca8ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_16
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 899
+        width: 367
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b852d86527b6df545988c19fd3240b3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_17
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 901
+        width: 399
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9b6b2e9c2697a46bfee0e5b83b6889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_18
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 200
+        width: 125
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e8614f04a778c43907f4d88f731199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_19
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 277
+        width: 129
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccfd0e2957bb1442aec3c30bd1246c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_20
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 67
+        width: 103
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f8c2b06afd44b419bf5244e93a2976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_21
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 399
+        width: 165
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4231a79a9de804292a356dd1678271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_22
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 197
+        width: 187
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3572fe059f09e142b870348a17d954a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_23
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 333
+        width: 187
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed58e0a50cdb542428fed53f2fa9e460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_24
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 441
+        width: 235
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b31bb707dca3e4898d200fc61a4645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_25
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 416
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3183ba681b570194e92deb7cb5f01f91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_26
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 683
+        width: 159
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fce0c24630bf347ada99d1f5537f80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_27
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 740
+        width: 159
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bb219a836fe2442a95b3544eb44216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_28
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 781
+        width: 159
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2584acc748252c540b847ffc377fbc23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_29
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 838
+        width: 159
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64748f018720304b9d66188de743776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_30
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 881
+        width: 159
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540cdc4a4bdb96f4393ab0086c8afad4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_31
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 938
+        width: 159
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea88d8770dcc2fd40b0d7f49707f6a59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_32
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 620
+        width: 81
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1166b420965474798a7877456653b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_33
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 964
+        width: 81
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfd2a924dd125b48a5bdcf524910ea8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_34
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 975
+        width: 238
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d756eb5041a2d854da8b93e424b3a2b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_35
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 622
+        width: 88
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85719a8e86a2d7b479829c240c126230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_36
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 1191
+        width: 38
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9271789ca52103c47a1e706f7ce5af86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_37
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 1459
+        width: 38
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bebc1a78a1dab48901a59ee99dd489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_38
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 1579
+        width: 33
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b1fcbafce7bb644b6d2445a09625de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_39
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 1799
+        width: 442
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f66c3df62c35564f90d8292a4f29973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_40
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 1360
+        width: 402
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818d31698bcdbb44ca767423aaa7a49b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_41
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 1360
+        width: 38
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b227b524dbd344146a0423197bba3ce8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level3-Furnitures_42
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 1711
+        width: 401
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c2825b47dee8e4aba8aefaf7022f05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
