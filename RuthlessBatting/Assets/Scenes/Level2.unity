@@ -10124,11 +10124,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4073995042341776, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.61
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 4437108005052334, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 19.72
+      value: 17.79
       objectReference: {fileID: 0}
     - target: {fileID: 4437108005052334, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10136,7 +10136,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4437108005052334, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7.2
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 114392102795107018, guid: ca3264337fd2f3d4daa24787e663133b,
         type: 2}
@@ -10287,6 +10287,72 @@ Prefab:
       propertyPath: playerLimit
       value: 
       objectReference: {fileID: 1234334123}
+    - target: {fileID: 4654039519675934, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654039519675934, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224971130467642196, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 224971130467642196, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 224911727359670096, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224911727359670096, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224911727359670096, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200624697803110, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200624697803110, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224813448630841702, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 224813448630841702, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855556681245012, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855556681245012, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855556681245012, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
   m_IsPrefabAsset: 0
@@ -12791,7 +12857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2010963725
 MonoBehaviour:
   m_ObjectHideFlags: 0
