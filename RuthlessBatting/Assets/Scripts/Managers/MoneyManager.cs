@@ -65,26 +65,27 @@ public class MoneyManager : MonoBehaviour
 
     void AddMoney()
     {
-        int moneyToAdd = (int)(Random.Range(minMoneyToGive, maxMoneyToGive) * moneyMultiplier);
-        moneyHolderScript.ActualMoney = moneyToAdd;
+        if (player)
+        {
+            int moneyToAdd = (int)(Random.Range(minMoneyToGive, maxMoneyToGive) * moneyMultiplier);
+            moneyHolderScript.ActualMoney = moneyToAdd;
 
-        Vector3 extraPos = new Vector3(Random.Range(-0.7f, 0.7f), 0.0f, 1.0f);
-        Transform go = Instantiate(multiplier, player.position + extraPos, player.rotation);
-        TextMeshPro tm = go.GetComponentInChildren<TextMeshPro>();
-        tm.font = font;
-        tm.fontSize = 7;
-        tm.text = "x" + moneyMultiplier;
-        tm.color = colorGradient.Evaluate(moneyMultiplier - 1.0f);
+            Vector3 extraPos = new Vector3(Random.Range(-0.7f, 0.7f), 0.0f, 1.0f);
+            Transform go = Instantiate(multiplier, player.position + extraPos, player.rotation);
+            TextMeshPro tm = go.GetComponentInChildren<TextMeshPro>();
+            tm.font = font;
+            tm.fontSize = 7;
+            tm.text = "x" + moneyMultiplier;
+            tm.color = colorGradient.Evaluate(moneyMultiplier - 1.0f);
 
-        timeLeft = timeToTurnBack;
-        moneyMultiplier += 0.2f;
+            timeLeft = timeToTurnBack;
+            moneyMultiplier += 0.2f;
 
-        if (moneyMultiplier < 1.8f)
-            AudioManager.Instance.RunAudio(Audios.respiracion_media);
-        else
-            AudioManager.Instance.RunAudio(Audios.respiracion_agitada);
-
-
+            if (moneyMultiplier < 1.8f)
+                AudioManager.Instance.RunAudio(Audios.respiracion_media);
+            else
+                AudioManager.Instance.RunAudio(Audios.respiracion_agitada);
+        }
     }
 
     static public MoneyManager Instance

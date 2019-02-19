@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
         if (!CompareTag("Player"))
         {
             MoneyManager.Instance.AddToListeners(this);
-
         }
     }
 
