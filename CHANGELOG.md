@@ -4,25 +4,54 @@ All notable changes will be documented here.
 
 ## [v0.16]
 ### Added
-- New design for the Player.
+- How to Play Menu.
+- Options Menu works.
+- Sellers appear at Level 2.
+- PlayerPrefs.
+- Level 3.
+- Storyboard 2.
+- Storyboard 3.
+- Storyboard 4.
 
 ### Updated
+- Improved Shinu's attack speed.
+- All the product is in the same language.
+- Blood configured at Level 2.
+- Credits Menu.
+- Wwise.
+
+### Fixed
+- Buying through a Wall is not able.
+- Blood sorting order.
+- When the Player dies, the Restart Menu appears.
+- Sellers appear above the Furnitures.
+- SaveLoad saves correctly when passing to another Level.
+
+
+## [v0.15]
+### Added
+- New design for the Player.
+- Sprites for Blood Particles.
+- Art for publication.
+- Tutorial.
+- Implemented Wwise.
+- SFX.
+- Loading Scene.
+- Death animations for Enemies.
+
+### Updated
+- Corrected HUD Sprites on the Level 1 and 2.
+- Implementation of the illumination on the Level 1.
+- Configured music.
+- Corrected some orthographic errors on the Storyboard.
 - User can skip the Storyboard.
 - Menu canvas.
 - Improved Enemy Shooter.
 - Configured music.
 
+### Fixed
+- Start and Continue buttons aren't bloqued on the Menu.
 
-## [v0.15]
-### Added
-- Sprites for Blood Particles.
-- Art for publication.
-- SFX.
-
-### Updated
-- Corrected HUD Sprites on the Level 1 and 2.
-- Implementation of the ilumination on the Level 1.
-- Configured music.
 
 
 ## [v0.14]
