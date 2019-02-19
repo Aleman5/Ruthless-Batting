@@ -18078,6 +18078,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 20998134012161538, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+        type: 2}
+      propertyPath: orthographic size
+      value: 7.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81363642792519570, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: c3c5c4febf63cfd4bb5bc098f1971a3d, type: 2}
@@ -26389,7 +26394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2010963725
 MonoBehaviour:
   m_ObjectHideFlags: 0
