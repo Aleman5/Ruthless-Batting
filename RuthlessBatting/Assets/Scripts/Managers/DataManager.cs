@@ -39,7 +39,7 @@ public class DataManager
     {
         data.actualScene = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
 
-        if (data.actualScene != SceneEnum.StoryboardN1 && data.actualScene != SceneEnum.StoryboardN2)
+        if (data.actualScene != SceneEnum.StoryboardN1 && data.actualScene != SceneEnum.StoryboardN2 && data.actualScene != SceneEnum.StoryboardN3 && data.actualScene != SceneEnum.StoryboardN4)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
