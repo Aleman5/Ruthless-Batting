@@ -386,7 +386,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Explode
-  m_Speed: 2
+  m_Speed: 0.3
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -398,7 +398,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dc35646ee93bad848a827f513c71190a, type: 2}
+  m_Motion: {fileID: 7400000, guid: a526794237d69bb409394d138c96528a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
