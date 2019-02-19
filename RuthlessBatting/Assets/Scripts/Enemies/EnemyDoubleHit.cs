@@ -19,7 +19,7 @@ public class EnemyDoubleHit : Enemy
 
     protected override void Patrolling()
     {
-        if (PlayerOnSight())
+        if (player && PlayerOnSight())
             OnEnemyInSight();
 
         if (!nav.pathPending && nav.remainingDistance < 0.5f)

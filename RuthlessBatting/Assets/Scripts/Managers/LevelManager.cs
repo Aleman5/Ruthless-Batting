@@ -75,7 +75,7 @@ public class LevelManager : MonoBehaviour
     void Restart()
     {
         restartText.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0.6f;
         alive = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;

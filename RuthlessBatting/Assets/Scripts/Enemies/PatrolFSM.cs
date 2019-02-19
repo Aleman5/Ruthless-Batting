@@ -20,7 +20,7 @@ public class PatrolFSM : MonoBehaviour, IPatrol
     {
         if (points.Length == 0)
             return;
-
+        
         do{
             destPoint = (destPoint + 1) % points.Length;
         } while (actualPoint == destPoint);

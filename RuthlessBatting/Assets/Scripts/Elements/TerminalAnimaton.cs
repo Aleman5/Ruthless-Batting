@@ -15,7 +15,6 @@ public class TerminalAnimaton : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         BuyElement script = GetComponentInParent<BuyElement>();
-        //script.OnInteract.AddListener(ChangeSprite);
         script.OnNotEnoughMoney.AddListener(ChangeColorSprite);
     }
 

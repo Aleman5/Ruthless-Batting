@@ -48,8 +48,13 @@ public abstract class EnemyBase : MonoBehaviour
         patrol    = GetComponent<IPatrol>();
 
         health = GetComponent<Health>();
-
         health.OnDeath().AddListener(OnNoHealth);
+
+        if (player)
+        {
+            Health playerHealth = player.GetComponentInParent<Health>();
+            playerHealth.OnDeath().AddListener(OnPlayerDeath);
+        }
     }
 
     protected void Update()
@@ -103,6 +108,10 @@ public abstract class EnemyBase : MonoBehaviour
     {
 
     }
+    virtual protected void OnPlayerDeath()
+    {
+
+    }
 
     public bool PlayerOnSight()
     {
@@ -142,7 +151,10 @@ public abstract class EnemyBase : MonoBehaviour
 
     public Vector3 GetDistance()
     {
-        return player.transform.position - transform.position;
+        if (player)
+            return player.transform.position - transform.position;
+        else
+            return new Vector3(0.1f, 0.1f);
     }
 
     public Vector3 GetDestinationDistance()

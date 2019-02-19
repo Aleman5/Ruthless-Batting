@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Enemy : EnemyBase
 {
@@ -20,6 +21,7 @@ public class Enemy : EnemyBase
         OutOfAttackRange,
         OnHit,
         NoHealth,
+        OnPlayerDeath,
         Count
     }
 
@@ -45,6 +47,9 @@ public class Enemy : EnemyBase
         fsm.SetRelation( (int)States.Chase,    (int)Events.NoHealth,          (int)States.Death    );
         fsm.SetRelation( (int)States.Attack,   (int)Events.NoHealth,          (int)States.Death    );
         fsm.SetRelation( (int)States.Recovery, (int)Events.NoHealth,          (int)States.Death    );
+        fsm.SetRelation( (int)States.Chase,    (int)Events.OnPlayerDeath,     (int)States.Patrol   );
+        fsm.SetRelation( (int)States.Attack,   (int)Events.OnPlayerDeath,     (int)States.Patrol   );
+        fsm.SetRelation( (int)States.Recovery, (int)Events.OnPlayerDeath,     (int)States.Patrol   );
     }
 
     // ===========================================================
@@ -168,6 +173,23 @@ public class Enemy : EnemyBase
     protected override void OnNoHealth()
     {
         fsm.SendEvent((int)Events.NoHealth);
+    }
+
+    protected override void OnPlayerDeath()
+    {
+        fsm.SendEvent((int)Events.OnPlayerDeath);
+
+        StartCoroutine(WaitAMoment());
+    }
+
+    IEnumerator WaitAMoment()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        patrol.FindNextPoint();
+        nav.speed = speed;
+
+        yield break;
     }
 
     public int GetActualState()

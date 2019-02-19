@@ -59,6 +59,7 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().OnDeath().AddListener(DisableObject);
     }
 
     void Update()
@@ -170,6 +171,13 @@ public class WaveSpawner : MonoBehaviour
         }
 
         go.GetComponent<IPatrol>().SetPoints(patrolHolders[spawnHolder].GetComponentsInChildren<Transform>());
+    }
+
+    void DisableObject()
+    {
+        StopAllCoroutines();
+
+        enabled = false;
     }
 
     public string GetActualWaveName()

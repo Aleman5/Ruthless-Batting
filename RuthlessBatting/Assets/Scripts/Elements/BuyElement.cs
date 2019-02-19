@@ -55,7 +55,12 @@ public class BuyElement : MonoBehaviour
 
     void Update()
     {
-        Vector3 dist = objective.position - transform.position;
+        Vector3 dist;
+
+        if (objective)
+            dist = objective.position - transform.position;
+        else
+            dist = new Vector3(distanceToInteract, distanceToInteract);
 
         if (dist.magnitude < distanceToInteract && Physics.Raycast(transform.position, dist, dist.magnitude, obstacules))
         {

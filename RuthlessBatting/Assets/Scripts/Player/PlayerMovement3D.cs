@@ -17,8 +17,15 @@ public class PlayerMovement3D : MonoBehaviour
     Vector3 movForce;
     Vector3 stairsDir;
 
+    const string overBloodLayer = "OverBlood";
+    const string overBloodUpLayer = "OverBloodUp";
+    int overBloodSortingOrder = 1;
+
     void Start()
     {
+        Health health = GetComponent<Health>();
+        health.OnDeath().AddListener(Death);
+
         originalMovSpeed = speed;
 
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
@@ -28,13 +35,10 @@ public class PlayerMovement3D : MonoBehaviour
             if (upgValues[(int)Buyable.MOVSPEED] > 0) SetStats(upgValues[(int)Buyable.MOVSPEED]);
             if (upgValues[(int)Buyable.ATKSPEED] > 0) GetComponentInChildren<Bat>().SetStats(upgValues[(int)Buyable.ATKSPEED]);
             if (upgValues[(int)Buyable.GRENADE ] > 0) GetComponentInChildren<GrenadeLauncher>().SetStats(upgValues[(int)Buyable.GRENADE]);
-            if (upgValues[(int)Buyable.EXTRAHP ] > 0) GetComponent<Health>().Amount = upgValues[(int)Buyable.EXTRAHP];
+            if (upgValues[(int)Buyable.EXTRAHP ] > 0) health.Amount = upgValues[(int)Buyable.EXTRAHP];
         }
 
         stairsDir.x = 0.0f;
-        //stairsDir.y = Mathf.Sin(angleOfTheStairs);
-        //stairsDir.z = Mathf.Cos(angleOfTheStairs);
-
         stairsDir.y = 0.587785f;
         stairsDir.z = 0.809017f;
 
@@ -91,22 +95,11 @@ public class PlayerMovement3D : MonoBehaviour
         newForce.y = 0;
         newForce = newForce.normalized * dashForce;
 
-        // Dash depending on the player LookAt
-        /*if (movForce.z > 0)
-            newForce = Vector3.forward * dashForce;
-        else if (movForce.z < 0)
-            newForce = -Vector3.forward * dashForce;
-        else if (movForce.x > 0)
-            newForce = Vector3.right * dashForce;
-        else
-            newForce = -Vector3.right * dashForce;*/
-
         rigidbodyToUse.AddForce(newForce);
     }
 
     public int GetUpgradeValue(int index)
     {
-        
         switch (index)
         {
             case (int)Buyable.MOVSPEED:
@@ -120,6 +113,30 @@ public class PlayerMovement3D : MonoBehaviour
         }
 
         return -1;
+    }
+
+    void Death()
+    {
+        Transform t1 = transform.GetChild(1);
+
+        SpriteRenderer sR = t1.GetComponent<SpriteRenderer>();
+        if (sR.sortingLayerName != "OverWallUp" && sR.sortingLayerName != "BehindWallUp")
+        {
+            sR.sortingLayerName = overBloodLayer;
+            sR.sortingOrder = overBloodSortingOrder;
+        }
+        else
+        {
+            sR.sortingLayerName = overBloodUpLayer;
+            sR.sortingOrder = overBloodSortingOrder;
+        }
+
+        PlayerAnimations anim = t1.GetComponent<PlayerAnimations>();
+        anim.Death();
+
+        t1.parent = null;
+
+        Destroy(gameObject);
     }
 
     public void SetStats(int level)

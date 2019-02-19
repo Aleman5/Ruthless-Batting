@@ -6,7 +6,7 @@ public class EnemySuperior : Enemy
     {
         //base.Patrol();
 
-        if (PlayerOnSight())
+        if (player && PlayerOnSight())
             OnEnemyInSight();
 
         if (!nav.pathPending && nav.remainingDistance < 0.5f)
