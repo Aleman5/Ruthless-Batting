@@ -50,6 +50,9 @@ public class BuyElement : MonoBehaviour
             case SceneEnum.Level2:
                 actualLevelScene = 2;
                 break;
+            case SceneEnum.Level3:
+                actualLevelScene = 3;
+                break;
         }
     }
 
