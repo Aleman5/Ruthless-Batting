@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryboardN1.unity
     guid: 9dcac03fef0583d4e9644023bb6a0ab1
   - enabled: 1
-    path: Assets/Scenes/Game3D.unity
+    path: Assets/Scenes/Level1.unity
     guid: ed8780ef0dc50d549b145ce4bfd5f268
   - enabled: 1
     path: Assets/Scenes/StoryboardN2.unity
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 2308ad89f9abb904abd924df7050708f
+  - enabled: 1
+    path: Assets/Scenes/StoryboardN4.unity
+    guid: 28fe0d1ba6540054ca8ef2135a4d6d51
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: f8c0f7412566afb419c9d3b264a3fe42
