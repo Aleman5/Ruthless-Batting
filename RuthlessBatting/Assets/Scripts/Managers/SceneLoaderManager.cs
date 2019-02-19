@@ -11,6 +11,7 @@ public enum SceneEnum
     Level2,
     StoryboardN3,
     Level3,
+    StoryboardN4,
     Loading,
     TotalScenes
 };

@@ -66,6 +66,14 @@ public class StoryController : MonoBehaviour {
                         AudioManager.Instance.RunAudio(Audios.storyboard2b);
                         impPanelState = true;
                         break;
+                    case SceneEnum.StoryboardN3:
+                        AudioManager.Instance.RunAudio(Audios.storyboard2b);
+                        impPanelState = true;
+                        break;
+                    case SceneEnum.StoryboardN4:
+                        AudioManager.Instance.RunAudio(Audios.storyboard2b);
+                        impPanelState = true;
+                        break;
                 }
         }
     }
