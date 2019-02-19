@@ -40,8 +40,9 @@ public class HudManager : MonoBehaviour
         //spawner.OnWaveChange.AddListener(ShowWaveText);
         spawner.OnCountdown.AddListener(CountdownTextSituation);
         spawner.OnCountdown.AddListener(UpdateCrosses);
-        spawner.OnCountdown.AddListener(ChangeSavingState);
         moneyHolder.OnMoneyChange.AddListener(OnMoneyChanged);
+
+        LevelManager.Instance.OnSaving.AddListener(ChangeSavingState);
 
         moneyChange.text = "$" + moneyHolder.ActualMoney;
         //waveText.text = spawner.GetActualWaveName();

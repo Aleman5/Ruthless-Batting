@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -21,6 +22,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Scene")]
     [SerializeField] SceneEnum actualScene;
+
+    [HideInInspector] UnityEvent onSaving = new UnityEvent();
 
     bool gameWon = false;
     bool alive = true;
@@ -85,7 +88,10 @@ public class LevelManager : MonoBehaviour
     {
         foreach (int checkpoint in checkpoints)
             if (checkpoint == waveSpawnerScript.GetActualWaveIndex())
+            {
+                OnSaving.Invoke();
                 SaveLoad.Save();
+            }
     }
 
     void Update()
@@ -143,6 +149,11 @@ public class LevelManager : MonoBehaviour
     public int[] GetCheckpoints()
     {
         return checkpoints;
+    }
+
+    public UnityEvent OnSaving
+    {
+        get { return onSaving; }
     }
 
     static public LevelManager Instance
