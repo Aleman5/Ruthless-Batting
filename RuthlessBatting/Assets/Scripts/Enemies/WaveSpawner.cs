@@ -64,8 +64,6 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G)) waveCompleted = true;
-
         if (state == SpawnStates.WON) return;
 
         if(state == SpawnStates.WAITING)

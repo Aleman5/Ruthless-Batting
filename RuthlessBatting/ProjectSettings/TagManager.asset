@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - WaveSpawner
   - StoryPanel
+  - Floor
   layers:
   - Default
   - TransparentFX

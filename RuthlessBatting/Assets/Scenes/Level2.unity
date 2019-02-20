@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 23951171}
   m_Layer: 14
   m_Name: UpFloor8
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -638,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &29923298
 Transform:
   m_ObjectHideFlags: 0
@@ -995,6 +995,7 @@ GameObject:
   - component: {fileID: 56053423}
   - component: {fileID: 56053424}
   - component: {fileID: 56053428}
+  - component: {fileID: 56053429}
   m_Layer: 8
   m_Name: Player3D
   m_TagString: Player
@@ -1116,6 +1117,17 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!114 &56053429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 56053421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c200b8e585e36964fbc3e56d2be41b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &72648338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1609,7 @@ GameObject:
   - component: {fileID: 150149583}
   m_Layer: 14
   m_Name: UpFloor5
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1739,6 +1751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170469174}
   - component: {fileID: 170469175}
+  - component: {fileID: 170469176}
   m_Layer: 0
   m_Name: NeonFinal
   m_TagString: Untagged
@@ -1791,8 +1804,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1787245697
-  m_SortingLayer: 10
+  m_SortingLayerID: -328056833
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 14ff8edcce5a9c94fa7a1728d709955e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1805,6 +1818,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &170469176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170469173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4f608a83d1d084180f9251de689e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &227456109
 Prefab:
   m_ObjectHideFlags: 0
@@ -4110,7 +4134,7 @@ GameObject:
   - component: {fileID: 589506215}
   m_Layer: 14
   m_Name: UpFloor3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4858,7 +4882,7 @@ GameObject:
   - component: {fileID: 769494585}
   m_Layer: 14
   m_Name: UpFloor7
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7373,7 +7397,7 @@ GameObject:
   - component: {fileID: 1256650275}
   m_Layer: 14
   m_Name: UpFloor1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7414,7 +7438,7 @@ GameObject:
   - component: {fileID: 1267888023}
   m_Layer: 14
   m_Name: UpFloor9
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7558,7 +7582,7 @@ GameObject:
   - component: {fileID: 1346710169}
   m_Layer: 14
   m_Name: UpFloor6
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8624,7 +8648,7 @@ GameObject:
   - component: {fileID: 1523294662}
   m_Layer: 14
   m_Name: UpFloor2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9863,7 +9887,7 @@ GameObject:
   - component: {fileID: 1649320175}
   m_Layer: 14
   m_Name: UpFloor4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10560,7 +10584,7 @@ GameObject:
   - component: {fileID: 1686322401}
   m_Layer: 14
   m_Name: UpFloor10
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11976,6 +12000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847377490}
   - component: {fileID: 1847377491}
+  - component: {fileID: 1847377492}
   m_Layer: 0
   m_Name: Neon
   m_TagString: Untagged
@@ -12028,8 +12053,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1787245697
-  m_SortingLayer: 10
+  m_SortingLayerID: 638719217
+  m_SortingLayer: 16
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5b139cb9ec1152646956f338c5a035c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12042,6 +12067,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1847377492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1847377489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4f608a83d1d084180f9251de689e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852297873
 GameObject:
   m_ObjectHideFlags: 0
