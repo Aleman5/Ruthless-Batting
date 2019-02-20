@@ -789,6 +789,34 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2024255898}
   m_Script: {fileID: 11500000, guid: 9afc6855ae625bd49add9b2bd3ade4cd, type: 3}
+--- !u!1 &57216722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57216723}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57216723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57216722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.55, y: 0, z: -0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58080988
 GameObject:
   m_ObjectHideFlags: 0
@@ -14755,6 +14783,7 @@ MonoBehaviour:
   hud: {fileID: 975392780}
   mainCamera: {fileID: 1400589923}
   newMaxSizeForCamera: 7.5
+  levelManager: {fileID: 1826606857}
 --- !u!4 &1060802067
 Transform:
   m_ObjectHideFlags: 0
@@ -18358,6 +18387,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1333334, y: 2.1666672, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1415849094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4545248237825006, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1400589922}
 --- !u!1 &1416582898
 GameObject:
   m_ObjectHideFlags: 0
@@ -24427,6 +24461,8 @@ MonoBehaviour:
   restartText: {fileID: 1982700850}
   checkpoints: 010000000300000005000000
   actualScene: 6
+  positionToRestart: {x: 4.55, y: 0, z: -0.2}
+  camera: {fileID: 1415849094}
 --- !u!4 &1826606858
 Transform:
   m_ObjectHideFlags: 0

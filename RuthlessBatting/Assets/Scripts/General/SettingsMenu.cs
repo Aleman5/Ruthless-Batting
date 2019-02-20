@@ -51,6 +51,8 @@ public class SettingsMenu : MonoBehaviour {
                 toggle2.isOn = false;
             }
         }
+
+        PlayerPrefs.SetInt("restarted", 0);
     }
 
     void Start()

@@ -23,10 +23,29 @@ public class LevelManager : MonoBehaviour
     [Header("Scene")]
     [SerializeField] SceneEnum actualScene;
 
+    [Header("Variales")]
+    [SerializeField] Vector3 positionToRestart;
+    [SerializeField] Transform camera;
+
     [HideInInspector] UnityEvent onSaving = new UnityEvent();
 
     bool gameWon = false;
     bool alive = true;
+    bool levelRestarted = false;
+
+    void Awake()
+    {
+        if (PlayerPrefs.HasKey("restarted"))
+        {
+            if (PlayerPrefs.GetInt("restarted") == 1)
+            {
+                PlayerPrefs.SetInt("restarted", 0);
+                PlayerHealthScript.GetComponent<Transform>().position = positionToRestart;
+                camera.position = new Vector3(positionToRestart.x, 10.0f, positionToRestart.z);
+                levelRestarted = true;
+            }
+        }
+    }
 
     void Start()
     {
@@ -109,6 +128,8 @@ public class LevelManager : MonoBehaviour
             {
                 Time.timeScale = 1f;
 
+                PlayerPrefs.SetInt("restarted", 1);
+
                 UpperFloorObjects.EmptyList();
                 SceneLoaderManager.Instance.ReloadScene(SceneManager.GetActiveScene());
             }
@@ -149,6 +170,11 @@ public class LevelManager : MonoBehaviour
     public int[] GetCheckpoints()
     {
         return checkpoints;
+    }
+
+    public bool IsLevelRestarted()
+    {
+        return levelRestarted;
     }
 
     public UnityEvent OnSaving

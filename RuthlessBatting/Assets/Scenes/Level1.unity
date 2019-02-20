@@ -8233,6 +8233,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1400589922}
   m_Script: {fileID: 11500000, guid: 9fce6f9f639d249429320f2c361dde24, type: 3}
+--- !u!4 &1400589924 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4633770012314810, guid: c3c5c4febf63cfd4bb5bc098f1971a3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1400589922}
 --- !u!1 &1403231705
 GameObject:
   m_ObjectHideFlags: 0
@@ -10543,6 +10548,8 @@ MonoBehaviour:
   restartText: {fileID: 1982700850}
   checkpoints: 000000000300000005000000
   actualScene: 2
+  positionToRestart: {x: 4.04, y: 0, z: -5}
+  camera: {fileID: 1400589924}
 --- !u!4 &1826606858
 Transform:
   m_ObjectHideFlags: 0
