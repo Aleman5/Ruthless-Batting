@@ -5,18 +5,12 @@ public class ZoomWhenKilling : MonoBehaviour
     [SerializeField] float distanceToZoom;
     [SerializeField] float velocityTurningBack;
     [SerializeField] float minCameraSize;
-
-    float maxSizeOfView;
+    [SerializeField] float maxCameraSize;
     bool isGoingBack;
-
-    void Awake()
-    {
-        maxSizeOfView = Camera.main.orthographicSize;
-    }
 
     void Update()
     {
-        if (isGoingBack && Camera.main.orthographicSize < maxSizeOfView)
+        if (isGoingBack && Camera.main.orthographicSize < maxCameraSize)
         {
             Camera.main.orthographicSize += velocityTurningBack;
         }
@@ -27,6 +21,12 @@ public class ZoomWhenKilling : MonoBehaviour
         if(Camera.main.orthographicSize > minCameraSize)
             Camera.main.orthographicSize -= distanceToZoom;
         isGoingBack = false;
+    }
+
+    public void SetNewMaxSize(float newSize)
+    {
+        maxCameraSize = newSize;
+        IsGoingBack = true;
     }
 
     public bool IsGoingBack

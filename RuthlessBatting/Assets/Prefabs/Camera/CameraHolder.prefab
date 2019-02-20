@@ -20,10 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4633770012314810}
   - component: {fileID: 20998134012161538}
-  - component: {fileID: 81363642792519570}
   - component: {fileID: 114188825020694182}
   - component: {fileID: 114581500651849516}
   - component: {fileID: 114807119290039100}
+  - component: {fileID: 114259937788152964}
+  - component: {fileID: 114001184123117420}
+  - component: {fileID: 114577813826731722}
   m_Layer: 16
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -55,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678698915250686}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.04, y: 10, z: -5}
+  m_LocalPosition: {x: -16.2, y: 10, z: -22.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4633770012314810}
@@ -69,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543311250116790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4545248237825006}
@@ -99,7 +101,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.2
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -115,13 +117,27 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &81363642792519570
-AudioListener:
+--- !u!114 &114001184123117420
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543311250116790}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dd3a60693ebed40bbd98b265b199a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!114 &114180423866259744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +166,30 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   player: {fileID: 0}
+--- !u!114 &114259937788152964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543311250116790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14583c430d006047a718f6dde87f577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &114577813826731722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543311250116790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5624261637e2d45a29bc7fa2697d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114581500651849516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cffc6aed3905e0b4abe0a199db88f182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 2
-  roughness: 7
+  magnitude: 3
+  roughness: 8
   fadeInTime: 0.1
   fadeOutTime: 0.5
 --- !u!114 &114807119290039100
@@ -189,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fce6f9f639d249429320f2c361dde24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToZoom: 0.28
-  velocityTurningBack: 0.01
-  minCameraSize: 3.8
+  distanceToZoom: 0.22
+  velocityTurningBack: 0.015
+  minCameraSize: 4.1
+  maxCameraSize: 0
