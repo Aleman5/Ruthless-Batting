@@ -31,16 +31,19 @@ public class BuyElement : MonoBehaviour
     void Awake()
     {
         buyable = GetComponent<IBuyable>();
+        text = GetComponentInChildren<TextMeshPro>();
+        moneyHolder = objective.GetComponent<MoneyHolder>();
 
         if (File.Exists(Application.persistentDataPath + "/rbSave.bp"))
+        {
             levelOfTheElement = SaveLoad.saveGame.data.playerUpgrades[(int)buyable.GetBuyable()];
+            for (int i = 0; i < levelOfTheElement; i++)
+                LevelUpThePrice();
+        }
         else
             levelOfTheElement = 0;
 
-        text = GetComponentInChildren<TextMeshPro>();
-        //text.text = buyable.GetBuyable() + " - $" + priceOfTheElement;
         text.text = "" + priceOfTheElement;
-        moneyHolder = objective.GetComponent<MoneyHolder>();
 
         switch((SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name))
         {
@@ -105,7 +108,11 @@ public class BuyElement : MonoBehaviour
         // Example 2: 100 + 100 % 10 = 110 + 110 % 10 = 121 % 10 = 133;
 
         priceOfTheElement += (int)(priceOfTheElement * extraPercentagePerLevelUp);
-        text.text = ""+priceOfTheElement;
+
+        if (levelOfTheElement < 3 * actualLevelScene)
+            text.text = "" + priceOfTheElement;
+        else
+            text.text = "";
     }
 
     public bool IsOnRange()
