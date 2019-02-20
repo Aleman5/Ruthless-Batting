@@ -99,7 +99,7 @@ public class LevelManager : MonoBehaviour
         if (gameWon && InputManager.Instance.GetActionButton())
         {
             Time.timeScale = 1f;
-            ChangeLevel2();
+            GoToNextLevel();
         }
             
 
@@ -133,7 +133,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    void ChangeLevel2()
+    void GoToNextLevel()
     {
         SaveLoad.Save();
         SceneLoaderManager.Instance.LoadNextScene(actualScene);

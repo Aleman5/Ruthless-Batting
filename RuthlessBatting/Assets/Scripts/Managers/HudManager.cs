@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
 public class HudManager : MonoBehaviour
 {
@@ -9,7 +9,6 @@ public class HudManager : MonoBehaviour
 
     [Header("Texts")]
     [SerializeField] TextMeshProUGUI moneyChange;
-    //[SerializeField] TextMeshProUGUI waveText;
     [SerializeField] TextMeshProUGUI timeLeft;
     [SerializeField] TextMeshProUGUI saving;
     [SerializeField] TextMeshProUGUI nextWaveComming;
@@ -20,7 +19,6 @@ public class HudManager : MonoBehaviour
     [SerializeField] MoneyHolder moneyHolder;
 
     [Header("Images")]
-    //[SerializeField] Image hud;
     [SerializeField] Image cross;
 
     [Header("Sprites")]
@@ -37,32 +35,20 @@ public class HudManager : MonoBehaviour
 
     void Start()
     {
-        //spawner.OnWaveChange.AddListener(ShowWaveText);
         spawner.OnCountdown.AddListener(CountdownTextSituation);
         spawner.OnCountdown.AddListener(UpdateCrosses);
+        spawner.OnLevelComplete.AddListener(Win);
         moneyHolder.OnMoneyChange.AddListener(OnMoneyChanged);
 
         LevelManager.Instance.OnSaving.AddListener(ChangeSavingState);
 
         moneyChange.text = "$" + moneyHolder.ActualMoney;
-        //waveText.text = spawner.GetActualWaveName();
         checkpoints = levelManager.GetCheckpoints();
 
         imgCrosses = new Image[spawner.GetMountOfWaves()];
 
-        //imgCrosses[0] = Instantiate(cross, crosses.position, crosses.rotation, crosses);
         for (int i = spawner.GetMountOfWaves() - 1; i > -1; i--)
-        {
-            bool saveCross = false;
-
-            foreach (int checkpoint in checkpoints)
-                if (i == checkpoint - 1) saveCross = true;
-
             imgCrosses[i] = Instantiate(cross, new Vector3(crosses.position.x - 80 * (spawner.GetMountOfWaves() - i), crosses.position.y, crosses.position.z), crosses.rotation, crosses);
-
-            if (saveCross && i != 0)
-                imgCrosses[i].sprite = sprCrosses[1];
-        }
 
         timeSavingLeft = 0;
     }
@@ -85,11 +71,6 @@ public class HudManager : MonoBehaviour
         moneyChange.text = "$" + moneyHolder.ActualMoney;
     }
 
-    /*void ShowWaveText()
-    {
-        waveText.text = spawner.GetActualWaveName();
-    }*/
-
     void CountdownTextSituation()
     {
         waveText = spawner.GetActualWaveName();
@@ -99,23 +80,22 @@ public class HudManager : MonoBehaviour
     void UpdateCrosses()
     {
         int waveCleared = spawner.GetActualWaveIndex() - 2;
-        bool isSaveWave = false;
 
-        if (waveCleared == -1)  return;
+        if (waveCleared == -1) return;
 
-        foreach (int checkpoint in checkpoints)
-            if (waveCleared == checkpoint - 1) isSaveWave = true;
+        for (int i = 0; i <= waveCleared; i++)
+            imgCrosses[i].sprite = sprCrosses[1];
+    }
 
-        if (!isSaveWave || waveCleared == 0)
-            imgCrosses[waveCleared].sprite = sprCrosses[2];
-        else
-            imgCrosses[waveCleared].sprite = sprCrosses[3];
+    void Win()
+    {
+        imgCrosses[imgCrosses.Length - 1].sprite = sprCrosses[1];
     }
 
     void TimeText()
     {
         int time = Mathf.FloorToInt(spawner.TimeLeft);
-        //hud.enabled = true;
+        
         nextWaveComming.color = new Color(255, 255, 255);
         nextWaveComming.enabled = true;
         nextWaveComming.color = new Color(nextWaveComming.color.r, nextWaveComming.color.g, nextWaveComming.color.b, Mathf.PingPong(Time.time, 0.5f));
@@ -126,13 +106,11 @@ public class HudManager : MonoBehaviour
             timeLeft.text = "0";
             nextWaveComming.color = new Color(nextWaveComming.color.r, 0, 0);
         }
-           // timeLeft.text = "Starts " + waveText + "...";
 
         if (time <= -2)
         {
             timeLeft.text = "";
             CountdownTextSituation();
-            //hud.enabled = false;
             nextWaveComming.enabled = false;
         }
     }
