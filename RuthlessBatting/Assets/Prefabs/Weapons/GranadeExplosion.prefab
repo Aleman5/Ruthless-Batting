@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4773015005136072}
   - component: {fileID: 212926001015454148}
+  - component: {fileID: 95195445698015530}
   m_Layer: 10
   m_Name: Explosion_Sprite
   m_TagString: Untagged
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 135209444486068996}
   - component: {fileID: 114302246000011558}
   - component: {fileID: 114377205929872250}
+  - component: {fileID: 114565873923543496}
   m_Layer: 10
   m_Name: GranadeExplosion
   m_TagString: Untagged
@@ -72,6 +74,24 @@ Transform:
   m_Father: {fileID: 4078058124943328}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!95 &95195445698015530
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490031246417404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ea7004413df8bc4e8c90efbc6722a0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114302246000011558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +118,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d12a5f1f9323a04e8e16b5d517ec450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 0.3
+  timeToDestroy: 0.5
+--- !u!114 &114565873923543496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737091164294080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165748c6a0a2f53468d4bc6815bb9b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135209444486068996
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -146,7 +177,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f40416872039a049bda84f1f802a8d8, type: 3}
+  m_Sprite: {fileID: 21300004, guid: ed5011e73fba9f144a3fef0d92a2c8a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
