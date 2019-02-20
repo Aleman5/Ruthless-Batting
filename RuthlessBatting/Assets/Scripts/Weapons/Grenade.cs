@@ -4,6 +4,7 @@ public class Grenade : MonoBehaviour
 {
     [SerializeField] GameObject explosion;
     [SerializeField] float speed;
+    Animator anim;
 
     Rigidbody rb;
     Vector3 movement;
@@ -12,6 +13,12 @@ public class Grenade : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();  
+    }
+
+    private void Start()
+    {
+        anim.SetBool("move", true);
     }
 
     void Update()
