@@ -34,12 +34,33 @@ public class AudioManager : MonoBehaviour
             case SceneEnum.Level2:
                 RunAudio(Audios.nivel2);
                 break;
+            case SceneEnum.StoryboardN3:
+                RunAudio(Audios.storyboard2b);
+                break;
+            case SceneEnum.Level3:
+                RunAudio(Audios.nivel3);
+                break;
+            case SceneEnum.StoryboardN4:
+                RunAudio(Audios.storyboard2b);
+                break;
+            case SceneEnum.Credits:
+                RunAudio(Audios.menu);
+                break;
+
         }
     }
 
     public void RunAudio(Audios audio)
     {
-        if (audio == Audios.menu || audio == Audios.nivel1 || audio == Audios.nivel2 || audio == Audios.storyboard1a || audio == Audios.storyboard2a)
+        if (audio == Audios.menu   || 
+            audio == Audios.nivel1 || 
+            audio == Audios.nivel2 || 
+            audio == Audios.nivel3 ||
+            audio == Audios.storyboard1a ||
+            audio == Audios.storyboard2a ||
+            audio == Audios.storyboard1b ||
+            audio == Audios.storyboard2b
+            )
             AkSoundEngine.StopAll();
         AkSoundEngine.PostEvent(audio.ToString(), gameObject);
     }

@@ -12,6 +12,7 @@ public enum SceneEnum
     StoryboardN3,
     Level3,
     StoryboardN4,
+    Credits,
     Loading,
     TotalScenes
 };
