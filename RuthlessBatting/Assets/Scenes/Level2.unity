@@ -5052,7 +5052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 809710522}
   - component: {fileID: 809710524}
-  - component: {fileID: 809710523}
   m_Layer: 0
   m_Name: GranadeLauncher
   m_TagString: Untagged
@@ -5074,20 +5073,6 @@ Transform:
   m_Father: {fileID: 1541516092}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &809710523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114494443054911220, guid: 8c01a6385e064d3428459454e2390040,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809710521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60be94c2a089d7d4886bd52d69dc42d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  granade: {fileID: 1482602942559422, guid: 214d1da90e389a94bbbb4fb53b3f5c51, type: 2}
-  cooldown: 1
 --- !u!114 &809710524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,7 +5086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   granade: {fileID: 1482602942559422, guid: 214d1da90e389a94bbbb4fb53b3f5c51, type: 2}
-  cooldown: 1
+  cooldown: 2
 --- !u!1 &852424663
 GameObject:
   m_ObjectHideFlags: 0

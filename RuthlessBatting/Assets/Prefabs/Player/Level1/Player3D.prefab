@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   granade: {fileID: 1482602942559422, guid: 214d1da90e389a94bbbb4fb53b3f5c51, type: 2}
-  cooldown: 1
+  cooldown: 2
 --- !u!114 &114116816850798494
 MonoBehaviour:
   m_ObjectHideFlags: 1

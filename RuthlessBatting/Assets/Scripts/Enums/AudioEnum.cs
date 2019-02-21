@@ -2,6 +2,7 @@
 {
     bate_pared,
     bath_al_aire,
+    cachiporrazo_electrico,
     disparo_laser,
     enemigo_explota,
     granada,

@@ -29,7 +29,7 @@ public class EnemyAttackFSM : MonoBehaviour, IAttack
 
         fsmScript.enabled = false;
 
-        //yield return new WaitForSeconds(timeToAttack);
+        AudioManager.Instance.RunAudio(Audios.cachiporrazo_electrico);
 
         ChangeBoxState();
 

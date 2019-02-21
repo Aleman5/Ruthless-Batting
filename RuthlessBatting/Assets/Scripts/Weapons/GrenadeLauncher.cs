@@ -2,22 +2,21 @@
 
 public class GrenadeLauncher : MonoBehaviour, IWeapon
 {
-    // Hacer que la animacion de la granada dure el tiempo en llegar hasta el punto objetivo (a discusión).
-
     [SerializeField] GameObject granade;
     [SerializeField] float cooldown;
 
+    float origCd;
     float actualTime;
     int upgGrenadeLevel;
 
     void Start()
     {
-        actualTime = cooldown;
+        origCd = actualTime = cooldown;
     }
 
     void Update()
     {
-        if (InputManager.Instance.GetGranadeButton() && actualTime <= 0.0f)
+        if (InputManager.Instance.GetGranadeButton() && actualTime < 0.0f)
         {
             actualTime = cooldown;
             InstantiateGranade();
@@ -33,6 +32,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
         Grenade gr = g.GetComponent<Grenade>();
 
         Vector3 dest = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        dest.y = transform.position.y;
         Vector3 diff = dest - transform.position;
         diff.y = 0;
 
@@ -43,7 +43,7 @@ public class GrenadeLauncher : MonoBehaviour, IWeapon
     {
         upgGrenadeLevel = level;
 
-        cooldown -= cooldown * 0.05f * upgGrenadeLevel;
+        cooldown = origCd - 0.1f * upgGrenadeLevel;
     }
 
     public int GetUpgradeValue() { return upgGrenadeLevel; }

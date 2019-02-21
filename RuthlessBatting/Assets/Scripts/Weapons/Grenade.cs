@@ -4,11 +4,14 @@ public class Grenade : MonoBehaviour
 {
     [SerializeField] GameObject explosion;
     [SerializeField] float speed;
+    [SerializeField] float maxDistance;
 
     Rigidbody rb;
     Animator anim;
     Vector3 movement;
     Vector3 dest;
+
+    float timeToDestroy = 0.5f;
 
     void Awake()
     {
@@ -23,11 +26,9 @@ public class Grenade : MonoBehaviour
 
     void Update()
     {
-        Vector3 diff = dest - transform.position;
-        diff.y = 0;
-        float dist = diff.magnitude;
+        timeToDestroy -= Time.deltaTime;
 
-        if(dist < 0.3f) Explote();
+        if (timeToDestroy < 0) Explote();
     }
 
     void FixedUpdate()
@@ -37,8 +38,7 @@ public class Grenade : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (!col.transform.CompareTag("Wall"))
-            Explote();
+        Explote();
     }
 
     void Explote()
@@ -47,17 +47,25 @@ public class Grenade : MonoBehaviour
         explosionPos.y = 0.1f;
         Instantiate(explosion, explosionPos, transform.rotation);
 
+        AudioManager.Instance.RunAudio(Audios.granada);
+
         Destroy(gameObject);
     }
 
     public void SetData(Vector3 direction, Vector3 destination)
     {
         movement = direction * speed;
-        dest = destination;
 
-        Vector3 newRotation = destination - transform.position;
-        newRotation.y = 0;
+        Vector3 newDestination = destination - transform.position;
+        newDestination.y = 0;
 
-       transform.rotation = Quaternion.LookRotation(newRotation, Vector3.down);
+        if (newDestination.magnitude > maxDistance)
+        {
+            newDestination.Normalize();
+            newDestination *= maxDistance;
+            dest = newDestination;
+        }
+
+       transform.rotation = Quaternion.LookRotation(newDestination, Vector3.down);
     }
 }
