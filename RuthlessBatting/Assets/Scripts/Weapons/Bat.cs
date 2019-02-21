@@ -18,6 +18,7 @@ public class Bat : MonoBehaviour, IWeapon
 
     float cooldown;
     float attackRate;
+    float origAttackRate;
     int upgBatLevel;
 
     float timeToDisappearHitBox;
@@ -26,10 +27,10 @@ public class Bat : MonoBehaviour, IWeapon
 
     void Awake()
     {
-        cooldown = 0.1f;
-        attackRate = 0.21f;
+        cooldown = 0.0f;
+        origAttackRate = attackRate = 0.255f;
 
-        timeToDisappearHitBox = 0.19f;
+        timeToDisappearHitBox = 0.18f;
         origTimeToDisappearHitBox = timeToDisappearHitBox;
 
         batBoxCollider.enabled = false;
@@ -78,8 +79,7 @@ public class Bat : MonoBehaviour, IWeapon
     {
         upgBatLevel = level;
 
-        cooldown -= cooldown * 0.05f * upgBatLevel;
-        timeToDisappearHitBox -= origTimeToDisappearHitBox * 0.05f * upgBatLevel;
+        attackRate = origAttackRate - 0.015f * upgBatLevel;
     }
 
     public int GetUpgradeValue() { return upgBatLevel; }

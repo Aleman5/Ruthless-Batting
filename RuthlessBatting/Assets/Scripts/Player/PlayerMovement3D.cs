@@ -19,7 +19,7 @@ public class PlayerMovement3D : MonoBehaviour
 
     const string overBloodLayer = "OverBlood";
     const string overBloodUpLayer = "OverBloodUp";
-    int overBloodSortingOrder = 1;
+    int overBloodSortingOrder = 3;
 
     void Start()
     {
@@ -118,7 +118,7 @@ public class PlayerMovement3D : MonoBehaviour
     void Death()
     {
         Transform t1 = transform.GetChild(1);
-
+        
         SpriteRenderer sR = t1.GetComponent<SpriteRenderer>();
         if (sR.sortingLayerName != "OverWallUp" && sR.sortingLayerName != "BehindWallUp")
         {
