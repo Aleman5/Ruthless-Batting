@@ -12,6 +12,10 @@ public class Bullet : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         target = new Vector3(player.position.x, player.position.y, player.position.z);
+
+        Vector3 newPosition = target - transform.position;
+        newPosition.y = 0;
+        transform.rotation = Quaternion.LookRotation(newPosition, Vector3.up);
     }
 
     private void Update()
