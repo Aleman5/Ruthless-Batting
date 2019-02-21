@@ -61,8 +61,6 @@ public class LevelManager : MonoBehaviour
     {
         winScreen.gameObject.SetActive(true);
         gameWon = true;
-
-        //Time.timeScale = 0;
     }
 
     void PauseGame()
@@ -162,8 +160,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator GoToMenu()
     {
-        //float fadeTime = GameObject.Find("Fade").GetComponent<Fading>().BeginFade(1);
-        yield return new WaitForSeconds(0.05f);//fadeTime;
+        yield return new WaitForSeconds(0.05f);
         SceneLoaderManager.Instance.ReturnMenu();
     }
 

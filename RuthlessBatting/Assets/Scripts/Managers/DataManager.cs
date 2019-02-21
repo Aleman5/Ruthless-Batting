@@ -51,9 +51,6 @@ public class DataManager
 
             for (int i = 0; i < (int)Buyable.COUNT; i++)
                 data.playerUpgrades[i] = pMovScript.GetUpgradeValue(i);
-
-            //Debug.Log("Actual Scene: " + data.actualScene + "; Money: " + data.moneyCount + "; Wave: " + data.waveName + "; Bodies: " + data.enemyBodies +
-            //    "; Upgrade[0]: " + data.playerUpgrades[0] + "; Upgrade[1]: " + data.playerUpgrades[1] + "; Upgrade[2]: " + data.playerUpgrades[2] + "; Upgrade[3]: " + data.playerUpgrades[3]);
         }
         else
         {

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StartTheLastFight : MonoBehaviour
 {
@@ -33,6 +31,7 @@ public class StartTheLastFight : MonoBehaviour
         hud.SetActive(true);
         ui.SetActive(true);
         mainCamera.SetNewMaxSize(newMaxSizeForCamera);
+
         Destroy(gameObject);
     }
 }

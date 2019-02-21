@@ -3,8 +3,7 @@
 [RequireComponent(typeof(Health))]
 public class GiveMoney : MonoBehaviour
 {
-
-    int moneyToGive; // This variable is temporary
+    int moneyToGive;
 
     Health health;
     MoneyHolder moneyHolder;

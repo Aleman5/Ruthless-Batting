@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
-public class StoryController : MonoBehaviour {
-
+public class StoryController : MonoBehaviour
+{
     [SerializeField] List<GameObject> panels;
     [SerializeField] int importantPanel;
     int index = 0;

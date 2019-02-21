@@ -85,7 +85,6 @@ public class BuyElement : MonoBehaviour
                     LevelUpThePrice();
                     AudioManager.Instance.RunAudio(Audios.habilidad_comprada);
                     onInteract.Invoke();
-                    //enabled = false;
                 }
                 else
                 {
@@ -103,10 +102,6 @@ public class BuyElement : MonoBehaviour
 
     void LevelUpThePrice()
     {
-        // Talk with Mati if is better incrementing the price based on the original price or based in the actual price.
-        // Example 1: 100 + 100 % 10 = 110 + 100 % 10 = 120 % 10 = 130;
-        // Example 2: 100 + 100 % 10 = 110 + 110 % 10 = 121 % 10 = 133;
-
         priceOfTheElement += (int)(priceOfTheElement * extraPercentagePerLevelUp);
 
         if (levelOfTheElement < 3 * actualLevelScene)

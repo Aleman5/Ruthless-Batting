@@ -1,17 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour {
-
+public class SceneLoader : MonoBehaviour
+{
     private bool loadScene = false;
     [SerializeField] private Text loadingText;
 
     void Update()
     {
-
         if (loadScene == false)
         {
             loadScene = true;
@@ -21,7 +19,6 @@ public class SceneLoader : MonoBehaviour {
 
         if (loadScene == true)
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
-
     }
 
     IEnumerator LoadNewScene()

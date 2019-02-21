@@ -143,7 +143,7 @@ public class PlayerMovement3D : MonoBehaviour
     {
         upgMovLevel = level;
 
-        speed = originalMovSpeed + originalMovSpeed * (0.05f * level); // Level 1 -> +5%, Level 2 -> +10%, Level 3 -> +15%
+        speed = originalMovSpeed + originalMovSpeed * (0.05f * level);
     }
 
     public int GetUpgradeValue() { return upgMovLevel; }
