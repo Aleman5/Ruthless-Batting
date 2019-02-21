@@ -5,6 +5,6 @@ public class VersionName : MonoBehaviour {
 
     void Awake()
     {
-        GetComponent<Text>().text = "ALPHA VERSION " + Application.version;
+        GetComponent<Text>().text = "v" + Application.version;
     }
 }
