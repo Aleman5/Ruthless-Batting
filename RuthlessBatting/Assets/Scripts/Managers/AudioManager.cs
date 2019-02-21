@@ -5,15 +5,11 @@ public class AudioManager : MonoBehaviour
 {
     static AudioManager instance;
 
-    bool soundOn;
     bool paused;
 
     void Start()
     {
         paused = false;
-        soundOn = true;
-        if (PlayerPrefs.HasKey("Sound") && PlayerPrefs.GetInt("Sound") == 0)
-            soundOn = false;
 
         SceneEnum sE = (SceneEnum)System.Enum.Parse(typeof(SceneEnum), SceneManager.GetActiveScene().name);
 

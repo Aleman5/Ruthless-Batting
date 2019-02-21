@@ -22,7 +22,6 @@ public class Bat : MonoBehaviour, IWeapon
     int upgBatLevel;
 
     float timeToDisappearHitBox;
-    float origTimeToDisappearHitBox;
     int direction;
 
     void Awake()
@@ -31,7 +30,6 @@ public class Bat : MonoBehaviour, IWeapon
         origAttackRate = attackRate = 0.255f;
 
         timeToDisappearHitBox = 0.18f;
-        origTimeToDisappearHitBox = timeToDisappearHitBox;
 
         batBoxCollider.enabled = false;
     }

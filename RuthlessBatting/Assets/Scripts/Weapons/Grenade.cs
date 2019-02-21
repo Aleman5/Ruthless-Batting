@@ -9,7 +9,6 @@ public class Grenade : MonoBehaviour
     Rigidbody rb;
     Animator anim;
     Vector3 movement;
-    Vector3 dest;
 
     float timeToDestroy = 0.5f;
 
@@ -63,7 +62,6 @@ public class Grenade : MonoBehaviour
         {
             newDestination.Normalize();
             newDestination *= maxDistance;
-            dest = newDestination;
         }
 
        transform.rotation = Quaternion.LookRotation(newDestination, Vector3.down);

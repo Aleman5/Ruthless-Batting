@@ -6,13 +6,9 @@ public class PlayerMovement3D : MonoBehaviour
     [SerializeField] Rigidbody rigidbodyToUse;
     [SerializeField] float speed;
     [SerializeField] float speedOnStairs;
-    [SerializeField] float dashForce;
 
     int upgMovLevel; // Upgrade level
-    float angleOfTheStairs = 36.0f; // Angle of the Stairs.
     float originalMovSpeed;
-    float dashCooldownTime = 0.6f;
-    float dashCooldown;
     bool isOnStairs = false;
     Vector3 movForce;
     Vector3 stairsDir;
@@ -41,14 +37,10 @@ public class PlayerMovement3D : MonoBehaviour
         stairsDir.x = 0.0f;
         stairsDir.y = 0.587785f;
         stairsDir.z = 0.809017f;
-
-        dashCooldown = dashCooldownTime;
     }
 
     void Update()
     {
-        dashCooldown -= Time.deltaTime;
-
         movForce = Vector3.zero;
 
         movForce.x = InputManager.Instance.GetHorizontalAxis();
@@ -59,12 +51,6 @@ public class PlayerMovement3D : MonoBehaviour
             movForce.x *= speed;
             movForce.z *= speed;
             movForce.y = 0;
-
-            if (InputManager.Instance.GetDashButton() && dashCooldown < 0)
-            {
-                dashCooldown = dashCooldownTime;
-                MakeForceMovement();
-            }
         }
         else
         {
@@ -85,17 +71,6 @@ public class PlayerMovement3D : MonoBehaviour
     void FixedUpdate()
     {
         rigidbodyToUse.AddForce(movForce);
-    }
-
-    public void MakeForceMovement()
-    {
-        rigidbodyToUse.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-
-        Vector3 newForce = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        newForce.y = 0;
-        newForce = newForce.normalized * dashForce;
-
-        rigidbodyToUse.AddForce(newForce);
     }
 
     public int GetUpgradeValue(int index)

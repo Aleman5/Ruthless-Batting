@@ -2,15 +2,6 @@
 
 public class AvoidStickyCollision : MonoBehaviour
 {
-    Rigidbody rb;
-    BoxCollider boxCollider;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        boxCollider = transform.GetChild(0).GetComponent<BoxCollider>();
-    }
-
     void OnCollisionEnter(Collision col)
     {
         if (col.transform.CompareTag("Floor"))

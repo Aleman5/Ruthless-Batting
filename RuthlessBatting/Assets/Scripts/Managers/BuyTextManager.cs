@@ -21,10 +21,6 @@ public class BuyTextManager : MonoBehaviour
 
     [SerializeField] Elements[] elements;
     [SerializeField] string[] differentAnswers;
-    //[SerializeField] string notEnoughMoneyText;
-
-    //int indexOfText;
-    //string savedText = "";
   
     void Start()
     {
@@ -44,14 +40,7 @@ public class BuyTextManager : MonoBehaviour
             elements[i].seller.OnQuit.AddListener(OnQuit);
 
             elements[i].seller.OnInteract.AddListener(ChangeSprite);
-
-            //elements[i].index = -1;
-            //elements[i].index2 = -1;
-
-            //elements[i].seller.OnNotEnoughMoney.AddListener(OnNotEnoughMoney);
         }
-
-        //ChangeSprite();
     }
 
     void OnRange()
@@ -88,7 +77,6 @@ public class BuyTextManager : MonoBehaviour
                     CancelInvoke("NameBackToNormal");
 
                 int newMessageIndex = Random.Range(0, differentAnswers.Length);
-                //elements[i].sellerText.text = differentAnswers[newMessageIndex];
             }
         }
     }
@@ -104,23 +92,4 @@ public class BuyTextManager : MonoBehaviour
             }
         }
     }
-
-    /*void OnNotEnoughMoney()
-    {
-        for (int i = 0; i < elements.Length; i++)
-        {
-            if (elements[i].seller.IsOnRange())
-            {
-                indexOfText = i;
-                savedText = elements[i].sellerText.text;
-                elements[i].sellerText.text = notEnoughMoneyText;
-                Invoke("NameBackToNormal", 0.5f);
-            }
-        }
-    }
-
-    void NameBackToNormal()
-    {
-        elements[indexOfText].sellerText.text = savedText;
-    }*/
 }

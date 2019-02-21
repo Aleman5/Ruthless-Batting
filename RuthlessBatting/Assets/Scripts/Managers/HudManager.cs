@@ -30,8 +30,6 @@ public class HudManager : MonoBehaviour
     Image[] imgCrosses;
 
     float timeSavingLeft;
-    string waveText = "";
-    int[] checkpoints;
 
     void Start()
     {
@@ -43,7 +41,6 @@ public class HudManager : MonoBehaviour
         LevelManager.Instance.OnSaving.AddListener(ChangeSavingState);
 
         moneyChange.text = "$" + moneyHolder.ActualMoney;
-        checkpoints = levelManager.GetCheckpoints();
 
         imgCrosses = new Image[spawner.GetMountOfWaves()];
 
@@ -73,7 +70,6 @@ public class HudManager : MonoBehaviour
 
     void CountdownTextSituation()
     {
-        waveText = spawner.GetActualWaveName();
         timeLeft.enabled = !timeLeft.enabled;
     }
 
