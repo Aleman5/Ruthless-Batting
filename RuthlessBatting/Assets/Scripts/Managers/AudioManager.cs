@@ -31,13 +31,13 @@ public class AudioManager : MonoBehaviour
                 RunAudio(Audios.nivel2);
                 break;
             case SceneEnum.StoryboardN3:
-                RunAudio(Audios.storyboard2b);
+                RunAudio(Audios.storyboard2a);
                 break;
             case SceneEnum.Level3:
                 RunAudio(Audios.nivel3);
                 break;
             case SceneEnum.StoryboardN4:
-                RunAudio(Audios.storyboard2b);
+                RunAudio(Audios.storyboard2a);
                 break;
             case SceneEnum.Credits:
                 RunAudio(Audios.menu);
