@@ -1902,6 +1902,11 @@ Prefab:
       propertyPath: toggle2
       value: 
       objectReference: {fileID: 793452742}
+    - target: {fileID: 114982219676867226, guid: 6a29008d16802f94580d71ae501f4f00,
+        type: 2}
+      propertyPath: m_Text
+      value: Music / SFX
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a29008d16802f94580d71ae501f4f00, type: 2}
   m_IsPrefabAsset: 0
