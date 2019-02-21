@@ -9933,6 +9933,21 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 114063828148328856, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: extraPercentagePerLevelUp
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063828148328856, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: priceOfTheElement
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062625176621074, guid: ca3264337fd2f3d4daa24787e663133b,
+        type: 2}
+      propertyPath: extraPercentagePerLevelUp
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca3264337fd2f3d4daa24787e663133b, type: 2}
   m_IsPrefabAsset: 0
