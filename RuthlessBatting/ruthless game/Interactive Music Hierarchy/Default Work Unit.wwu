@@ -1202,6 +1202,14 @@
 								<AudioNodeRef Name="Storyboard 2b" ID="{7CC8A32A-4605-44A5-ABBE-9B9CA2D4C186}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="lvl3" ID="{6D3292F5-D5C5-4E2B-830C-000C1F5AAB05}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Ruth_nivel3" ID="{D436780C-A290-4639-86C2-037E9514382B}" WorkUnitID="{DF8C4FB3-4DD3-47F5-9963-7A4E2113E781}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
 			</ChildrenList>

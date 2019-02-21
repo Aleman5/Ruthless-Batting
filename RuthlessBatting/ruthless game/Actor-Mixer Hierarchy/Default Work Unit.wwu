@@ -101,7 +101,7 @@
 										<AudioFileSource Name="bate al aire#01" ID="{0A1968A6-AD4D-42E8-A567-C3AAF95945B4}" ShortID="950241008">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.056084522304497"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0280422611522485"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.80422611522485E-02"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>bate al aire\bate al aire#01.wav</AudioFile>
@@ -123,8 +123,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="bate al aire#02" ID="{00D829F5-035F-45CF-A238-6449D836CCB5}" ShortID="284596102">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0864419159994382"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0416773523568721"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.64419159994382E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.16773523568721E-02"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>bate al aire\bate al aire#02.wav</AudioFile>
@@ -146,8 +146,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="bate al aire#03" ID="{2D63988E-795D-4DB3-A79B-E2FF0A9CE82D}" ShortID="529332982">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0757294864848594"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0991949611703088"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="7.57294864848594E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="9.91949611703088E-02"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.695431340677864"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -170,8 +170,8 @@
 									<ChildrenList>
 										<AudioFileSource Name="bate al aire#04" ID="{CEA3F509-A03F-4F5F-964F-423508327203}" ShortID="878297216">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0336825747998314"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0691148937451087"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.36825747998314E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="6.91148937451087E-02"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>bate al aire\bate al aire#04.wav</AudioFile>
@@ -193,7 +193,7 @@
 									<ChildrenList>
 										<AudioFileSource Name="bate al aire#05" ID="{91AC50E9-0EFE-47B4-A206-EFAF4670D1EA}" ShortID="1058815598">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0593511829510565"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="5.93511829510565E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.134575356691349"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -217,7 +217,7 @@
 										<AudioFileSource Name="bate al aire#06" ID="{5BB276AF-E095-4DEB-9438-BDF44F0A7E1B}" ShortID="175276589">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.019017593763169"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0276838390223346"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.76838390223346E-02"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>bate al aire\bate al aire#06.wav</AudioFile>
@@ -1610,7 +1610,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu atras" ID="{B48795F0-3CFF-4686-94BF-1AA146C3CCFB}" ShortID="22642979">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0905067926875765"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.05067926875765E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="1.11323355005719"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.470635321975397"/>
 														<Property Name="TrimEnd" Type="Real64" Value="2.26266981718942"/>
@@ -1662,7 +1662,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu atras" ID="{37A1AC22-607D-4712-A5B7-44D475C74B8D}" ShortID="610518036">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0724054341500615"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="7.24054341500615E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.950321323219553"/>
 														<Property Name="TrimBegin" Type="Real64" Value="5.03217767342925"/>
 														<Property Name="TrimEnd" Type="Real64" Value="6.80611081010576"/>
@@ -1702,7 +1702,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu clic" ID="{AAE585C9-332E-4BEB-9247-A8B7743E46F4}" ShortID="190727780">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0887005598699657"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="8.87005598699657E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="1.52762075331608"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.887005598699658"/>
 														<Property Name="TrimEnd" Type="Real64" Value="3.08480835992214"/>
@@ -1730,7 +1730,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu clic" ID="{52097EE9-8507-4BBA-AF30-B5DCCBBD7DB9}" ShortID="651555151">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0887005598699657"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="8.87005598699657E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.798305038829692"/>
 														<Property Name="TrimBegin" Type="Real64" Value="3.23264262637208"/>
 														<Property Name="TrimEnd" Type="Real64" Value="5.46001224088456"/>
@@ -1802,8 +1802,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{6B4AFF3E-1C6E-45B4-9073-2EFC2B893D6C}" ShortID="788638222">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0657247205666929"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="6.57247205666929E-02"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.492935404250196"/>
 														<Property Name="TrimEnd" Type="Real64" Value="0.788696646800311"/>
 													</PropertyList>
@@ -1853,7 +1853,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{F19E26EF-5AE5-4CC2-8919-BC28259FEA5E}" ShortID="371803262">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.158834741369508"/>
 														<Property Name="TrimBegin" Type="Real64" Value="4.24593866105384"/>
 														<Property Name="TrimEnd" Type="Real64" Value="4.46197825180547"/>
@@ -1878,8 +1878,8 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{BAEEFAF1-1A1C-4C17-8C1E-251F87841166}" ShortID="153040202">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0985870808500394"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="9.85870808500394E-02"/>
 														<Property Name="TrimBegin" Type="Real64" Value="6.09961920592557"/>
 														<Property Name="TrimEnd" Type="Real64" Value="6.44102261553589"/>
 													</PropertyList>
@@ -1910,7 +1910,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{6BD2D4D8-74E2-4500-8E8C-E598F5F138EC}" ShortID="512938099">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 														<Property Name="TrimBegin" Type="Real64" Value="7.39403106375294"/>
 														<Property Name="TrimEnd" Type="Real64" Value="8.06770944956154"/>
@@ -1942,7 +1942,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{FBDE8D13-01D3-4BED-8D82-201E44E95A05}" ShortID="928859974">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 														<Property Name="TrimBegin" Type="Real64" Value="9.4972221218871"/>
 														<Property Name="TrimEnd" Type="Real64" Value="10.0394510665623"/>
@@ -1974,7 +1974,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{1DEF1E41-24B9-42E5-BD7D-8B6D8FA2E632}" ShortID="39813892">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 														<Property Name="TrimBegin" Type="Real64" Value="11.8304497020047"/>
 														<Property Name="TrimEnd" Type="Real64" Value="13.0299258523468"/>
@@ -2006,7 +2006,7 @@
 											<ChildrenList>
 												<AudioFileSource Name="menu slide" ID="{2A7D7B83-F096-4D62-B584-54EDF9546B89}" ShortID="997935061">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0985870808500391"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.85870808500391E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.345054782975137"/>
 														<Property Name="TrimBegin" Type="Real64" Value="13.522861256597"/>
 														<Property Name="TrimEnd" Type="Real64" Value="14.4265761643891"/>
@@ -2037,6 +2037,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2648,11 +2653,6 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>

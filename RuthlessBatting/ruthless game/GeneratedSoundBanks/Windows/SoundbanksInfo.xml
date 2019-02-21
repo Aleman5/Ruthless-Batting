@@ -251,6 +251,10 @@
 					<ShortName>golpes bath1.wav</ShortName>
 					<Path>SFX\golpes bath1_A1793BE9.wem</Path>
 				</File>
+				<File Id="919967735" Language="SFX">
+					<ShortName>Ruth_nivel3.wav</ShortName>
+					<Path>SFX\Ruth_nivel3_CB1F3167.wem</Path>
+				</File>
 				<File Id="942580077" Language="SFX">
 					<ShortName>Musica_Menu\Ruthless Menu final.wav</ShortName>
 					<Path>SFX\Musica_Menu\Ruthless Menu final_CB1F3167.wem</Path>

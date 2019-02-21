@@ -170,10 +170,10 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="off" ID="{A940C2B3-2E64-4F33-8C4C-9E6E5DD34C7D}"/>
-						<CurrentStateRef Name="lvl2" ID="{9A9B55B6-AD28-461D-B15D-1DAFFA52B3A9}"/>
+						<CurrentStateRef Name="None" ID="{D791532A-9CF7-4726-9344-4FB9D79BF7BB}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="storyboard2b" ID="{CE66DFA6-8B92-435E-B4F4-E5C303A1F25F}"/>
+						<CurrentSwitchRef Name="lvl1" ID="{1A42ACC9-2621-4891-8B1A-551AF361C818}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
