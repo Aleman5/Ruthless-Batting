@@ -4,9 +4,9 @@ public class Grenade : MonoBehaviour
 {
     [SerializeField] GameObject explosion;
     [SerializeField] float speed;
-    Animator anim;
 
     Rigidbody rb;
+    Animator anim;
     Vector3 movement;
     Vector3 dest;
 
@@ -16,7 +16,7 @@ public class Grenade : MonoBehaviour
         anim = GetComponentInChildren<Animator>();  
     }
 
-    private void Start()
+    void Start()
     {
         anim.SetBool("move", true);
     }
@@ -54,5 +54,10 @@ public class Grenade : MonoBehaviour
     {
         movement = direction * speed;
         dest = destination;
+
+        Vector3 newRotation = destination - transform.position;
+        newRotation.y = 0;
+
+       transform.rotation = Quaternion.LookRotation(newRotation, Vector3.down);
     }
 }
