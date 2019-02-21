@@ -2,7 +2,7 @@
 All notable changes will be documented here.
 
 
-## [v0.16]
+## [v1.0]
 ### Added
 - How to Play Menu.
 - Options Menu works.
