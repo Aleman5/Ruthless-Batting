@@ -354,7 +354,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Woodcutter
 
-    ( Bad signal Font)'
+    (Bad signal Font)'
 --- !u!222 &277080414
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField] Wave[] waves;
     int nextWave = -1;
+    //int nextWave = 4;        // TESTING
 
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] Transform[] patrolHolders;
