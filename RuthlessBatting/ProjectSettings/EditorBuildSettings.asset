@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryboardN4.unity
     guid: 28fe0d1ba6540054ca8ef2135a4d6d51
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1feea19babfa59d428dd506c9dcfbf0f
+  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: f8c0f7412566afb419c9d3b264a3fe42
   m_configObjects: {}
