@@ -20,8 +20,8 @@ public class MoneyHolder : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-            ActualMoney = 1000;
+        /*if (Input.GetKeyDown(KeyCode.M))
+            ActualMoney = 1000;*/
     }
 
     public int ActualMoney

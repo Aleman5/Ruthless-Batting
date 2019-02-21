@@ -62,10 +62,10 @@ public class PlayerMovement3D : MonoBehaviour
         }
 
         // Para Testing nomás
-        if (Input.GetKey(KeyCode.H))
+        /*if (Input.GetKey(KeyCode.H))
         {
             GetComponent<Health>().Amount++;
-        }
+        }*/
     }
 
     void FixedUpdate()
