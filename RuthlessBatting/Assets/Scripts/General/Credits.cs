@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
@@ -6,9 +9,17 @@ public class Credits : MonoBehaviour
 
     void Update()
     {
-        if (InputManager.Instance.GetActionButton() && creditsAnimator.GetCurrentAnimatorStateInfo(0).IsName("Credits"))
+        if (InputManager.Instance.GetPauseButton())
         {
             SceneLoaderManager.Instance.ReturnMenu();
         }
+
+        StartCoroutine(GoToMenu());
+    }
+
+    IEnumerator GoToMenu()
+    {
+        yield return new WaitForSeconds(47.0f);
+        SceneLoaderManager.Instance.ReturnMenu();
     }
 }
