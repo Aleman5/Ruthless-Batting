@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPanel: {fileID: 153872314}
-  lastPanel: {fileID: 167237950}
+  lastPanel: {fileID: 1884628989}
   panels:
   - {fileID: 153872314}
   - {fileID: 1689040975}

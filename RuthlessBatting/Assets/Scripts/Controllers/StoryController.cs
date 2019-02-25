@@ -39,13 +39,9 @@ public class StoryController : MonoBehaviour
         if (InputManager.Instance.GetPauseButton())
             LoadNextScene();
 
-        if (panels[index] == firstPanel)
-            firstButton.gameObject.SetActive(false);
+        /**/
 
-        if (panels[index] == lastPanel)
-            secondButton.GetComponentInChildren<Image>().color = Color.red;
-        else
-            secondButton.GetComponentInChildren<Image>().color = Color.white;
+        /**/
     }
 
     public void PrevPanel()
@@ -55,11 +51,19 @@ public class StoryController : MonoBehaviour
             panels[index].SetActive(false);
             index--;
             panels[index].SetActive(true);
+            secondButton.GetComponentInChildren<Image>().color = Color.white;
         }
+        if (panels[index] == firstPanel)
+            firstButton.gameObject.SetActive(false);
     }
 
     public void NextPanel()
     {
+        if (panels[index] == lastPanel)
+            secondButton.GetComponentInChildren<Image>().color = Color.red;
+        else
+            secondButton.GetComponentInChildren<Image>().color = Color.white;
+
         firstButton.gameObject.SetActive(true);
         panels[index].SetActive(false);
         index++;
