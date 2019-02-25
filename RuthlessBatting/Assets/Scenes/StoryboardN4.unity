@@ -222,13 +222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336ab79bfb7b9244c95ec2f28e573ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 153872314}
+  firstPanel: {fileID: 153872314}
+  lastPanel: {fileID: 1719456957}
   panels:
   - {fileID: 153872314}
   - {fileID: 1689040975}
   - {fileID: 1719456957}
   importantPanel: 0
-  button: {fileID: 1705858570}
+  firstButton: {fileID: 1705858570}
+  secondButton: {fileID: 1286868351}
 --- !u!1 &153872314
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +620,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224641167599747566, guid: 050064ce42812624bab34c97342c8d75,
     type: 2}
   m_PrefabInternal: {fileID: 1705858569}
+--- !u!114 &1286868351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114247765749782470, guid: 050064ce42812624bab34c97342c8d75,
+    type: 2}
+  m_PrefabInternal: {fileID: 1705858569}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1668998980
 GameObject:
   m_ObjectHideFlags: 0

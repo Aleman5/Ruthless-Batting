@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class StoryController : MonoBehaviour
 {
-    [SerializeField] GameObject panel;
+    [SerializeField] GameObject firstPanel;
+    [SerializeField] GameObject lastPanel;
     [SerializeField] List<GameObject> panels;
     [SerializeField] int importantPanel;
-    [SerializeField] Button button;
+    [SerializeField] Button firstButton;
+    [SerializeField] Button secondButton;
     int index = 0;
     bool impPanelState = false;
 
@@ -18,7 +20,8 @@ public class StoryController : MonoBehaviour
         SaveLoad.Save();
 
         panels[index].SetActive(true);
-        button.gameObject.SetActive(false);
+        firstButton.gameObject.SetActive(false);
+ 
     }
 
 	void Update ()
@@ -35,6 +38,14 @@ public class StoryController : MonoBehaviour
 
         if (InputManager.Instance.GetPauseButton())
             LoadNextScene();
+
+        if (panels[index] == firstPanel)
+            firstButton.gameObject.SetActive(false);
+
+        if (panels[index] == lastPanel)
+            secondButton.GetComponentInChildren<Image>().color = Color.red;
+        else
+            secondButton.GetComponentInChildren<Image>().color = Color.white;
     }
 
     public void PrevPanel()
@@ -45,14 +56,11 @@ public class StoryController : MonoBehaviour
             index--;
             panels[index].SetActive(true);
         }
-
-        if (panels[index] == panel)
-            button.gameObject.SetActive(false);
     }
 
     public void NextPanel()
     {
-        button.gameObject.SetActive(true);
+        firstButton.gameObject.SetActive(true);
         panels[index].SetActive(false);
         index++;
         if (index == panels.Count)
