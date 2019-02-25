@@ -11,6 +11,7 @@ public class SettingsMenu : MonoBehaviour {
     Resolution[] resolutions;
 
     [SerializeField] Slider slider;
+    [SerializeField] Slider slidersfx;
     [SerializeField] Toggle toggle1;
     [SerializeField] Toggle toggle2;
 
@@ -19,11 +20,16 @@ public class SettingsMenu : MonoBehaviour {
         if (PlayerPrefs.HasKey("volume"))
         {
             slider.value = PlayerPrefs.GetFloat("volume");
-            AkSoundEngine.SetRTPCValue("volumen_musica", PlayerPrefs.GetFloat("volume"));
-            AkSoundEngine.SetRTPCValue("volumen_sfx", PlayerPrefs.GetFloat("volume"));
+            AkSoundEngine.SetRTPCValue("volumen_musica", PlayerPrefs.GetFloat("volume"));   
         }
 
-        if (PlayerPrefs.HasKey("music"))
+        if (PlayerPrefs.HasKey("volumesfx"))
+        {
+            slidersfx.value = PlayerPrefs.GetFloat("volumesfx");
+            AkSoundEngine.SetRTPCValue("volumen_sfx", PlayerPrefs.GetFloat("volumesfx"));
+        }
+
+       /* if (PlayerPrefs.HasKey("music"))
         {
             if (PlayerPrefs.GetInt("music") == 1)
             {
@@ -35,7 +41,7 @@ public class SettingsMenu : MonoBehaviour {
                 AudioManager.Instance.ChangeSoundState(false);
                 toggle1.isOn = false;
             }
-        }
+        }*/
 
         if (PlayerPrefs.HasKey("screen"))
         {
@@ -88,6 +94,11 @@ public class SettingsMenu : MonoBehaviour {
     {
         PlayerPrefs.SetFloat("volume", volume);
         AkSoundEngine.SetRTPCValue("volumen_musica", volume);
+    }
+
+    public void SetVolumeSFX(float volume)
+    {
+        PlayerPrefs.SetFloat("volumesfx", volume);
         AkSoundEngine.SetRTPCValue("volumen_sfx", volume);
     }
 
@@ -96,14 +107,14 @@ public class SettingsMenu : MonoBehaviour {
         QualitySettings.SetQualityLevel(qualityIndex);
     }*/
 
-    public void SetMusic(bool isActive)
+    /*public void SetMusic(bool isActive)
     {
         AudioManager.Instance.ChangeSoundState(isActive);
         if (isActive)
             PlayerPrefs.SetInt("music", 1);
         else
             PlayerPrefs.SetInt("music", 0);
-    }
+    }*/
 
     public void SetFullScreen (bool isFullscreen)
     {

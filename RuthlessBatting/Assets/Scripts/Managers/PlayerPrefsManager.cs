@@ -13,16 +13,20 @@ public class PlayerPrefsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("volume"))
         {
             AkSoundEngine.SetRTPCValue("volumen_musica", PlayerPrefs.GetFloat("volume"));
-            AkSoundEngine.SetRTPCValue("volumen_sfx", PlayerPrefs.GetFloat("volume"));
         }
 
-        if (PlayerPrefs.HasKey("music"))
+        if (PlayerPrefs.HasKey("volumesfx"))
+        {
+            AkSoundEngine.SetRTPCValue("volumen_sfx", PlayerPrefs.GetFloat("volumesfx"));
+        }
+
+        /*if (PlayerPrefs.HasKey("music"))
         {
             if (PlayerPrefs.GetInt("music") == 1)
                 AudioManager.Instance.ChangeSoundState(true);
             else
                 AudioManager.Instance.ChangeSoundState(false);
-        }
+        }*/
 
         if (PlayerPrefs.HasKey("screen"))
         {
