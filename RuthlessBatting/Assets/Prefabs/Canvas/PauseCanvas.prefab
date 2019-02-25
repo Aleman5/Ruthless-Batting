@@ -3529,7 +3529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.55052084, y: 0.32474074}
   m_AnchorMax: {x: 0.69000006, y: 0.36274073}
-  m_AnchoredPosition: {x: 2.12, y: 2.4400024}
+  m_AnchoredPosition: {x: 2.119995, y: 2.4400024}
   m_SizeDelta: {x: -2.3999634, y: -3.2000122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224246796538605202
@@ -3871,10 +3871,10 @@ RectTransform:
   m_Father: {fileID: 224476227145453272}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5564792, y: 0.6428519}
-  m_AnchorMax: {x: 0.68447924, y: 0.68700004}
-  m_AnchoredPosition: {x: -0.25, y: -0.25}
-  m_SizeDelta: {x: 1.0899963, y: 0.1000061}
+  m_AnchorMin: {x: 0.54800004, y: 0.642}
+  m_AnchorMax: {x: 0.68687505, y: 0.68700004}
+  m_AnchoredPosition: {x: 1.5399017, y: 0.4500122}
+  m_SizeDelta: {x: 3, y: -0.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224638361070702888
 RectTransform:
