@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class StoryController : MonoBehaviour
 {
+    [SerializeField] GameObject panel;
     [SerializeField] List<GameObject> panels;
     [SerializeField] int importantPanel;
+    [SerializeField] Button button;
     int index = 0;
     bool impPanelState = false;
 
@@ -15,7 +18,8 @@ public class StoryController : MonoBehaviour
         SaveLoad.Save();
 
         panels[index].SetActive(true);
-	}
+        button.gameObject.SetActive(false);
+    }
 
 	void Update ()
     {
@@ -41,10 +45,14 @@ public class StoryController : MonoBehaviour
             index--;
             panels[index].SetActive(true);
         }
+
+        if (panels[index] == panel)
+            button.gameObject.SetActive(false);
     }
 
     public void NextPanel()
     {
+        button.gameObject.SetActive(true);
         panels[index].SetActive(false);
         index++;
         if (index == panels.Count)
