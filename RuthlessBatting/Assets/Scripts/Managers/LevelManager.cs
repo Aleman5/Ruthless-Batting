@@ -111,6 +111,12 @@ public class LevelManager : MonoBehaviour
             }
     }
 
+    void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+            PauseGame();
+    }
+
     void Update()
     {
         if (gameWon && InputManager.Instance.GetActionButton())
