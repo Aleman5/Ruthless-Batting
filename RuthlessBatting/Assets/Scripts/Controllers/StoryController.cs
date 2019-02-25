@@ -26,12 +26,12 @@ public class StoryController : MonoBehaviour
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) | (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             PrevPanel();
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) | (Input.GetKeyDown(KeyCode.RightArrow)))
         {
             NextPanel();
         }
