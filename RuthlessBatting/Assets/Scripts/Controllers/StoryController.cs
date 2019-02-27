@@ -17,8 +17,6 @@ public class StoryController : MonoBehaviour
 
 	void Awake ()
     {
-        SaveLoad.Save();
-
         panels[index].SetActive(true);
         firstButton.gameObject.SetActive(false);
  

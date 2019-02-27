@@ -44,6 +44,8 @@ public class LevelManager : MonoBehaviour
                 camera.position = new Vector3(positionToRestart.x, 10.0f, positionToRestart.z);
                 levelRestarted = true;
             }
+            else
+                SaveLoad.Save();
         }
     }
 
